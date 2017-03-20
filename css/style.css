@@ -1148,6 +1148,7 @@ a.article-title:hover {
 }
 .article-entry img,
 .article-entry video {
+  max-height: 550px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -1400,7 +1401,7 @@ a.article-title:hover {
 }
 .article-gallery-img img {
   display: block;
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
 }
 .article-gallery {
