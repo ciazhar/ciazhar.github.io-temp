@@ -4,14 +4,81 @@
   
     
     <entry>
+      <title><![CDATA[Fill in form dan Function Key]]></title>
+      <url>http://ciazhar.github.io/2017/04/14/ui-ux-fill-in-form-dan-function-key/</url>
+      <content type="html"><![CDATA[<p><img src="/images/ui-ux/Ui-Ux.jpg" alt=""></p>
+<h1 id="FILL-IN-FORM"><a href="#FILL-IN-FORM" class="headerlink" title="FILL IN FORM"></a>FILL IN FORM</h1><h2 id="Definisi-Fill-in-Form"><a href="#Definisi-Fill-in-Form" class="headerlink" title="Definisi Fill in Form :"></a>Definisi Fill in Form :</h2><p>   Sebuah tabel data yang diwajibkan diisi oleh user, data tersebut biasanya digunakan untuk sebuah pendaftaran.<br>   Data yang diinputkan umumnya banyak keakuratan data, misal fill in form memerintahkan user untuk memasukkan data pribadi ( nama, umur, jenis kelamin dst ).</p>
+<h2 id="Hal-yang-perlu-diperhatikan-terkait-Fill-In-Form"><a href="#Hal-yang-perlu-diperhatikan-terkait-Fill-In-Form" class="headerlink" title="Hal yang perlu diperhatikan terkait Fill In Form :"></a>Hal yang perlu diperhatikan terkait Fill In Form :</h2><ul>
+<li>Keyboard.</li>
+<li>Kegunaan Tab atau Mouse untuk memindahkan cursor.</li>
+<li>Maksud dari masing - masing field dan label.</li>
+<li>Metode dalam mengoreksi kesalahan.</li>
+<li>Kegunaan Enter dan Return.</li>
+</ul>
+<h2 id="Pedoman-dalam-membuat-Fill-Inform"><a href="#Pedoman-dalam-membuat-Fill-Inform" class="headerlink" title="Pedoman dalam membuat Fill Inform :"></a>Pedoman dalam membuat Fill Inform :</h2><ul>
+<li>Berikan judul yang jelas dan memiliki arti.</li>
+<li>Instruksi yang komprehensif.</li>
+<li>Pengelompokkan dan pengurutan secara logikal.</li>
+<li>Layout ( Desain tata letak ) yang mudah dilihat.</li>
+<li>Berikan nama field yang dikenal secara umum.</li>
+<li>Berikan tempat yang jelas untuk menginputkan data,</li>
+<li>Pergerakan kursor yang nyaman.</li>
+<li>Berikan koreksi eror / penanganan kesalahan untuk setiap karakter  tidak tepat yang diinputkan.</li>
+<li>Sertakan informasi mengenai status pengisian form.</li>
+</ul>
+<h2 id="Kelebihan-Fill-In-Form"><a href="#Kelebihan-Fill-In-Form" class="headerlink" title="Kelebihan Fill In Form :"></a>Kelebihan Fill In Form :</h2><ul>
+<li>Keterbiasaan Pengguna dalam Mengisi Form dapat mempermudah pengisian.</li>
+<li>Beban memori rendah.</li>
+<li>Perancangan yang mudah dengan berbagai alat/Software bantu perancangan tampilan.</li>
+<li>Isian Formulir yang disederhanakan.</li>
+</ul>
+<h2 id="Kekurangan-Fill-In-Form"><a href="#Kekurangan-Fill-In-Form" class="headerlink" title="Kekurangan Fill In Form :"></a>Kekurangan Fill In Form :</h2><ul>
+<li>Bila tak terbiasa, membutuhkan waktu bagi user untuk memahami dan mengisi form.</li>
+<li>Jika Formulir bermenu datar, akan memakan ruang pada layar.</li>
+<li>Pembuatan data pertanyaan harus logis dan tersusun dengan jelas jika tidak akan membuat user kebingungan.</li>
+</ul>
+<h1 id="FUNCTION-KEYS"><a href="#FUNCTION-KEYS" class="headerlink" title="FUNCTION KEYS"></a>FUNCTION KEYS</h1><h2 id="Pendahuluan"><a href="#Pendahuluan" class="headerlink" title="Pendahuluan :"></a>Pendahuluan :</h2><p>   Tahun 1986, IBM ( International Business Machine ) menambahkan beberapa tombol fungsi pada keyboard standard. Tombol ini dapat dipergunakan sebagai perintah khusus yang disertakan pada sistem operasi maupun aplikasi dan disebut function keys.<br>   Key Modal Styles : Penyampaian “aksi” melalui penekanan tombol-tombol yang diprogram sebelumnya untuk menjalankan perintah tertentu.</p>
+<h2 id="Definisi"><a href="#Definisi" class="headerlink" title="Definisi :"></a>Definisi :</h2><p>  Tombol khusus yang terdapat pada keyboard yang memberikan masukan tanpa berhubungan dengan setiap karakter F1 s/d F12. Contoh Fungsi umumnya :<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">F1 = Help.</div><div class="line">F2 = Merubah nama file.</div><div class="line">F3 = Search.</div><div class="line">alt + F4 = Menutup program yang sedang berjalan.</div><div class="line">F5 = Refresh.</div><div class="line">F6 = Memindahkan kursor ke Address bar.</div><div class="line">F7 = memeriksa ejaan/tata bahasa (Ms. Word).</div><div class="line">F8 = Tombol fungsi yang digunakan untuk masuk ke menu startup windows, biasa digunakan masuk ke Windows Safe Mode.</div><div class="line">F9 = Untuk membuka toolbar Measurements pada Quark 5.0.</div><div class="line">shift + F10 = Menampilkan menu shortcut ( MS Word ).</div><div class="line">F11 = Full Screen pada browser.</div><div class="line">shift + F12 = Save As ( MS. Word ).</div></pre></td></tr></table></figure></p>
+<h2 id="Kelebihan-Function-Keys"><a href="#Kelebihan-Function-Keys" class="headerlink" title="Kelebihan Function Keys :"></a>Kelebihan Function Keys :</h2><ul>
+<li>Mempermudah pekerjaan.</li>
+<li>Kecepatan yang lebih tinggi dan praktis.</li>
+<li>Dapat menjadi pengganti input saat mouse sedang error.</li>
+</ul>
+<p>Kekurangan Function Keys :</p>
+<ul>
+<li>Jarang Digunakan dan Diketahui oleh pengguna - pengguna baru.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Kuliah </category>
+            
+            <category> Interaksi Manusia dan Komputer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ui </tag>
+            
+            <tag> ux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Kritik dan Saran terhadap Website KPM Udinus]]></title>
       <url>http://ciazhar.github.io/2017/04/11/Kritik-dan-Saran-terhadap-Website-KPM-Udinus/</url>
-      <content type="html"><![CDATA[<h1 id="Kritik"><a href="#Kritik" class="headerlink" title="Kritik"></a>Kritik</h1><ul>
+      <content type="html"><![CDATA[<h1 id="Sekilas-Tentang-KPM-UDINUS"><a href="#Sekilas-Tentang-KPM-UDINUS" class="headerlink" title="Sekilas Tentang KPM UDINUS"></a>Sekilas Tentang KPM UDINUS</h1><p>Kantor Penjaminan Mutu Univeristas Dian Nuswantoro adalah suatu badan internal di bawah Universitas Dian Nuswantoro yang bertujuan untuk mengembangkan sistem penjaminan mutu, menyelenggarakan sistem audit mutu internal dalam rangka pelaksanaan sistem penjaminan mutu dan menjamin perbaikan mutu secara terus menerus terhadap pencapaian kinerja penyelenggaraan pendidikan tinggi di Universitas Dian Nuswantoro.</p>
+<h1 id="Kritik-dan-Saran"><a href="#Kritik-dan-Saran" class="headerlink" title="Kritik dan Saran"></a>Kritik dan Saran</h1><ul>
 <li>Copyright telah kadaluarsa. Seharusnya selalu diperbaharui secara konsekuen. Kemudian perlu ditambahkan instansi (udinus) karena KPM sendiri berada di bawah udinus.</li>
 </ul>
 <p><img src="/images/kritik-kpm-udinus/copyright.png" alt=""></p>
 <ul>
-<li>Foto dari Anggota KPM tidak proporsional dan tidak rapi. Pada laman web terlalu kecil sedangkan pada mobile terlalu besar. Pada laman web foto tidak center dan penulisanya tidak rapi. Seharusnya kontenya dikonfigurasi agar progresive dan rapi. Saya menyarankan menggunakan framework seperti bootstrap agar tidak susah dalam mengkonfigurasinya.</li>
+<li>Foto dari Anggota KPM tidak proporsional dan tidak rapi. Pada laman web terlalu kecil sedangkan pada mobile terlalu besar. Pada laman web foto tidak center dan penulisanya tidak rapi. Seharusnya kontenya dikonfigurasi agar progresive dan rapi. Kami menyarankan menggunakan grid system yang ada pada bootstrap agar lebih mudah dalam mengkonfigurasinya.</li>
 </ul>
 <p><img src="/images/kritik-kpm-udinus/foto.png" alt=""></p>
 <ul>
@@ -19,7 +86,7 @@
 </ul>
 <p><img src="/images/kritik-kpm-udinus/index.png" alt=""></p>
 <ul>
-<li>Terdapat 2 tombol home pada halama utama yang membingungkan user</li>
+<li>Terdapat 2 tombol home pada halama utama yang membingungkan user. Seharusnya satu saja sudah cukup.</li>
 </ul>
 <p><img src="/images/kritik-kpm-udinus/home.png" alt=""></p>
 <ul>
@@ -31,19 +98,27 @@
 </ul>
 <p><img src="/images/kritik-kpm-udinus/lamankosong.png" alt=""></p>
 <ul>
-<li>Navbar kurang menarik dan terlalu gelap</li>
-</ul>
-<ul>
 <li>Perlu dicantumkan kontak person pada bagian bawah web. Sehingga apabila terjadi permasalahan pada webiste dan sebagainya dapat langsung ditanggulangi.</li>
 </ul>
 <ul>
-<li>Perlu mengubah designnya menurut saya terlalu jadul</li>
+<li>Perlu ditambahkan fasilitash search untuk memudahkan user mencari konten yang dikehendaki.</li>
+</ul>
+<ul>
+<li>Perlu dicantumkan kontak person pada bagian bawah web. Sehingga apabila terjadi permasalahan pada webiste dan sebagainya dapat langsung ditanggulangi. Seperti pada  <a href="http://kjm.ugm.ac.id/" target="_blank" rel="external">http://kjm.ugm.ac.id/</a></li>
+</ul>
+<ul>
+<li>Perlu ditambahkan jadwal agenda kegiatan mengenai kpm. Seperti pada <a href="http://kjm.ugm.ac.id/" target="_blank" rel="external">http://kjm.ugm.ac.id/</a></li>
+</ul>
+<ul>
+<li>Perlu ditambahkan laman mengenai sambutan ketua kpm untuk menambah kesan hangat kepada pengunjung  webste. Seperti pada <a href="http://kjm.ugm.ac.id/sambutan-rektor-universitas-gadjah-mada-prof-dr-pratikno-m-soc-sc/" target="_blank" rel="external">http://kjm.ugm.ac.id/sambutan-rektor-universitas-gadjah-mada-prof-dr-pratikno-m-soc-sc/</a></li>
 </ul>
 ]]></content>
       
         <categories>
             
             <category> Kuliah </category>
+            
+            <category> Interaksi Manusia dan Komputer </category>
             
         </categories>
         
@@ -78,7 +153,8 @@
     <entry>
       <title><![CDATA[Bahasa Perintah dan Bahasa Alami]]></title>
       <url>http://ciazhar.github.io/2017/03/27/ui-ux_common-language-and-natural-language/</url>
-      <content type="html"><![CDATA[<h2 id="Pendahuluan"><a href="#Pendahuluan" class="headerlink" title="Pendahuluan"></a>Pendahuluan</h2><ul>
+      <content type="html"><![CDATA[<p><img src="/images/ui-ux/Ui-Ux.jpg" alt=""></p>
+<h2 id="Pendahuluan"><a href="#Pendahuluan" class="headerlink" title="Pendahuluan"></a>Pendahuluan</h2><ul>
 <li><p>Tujuan dasar bahasa</p>
 <ul>
 <li>presisi</li>
@@ -198,6 +274,8 @@ Contoh:
             
             <category> Kuliah </category>
             
+            <category> Interaksi Manusia dan Komputer </category>
+            
         </categories>
         
         
@@ -276,6 +354,8 @@ Contoh:
         <categories>
             
             <category> Kuliah </category>
+            
+            <category> Interaksi Manusia dan Komputer </category>
             
         </categories>
         
