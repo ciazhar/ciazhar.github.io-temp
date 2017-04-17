@@ -4,9 +4,45 @@
   
     
     <entry>
-      <title><![CDATA[orakom_sistem-bilangan]]></title>
-      <url>http://ciazhar.github.io/2017/04/15/orakom-sistem-bilangan/</url>
-      <content type="html"></content>
+      <title><![CDATA[Getting Started with Hexo]]></title>
+      <url>http://ciazhar.github.io/2017/04/16/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Bagaimana Perangkat Elektronik Berjalan ?]]></title>
+      <url>http://ciazhar.github.io/2017/04/15/orakom_bagaimana-perangkat-elektronik-berjalan/</url>
+      <content type="html"><![CDATA[<p>Dalam kehidupan sehari-hari kita sering sekali menggunakan perangkat elektronik seperti komputer, laptop dan hp. Perangkat elektronik tersebut sudah didesain sedimikian rupa agar dapat nyaman berinteraksi dengan penggunanya, baik dari desain, perangkat input dll. Tetapi pernahkah anda berpikir bagaimana cara kerjanya alat-alat tersebut? Bagaimana data dari keyboard, mouse atau perangkat input lainya diproses ? Dan tentunya akan banyak sekali pertanyaan mengenai hal tersebut. Pada kesempatan ini saya akan sedikit menceritakan bagaimana proses data di perangkat elektronik tersebut.</p>
+<h2 id="Proses-Booting"><a href="#Proses-Booting" class="headerlink" title="Proses Booting"></a>Proses Booting</h2><p>Hal pertama yang dilakukan perangkat saat proses booting adalah melakukan booting Sistem Operasi. Kemudian perangkat akan melakukan inisialisasi, yaitu melakukan checklist terhadap hardware yang terhubung dengan perangkat kita.</p>
+<h2 id="Transfer-Data-pada-Komputer"><a href="#Transfer-Data-pada-Komputer" class="headerlink" title="Transfer Data pada Komputer"></a>Transfer Data pada Komputer</h2><p>Data yang kita inputkan melalui perangkat masukan sebenarnya adalah kumpulan pola arus listrik yang dikonversi menjadi kode biner. Secara teknis untuk tegangan 0 volt akan dikonversi menjadi kode biner 0 dan tegangan 5 volt akan dikonversi menjadi kode biner 1. Proses konversi dari arus listrik menjadi biner ini dilakukan oleh <code>Flip Flop</code> yang terdiri dari kumpulan gerbang logika. Data biner tersebut kemudian dibawa menuju <code>register</code> yang ada pada processor untuk disimpan. Setiap kode biner akan menghuni satu space register. Pengggambaran bagaimana data tersebut disimpan adalah seperti gambar di bawah ini :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">_________________________________</div><div class="line">|       |       |       |       |</div><div class="line">|   1   |   2   |   3   |   4   | --&gt; Register</div><div class="line">|_______|_______|_______|_______|   </div><div class="line">|       |       |       |       |</div><div class="line">|   0   |   1   |   0   |   0   | --&gt; Biner</div><div class="line">|_______|_______|_______|_______|</div></pre></td></tr></table></figure></p>
+<p>Sedikit Info tentang Processor, dia memiliki bagian yang memiliki fungsi masing masing. Bagian tersebut diantaranya adalah :</p>
+<ul>
+<li>ALU</li>
+<li>Control Unit</li>
+<li>Register</li>
+</ul>
+<p>Lanjut, data yang ada pada register kemudian diproses, apakah akan dioutputkan atau akan disimpan sesuai dengan yang kita inginkan. Apabila ingin dioutputkan data akan ditransfer menuju perangkat keluaran yang dikehendaki, semisal layar monitor. Dan apabila ingin disimpan sebelumnya akan dikonversi menuju kode heksal. Proses konversi dari kode biner dan heksal dan sebaliknya dilakukan oleh Sistem Operasi.</p>
+<p>Data pada hardisk yang berupa kode heksal apabila ingin diproses maka harus dikonversi kembali menjadi kode desimal. Data tersebut kemudian diteruskan melalui RAM dan berakhir di Processor. Dalam tahap pemrosesan data, data tadi akan disimpan sementara pada cache memory yang ada pada processor.</p>
+]]></content>
       
         <categories>
             
@@ -83,9 +119,7 @@
         
         <tags>
             
-            <tag> ui </tag>
-            
-            <tag> ux </tag>
+            <tag> ui-ux </tag>
             
         </tags>
         
@@ -120,20 +154,21 @@
 </ul>
 <p><img src="/images/kritik-kpm-udinus/lamankosong.png" alt=""></p>
 <ul>
-<li>Perlu dicantumkan kontak person pada bagian bawah web. Sehingga apabila terjadi permasalahan pada webiste dan sebagainya dapat langsung ditanggulangi.</li>
-</ul>
-<ul>
 <li>Perlu ditambahkan fasilitash search untuk memudahkan user mencari konten yang dikehendaki.</li>
 </ul>
+<p><img src="/images/kritik-kpm-udinus/pencarian.png" alt=""></p>
 <ul>
 <li>Perlu dicantumkan kontak person pada bagian bawah web. Sehingga apabila terjadi permasalahan pada webiste dan sebagainya dapat langsung ditanggulangi. Seperti pada  <a href="http://kjm.ugm.ac.id/" target="_blank" rel="external">http://kjm.ugm.ac.id/</a></li>
 </ul>
+<p><img src="/images/kritik-kpm-udinus/kontak-person.png" alt=""></p>
 <ul>
 <li>Perlu ditambahkan jadwal agenda kegiatan mengenai kpm. Seperti pada <a href="http://kjm.ugm.ac.id/" target="_blank" rel="external">http://kjm.ugm.ac.id/</a></li>
 </ul>
+<p><img src="/images/kritik-kpm-udinus/agenda.png" alt=""></p>
 <ul>
 <li>Perlu ditambahkan laman mengenai sambutan ketua kpm untuk menambah kesan hangat kepada pengunjung  webste. Seperti pada <a href="http://kjm.ugm.ac.id/sambutan-rektor-universitas-gadjah-mada-prof-dr-pratikno-m-soc-sc/" target="_blank" rel="external">http://kjm.ugm.ac.id/sambutan-rektor-universitas-gadjah-mada-prof-dr-pratikno-m-soc-sc/</a></li>
 </ul>
+<p><img src="/images/kritik-kpm-udinus/sambutan-kepala.png" alt=""></p>
 ]]></content>
       
         <categories>
@@ -144,31 +179,6 @@
             
         </categories>
         
-        
-        <tags>
-            
-            <tag> ui </tag>
-            
-            <tag> ux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://ciazhar.github.io/2017/04/11/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
         
     </entry>
     
@@ -303,9 +313,7 @@ Contoh:
         
         <tags>
             
-            <tag> ui </tag>
-            
-            <tag> ux </tag>
+            <tag> ui-ux </tag>
             
         </tags>
         
@@ -384,9 +392,7 @@ Contoh:
         
         <tags>
             
-            <tag> ui </tag>
-            
-            <tag> ux </tag>
+            <tag> ui-ux </tag>
             
         </tags>
         
