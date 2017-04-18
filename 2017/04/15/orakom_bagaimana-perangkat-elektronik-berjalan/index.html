@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://ciazhar.github.io/2017/04/15/orakom_bagaimana-perangkat-elektronik-berjalan/index.html">
 <meta property="og:site_name" content="ciazhar">
 <meta property="og:description" content="Dalam kehidupan sehari-hari kita sering sekali menggunakan perangkat elektronik seperti komputer, laptop dan hp. Perangkat elektronik tersebut sudah didesain sedimikian rupa agar dapat nyaman berinter">
-<meta property="og:updated_time" content="2017-04-15T11:40:49.792Z">
+<meta property="og:updated_time" content="2017-04-17T13:35:08.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bagaimana Perangkat Elektronik Berjalan ?">
 <meta name="twitter:description" content="Dalam kehidupan sehari-hari kita sering sekali menggunakan perangkat elektronik seperti komputer, laptop dan hp. Perangkat elektronik tersebut sudah didesain sedimikian rupa agar dapat nyaman berinter">
@@ -166,12 +166,6 @@
             <p>Dalam kehidupan sehari-hari kita sering sekali menggunakan perangkat elektronik seperti komputer, laptop dan hp. Perangkat elektronik tersebut sudah didesain sedimikian rupa agar dapat nyaman berinteraksi dengan penggunanya, baik dari desain, perangkat input dll. Tetapi pernahkah anda berpikir bagaimana cara kerjanya alat-alat tersebut? Bagaimana data dari keyboard, mouse atau perangkat input lainya diproses ? Dan tentunya akan banyak sekali pertanyaan mengenai hal tersebut. Pada kesempatan ini saya akan sedikit menceritakan bagaimana proses data di perangkat elektronik tersebut.</p>
 <h2 id="Proses-Booting"><a href="#Proses-Booting" class="headerlink" title="Proses Booting"></a>Proses Booting</h2><p>Hal pertama yang dilakukan perangkat saat proses booting adalah melakukan booting Sistem Operasi. Kemudian perangkat akan melakukan inisialisasi, yaitu melakukan checklist terhadap hardware yang terhubung dengan perangkat kita.</p>
 <h2 id="Transfer-Data-pada-Komputer"><a href="#Transfer-Data-pada-Komputer" class="headerlink" title="Transfer Data pada Komputer"></a>Transfer Data pada Komputer</h2><p>Data yang kita inputkan melalui perangkat masukan sebenarnya adalah kumpulan pola arus listrik yang dikonversi menjadi kode biner. Secara teknis untuk tegangan 0 volt akan dikonversi menjadi kode biner 0 dan tegangan 5 volt akan dikonversi menjadi kode biner 1. Proses konversi dari arus listrik menjadi biner ini dilakukan oleh <code>Flip Flop</code> yang terdiri dari kumpulan gerbang logika. Data biner tersebut kemudian dibawa menuju <code>register</code> yang ada pada processor untuk disimpan. Setiap kode biner akan menghuni satu space register. Pengggambaran bagaimana data tersebut disimpan adalah seperti gambar di bawah ini :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">_________________________________</div><div class="line">|       |       |       |       |</div><div class="line">|   1   |   2   |   3   |   4   | --&gt; Register</div><div class="line">|_______|_______|_______|_______|   </div><div class="line">|       |       |       |       |</div><div class="line">|   0   |   1   |   0   |   0   | --&gt; Biner</div><div class="line">|_______|_______|_______|_______|</div></pre></td></tr></table></figure></p>
-<p>Sedikit Info tentang Processor, dia memiliki bagian yang memiliki fungsi masing masing. Bagian tersebut diantaranya adalah :</p>
-<ul>
-<li>ALU</li>
-<li>Control Unit</li>
-<li>Register</li>
-</ul>
 <p>Lanjut, data yang ada pada register kemudian diproses, apakah akan dioutputkan atau akan disimpan sesuai dengan yang kita inginkan. Apabila ingin dioutputkan data akan ditransfer menuju perangkat keluaran yang dikehendaki, semisal layar monitor. Dan apabila ingin disimpan sebelumnya akan dikonversi menuju kode heksal. Proses konversi dari kode biner dan heksal dan sebaliknya dilakukan oleh Sistem Operasi.</p>
 <p>Data pada hardisk yang berupa kode heksal apabila ingin diproses maka harus dikonversi kembali menjadi kode desimal. Data tersebut kemudian diteruskan melalui RAM dan berakhir di Processor. Dalam tahap pemrosesan data, data tadi akan disimpan sementara pada cache memory yang ada pada processor.</p>
 
@@ -181,7 +175,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/15/orakom_bagaimana-perangkat-elektronik-berjalan/" data-id="cj1ll45hc0005omlpxapsgyi9" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/15/orakom_bagaimana-perangkat-elektronik-berjalan/" data-id="cj1m6a8nc00062nlpf0li3u75" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -343,6 +337,46 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/04/17/orakom-bagian-processor/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></p>
+                            <p class="item-title"><a href="/2017/04/17/orakom-bagian-processor/" class="title">Bagian Processor</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T13:35:37.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/17/orakom-sistem-bilangan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></p>
+                            <p class="item-title"><a href="/2017/04/17/orakom-sistem-bilangan/" class="title">Sistem Bilangan</a></p>
+                            <p class="item-date"><time datetime="2017-04-17T12:56:24.000Z" itemprop="datePublished">2017-04-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/04/16/hello-world/" class="thumbnail">
     
     
@@ -400,46 +434,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/04/11/Kritik-dan-Saran-terhadap-Website-KPM-Udinus/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/kritik-kpm-udinus/copyright.png)" alt="Kritik dan Saran terhadap Website KPM Udinus" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></p>
-                            <p class="item-title"><a href="/2017/04/11/Kritik-dan-Saran-terhadap-Website-KPM-Udinus/" class="title">Kritik dan Saran terhadap Website KPM Udinus</a></p>
-                            <p class="item-date"><time datetime="2017-04-11T08:43:58.000Z" itemprop="datePublished">2017-04-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/03/27/ui-ux_common-language-and-natural-language/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/ui-ux/Ui-Ux.jpg)" alt="Bahasa Perintah dan Bahasa Alami" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></p>
-                            <p class="item-title"><a href="/2017/03/27/ui-ux_common-language-and-natural-language/" class="title">Bahasa Perintah dan Bahasa Alami</a></p>
-                            <p class="item-date"><time datetime="2017-03-26T23:06:11.000Z" itemprop="datePublished">2017-03-27</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -449,7 +443,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -459,7 +453,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -469,7 +463,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tag</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">3</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">3</span></li></ul>
         </div>
     </div>
 

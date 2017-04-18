@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title><![CDATA[Bagian Processor]]></title>
+      <url>http://ciazhar.github.io/2017/04/17/orakom-bagian-processor/</url>
+      <content type="html"><![CDATA[<h1 id="ALU-Arithmetic-and-Logic-Unit"><a href="#ALU-Arithmetic-and-Logic-Unit" class="headerlink" title="ALU (Arithmetic and Logic Unit)"></a>ALU (Arithmetic and Logic Unit)</h1><p>  ALU merupakan bagian pengolah biner di processor. ALU bertugas melalukan operasi aritmatika dan logika sesuai instruksi yang diberikan.</p>
+<h1 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h1><p>  Control Unit bertugas memberikan arahan / kendali / kontrol terhadap operasi yang dilakukan oleh ALU</p>
+<h1 id="Register"><a href="#Register" class="headerlink" title="Register"></a>Register</h1><p>  Register merupakan perangkat memori sementara yang menyimpan data dari suatu program yang sedang berjalan.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Teknologi </category>
+            
+            <category> Organisasi dan Arsitektur Komputer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> komputer </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Sistem Bilangan]]></title>
+      <url>http://ciazhar.github.io/2017/04/17/orakom-sistem-bilangan/</url>
+      <content type="html"><![CDATA[<h1 id="Macam-macam-Sistem-Bilangan"><a href="#Macam-macam-Sistem-Bilangan" class="headerlink" title="Macam-macam Sistem Bilangan"></a>Macam-macam Sistem Bilangan</h1><ul>
+<li>Biner (basis 2)<br>Simbol : 0,1</li>
+<li>Oktal (basis 8)<br>Simbol : 0,1,2,3,4,5,6,7</li>
+<li>Desimal (basis 10)<br>Simbol : 0,1,2,3,4,5,6,7,8.9</li>
+<li>Heksal (basis 16)<br>Simbol : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15</li>
+</ul>
+<h1 id="Konversi-antar-Sistem-Bilangan"><a href="#Konversi-antar-Sistem-Bilangan" class="headerlink" title="Konversi antar Sistem Bilangan"></a>Konversi antar Sistem Bilangan</h1><ul>
+<li>Desimal ke Biner</li>
+</ul>
+<p>  Contoh : Semisal kita akan mengubah 123(10) ke biner. Hal pertama yang harus kita lakukan adalah membagi angka tersebut dengan 2, kemudian hasil pembagian kita taruh dibagian bawah. Dan apabila angka habis dibagi 2 maka kita tulis 0 dan apabila bersisa kita tulis 1 di bagian samping. Lakukan langkah tersebut secara berulang-ulang sampai hasilnya tidak bisa dibagi 2 lagi. Contohnya adalah sebagai berikut :<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">123</div><div class="line">--- =  1</div><div class="line">61</div><div class="line">--- = 1</div><div class="line">30</div><div class="line">--- = 0</div><div class="line">15</div><div class="line">--- = 1</div><div class="line">7</div><div class="line">--- = 1</div><div class="line">3</div><div class="line">--- = 1</div><div class="line">1</div></pre></td></tr></table></figure></p>
+<p>  Dari hasil diatas kita dapatkan hasil 1 1 1 1 0 1 1 (dibaca dari bawah). Jadi biner dari 123 adalah 1111011.</p>
+<ul>
+<li>Biner ke Desimal</li>
+</ul>
+<p>  Contoh : Semisal kita akan mengubah 1111011(2) ke desimal. Hal pertama yang kita lakukan adalah mendefinisikan tiap digit dengan 2 pangkat nomer digit. Digit dihitung dari belakang. Contohnya adalah sebagai berikut :<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">2^6   2^5   2^4   2^3   2^2   2^1   2^0</div><div class="line">64    32    16    8     4     2     1</div><div class="line"></div><div class="line">1     1     1     1     0     1     1</div></pre></td></tr></table></figure></p>
+<p>  Kemudian kita tambahkan tiap hasil dari 2 pangkat nomer digit yang bilangan binernya 1.<br>  64+32+16+8+4+2+1 = 123. Dari penjumlahan tersebut kita dapatkan hasil 123, jadi desimal dari 1111011 adalah 123.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Teknologi </category>
+            
+            <category> Organisasi dan Arsitektur Komputer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> komputer </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Getting Started with Hexo]]></title>
       <url>http://ciazhar.github.io/2017/04/16/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -34,12 +97,6 @@
       <content type="html"><![CDATA[<p>Dalam kehidupan sehari-hari kita sering sekali menggunakan perangkat elektronik seperti komputer, laptop dan hp. Perangkat elektronik tersebut sudah didesain sedimikian rupa agar dapat nyaman berinteraksi dengan penggunanya, baik dari desain, perangkat input dll. Tetapi pernahkah anda berpikir bagaimana cara kerjanya alat-alat tersebut? Bagaimana data dari keyboard, mouse atau perangkat input lainya diproses ? Dan tentunya akan banyak sekali pertanyaan mengenai hal tersebut. Pada kesempatan ini saya akan sedikit menceritakan bagaimana proses data di perangkat elektronik tersebut.</p>
 <h2 id="Proses-Booting"><a href="#Proses-Booting" class="headerlink" title="Proses Booting"></a>Proses Booting</h2><p>Hal pertama yang dilakukan perangkat saat proses booting adalah melakukan booting Sistem Operasi. Kemudian perangkat akan melakukan inisialisasi, yaitu melakukan checklist terhadap hardware yang terhubung dengan perangkat kita.</p>
 <h2 id="Transfer-Data-pada-Komputer"><a href="#Transfer-Data-pada-Komputer" class="headerlink" title="Transfer Data pada Komputer"></a>Transfer Data pada Komputer</h2><p>Data yang kita inputkan melalui perangkat masukan sebenarnya adalah kumpulan pola arus listrik yang dikonversi menjadi kode biner. Secara teknis untuk tegangan 0 volt akan dikonversi menjadi kode biner 0 dan tegangan 5 volt akan dikonversi menjadi kode biner 1. Proses konversi dari arus listrik menjadi biner ini dilakukan oleh <code>Flip Flop</code> yang terdiri dari kumpulan gerbang logika. Data biner tersebut kemudian dibawa menuju <code>register</code> yang ada pada processor untuk disimpan. Setiap kode biner akan menghuni satu space register. Pengggambaran bagaimana data tersebut disimpan adalah seperti gambar di bawah ini :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">_________________________________</div><div class="line">|       |       |       |       |</div><div class="line">|   1   |   2   |   3   |   4   | --&gt; Register</div><div class="line">|_______|_______|_______|_______|   </div><div class="line">|       |       |       |       |</div><div class="line">|   0   |   1   |   0   |   0   | --&gt; Biner</div><div class="line">|_______|_______|_______|_______|</div></pre></td></tr></table></figure></p>
-<p>Sedikit Info tentang Processor, dia memiliki bagian yang memiliki fungsi masing masing. Bagian tersebut diantaranya adalah :</p>
-<ul>
-<li>ALU</li>
-<li>Control Unit</li>
-<li>Register</li>
-</ul>
 <p>Lanjut, data yang ada pada register kemudian diproses, apakah akan dioutputkan atau akan disimpan sesuai dengan yang kita inginkan. Apabila ingin dioutputkan data akan ditransfer menuju perangkat keluaran yang dikehendaki, semisal layar monitor. Dan apabila ingin disimpan sebelumnya akan dikonversi menuju kode heksal. Proses konversi dari kode biner dan heksal dan sebaliknya dilakukan oleh Sistem Operasi.</p>
 <p>Data pada hardisk yang berupa kode heksal apabila ingin diproses maka harus dikonversi kembali menjadi kode desimal. Data tersebut kemudian diteruskan melalui RAM dan berakhir di Processor. Dalam tahap pemrosesan data, data tadi akan disimpan sementara pada cache memory yang ada pada processor.</p>
 ]]></content>
