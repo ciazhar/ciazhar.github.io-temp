@@ -29,45 +29,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Membuat Laman Web Sederhana]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1.%20membuat%20halaman%20web%20sederhana%20dengan%20spring%20boot%20starter%20web%20dan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
-<li><p>Buat simple controller(main/java/domain/Controllers/HaloController.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class HaloController&#123;</div><div class="line">  @RequestMapping(&quot;/&quot;)</div><div class="line">  public String halo()&#123;</div><div class="line">    return &quot;index&quot;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Keterangan :</p>
-<ul>
-<li><code>@Controller</code> digunakan untuk menandai bahwa <code>HaloController</code> adalah class controller</li>
-<li><code>@RequestMapping</code> digunakan untuk mapping url pada methode <code>halo</code> yang akan digunakan oleh view <code>index</code></li>
-</ul>
-</li>
-<li><p>Buat File Html(main/resources/templates/index.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;title&gt;Aplikasi Spring Boot&lt;/title&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/bootstrap.min.css&#125;&quot;  media=&quot;screen&quot;/&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/signin.css&#125;&quot; media=&quot;screen&quot;/&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line"></div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;</div><div class="line">      &lt;div class=&quot;container&quot;&gt;</div><div class="line">        &lt;div class=&quot;navbar-header&quot;&gt;</div><div class="line">          &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;</div><div class="line">            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">          &lt;/button&gt;</div><div class="line">          &lt;a class=&quot;navbar-brand&quot; th:href=&quot;@&#123;/&#125;&quot;&gt;ciazhar&lt;/a&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line"></div><div class="line">    &lt;div class=&quot;container&quot;&gt;</div><div class="line">      &lt;h1&gt;Aplikasi Spring Boot Dengan Thymeleaf&lt;/h1&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;script th:src=&quot;@&#123;/js/jquery.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script th:src=&quot;@&#123;/js/bootstrap.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>Keterangan :</p>
-<ul>
-<li><code>&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</code> menandai bahwa html itu menggunakan template engine thymeleaf</li>
-<li><code>th:href</code> (dlm html <code>href</code>) digunakan untuk menginjek css. css tersebut dapat di simpan di <code>src/main/resources/static/css</code>. Tetapi karena <code>src/main/resources/static</code> merupakan classpath maka utnuk injek hanya perlu dari folder css saja. contoh : <code>&lt;link rel=&quot;stylesheet&quot; th:href=&quot;@{/css/bootstrap.min.css}&quot;  media=&quot;screen&quot;/&gt;</code><br>Selain itu kita juga dapat menggunakanya untuk melakukan link sesuai mapping di controller. contoh : <code>&lt;a class=&quot;navbar-brand&quot; th:href=&quot;@{/}&quot;&gt;ciazhar&lt;/a&gt;</code></li>
-<li><code>th:src</code>(dlm html <code>src</code>) digunakan untuk menginjek js. js tersebut dapat di simpan di <code>src/main/resources/static/js</code>. contoh : <code>&lt;script th:src=&quot;@{/js/jquery.min.js}&quot;&gt;&lt;/script&gt;</code></li>
-</ul>
-</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Kardinalitas]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.4.kardinalitas/</url>
+      <title><![CDATA[Jasper Report]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5.%20jasper-report/</url>
       <content type="html"></content>
       
         <categories>
@@ -135,6 +98,24 @@
 </li>
 </ul>
 ]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring Framework </category>
+            
+            <category> Spring Boot </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Kardinalitas]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.4.kardinalitas/</url>
+      <content type="html"></content>
       
         <categories>
             
@@ -354,6 +335,75 @@
     </entry>
     
     <entry>
+      <title><![CDATA[CRUD dengan spring data jpa]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.1.%20crud%20dengan%20spring%20data%20jpa/</url>
+      <content type="html"><![CDATA[<h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
+<li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Setting Database (main/resources/application.properties)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.datasource.url=jdbc:mysql://localhost/pelatihan</div><div class="line">spring.datasource.username=pelatihanuser</div><div class="line">spring.datasource.password=pelatihanpasswd</div></pre></td></tr></table></figure>
+</li>
+<li><p>Bikin Schema (CLI)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line">grant all on pelatihan.* to pelatihanuser@localhost identified by &apos;pelatihanpasswd&apos;</div><div class="line">create database pelatihan;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Meggunakan mysql (CLI)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan tabel</div><div class="line">show tables;			///memperlihatkan tabel dan datanya</div><div class="line">show create table peserta \G	///memperlihatkan detil tabel</div><div class="line">drop table peserta;		///redeploy tabel</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring Framework </category>
+            
+            <category> Spring Boot </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Membuat Laman Web Sederhana]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1.%20membuat%20halaman%20web%20sederhana%20dengan%20spring%20boot%20starter%20web%20dan%20thymeleaf/</url>
+      <content type="html"><![CDATA[<h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
+<li><p>Buat simple controller(main/java/domain/Controllers/HaloController.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class HaloController&#123;</div><div class="line">  @RequestMapping(&quot;/&quot;)</div><div class="line">  public String halo()&#123;</div><div class="line">    return &quot;index&quot;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :</p>
+<ul>
+<li><code>@Controller</code> digunakan untuk menandai bahwa <code>HaloController</code> adalah class controller</li>
+<li><code>@RequestMapping</code> digunakan untuk mapping url pada methode <code>halo</code> yang akan digunakan oleh view <code>index</code></li>
+</ul>
+</li>
+<li><p>Buat File Html(main/resources/templates/index.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;title&gt;Aplikasi Spring Boot&lt;/title&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/bootstrap.min.css&#125;&quot;  media=&quot;screen&quot;/&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/signin.css&#125;&quot; media=&quot;screen&quot;/&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line"></div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;</div><div class="line">      &lt;div class=&quot;container&quot;&gt;</div><div class="line">        &lt;div class=&quot;navbar-header&quot;&gt;</div><div class="line">          &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;</div><div class="line">            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">          &lt;/button&gt;</div><div class="line">          &lt;a class=&quot;navbar-brand&quot; th:href=&quot;@&#123;/&#125;&quot;&gt;ciazhar&lt;/a&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line"></div><div class="line">    &lt;div class=&quot;container&quot;&gt;</div><div class="line">      &lt;h1&gt;Aplikasi Spring Boot Dengan Thymeleaf&lt;/h1&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;script th:src=&quot;@&#123;/js/jquery.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script th:src=&quot;@&#123;/js/bootstrap.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>Keterangan :</p>
+<ul>
+<li><code>&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</code> menandai bahwa html itu menggunakan template engine thymeleaf</li>
+<li><code>th:href</code> (dlm html <code>href</code>) digunakan untuk menginjek css. css tersebut dapat di simpan di <code>src/main/resources/static/css</code>. Tetapi karena <code>src/main/resources/static</code> merupakan classpath maka utnuk injek hanya perlu dari folder css saja. contoh : <code>&lt;link rel=&quot;stylesheet&quot; th:href=&quot;@{/css/bootstrap.min.css}&quot;  media=&quot;screen&quot;/&gt;</code><br>Selain itu kita juga dapat menggunakanya untuk melakukan link sesuai mapping di controller. contoh : <code>&lt;a class=&quot;navbar-brand&quot; th:href=&quot;@{/}&quot;&gt;ciazhar&lt;/a&gt;</code></li>
+<li><code>th:src</code>(dlm html <code>src</code>) digunakan untuk menginjek js. js tersebut dapat di simpan di <code>src/main/resources/static/js</code>. contoh : <code>&lt;script th:src=&quot;@{/js/jquery.min.js}&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring Framework </category>
+            
+            <category> Spring Boot </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Setup Project Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0.%20setup%20project/</url>
       <content type="html"><![CDATA[<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><ul>
@@ -393,7 +443,78 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Jasper Report]]></title>
+      <title><![CDATA[Android]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1.view/</url>
+      <content type="html"><![CDATA[<h1 id="Android-for-Beginner"><a href="#Android-for-Beginner" class="headerlink" title="Android for Beginner"></a>Android for Beginner</h1><h2 id="Layouting"><a href="#Layouting" class="headerlink" title="Layouting"></a>Layouting</h2><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><h4 id="Pengertian-View"><a href="#Pengertian-View" class="headerlink" title="Pengertian View"></a>Pengertian View</h4><p>View pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.</p>
+<h4 id="Macam-macam-view-berdasar-kontenya"><a href="#Macam-macam-view-berdasar-kontenya" class="headerlink" title="Macam - macam view berdasar kontenya"></a>Macam - macam view berdasar kontenya</h4><ul>
+<li>Text View</li>
+<li>Image View</li>
+<li>Button</li>
+</ul>
+<p>Dalam menuliskan pemrograman, kita diharuskan untuk menulis kode program sebagai instruksi yang spesifik dan detail.</p>
+<p>IDE (Integrated Development Environment) merupakan suatu ruang kerja berupa perangkat lunak yang digunakan untuk menulis kode program. IDE yang biasa digunakan untuk menulis kode program android adalah Android Studio.</p>
+<p>Bahasa yang digunakan untuk membuat view pada Android berupa XML.</p>
+<p>Untuk menulis kode xml anda dapat menggunakan <a href="https://udacity.github.io/android-layout" target="_blank" rel="external">https://udacity.github.io/android-layout</a>.</p>
+<p>Kode XML digambarkan sebagai berikut :<br>    <gambar 10="" video="" ke=""><br>    <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Ini Text"</span></div><div class="line">	<span class="attr">android:textColor</span>=<span class="string">"@android:color/white"</span></div><div class="line">	<span class="attr">android:backgroud</span>=<span class="string">"@android:color/black"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"200dp"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"300dp"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></gambar></p>
+<p>Kode tersebut memiliki ketentuan yaitu :</p>
+<ul>
+<li>Kode program ditulis di dalam tag. Tag didefinisikan dengan &lt;&gt; (kurung siku).</li>
+<li>Terdapat 2 tag yaitu tag pembuka dan tag penutup. Perbedaanya tag penutup terdapat tanda /(garis miring).</li>
+<li>Terdapat nama tag yang mewakili view yang ingin dipakai.</li>
+<li>Terdapat atribut(-atribut) yang digunakan untuk mendefinisikan view tersebut lebih lanjut. Semisal untuk konten, warna tinggi dll.</li>
+<li>Setiap atribut memiliki nilai. Nilai tersebut yang dipisahkan dari atributnya oleh tanda  = (samadengan) dan ditulis di dalam “” (tanda petik).</li>
+</ul>
+<h4 id="Text-View"><a href="#Text-View" class="headerlink" title="Text View"></a>Text View</h4><ul>
+<li>Satuan panjang (untuk panjang, tinggi dll) biasanya didefinisikan dengan satuan <code>dp</code>. Atau untuk membuatnya menyesuaikan dengan panjang dan lebar konten, dapat menggunakan <code>wrap_content</code>.</li>
+<li>Satuan ukuran font didefinisikan dengan <code>sp</code>.</li>
+<li>Referensi untuk design dapat dilihat di <a href="https://www.google.com/design/spec/material-design/introduction.html" target="_blank" rel="external">Material Design Spec</a> atau <a href="">google+ #AndroidDev #Protip</a></li>
+<li>Ukuran font dapat juga didefinisikan sebagai berikut :</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line"><span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceLarge"</span></div><div class="line"><span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceMedium"</span></div><div class="line"><span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceSmall"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Untuk mengganti warna font dan atau backgound dapat diubah dengan memasukkan nama warna atau kode warna hexa desimal. Contoh :<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line"><span class="attr">android:background</span>=<span class="string">"#AAAA"</span></div><div class="line"><span class="attr">android:textColor</span>=<span class="string">"#AAAA"</span>				</div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Image-view"><a href="#Image-view" class="headerlink" title="Image view"></a>Image view</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android.src</span>=<span class="string">""</span></div><div class="line">  <span class="attr">android.layout_width</span>=<span class="string">""</span></div><div class="line">  <span class="attr">android.layout_height</span>=<span class="string">""</span></div><div class="line">  <span class="attr">android.scaleType</span>=<span class="string">""</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<p>Keterangan :</p>
+<ul>
+<li>atribut <code>android:src</code> mendefinisikan resource atau tempat beradanya file gambar. Nilainya dapat diisi “@drawable/nama_file”</li>
+<li>atribut <code>android:scaleType</code> mendefinisikan posisi dan skala gambar. Nilainya dapat diisi dengan center untuk berada di tengah atau centerCrop untuk berada di tengah dengan mempertimbangkan ukuran gambar di layar dengan menyesuaikan sudut dari view.</li>
+</ul>
+<h3 id="Memposisikan-View"><a href="#Memposisikan-View" class="headerlink" title="Memposisikan View"></a>Memposisikan View</h3><h4 id="View-Group"><a href="#View-Group" class="headerlink" title="View Group"></a>View Group</h4><p>View group ini digunakan untuk mengelompokkan berbagai macam view. Jadi dia seperti <code>div</code> pada html. View group ini juga dapat didefinisikan sebagai parent sedangkan view didefinisikan sebagai child.</p>
+<p>Cara menggambarkan view grup :</p>
+<ul>
+<li>Linear Layout<ul>
+<li>Vertical row, yaitu view yang disusun secara vertical atas-bawah.</li>
+<li>Horizontal row, yaitu view yang disusun secara horizontal kanan-kiri.</li>
+</ul>
+</li>
+<li>Relative Layout<ul>
+<li>Relative to parent, yaitu view yang disusun relatif berdasarkan pada parent.</li>
+<li>Relative to other child, yaitu view yang disusun relatif berdasarkan pada child lainya.<br><ss 3="" bisa="" diambil="" di="" no=""><br>kode XML dari view grup digambarkan sebagai berikut :<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">  <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line"><span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>&gt;</div><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Guest List"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	&gt;</div><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Kunai"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
+</ss></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Lesson 2</li>
+<li>Lesson 3</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spring Boot]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/Spring-Boot/</url>
       <content type="html"><![CDATA[<h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><h1 id="Development-Environment-untuk-Spring-Boot"><a href="#Development-Environment-untuk-Spring-Boot" class="headerlink" title="Development Environment untuk Spring Boot"></a>Development Environment untuk Spring Boot</h1><ul>
 <li>JDK 1.8</li>
@@ -417,56 +538,6 @@
 <li>Application.java (main class)</li>
 </ul>
 ]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CRUD dengan spring data jpa]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.1.%20crud%20dengan%20spring%20data%20jpa/</url>
-      <content type="html"><![CDATA[<h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
-<li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Setting Database (main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.datasource.url=jdbc:mysql://localhost/pelatihan</div><div class="line">spring.datasource.username=pelatihanuser</div><div class="line">spring.datasource.password=pelatihanpasswd</div></pre></td></tr></table></figure>
-</li>
-<li><p>Bikin Schema (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line">grant all on pelatihan.* to pelatihanuser@localhost identified by &apos;pelatihanpasswd&apos;</div><div class="line">create database pelatihan;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Meggunakan mysql (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan tabel</div><div class="line">show tables;			///memperlihatkan tabel dan datanya</div><div class="line">show create table peserta \G	///memperlihatkan detil tabel</div><div class="line">drop table peserta;		///redeploy tabel</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Jasper Report]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5.%20jasper-report/</url>
-      <content type="html"></content>
       
         <categories>
             

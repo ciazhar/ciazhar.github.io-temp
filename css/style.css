@@ -2116,20 +2116,12 @@ i.icon:before {
     width: 100%;
     background: #f0f0f0;
   }
-  #sidebar a {
-    text-decoration: none;
-    color: #777;
-  }
-  #sidebar a:hover {
-    color: #444;
-  }
   #sidebar .sidebar-top,
   #sidebar .widget-wrap {
     padding: 15px;
   }
   #sidebar .widgets-container {
     padding-bottom: 15px;
-    font-weight: bold;
   }
   #footer {
     margin-top: 0px;
