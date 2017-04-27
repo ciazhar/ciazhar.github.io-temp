@@ -18,12 +18,14 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
 <meta property="og:description" content="Menggunakan Entity Manager Factory
 Buat Model Peserta(main/java/domain/entity/Peserta.java)
 1234567891011121314151617181920212223242526@Entitypublic class Peserta&amp;#123;  @Id @GeneratedValue(generator">
-<meta property="og:updated_time" content="2017-04-23T11:45:52.342Z">
+<meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
+<meta property="og:updated_time" content="2017-04-26T23:13:10.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Menggunakan Entity Manager Factory">
 <meta name="twitter:description" content="Menggunakan Entity Manager Factory
 Buat Model Peserta(main/java/domain/entity/Peserta.java)
 1234567891011121314151617181920212223242526@Entitypublic class Peserta&amp;#123;  @Id @GeneratedValue(generator">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
     
 
     
@@ -164,7 +166,8 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
+            <p><img src="/images/springboot.png" alt=""></p>
+<h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
 <li><p>Buat Model Peserta(main/java/domain/entity/Peserta.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">public class Peserta&#123;</div><div class="line">  @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">  @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">  private String id;</div><div class="line"></div><div class="line">  @Column(nullable=false)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  @Size(min = 1, max = 150)</div><div class="line">  private String nama;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @Email</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String email;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String noHp;</div><div class="line"></div><div class="line">  @Version</div><div class="line">  @Column(columnDefinition= &quot;integer DEFAULT 0&quot;)</div><div class="line">  private Integer version;</div></pre></td></tr></table></figure>
 <p>Keterangan :</p>
@@ -201,7 +204,7 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.2. menggunakan entity manager factory/" data-id="cj1yi0e1h000xjglpv234y9vc" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.2. menggunakan entity manager factory/" data-id="cj1z0ne0u000qmklp8j6w4ruy" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -386,7 +389,7 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
                             <a href="/2017/04/23/pemrograman/spring/5. jasper-report/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Jasper Report" class="thumbnail-image"></span>
     
     
 </a>
@@ -406,7 +409,7 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
                             <a href="/2017/04/23/pemrograman/spring/4. layout dengan thymeleaf/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Thymeleaf" class="thumbnail-image"></span>
     
     
 </a>
@@ -426,7 +429,7 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
                             <a href="/2017/04/23/pemrograman/spring/3. otorisasi login dengan spring security/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Otorisasi Login dengan spring security" class="thumbnail-image"></span>
     
     
 </a>
@@ -446,7 +449,7 @@ Buat Model Peserta(main/java/domain/entity/Peserta.java)
                             <a href="/2017/04/23/pemrograman/spring/2.4.kardinalitas/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Kardinalitas" class="thumbnail-image"></span>
     
     
 </a>

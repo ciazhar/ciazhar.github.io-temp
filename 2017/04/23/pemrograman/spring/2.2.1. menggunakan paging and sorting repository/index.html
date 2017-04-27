@@ -18,12 +18,14 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
 <meta property="og:description" content="Menggunakan Paging and Sorting Repository
 Membuat model (src/main/java/domain/model/PesertaPaging.java)
 123456789101112131415161718192021222324@Entity @Table(name = &amp;quot;t_peserta&amp;quot;)public class">
-<meta property="og:updated_time" content="2017-04-23T11:45:48.305Z">
+<meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
+<meta property="og:updated_time" content="2017-04-26T23:13:10.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Menggunakan Paging and Sorting Repository">
 <meta name="twitter:description" content="Menggunakan Paging and Sorting Repository
 Membuat model (src/main/java/domain/model/PesertaPaging.java)
 123456789101112131415161718192021222324@Entity @Table(name = &amp;quot;t_peserta&amp;quot;)public class">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
     
 
     
@@ -164,7 +166,8 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
+            <p><img src="/images/springboot.png" alt=""></p>
+<h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
 <li><p>Membuat model (src/main/java/domain/model/PesertaPaging.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">@Entity @Table(name = &quot;t_peserta&quot;)</div><div class="line">public class PesertaPaging &#123;</div><div class="line"></div><div class="line">    @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">    @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">    private String id;</div><div class="line"></div><div class="line">    @Column(nullable=false)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    @Size(min = 1, max = 150)</div><div class="line">    private String nama;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @Email</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String email;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
@@ -191,7 +194,7 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.1. menggunakan paging and sorting repository/" data-id="cj1yi0e1b000ujglpa2up2ih9" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.1. menggunakan paging and sorting repository/" data-id="cj1z0ne0q000omklpd3rdpmjd" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -376,7 +379,7 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
                             <a href="/2017/04/23/pemrograman/spring/5. jasper-report/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Jasper Report" class="thumbnail-image"></span>
     
     
 </a>
@@ -396,7 +399,7 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
                             <a href="/2017/04/23/pemrograman/spring/4. layout dengan thymeleaf/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Thymeleaf" class="thumbnail-image"></span>
     
     
 </a>
@@ -416,7 +419,7 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
                             <a href="/2017/04/23/pemrograman/spring/3. otorisasi login dengan spring security/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Otorisasi Login dengan spring security" class="thumbnail-image"></span>
     
     
 </a>
@@ -436,7 +439,7 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
                             <a href="/2017/04/23/pemrograman/spring/2.4.kardinalitas/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="Kardinalitas" class="thumbnail-image"></span>
     
     
 </a>

@@ -31,7 +31,8 @@
     <entry>
       <title><![CDATA[Jasper Report]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5.%20jasper-report/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
       
         <categories>
             
@@ -49,7 +50,8 @@
     <entry>
       <title><![CDATA[Thymeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4.%20layout%20dengan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; name=&quot;userName&quot; value=&quot;James Carrot&quot; th:value=&quot;$&#123;user.name&#125;&quot; /&gt;</div></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; name=&quot;userName&quot; value=&quot;James Carrot&quot; th:value=&quot;$&#123;user.name&#125;&quot; /&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Menggunakan-Thymeleaf"><a href="#Menggunakan-Thymeleaf" class="headerlink" title="Menggunakan Thymeleaf"></a>Menggunakan Thymeleaf</h1><p>  Tambahkan xmlns dibawah ini pada tag html<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Expression-di-Thymeleaf"><a href="#Expression-di-Thymeleaf" class="headerlink" title="Expression di Thymeleaf"></a>Expression di Thymeleaf</h1><ul>
 <li><p>Menampilkan pesan menggunakan <code>#{}</code><br>Contoh Menampilkan nama user yang sedang online</p>
@@ -83,7 +85,8 @@
     <entry>
       <title><![CDATA[Otorisasi Login dengan spring security]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.%20otorisasi%20login%20dengan%20spring%20security/</url>
-      <content type="html"><![CDATA[<h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
 <li><p>Tambahkan dependency (pom.xml)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
 </li>
@@ -115,7 +118,8 @@
     <entry>
       <title><![CDATA[Kardinalitas]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.4.kardinalitas/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
       
         <categories>
             
@@ -133,7 +137,8 @@
     <entry>
       <title><![CDATA[Generate Content pada Client Side Menggunakan AngularJS]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.3.%20generate%20content%20dari%20client%20side%20dengan%20AngularJS/</url>
-      <content type="html"><![CDATA[<h1 id="Generate-Content-pada-Client-Side-Menggunakan-AngularJS"><a href="#Generate-Content-pada-Client-Side-Menggunakan-AngularJS" class="headerlink" title="Generate Content pada Client Side Menggunakan AngularJS"></a>Generate Content pada Client Side Menggunakan AngularJS</h1><p>  Kita akan coba menggenate content dari materi.</p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Generate-Content-pada-Client-Side-Menggunakan-AngularJS"><a href="#Generate-Content-pada-Client-Side-Menggunakan-AngularJS" class="headerlink" title="Generate Content pada Client Side Menggunakan AngularJS"></a>Generate Content pada Client Side Menggunakan AngularJS</h1><p>  Kita akan coba menggenate content dari materi.</p>
 <h2 id="Memulai-AngularJS"><a href="#Memulai-AngularJS" class="headerlink" title="Memulai AngularJS"></a>Memulai AngularJS</h2><ul>
 <li><p>Membuat file html (src/main/resources/templates/materi/listMateri.html)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">    &lt;title&gt;Daftar Materi&lt;/title&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body ng-app=&quot;&quot;&gt;</div><div class="line">    &lt;h1&gt;Daftar Materi&lt;/h1&gt;</div><div class="line">    &lt;script th:src=&quot;@&#123;/js/angular.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
@@ -228,7 +233,8 @@
     <entry>
       <title><![CDATA[Menggunakan Entity Manager Factory]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.2.%20menggunakan%20entity%20manager%20factory/</url>
-      <content type="html"><![CDATA[<h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
 <li><p>Buat Model Peserta(main/java/domain/entity/Peserta.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">public class Peserta&#123;</div><div class="line">  @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">  @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">  private String id;</div><div class="line"></div><div class="line">  @Column(nullable=false)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  @Size(min = 1, max = 150)</div><div class="line">  private String nama;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @Email</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String email;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String noHp;</div><div class="line"></div><div class="line">  @Version</div><div class="line">  @Column(columnDefinition= &quot;integer DEFAULT 0&quot;)</div><div class="line">  private Integer version;</div></pre></td></tr></table></figure>
 <p>Keterangan :</p>
@@ -276,7 +282,8 @@
     <entry>
       <title><![CDATA[Menggunakan Paging and Sorting Repository]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.1.%20menggunakan%20paging%20and%20sorting%20repository/</url>
-      <content type="html"><![CDATA[<h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
 <li><p>Membuat model (src/main/java/domain/model/PesertaPaging.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">@Entity @Table(name = &quot;t_peserta&quot;)</div><div class="line">public class PesertaPaging &#123;</div><div class="line"></div><div class="line">    @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">    @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">    private String id;</div><div class="line"></div><div class="line">    @Column(nullable=false)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    @Size(min = 1, max = 150)</div><div class="line">    private String nama;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @Email</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String email;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
@@ -314,7 +321,8 @@
     <entry>
       <title><![CDATA[Generate Content dari Server Side]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.%20generate%20content%20dari%20server%20side%20dengan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<h1 id="Generate-Content-dari-Server-Side"><a href="#Generate-Content-dari-Server-Side" class="headerlink" title="Generate Content dari Server Side"></a>Generate Content dari Server Side</h1><p>Ada banyak cara dalam melakukan crud di springframework. contoh :</p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Generate-Content-dari-Server-Side"><a href="#Generate-Content-dari-Server-Side" class="headerlink" title="Generate Content dari Server Side"></a>Generate Content dari Server Side</h1><p>Ada banyak cara dalam melakukan crud di springframework. contoh :</p>
 <ul>
 <li>menggunakan entity manager factory</li>
 <li>menggunakan paging and sorting repository</li>
@@ -337,7 +345,8 @@
     <entry>
       <title><![CDATA[CRUD dengan spring data jpa]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.1.%20crud%20dengan%20spring%20data%20jpa/</url>
-      <content type="html"><![CDATA[<h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
 <li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
 </li>
@@ -369,7 +378,8 @@
     <entry>
       <title><![CDATA[Membuat Laman Web Sederhana]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1.%20membuat%20halaman%20web%20sederhana%20dengan%20spring%20boot%20starter%20web%20dan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
 <li><p>Buat simple controller(main/java/domain/Controllers/HaloController.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class HaloController&#123;</div><div class="line">  @RequestMapping(&quot;/&quot;)</div><div class="line">  public String halo()&#123;</div><div class="line">    return &quot;index&quot;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Keterangan :</p>
@@ -404,9 +414,106 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Android]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1.view/</url>
+      <content type="html"><![CDATA[<p><img src="/images/android.jpg" alt=""></p>
+<h1 id="Android-for-Beginner"><a href="#Android-for-Beginner" class="headerlink" title="Android for Beginner"></a>Android for Beginner</h1><h2 id="Layouting"><a href="#Layouting" class="headerlink" title="Layouting"></a>Layouting</h2><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><h4 id="Pengertian-View"><a href="#Pengertian-View" class="headerlink" title="Pengertian View"></a>Pengertian View</h4><p>View pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.</p>
+<h4 id="Macam-macam-view-berdasar-kontenya"><a href="#Macam-macam-view-berdasar-kontenya" class="headerlink" title="Macam - macam view berdasar kontenya"></a>Macam - macam view berdasar kontenya</h4><ul>
+<li>Text View</li>
+<li>Image View</li>
+<li>Button</li>
+</ul>
+<p>Dalam menuliskan pemrograman, kita diharuskan untuk menulis kode program sebagai instruksi yang spesifik dan detail.</p>
+<p>IDE (Integrated Development Environment) merupakan suatu ruang kerja berupa perangkat lunak yang digunakan untuk menulis kode program. IDE yang biasa digunakan untuk menulis kode program android adalah Android Studio.</p>
+<p>Bahasa yang digunakan untuk membuat view pada Android berupa XML.</p>
+<p>Untuk menulis kode xml anda dapat menggunakan <a href="https://udacity.github.io/android-layout" target="_blank" rel="external">https://udacity.github.io/android-layout</a>.</p>
+<p>Kode XML digambarkan sebagai berikut :<br>    <!--gambar video ke 10--><br>    <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Ini Text"</span></div><div class="line">	<span class="attr">android:textColor</span>=<span class="string">"@android:color/white"</span></div><div class="line">	<span class="attr">android:background</span>=<span class="string">"@android:color/black"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"200dp"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"300dp"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
+<p>Kode tersebut memiliki ketentuan yaitu :</p>
+<ul>
+<li>Kode program ditulis di dalam tag. Tag didefinisikan dengan <code>&lt;&gt;</code> (kurung siku).</li>
+<li>Terdapat 2 tag yaitu tag pembuka dan tag penutup. Perbedaan antara tag pembuka dan tag penutup terdapat tanda <code>/</code>(garis miring).<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">.....</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Tag juga bisa didefinisikan seperti berikut :<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span>&gt;</span></div><div class="line">  ....</div><div class="line"><span class="tag">&lt;/<span class="name">TextView</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>Terdapat nama tag yang mewakili view yang ingin dipakai. Dalam contoh diatas nama tag adalah TextView.</li>
+<li>Terdapat atribut(-atribut) yang digunakan untuk mengcustom view tersebut. Semisal untuk konten, warna tinggi dll.</li>
+<li>Setiap atribut memiliki nilai. Nilai mewakili apa yang akan dicustom pada setiap atribut. Nilai tersebut dipisahkan dari atributnya oleh tanda  <code>=</code> (samadengan) dan ditulis di dalam <code>&quot;&quot;</code> (tanda petik dua).</li>
+</ul>
+<h4 id="Text-View"><a href="#Text-View" class="headerlink" title="Text View"></a>Text View</h4><p>Macam macam atribut untuk text view :</p>
+<ul>
+<li>Menulis text</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:text</span>=<span class="string">"tulis text anda di sini"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Mengatur tinggi dan lebar layout</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:height_layout</span>=<span class="string">"300dp"</span></div><div class="line">  <span class="attr">android:width_layout</span>=<span class="string">"300dp"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<p>Satuan panjang (untuk panjang, tinggi dll) biasanya didefinisikan dengan satuan <code>dp</code>.<br>Atau untuk membuatnya menyesuaikan lebar dan tinggi text, anda dapat menggunakan mengisi nilainya dengan <code>wrap_content</code>.<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:height_layout</span>=<span class="string">"wrap_content"</span></div><div class="line">  <span class="attr">android:width_layout</span>=<span class="string">"wrap_content"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>Mengganti warna text</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:textColor</span>=<span class="string">"@android:color/white"</span></div><div class="line">  <span class="attr">atau</span></div><div class="line">  <span class="attr">android:textColor</span>=<span class="string">"#Kode_hexa_desimal"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Mengganti ukuran font</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:textSize</span>=<span class="string">"30sp"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<p>Satuan ukuran font didefinisikan dengan <code>sp</code>. Ukuran font dapat juga didefinisikan sebagai berikut :</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceLarge"</span></div><div class="line">  <span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceMedium"</span></div><div class="line">  <span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceSmall"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Referensi untuk design dapat dilihat di <a href="https://www.google.com/design/spec/material-design/introduction.html" target="_blank" rel="external">Material Design Spec</a> atau <a href="https://plus.google.com/+AndroidDevelopers" target="_blank" rel="external">google+ #AndroidDev #Protip</a></li>
+</ul>
+<h4 id="Image-view"><a href="#Image-view" class="headerlink" title="Image view"></a>Image view</h4><p>Macam-macam atribut untuk Image View :</p>
+<ul>
+<li>Memilih gambar dari resource/assets:</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ImageView</span></span></div><div class="line">  <span class="attr">android:src</span>=<span class="string">"@drawable/ocean"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Mengatur tinggi dan lebar layout</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:height_layout</span>=<span class="string">"300dp"</span></div><div class="line">  <span class="attr">android:width_layout</span>=<span class="string">"300dp"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>Mengatur posisi dan skala gambar</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ImageView</span></span></div><div class="line">  <span class="attr">android:scaleType</span>=<span class="string">"centerCrop"</span></div><div class="line">  <span class="attr">atau</span></div><div class="line">  <span class="attr">android:scaleType</span>=<span class="string">"center"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
+<h3 id="Memposisikan-View"><a href="#Memposisikan-View" class="headerlink" title="Memposisikan View"></a>Memposisikan View</h3><h4 id="View-Group"><a href="#View-Group" class="headerlink" title="View Group"></a>View Group</h4><p>View group ini digunakan untuk mengelompokkan berbagai macam view. Jadi dia seperti <code>div</code> pada html. View group ini juga dapat didefinisikan sebagai parent sedangkan view didefinisikan sebagai child.<br>Kode XML dari view grup digambarkan sebagai berikut :<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">  <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">  <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">  <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"Guest List"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    /&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"Kunai"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Note :<br>Perlu diketahui setiap XML yang kita buat harus kita tambahkan <code>xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</code>. Kode tersebut biasa disebut <code>XML namespace declaration</code>. Ini digunkan untuk mendefinisikan bahwa XML kita digunakan untuk android.  </p>
+<p>Macam-macam view grup :</p>
+<ol>
+<li>Linear Layout<br>View disusun secara berderet baik horizontal ataupun vertikal pada view grup. Untuk menggunakan Linear Layout cukup menggunakan tag <code>LinearLayout</code>.<ul>
+<li>Vertical row, yaitu view yang disusun secara vertical atas-bawah. Untuk menggunakan vertical row cukup tambahkan atribut <code>android:orientation=&quot;vertical&quot;</code>.</li>
+<li>Horizontal column, yaitu view yang disusun secara horizontal kanan-kiri. Untuk menggunakan horizontal column cukup tambahkan atribut <code>android:orientation=&quot;horizontal&quot;</code>.</li>
+</ul>
+</li>
+</ol>
+<p>Untuk mengatur panjang dan tinggi view dengan menyesuaikan parentnya dapat menggunakan sintaks sebagai berikut :<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">  <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></div><div class="line">  <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">  <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">  <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">  &gt;</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"Guest List"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    /&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"Kunai"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Pada kode diatas LinearLayout menggunakan match parent yang mengakibatkanya memiliki tinggi dan lebar sebesar resolusi layar. Begitu juga dengan text view yang menyesuaikan LinearLayout memiliki lebar sebesar layar.</p>
+<p>Untuk mengatur proporsi pajang dan lebar antar view kita dapat menggunakan <code>android:layout_weight=&quot;1&quot;</code> dan setiap panjang dan lebar diatur ke 0dp. Berikut contohnya :<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">  <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></div><div class="line">  <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">  <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">  <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">  &gt;</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"Guest List"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"0dp"</span></div><div class="line">    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></div><div class="line">    /&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:text</span>=<span class="string">"Kunai"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"0dp"</span></div><div class="line">    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></div><div class="line">    /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ol>
+<li>Relative Layout<br>View disusun secara sembarang.<ul>
+<li>Relative to parent, yaitu view yang disusun relatif berdasarkan pada parent.</li>
+<li>Relative to other child, yaitu view yang disusun relatif berdasarkan pada child lainya.</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Setup Project Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0.%20setup%20project/</url>
-      <content type="html"><![CDATA[<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><ul>
 <li>JDK 1.8</li>
 <li>Maven</li>
 </ul>
@@ -443,80 +550,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Android]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1.view/</url>
-      <content type="html"><![CDATA[<h1 id="Android-for-Beginner"><a href="#Android-for-Beginner" class="headerlink" title="Android for Beginner"></a>Android for Beginner</h1><h2 id="Layouting"><a href="#Layouting" class="headerlink" title="Layouting"></a>Layouting</h2><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><h4 id="Pengertian-View"><a href="#Pengertian-View" class="headerlink" title="Pengertian View"></a>Pengertian View</h4><p>View pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.</p>
-<h4 id="Macam-macam-view-berdasar-kontenya"><a href="#Macam-macam-view-berdasar-kontenya" class="headerlink" title="Macam - macam view berdasar kontenya"></a>Macam - macam view berdasar kontenya</h4><ul>
-<li>Text View</li>
-<li>Image View</li>
-<li>Button</li>
-</ul>
-<p>Dalam menuliskan pemrograman, kita diharuskan untuk menulis kode program sebagai instruksi yang spesifik dan detail.</p>
-<p>IDE (Integrated Development Environment) merupakan suatu ruang kerja berupa perangkat lunak yang digunakan untuk menulis kode program. IDE yang biasa digunakan untuk menulis kode program android adalah Android Studio.</p>
-<p>Bahasa yang digunakan untuk membuat view pada Android berupa XML.</p>
-<p>Untuk menulis kode xml anda dapat menggunakan <a href="https://udacity.github.io/android-layout" target="_blank" rel="external">https://udacity.github.io/android-layout</a>.</p>
-<p>Kode XML digambarkan sebagai berikut :<br>    <gambar 10="" video="" ke=""><br>    <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Ini Text"</span></div><div class="line">	<span class="attr">android:textColor</span>=<span class="string">"@android:color/white"</span></div><div class="line">	<span class="attr">android:background</span>=<span class="string">"@android:color/black"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"200dp"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"300dp"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure></gambar></p>
-<p>Kode tersebut memiliki ketentuan yaitu :</p>
-<ul>
-<li>Kode program ditulis di dalam tag. Tag didefinisikan dengan &lt;&gt; (kurung siku).</li>
-<li>Terdapat 2 tag yaitu tag pembuka dan tag penutup. Perbedaanya tag penutup terdapat tanda /(garis miring).</li>
-<li>Terdapat nama tag yang mewakili view yang ingin dipakai.</li>
-<li>Terdapat atribut(-atribut) yang digunakan untuk mendefinisikan view tersebut lebih lanjut. Semisal untuk konten, warna tinggi dll.</li>
-<li>Setiap atribut memiliki nilai. Nilai tersebut yang dipisahkan dari atributnya oleh tanda  = (samadengan) dan ditulis di dalam “” (tanda petik).</li>
-</ul>
-<h4 id="Text-View"><a href="#Text-View" class="headerlink" title="Text View"></a>Text View</h4><ul>
-<li>Satuan panjang (untuk panjang, tinggi dll) biasanya didefinisikan dengan satuan <code>dp</code>. Atau untuk membuatnya menyesuaikan dengan panjang dan lebar konten, dapat menggunakan <code>wrap_content</code>.</li>
-<li>Satuan ukuran font didefinisikan dengan <code>sp</code>.</li>
-<li>Referensi untuk design dapat dilihat di <a href="https://www.google.com/design/spec/material-design/introduction.html" target="_blank" rel="external">Material Design Spec</a> atau <a href="">google+ #AndroidDev #Protip</a></li>
-<li>Ukuran font dapat juga didefinisikan sebagai berikut :</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line"><span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceLarge"</span></div><div class="line"><span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceMedium"</span></div><div class="line"><span class="attr">android:textAppearance</span>=<span class="string">"?android:textAppearanceSmall"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>Untuk mengganti warna font dan atau backgound dapat diubah dengan memasukkan nama warna atau kode warna hexa desimal. Contoh :<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line"><span class="attr">android:background</span>=<span class="string">"#AAAA"</span></div><div class="line"><span class="attr">android:textColor</span>=<span class="string">"#AAAA"</span>				</div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="Image-view"><a href="#Image-view" class="headerlink" title="Image view"></a>Image view</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">  <span class="attr">android:src</span>=<span class="string">"@drawable/ocean"</span></div><div class="line">  <span class="attr">android:layout_width</span>=<span class="string">"30dp"</span></div><div class="line">  <span class="attr">android:layout_height</span>=<span class="string">"30dp"</span></div><div class="line">  <span class="attr">android:scaleType</span>=<span class="string">"centerCrop"</span></div><div class="line">/&gt;</div></pre></td></tr></table></figure>
-<p>Keterangan :</p>
-<ul>
-<li>atribut <code>android:src</code> mendefinisikan resource atau tempat beradanya file gambar. Nilainya dapat diisi “@drawable/nama_file”</li>
-<li>atribut <code>android:scaleType</code> mendefinisikan posisi dan skala gambar. Nilainya dapat diisi dengan center untuk berada di tengah atau centerCrop untuk berada di tengah dengan mempertimbangkan ukuran gambar di layar dengan menyesuaikan sudut dari view.</li>
-</ul>
-<h3 id="Memposisikan-View"><a href="#Memposisikan-View" class="headerlink" title="Memposisikan View"></a>Memposisikan View</h3><h4 id="View-Group"><a href="#View-Group" class="headerlink" title="View Group"></a>View Group</h4><p>View group ini digunakan untuk mengelompokkan berbagai macam view. Jadi dia seperti <code>div</code> pada html. View group ini juga dapat didefinisikan sebagai parent sedangkan view didefinisikan sebagai child.</p>
-<p>Cara menggambarkan view grup :</p>
-<ul>
-<li>Linear Layout<ul>
-<li>Vertical row, yaitu view yang disusun secara vertical atas-bawah.</li>
-<li>Horizontal row, yaitu view yang disusun secara horizontal kanan-kiri.</li>
-</ul>
-</li>
-<li>Relative Layout<ul>
-<li>Relative to parent, yaitu view yang disusun relatif berdasarkan pada parent.</li>
-<li>Relative to other child, yaitu view yang disusun relatif berdasarkan pada child lainya.<br><ss 3="" bisa="" diambil="" di="" no=""><br>kode XML dari view grup digambarkan sebagai berikut :<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">  <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line"><span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line"><span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>&gt;</div><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Guest List"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	/&gt;</div><div class="line"><span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">	<span class="attr">android:text</span>=<span class="string">"Kunai"</span></div><div class="line">	<span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></div><div class="line">	<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">	/&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div></pre></td></tr></table></figure>
-</ss></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Lesson 2</li>
-<li>Lesson 3</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Android </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Spring Boot]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/Spring-Boot/</url>
-      <content type="html"><![CDATA[<h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><h1 id="Development-Environment-untuk-Spring-Boot"><a href="#Development-Environment-untuk-Spring-Boot" class="headerlink" title="Development Environment untuk Spring Boot"></a>Development Environment untuk Spring Boot</h1><ul>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><h1 id="Development-Environment-untuk-Spring-Boot"><a href="#Development-Environment-untuk-Spring-Boot" class="headerlink" title="Development Environment untuk Spring Boot"></a>Development Environment untuk Spring Boot</h1><ul>
 <li>JDK 1.8</li>
 <li>Maven</li>
 </ul>
