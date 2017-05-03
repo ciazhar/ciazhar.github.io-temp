@@ -4,9 +4,35 @@
   
     
     <entry>
+      <title><![CDATA[Getting Started with Hexo]]></title>
+      <url>http://ciazhar.github.io/2017/05/03/pemrograman/hexo/hello-world/</url>
+      <content type="html"><![CDATA[<p><img src="/images/hexo.png" alt=""><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Routing Component]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/3-Routing-Component/</url>
-      <content type="html"><![CDATA[<h2 id="Routing-Top-Level-Component"><a href="#Routing-Top-Level-Component" class="headerlink" title="Routing Top Level Component"></a>Routing Top Level Component</h2><ol>
+      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+<h2 id="Routing-Top-Level-Component"><a href="#Routing-Top-Level-Component" class="headerlink" title="Routing Top Level Component"></a>Routing Top Level Component</h2><ol>
 <li><p>Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya yaitu about dan welcome. Struktur foldernya akan menjadi seperti ini</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">src/app/</div><div class="line">├── about</div><div class="line">│   ├── about.component.css</div><div class="line">│   ├── about.component.html</div><div class="line">│   ├── about.component.spec.ts</div><div class="line">│   └── about.component.ts</div><div class="line">├── app.component.css</div><div class="line">├── app.component.html</div><div class="line">├── app.component.spec.ts</div><div class="line">├── app.component.ts</div><div class="line">├── app.module.ts</div><div class="line">├── navbar</div><div class="line">│   ├── navbar.component.css</div><div class="line">│   ├── navbar.component.html</div><div class="line">│   ├── navbar.component.spec.ts</div><div class="line">│   └── navbar.component.ts</div><div class="line">├── sidebar</div><div class="line">│   ├── sidebar.component.css</div><div class="line">│   ├── sidebar.component.html</div><div class="line">│   ├── sidebar.component.spec.ts</div><div class="line">│   └── sidebar.component.ts</div><div class="line">├── transaksi</div><div class="line">│   ├── beli</div><div class="line">│   │   ├── beli.component.css</div><div class="line">│   │   ├── beli.component.html</div><div class="line">│   │   ├── beli.component.spec.ts</div><div class="line">│   │   └── beli.component.ts</div><div class="line">│   ├── jual</div><div class="line">│   │   ├── jual.component.css</div><div class="line">│   │   ├── jual.component.html</div><div class="line">│   │   ├── jual.component.spec.ts</div><div class="line">│   │   └── jual.component.ts</div><div class="line">│   ├── rekap</div><div class="line">│   │   ├── rekap.component.css</div><div class="line">│   │   ├── rekap.component.html</div><div class="line">│   │   ├── rekap.component.spec.ts</div><div class="line">│   │   └── rekap.component.ts</div><div class="line">│   └── transaksi.module.ts</div><div class="line">└── welcome</div><div class="line">    ├── welcome.component.css</div><div class="line">    ├── welcome.component.html</div><div class="line">    ├── welcome.component.spec.ts</div><div class="line">    └── welcome.component.ts</div></pre></td></tr></table></figure>
 </li>
@@ -58,7 +84,8 @@
     <entry>
       <title><![CDATA[Component dan Module]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/2-Component-dan-Module/</url>
-      <content type="html"><![CDATA[<h2 id="Membuat-Komponen"><a href="#Membuat-Komponen" class="headerlink" title="Membuat Komponen"></a>Membuat Komponen</h2><p>Untuk membuat componen dapat menggunakan perintah sebagai berikut<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g component NAMA_COMPONENT</div></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+<h2 id="Membuat-Komponen"><a href="#Membuat-Komponen" class="headerlink" title="Membuat Komponen"></a>Membuat Komponen</h2><p>Untuk membuat componen dapat menggunakan perintah sebagai berikut<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g component NAMA_COMPONENT</div></pre></td></tr></table></figure></p>
 <p>Sehingga Struktur foldernya akan menjadi seperti :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">app/</div><div class="line">├── app.component.css</div><div class="line">├── app.component.html</div><div class="line">├── app.component.spec.ts</div><div class="line">├── app.component.ts</div><div class="line">├── app.module.ts</div><div class="line">├── navbar</div><div class="line">│   ├── navbar.component.css</div><div class="line">│   ├── navbar.component.html</div><div class="line">│   ├── navbar.component.spec.ts</div><div class="line">│   └── navbar.component.ts</div><div class="line">└── sidebar</div><div class="line">    ├── sidebar.component.css</div><div class="line">    ├── sidebar.component.html</div><div class="line">    ├── sidebar.component.spec.ts</div><div class="line">    └── sidebar.component.ts</div></pre></td></tr></table></figure></p>
 <p>Navbar dan Sidebar merupakan contoh dari Top Level Component</p>
 <h2 id="Membuat-Module"><a href="#Membuat-Module" class="headerlink" title="Membuat Module"></a>Membuat Module</h2><p>Untuk membuat module dapat menggunakan<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g module NAMA_MODULE</div></pre></td></tr></table></figure></p>
@@ -81,7 +108,8 @@
     <entry>
       <title><![CDATA[Setup Project Angular2]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/1-Setup-Project-Angular2/</url>
-      <content type="html"><![CDATA[<h2 id="Menginstall-Node-dan-NPM"><a href="#Menginstall-Node-dan-NPM" class="headerlink" title="Menginstall Node dan NPM"></a>Menginstall Node dan NPM</h2><p>Untuk menginstall node saya menyarankan menggunakan tutorial dari <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04" target="_blank" rel="external">Digital Ocean</a> dengan menggunakan nvm.</p>
+      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+<h2 id="Menginstall-Node-dan-NPM"><a href="#Menginstall-Node-dan-NPM" class="headerlink" title="Menginstall Node dan NPM"></a>Menginstall Node dan NPM</h2><p>Untuk menginstall node saya menyarankan menggunakan tutorial dari <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04" target="_blank" rel="external">Digital Ocean</a> dengan menggunakan nvm.</p>
 <h2 id="Menginstall-Angular-CLI"><a href="#Menginstall-Angular-CLI" class="headerlink" title="Menginstall Angular CLI"></a>Menginstall Angular CLI</h2><p>Angular ini adalah salah satu tools untuk membuat aplikasi angular2. Untuk menggunakanya cukup ketikkan kode berikut apda terminal.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g @angular/cli</div></pre></td></tr></table></figure></p>
 <h2 id="Membuat-Project-Angular2"><a href="#Membuat-Project-Angular2" class="headerlink" title="Membuat Project Angular2"></a>Membuat Project Angular2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng new NAMA_PROJECT</div></pre></td></tr></table></figure>
 <p>Setelah itu akan dibuat struktur folder sebagai berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line">angular2-spring-boot-pegadaian/</div><div class="line">├── .git</div><div class="line">│   ├── branches</div><div class="line">│   ├── COMMIT_EDITMSG</div><div class="line">│   ├── config</div><div class="line">│   ├── description</div><div class="line">│   ├── HEAD</div><div class="line">│   ├── hooks</div><div class="line">│   │   ├── applypatch-msg.sample</div><div class="line">│   │   ├── commit-msg.sample</div><div class="line">│   │   ├── post-update.sample</div><div class="line">│   │   ├── pre-applypatch.sample</div><div class="line">│   │   ├── pre-commit.sample</div><div class="line">│   │   ├── prepare-commit-msg.sample</div><div class="line">│   │   ├── pre-push.sample</div><div class="line">│   │   ├── pre-rebase.sample</div><div class="line">│   │   └── update.sample</div><div class="line">│   ├── index</div><div class="line">│   ├── info</div><div class="line">│   │   └── exclude</div><div class="line">│   ├── logs</div><div class="line">│   │   ├── HEAD</div><div class="line">│   │   └── refs</div><div class="line">│   │       └── heads</div><div class="line">│   │           └── master</div><div class="line">│   ├── objects</div><div class="line">│   │   ├── 82</div><div class="line">│   │   │   └── e3a754b6a0fcb238b03c0e47d05219fbf9cf89</div><div class="line">│   │   ├── e6</div><div class="line">│   │   │   └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391</div><div class="line">│   │   ├── f1</div><div class="line">│   │   │   └── 65300d6c67d5599ceb9b0ed355c2a8cbe336bf</div><div class="line">│   │   ├── info</div><div class="line">│   │   └── pack</div><div class="line">│   └── refs</div><div class="line">│       ├── heads</div><div class="line">│       │   └── master</div><div class="line">│       └── tags</div><div class="line">├── .gitignore</div><div class="line">└── NAMA_PROJECT</div><div class="line">    ├── .angular-cli.json</div><div class="line">    ├── e2e</div><div class="line">    │   ├── app.e2e-spec.ts</div><div class="line">    │   ├── app.po.ts</div><div class="line">    │   └── tsconfig.e2e.json</div><div class="line">    ├── .editorconfig</div><div class="line">    ├── .gitignore</div><div class="line">    ├── karma.conf.js</div><div class="line">    ├── package.json</div><div class="line">    ├── protractor.conf.js</div><div class="line">    ├── README.md</div><div class="line">    ├── src</div><div class="line">    │   ├── app</div><div class="line">    │   │   ├── app.component.css</div><div class="line">    │   │   ├── app.component.html</div><div class="line">    │   │   ├── app.component.spec.ts</div><div class="line">    │   │   ├── app.component.ts</div><div class="line">    │   │   └── app.module.ts</div><div class="line">    │   ├── assets</div><div class="line">    │   │   └── .gitkeep</div><div class="line">    │   ├── environments</div><div class="line">    │   │   ├── environment.prod.ts</div><div class="line">    │   │   └── environment.ts</div><div class="line">    │   ├── favicon.ico</div><div class="line">    │   ├── index.html</div><div class="line">    │   ├── main.ts</div><div class="line">    │   ├── polyfills.ts</div><div class="line">    │   ├── styles.css</div><div class="line">    │   ├── test.ts</div><div class="line">    │   ├── tsconfig.app.json</div><div class="line">    │   ├── tsconfig.spec.json</div><div class="line">    │   └── typings.d.ts</div><div class="line">    ├── tsconfig.json</div><div class="line">    └── tslint.json</div></pre></td></tr></table></figure></p>
@@ -126,7 +154,8 @@
     <entry>
       <title><![CDATA[Introduction to Angular2]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+]]></content>
       
         <categories>
             
@@ -140,34 +169,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Getting Started with Hexo]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/hexo/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Hexo </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Jasper Report]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5.%20jasper-report/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <ol>
 <li><p>Tambahkan dependency</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context-support<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.github.jpenren<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-spring-data-dialect<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>net.sf.jasperreports<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jasperreports<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>6.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.10.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -200,7 +204,7 @@
     <entry>
       <title><![CDATA[Thymeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4.%20layout%20dengan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; name=&quot;userName&quot; value=&quot;James Carrot&quot; th:value=&quot;$&#123;user.name&#125;&quot; /&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Menggunakan-Thymeleaf"><a href="#Menggunakan-Thymeleaf" class="headerlink" title="Menggunakan Thymeleaf"></a>Menggunakan Thymeleaf</h1><p>  Tambahkan xmlns dibawah ini pada tag html<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Expression-di-Thymeleaf"><a href="#Expression-di-Thymeleaf" class="headerlink" title="Expression di Thymeleaf"></a>Expression di Thymeleaf</h1><ul>
@@ -235,7 +239,7 @@
     <entry>
       <title><![CDATA[Otorisasi Login dengan spring security]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.%20otorisasi%20login%20dengan%20spring%20security/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
 <li><p>Tambahkan dependency (pom.xml)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
@@ -268,7 +272,7 @@
     <entry>
       <title><![CDATA[Kardinalitas]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.4.kardinalitas/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 ]]></content>
       
         <categories>
@@ -287,7 +291,7 @@
     <entry>
       <title><![CDATA[Generate Content pada Client Side Menggunakan AngularJS]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.3.%20generate%20content%20dari%20client%20side%20dengan%20AngularJS/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Generate-Content-pada-Client-Side-Menggunakan-AngularJS"><a href="#Generate-Content-pada-Client-Side-Menggunakan-AngularJS" class="headerlink" title="Generate Content pada Client Side Menggunakan AngularJS"></a>Generate Content pada Client Side Menggunakan AngularJS</h1><p>  Kita akan coba menggenate content dari materi.</p>
 <h2 id="Memulai-AngularJS"><a href="#Memulai-AngularJS" class="headerlink" title="Memulai AngularJS"></a>Memulai AngularJS</h2><ul>
 <li><p>Membuat file html (src/main/resources/templates/materi/listMateri.html)</p>
@@ -383,7 +387,7 @@
     <entry>
       <title><![CDATA[Menggunakan Entity Manager Factory]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.2.%20menggunakan%20entity%20manager%20factory/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
 <li><p>Buat Model Peserta(main/java/domain/entity/Peserta.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">public class Peserta&#123;</div><div class="line">  @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">  @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">  private String id;</div><div class="line"></div><div class="line">  @Column(nullable=false)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  @Size(min = 1, max = 150)</div><div class="line">  private String nama;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @Email</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String email;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String noHp;</div><div class="line"></div><div class="line">  @Version</div><div class="line">  @Column(columnDefinition= &quot;integer DEFAULT 0&quot;)</div><div class="line">  private Integer version;</div></pre></td></tr></table></figure>
@@ -432,7 +436,7 @@
     <entry>
       <title><![CDATA[Menggunakan Paging and Sorting Repository]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.1.%20menggunakan%20paging%20and%20sorting%20repository/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
 <li><p>Membuat model (src/main/java/domain/model/PesertaPaging.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">@Entity @Table(name = &quot;t_peserta&quot;)</div><div class="line">public class PesertaPaging &#123;</div><div class="line"></div><div class="line">    @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">    @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">    private String id;</div><div class="line"></div><div class="line">    @Column(nullable=false)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    @Size(min = 1, max = 150)</div><div class="line">    private String nama;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @Email</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String email;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -471,7 +475,7 @@
     <entry>
       <title><![CDATA[Generate Content dari Server Side]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.%20generate%20content%20dari%20server%20side%20dengan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Generate-Content-dari-Server-Side"><a href="#Generate-Content-dari-Server-Side" class="headerlink" title="Generate Content dari Server Side"></a>Generate Content dari Server Side</h1><p>Ada banyak cara dalam melakukan crud di springframework. contoh :</p>
 <ul>
 <li>menggunakan entity manager factory</li>
@@ -495,7 +499,7 @@
     <entry>
       <title><![CDATA[CRUD dengan spring data jpa]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.1.%20crud%20dengan%20spring%20data%20jpa/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
 <li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
@@ -528,7 +532,7 @@
     <entry>
       <title><![CDATA[Membuat Laman Web Sederhana]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1.%20membuat%20halaman%20web%20sederhana%20dengan%20spring%20boot%20starter%20web%20dan%20thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
 <li><p>Buat simple controller(main/java/domain/Controllers/HaloController.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class HaloController&#123;</div><div class="line">  @RequestMapping(&quot;/&quot;)</div><div class="line">  public String halo()&#123;</div><div class="line">    return &quot;index&quot;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -547,46 +551,6 @@
 <li><code>th:src</code>(dlm html <code>src</code>) digunakan untuk menginjek js. js tersebut dapat di simpan di <code>src/main/resources/static/js</code>. contoh : <code>&lt;script th:src=&quot;@{/js/jquery.min.js}&quot;&gt;&lt;/script&gt;</code></li>
 </ul>
 </li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Setup Project Spring]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0.%20setup%20project/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><ul>
-<li>JDK 1.8</li>
-<li>Maven</li>
-</ul>
-<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
-<li>Buka browser masukkan url <code>http://start.spring.io/</code></li>
-<li>Masukkan sebagai berikut<ul>
-<li>groupId : <code>com.ciazhar</code></li>
-<li>artifactId : <code>aplikasi-spring</code></li>
-<li>dependency : <code>web</code>,<code>thymeleaf</code></li>
-</ul>
-</li>
-<li>Download sample project</li>
-<li>Add project ke text editor</li>
-</ul>
-<p>Note :<br>Pada Project tersebut terdapat 3 buah file utama yaitu :</p>
-<ul>
-<li>pom.xml (konfigurasi maven)</li>
-<li>application.properties (konfigurasi project)</li>
-<li>Application.java (main class)</li>
 </ul>
 ]]></content>
       
@@ -710,9 +674,49 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Setup Project Spring]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0.%20setup%20project/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><ul>
+<li>JDK 1.8</li>
+<li>Maven</li>
+</ul>
+<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
+<li>Buka browser masukkan url <code>http://start.spring.io/</code></li>
+<li>Masukkan sebagai berikut<ul>
+<li>groupId : <code>com.ciazhar</code></li>
+<li>artifactId : <code>aplikasi-spring</code></li>
+<li>dependency : <code>web</code>,<code>thymeleaf</code></li>
+</ul>
+</li>
+<li>Download sample project</li>
+<li>Add project ke text editor</li>
+</ul>
+<p>Note :<br>Pada Project tersebut terdapat 3 buah file utama yaitu :</p>
+<ul>
+<li>pom.xml (konfigurasi maven)</li>
+<li>application.properties (konfigurasi project)</li>
+<li>Application.java (main class)</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring Framework </category>
+            
+            <category> Spring Boot </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Spring Boot]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/Spring-Boot/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><h1 id="Development-Environment-untuk-Spring-Boot"><a href="#Development-Environment-untuk-Spring-Boot" class="headerlink" title="Development Environment untuk Spring Boot"></a>Development Environment untuk Spring Boot</h1><ul>
 <li>JDK 1.8</li>
 <li>Maven</li>
