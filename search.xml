@@ -4,10 +4,35 @@
   
     
     <entry>
+      <title><![CDATA[Setup Project Hexo]]></title>
+      <url>http://ciazhar.github.io/2017/05/07/pemrograman/hexo/1-Setup-Project-Hexo/</url>
+      <content type="html"><![CDATA[<p><img src="/images/hexo.png" alt=""></p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Introduction to Hexo]]></title>
       <url>http://ciazhar.github.io/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/</url>
       <content type="html"><![CDATA[<p><img src="/images/hexo.png" alt=""></p>
-<h1 id="Sekilas-tentang-Hexo"><a href="#Sekilas-tentang-Hexo" class="headerlink" title="Sekilas tentang Hexo"></a>Sekilas tentang Hexo</h1><p><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> merupakan suatu framework untuk mempermudah dalam Blog. Untuk mengulis konten pada Hexo, dapat menggunakan <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a> yang kemudian akan dicompile menjadi html. Untuk Layout dan Design dapat menggunkaan <a href="http://ejs.co/" target="_blank" rel="external">EJS</a>.</p>
+<h1 id="Sekilas-tentang-Hexo"><a href="#Sekilas-tentang-Hexo" class="headerlink" title="Sekilas tentang Hexo"></a>Sekilas tentang Hexo</h1><p><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> merupakan suatu framework untuk mempermudah dalam membuat Blog atau Website probadi. Untuk mengulis konten pada Hexo, dapat menggunakan <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a> yang kemudian akan dicompile menjadi html. Untuk Layout dan Design dapat menggunkaan <a href="http://ejs.co/" target="_blank" rel="external">EJS</a>.</p>
 <h1 id="Roadmap-Belajar-Hexo"><a href="#Roadmap-Belajar-Hexo" class="headerlink" title="Roadmap Belajar Hexo"></a>Roadmap Belajar Hexo</h1>]]></content>
       
         <categories>
