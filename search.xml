@@ -4,6 +4,42 @@
   
     
     <entry>
+      <title><![CDATA[0. Introduction to Hexo]]></title>
+      <url>http://ciazhar.github.io/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/</url>
+      <content type="html"><![CDATA[<p><img src="/images/hexo.png" alt=""></p>
+<h1 id="Sekilas-tentang-Hexo"><a href="#Sekilas-tentang-Hexo" class="headerlink" title="Sekilas tentang Hexo"></a>Sekilas tentang Hexo</h1><p><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> merupakan suatu framework untuk mempermudah dalam Blog. Untuk mengulis konten pada Hexo, dapat menggunakan <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a> yang kemudian akan dicompile menjadi html. Untuk Layout dan Design dapat menggunkaan <a href="http://ejs.co/" target="_blank" rel="external">EJS</a>.</p>
+<h1 id="Roadmap-Belajar-Hexo"><a href="#Roadmap-Belajar-Hexo" class="headerlink" title="Roadmap Belajar Hexo"></a>Roadmap Belajar Hexo</h1>]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Introduction to Android]]></title>
+      <url>http://ciazhar.github.io/2017/05/07/pemrograman/android/0-Introduction-to-Android/</url>
+      <content type="html"><![CDATA[<p><img src="/images/android.jpg" alt=""></p>
+<h1 id="Sekilas-tentang-Android"><a href="#Sekilas-tentang-Android" class="headerlink" title="Sekilas tentang Android"></a>Sekilas tentang Android</h1><p><a href="https://developer.android.com/" target="_blank" rel="external">Android</a> merupakan Sistem Operasi untuk mobile. Aplikasi android native sendiri dapat dibangun menggunakan XML(untuk design) dan Java(untuk logic). Pada Tutorial kali ini kita akan coba membuat aplikasi Android native.</p>
+<h1 id="Roadmap-Belajar-Android-Native"><a href="#Roadmap-Belajar-Android-Native" class="headerlink" title="Roadmap Belajar Android Native"></a>Roadmap Belajar Android Native</h1>]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Android </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Getting Started with Hexo]]></title>
       <url>http://ciazhar.github.io/2017/05/03/pemrograman/hexo/hello-world/</url>
       <content type="html"><![CDATA[<p><img src="/images/hexo.png" alt=""><br>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
@@ -74,7 +110,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Angular2 </category>
+            <category> Angular </category>
             
         </categories>
         
@@ -98,7 +134,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Angular2 </category>
+            <category> Angular </category>
             
         </categories>
         
@@ -144,7 +180,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Angular2 </category>
+            <category> Angular </category>
             
         </categories>
         
@@ -155,13 +191,14 @@
       <title><![CDATA[Introduction to Angular2]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/</url>
       <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
-]]></content>
+<h1 id="Sekilas-tentang-Angular"><a href="#Sekilas-tentang-Angular" class="headerlink" title="Sekilas tentang Angular"></a>Sekilas tentang Angular</h1><p><a href="https://angular.io" target="_blank" rel="external">Angular</a> merupakan framework untuk membangun aplikasi frontend web, desktop dan mobile. Angular sendiri berbasis bahasa pemrograman Typescript. Pada Tutorial kali ini kita akan coba membuat aplikasi angular berbasis frontend web.</p>
+<h1 id="Roadmap-Belajar-Angular"><a href="#Roadmap-Belajar-Angular" class="headerlink" title="Roadmap Belajar Angular"></a>Roadmap Belajar Angular</h1>]]></content>
       
         <categories>
             
             <category> Pemrograman </category>
             
-            <category> Angular2 </category>
+            <category> Angular </category>
             
         </categories>
         
@@ -170,7 +207,7 @@
     
     <entry>
       <title><![CDATA[Jasper Report]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5.%20jasper-report/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/6.%20jasper-report/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <ol>
 <li><p>Tambahkan dependency</p>
@@ -203,7 +240,7 @@
     
     <entry>
       <title><![CDATA[Thymeleaf]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4.%20layout%20dengan%20thymeleaf/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5.%20layout%20dengan%20thymeleaf/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; name=&quot;userName&quot; value=&quot;James Carrot&quot; th:value=&quot;$&#123;user.name&#125;&quot; /&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Menggunakan-Thymeleaf"><a href="#Menggunakan-Thymeleaf" class="headerlink" title="Menggunakan Thymeleaf"></a>Menggunakan Thymeleaf</h1><p>  Tambahkan xmlns dibawah ini pada tag html<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure></p>
@@ -238,7 +275,7 @@
     
     <entry>
       <title><![CDATA[Otorisasi Login dengan spring security]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.%20otorisasi%20login%20dengan%20spring%20security/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4.%20otorisasi%20login%20dengan%20spring%20security/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
 <li><p>Tambahkan dependency (pom.xml)</p>
@@ -271,7 +308,7 @@
     
     <entry>
       <title><![CDATA[Kardinalitas]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.4.kardinalitas/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.4.kardinalitas/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 ]]></content>
       
@@ -290,7 +327,7 @@
     
     <entry>
       <title><![CDATA[Generate Content pada Client Side Menggunakan AngularJS]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.3.%20generate%20content%20dari%20client%20side%20dengan%20AngularJS/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.3.%20generate%20content%20dari%20client%20side%20dengan%20AngularJS/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Generate-Content-pada-Client-Side-Menggunakan-AngularJS"><a href="#Generate-Content-pada-Client-Side-Menggunakan-AngularJS" class="headerlink" title="Generate Content pada Client Side Menggunakan AngularJS"></a>Generate Content pada Client Side Menggunakan AngularJS</h1><p>  Kita akan coba menggenate content dari materi.</p>
 <h2 id="Memulai-AngularJS"><a href="#Memulai-AngularJS" class="headerlink" title="Memulai AngularJS"></a>Memulai AngularJS</h2><ul>
@@ -386,7 +423,7 @@
     
     <entry>
       <title><![CDATA[Menggunakan Entity Manager Factory]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.2.%20menggunakan%20entity%20manager%20factory/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.2.%20menggunakan%20entity%20manager%20factory/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
 <li><p>Buat Model Peserta(main/java/domain/entity/Peserta.java)</p>
@@ -435,7 +472,7 @@
     
     <entry>
       <title><![CDATA[Menggunakan Paging and Sorting Repository]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.1.%20menggunakan%20paging%20and%20sorting%20repository/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1.%20menggunakan%20paging%20and%20sorting%20repository/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
 <li><p>Membuat model (src/main/java/domain/model/PesertaPaging.java)</p>
@@ -474,7 +511,7 @@
     
     <entry>
       <title><![CDATA[Generate Content dari Server Side]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.2.%20generate%20content%20dari%20server%20side%20dengan%20thymeleaf/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.%20generate%20content%20dari%20server%20side%20dengan%20thymeleaf/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Generate-Content-dari-Server-Side"><a href="#Generate-Content-dari-Server-Side" class="headerlink" title="Generate Content dari Server Side"></a>Generate Content dari Server Side</h1><p>Ada banyak cara dalam melakukan crud di springframework. contoh :</p>
 <ul>
@@ -498,7 +535,7 @@
     
     <entry>
       <title><![CDATA[CRUD dengan spring data jpa]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.1.%20crud%20dengan%20spring%20data%20jpa/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1.%20crud%20dengan%20spring%20data%20jpa/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
 <li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
@@ -531,7 +568,7 @@
     
     <entry>
       <title><![CDATA[Membuat Laman Web Sederhana]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1.%20membuat%20halaman%20web%20sederhana%20dengan%20spring%20boot%20starter%20web%20dan%20thymeleaf/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2.%20membuat%20halaman%20web%20sederhana%20dengan%20spring%20boot%20starter%20web%20dan%20thymeleaf/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
 <li><p>Buat simple controller(main/java/domain/Controllers/HaloController.java)</p>
@@ -660,6 +697,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">RelativeView</span>&gt;</span></div><div class="line">  ....</div><div class="line">  <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">    <span class="attr">android:layout_alignParentTop</span>=<span class="string">"true/false"</span></div><div class="line">    <span class="attr">android:layout_alignParentButton</span>=<span class="string">"true/false"</span></div><div class="line">    <span class="attr">android:layout_alignParentLeft</span>=<span class="string">"true/false"</span></div><div class="line">    <span class="attr">android:layout_alignParentRight</span>=<span class="string">"true/false"</span>&gt;</div><div class="line"><span class="tag">&lt;<span class="name">RelativeView</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
+<p><a href="https://icons8.com/android-icons/" target="_blank" rel="external">https://icons8.com/android-icons/</a></p>
 ]]></content>
       
         <categories>
@@ -675,7 +713,7 @@
     
     <entry>
       <title><![CDATA[Setup Project Spring]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0.%20setup%20project/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1.%20setup%20project/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
 <h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><ul>
 <li>JDK 1.8</li>
@@ -715,28 +753,22 @@
     
     <entry>
       <title><![CDATA[Spring Boot]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/Spring-Boot/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0.%20introduction-to-spring-boot/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
-<h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><h1 id="Development-Environment-untuk-Spring-Boot"><a href="#Development-Environment-untuk-Spring-Boot" class="headerlink" title="Development Environment untuk Spring Boot"></a>Development Environment untuk Spring Boot</h1><ul>
-<li>JDK 1.8</li>
-<li>Maven</li>
-</ul>
-<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
-<li>Buka browser masukkan url <code>http://start.spring.io/</code></li>
-<li>Masukkan sebagai berikut<ul>
-<li>groupId : <code>com.ciazhar</code></li>
-<li>artifactId : <code>aplikasi-spring</code></li>
-<li>dependency : <code>web</code>,<code>thymeleaf</code></li>
-</ul>
-</li>
-<li>Download sample project</li>
-<li>Add project ke text editor</li>
-</ul>
-<p>Note :<br>Pada Project tersebut terdapat 3 buah file utama yaitu :</p>
-<ul>
-<li>pom.xml (konfigurasi maven)</li>
-<li>application.properties (konfigurasi project)</li>
-<li>Application.java (main class)</li>
+<h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><p><a href="http://projects.spring.io/spring-boot/" target="_blank" rel="external">Spring Boot</a> merupakan suatu framework untuk mempermudah dalam membangun aplikasi spring tanpa harus mengkonfigurasi setiap komponenya. Spring sendiri adalah framework untuk membuat aplikasi berbasis enterprise menggunakan bahasa-bahasa JVM. Pada Tutorial kali ini kita akan coba membuat aplikasi spring berbasis backend web.</p>
+<h1 id="Roadmap-Belajar-Spring-Boot"><a href="#Roadmap-Belajar-Spring-Boot" class="headerlink" title="Roadmap Belajar Spring Boot"></a>Roadmap Belajar Spring Boot</h1><ul>
+<li><a href="">Setup Development Environment</a></li>
+<li><a href="">Membuat Web Menggunakan Spring Boot dan Thyeleaf</a></li>
+<li><a href="">CRUD dengan Spring Data JPA</a></li>
+<li><a href="">Generate content dari server side menggunakan Thymeleaf</a></li>
+<li><a href="">Menggunakan Paging and sorting repostory</a></li>
+<li><a href="">Menggunakan Entity Manager Factory</a></li>
+<li><a href="">Generate content dari client side menggunkan AngularJS</a></li>
+<li><a href="">Kardinalitas dengan Spring Data JPA</a></li>
+<li><a href="">Validasi menggunakan JSR-303</a></li>
+<li><a href="">Otoriasai login dengan Spring Security</a></li>
+<li><a href="">Layouting dengan Thymeleaf</a></li>
+<li><a href="">Membuat Report dengan Jasper Report</a></li>
 </ul>
 ]]></content>
       

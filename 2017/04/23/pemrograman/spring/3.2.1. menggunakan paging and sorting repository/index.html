@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Menggunakan Paging and Sorting Repository | ciazhar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Menggunakan Paging and Sorting Repository
+Membuat model (src/main/java/domain/model/PesertaPaging.java)
+123456789101112131415161718192021222324@Entity @Table(name = &amp;quot;t_peserta&amp;quot;)public class">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Menggunakan Paging and Sorting Repository">
+<meta property="og:url" content="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1. menggunakan paging and sorting repository/index.html">
+<meta property="og:site_name" content="ciazhar">
+<meta property="og:description" content="Menggunakan Paging and Sorting Repository
+Membuat model (src/main/java/domain/model/PesertaPaging.java)
+123456789101112131415161718192021222324@Entity @Table(name = &amp;quot;t_peserta&amp;quot;)public class">
+<meta property="og:image" content="http://ciazhar.github.io/images/springboot.jpg">
+<meta property="og:updated_time" content="2017-05-03T09:11:20.465Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Menggunakan Paging and Sorting Repository">
+<meta name="twitter:description" content="Menggunakan Paging and Sorting Repository
+Membuat model (src/main/java/domain/model/PesertaPaging.java)
+123456789101112131415161718192021222324@Entity @Table(name = &amp;quot;t_peserta&amp;quot;)public class">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Someone INTJs</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Beranda</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">Tentang</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'pos',
+            PAGES: 'Pages',
+            CATEGORIES: 'kategori',
+            TAGS: 'tag',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-pemrograman/spring/3.2.1. menggunakan paging and sorting repository" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Menggunakan Paging and Sorting Repository
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/04/23/pemrograman/spring/3.2.1. menggunakan paging and sorting repository/" class="article-date">
+            <time datetime="2017-04-23T07:17:33.000Z" itemprop="datePublished">2017-04-23</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/springboot.jpg" alt=""></p>
+<h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
+<li><p>Membuat model (src/main/java/domain/model/PesertaPaging.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">@Entity @Table(name = &quot;t_peserta&quot;)</div><div class="line">public class PesertaPaging &#123;</div><div class="line"></div><div class="line">    @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">    @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">    private String id;</div><div class="line"></div><div class="line">    @Column(nullable=false)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    @Size(min = 1, max = 150)</div><div class="line">    private String nama;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @Email</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String email;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Generate getter dan setter (src/main/java/domain/model/PesertaPaging.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public String getId() &#123;</div><div class="line">    return id;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public void setId(String id) &#123;</div><div class="line">    this.id = id;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public String getNama() &#123;</div><div class="line">    return nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public void setNama(String nama) &#123;</div><div class="line">    this.nama = nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public String getEmail() &#123;</div><div class="line">    return email;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public void setEmail(String email) &#123;</div><div class="line">    this.email = email;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public String getNoHp() &#123;</div><div class="line">    return noHp;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public void setNoHp(String noHp) &#123;</div><div class="line">    this.noHp = noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Membuat dao (src/main/java/domain/dao/PesertaPagingDao.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public interface PesertaPagingDao extends PagingAndSortingRepository&lt;PesertaPaging, String&gt;&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Membuat controller (src/main/java/domain/controller/PesertaPagingController.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">@RequestMapping(&quot;/peserta&quot;)</div><div class="line">public class PesertaPagingController &#123;</div><div class="line"></div><div class="line">    @Autowired</div><div class="line">    PesertaPagingDao pesertaPagingDao;</div><div class="line"></div><div class="line">    @RequestMapping(&quot;/list&quot;)</div><div class="line">    public String listPeserta(ModelMap modelMap)&#123;</div><div class="line">        modelMap.put(&quot;peserta&quot;,pesertaPagingDao.findAll());</div><div class="line">        return &quot;/peserta/list&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @RequestMapping(value = &quot;/form&quot;, method = RequestMethod.GET)</div><div class="line">    public void tampilkanForm(</div><div class="line">            @RequestParam(required = false, name = &quot;id&quot;) PesertaPaging peserta,</div><div class="line">            ModelMap mm)&#123;</div><div class="line">        if(peserta != null)&#123;</div><div class="line">            mm.addAttribute(&quot;peserta&quot;, peserta);</div><div class="line">        &#125; else &#123;</div><div class="line">            mm.addAttribute(&quot;peserta&quot;, new PesertaPaging());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    @RequestMapping(value = &quot;/form&quot;, method = RequestMethod.POST)</div><div class="line">    public String prosesForm(@ModelAttribute @Valid PesertaPaging p, BindingResult hasilValidasi)&#123;</div><div class="line">        if(hasilValidasi.hasErrors())&#123;</div><div class="line">            return &quot;/peserta/form&quot;;</div><div class="line">        &#125;</div><div class="line">        pesertaPagingDao.save(p);</div><div class="line">        return &quot;redirect:list&quot;;</div><div class="line">    &#125;</div><div class="line">    @RequestMapping(value = &quot;/hapus&quot;)</div><div class="line">    public String hapusPeserta(@RequestParam(name = &quot;id&quot;)String id,ModelMap modelMap)&#123;</div><div class="line">        pesertaPagingDao.delete(id);</div><div class="line">        return &quot;redirect:list&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Membuat UI (src/main/resources/templates/peserta/list.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;Aplikasi Spring Boot&lt;/title&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/bootstrap.min.css&#125;&quot;  media=&quot;screen&quot;/&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/starter-template.css&#125;&quot; media=&quot;screen&quot;/&gt;</div><div class="line"></div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;</div><div class="line">    &lt;div class=&quot;container&quot;&gt;</div><div class="line">        &lt;div class=&quot;navbar-header&quot;&gt;</div><div class="line">            &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;</div><div class="line">                &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;/button&gt;</div><div class="line">            &lt;a class=&quot;navbar-brand&quot; th:href=&quot;@&#123;/&#125;&quot;&gt;ciazhar&lt;/a&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div id=&quot;navbar&quot; class=&quot;collapse navbar-collapse&quot;&gt;</div><div class="line">            &lt;ul class=&quot;nav navbar-nav&quot;&gt;</div><div class="line">                &lt;li class=&quot;active&quot;&gt;&lt;a th:href=&quot;@&#123;/peserta&#125;&quot;&gt;Daftar Peserta&lt;/a&gt;&lt;/li&gt;</div><div class="line">                &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;</div><div class="line">                &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;/ul&gt;</div><div class="line">        &lt;/div&gt;&lt;!--/.nav-collapse --&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/nav&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;h1&gt;Daftar Peserta&lt;/h1&gt;</div><div class="line">    &lt;div th:if=&quot;$&#123;not #lists.isEmpty(peserta)&#125;&quot;&gt;</div><div class="line">        &lt;table class=&quot;table table-striped&quot;&gt;</div><div class="line">            &lt;tr&gt;</div><div class="line">                &lt;th&gt;Nama&lt;/th&gt;</div><div class="line">                &lt;th&gt;Email&lt;/th&gt;</div><div class="line">                &lt;th&gt;No Hp&lt;/th&gt;</div><div class="line">                &lt;th&gt;Action&lt;/th&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">            &lt;tr th:each=&quot;pesertas : $&#123;peserta&#125;&quot;&gt;</div><div class="line">                &lt;td th:text=&quot;$&#123;pesertas.nama&#125;&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td th:text=&quot;$&#123;pesertas.email&#125;&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td th:text=&quot;$&#123;pesertas.noHp&#125;&quot;&gt;&lt;/td&gt;</div><div class="line">                &lt;td&gt;</div><div class="line">                    &lt;a th:href=&quot;@&#123;/peserta/form(id=$&#123;pesertas.id&#125;)&#125;&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-edit&quot;&gt;&lt;/span&gt;&lt;/a&gt;</div><div class="line">                    &lt;a th:href=&quot;@&#123;/peserta/hapus(id=$&#123;pesertas.id&#125;)&#125;&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-remove&quot;&gt;&lt;/span&gt;&lt;/a&gt;</div><div class="line">                &lt;/td&gt;</div><div class="line">            &lt;/tr&gt;</div><div class="line">        &lt;/table&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;a class=&quot;btn btn-default&quot; th:href=&quot;@&#123;/peserta/form&#125;&quot;&gt;New&lt;/a&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;script th:src=&quot;@&#123;/js/jquery.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script th:src=&quot;@&#123;/js/bootstrap.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Membuat UI (src/main/resources/templates/peserta/form.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;title&gt;Aplikasi Spring Boot&lt;/title&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/bootstrap.min.css&#125;&quot;  media=&quot;screen&quot;/&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/starter-template.css&#125;&quot; media=&quot;screen&quot;/&gt;</div><div class="line"></div><div class="line">&lt;/head&gt;</div><div class="line"></div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;</div><div class="line">    &lt;div class=&quot;container&quot;&gt;</div><div class="line">        &lt;div class=&quot;navbar-header&quot;&gt;</div><div class="line">            &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;</div><div class="line">                &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;/button&gt;</div><div class="line">            &lt;a class=&quot;navbar-brand&quot; th:href=&quot;@&#123;/&#125;&quot;&gt;ciazhar&lt;/a&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">        &lt;div id=&quot;navbar&quot; class=&quot;collapse navbar-collapse&quot;&gt;</div><div class="line">            &lt;ul class=&quot;nav navbar-nav&quot;&gt;</div><div class="line">                &lt;li class=&quot;active&quot;&gt;&lt;a th:href=&quot;@&#123;/peserta&#125;&quot;&gt;Daftar Peserta&lt;/a&gt;&lt;/li&gt;</div><div class="line">                &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;</div><div class="line">                &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;</div><div class="line">            &lt;/ul&gt;</div><div class="line">        &lt;/div&gt;&lt;!--/.nav-collapse --&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/nav&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;h1&gt;Form Peserta&lt;/h1&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;</div><div class="line">        &lt;div class=&quot;col-sm-8&quot;&gt;</div><div class="line">            &lt;form class=&quot;form-horizontal&quot; th:object=&quot;$&#123;peserta&#125;&quot; th:action=&quot;@&#123;/peserta/form&#125;&quot; method=&quot;post&quot;&gt;</div><div class="line">                &lt;input type=&quot;hidden&quot; th:field=&quot;*&#123;id&#125;&quot;/&gt;</div><div class="line">                &lt;div class=&quot;form-group&quot;&gt;</div><div class="line">                    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Nama:&lt;/label&gt;</div><div class="line">                    &lt;div class=&quot;col-sm-10&quot;&gt;</div><div class="line">                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; th:field=&quot;*&#123;nama&#125;&quot;/&gt;</div><div class="line">                    &lt;/div&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line"></div><div class="line">                &lt;div class=&quot;form-group&quot;&gt;</div><div class="line">                    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Email:&lt;/label&gt;</div><div class="line">                    &lt;div class=&quot;col-sm-10&quot;&gt;</div><div class="line">                        &lt;input type=&quot;email&quot; class=&quot;form-control&quot; th:field=&quot;*&#123;email&#125;&quot;/&gt;</div><div class="line">                    &lt;/div&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line"></div><div class="line">                &lt;div class=&quot;form-group&quot;&gt;</div><div class="line">                    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Nomer HP:&lt;/label&gt;</div><div class="line">                    &lt;div class=&quot;col-sm-10&quot;&gt;</div><div class="line">                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; th:field=&quot;*&#123;noHp&#125;&quot;/&gt;</div><div class="line">                    &lt;/div&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line"></div><div class="line">                &lt;div class=&quot;form-group&quot;&gt;</div><div class="line">                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-deffault&quot;&gt;Simpan&lt;/button&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">            &lt;/form&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;script th:src=&quot;@&#123;/js/jquery.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script th:src=&quot;@&#123;/js/bootstrap.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1. menggunakan paging and sorting repository/" data-id="cj2ea53sw001exglp9o66nndo" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>ikuti:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com/kid.dont.cry" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ciazhar" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="telegram" href="http://telegram.me/ciazhar" target="_blank">
+                        <i class="icon fa fa-telegram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    <!-- 
+        
+<nav id="article-nav">
+    
+        <a href="/2017/04/23/pemrograman/spring/3.2.2. menggunakan entity manager factory/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            Menggunakan Entity Manager Factory
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/04/23/pemrograman/spring/3.2. generate content dari server side dengan thymeleaf/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih lawas</strong>
+        <p class="article-nav-title">Generate Content dari Server Side</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+     -->
+
+    <div class="widget-wrap">
+      
+          
+              <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring Framework + AngularJS = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+          
+              
+    <div class="widget-wrap">
+        <h3 class="widget-title">Roadmap</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.jpg)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular2.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo.png)" alt="0. Introduction to Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">0. Introduction to Hexo</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/23/pemrograman/spring/0. introduction-to-spring-boot/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/springboot.jpg)" alt="Spring Boot" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></p>
+                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0. introduction-to-spring-boot/" class="title">Spring Boot</a></p>
+                                <p class="item-date"><time datetime="2017-04-23T07:17:28.000Z" itemprop="datePublished">2017-04-23</time></p>
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">kategori</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a><span class="category-list-count">12</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arsip</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tag</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+          
+      
+
+      <!-- 
+        <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring Framework + AngularJS = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+        
+       -->
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Muhammad Hafidz</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'true';
+    
+    
+    var disqus_url = 'http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1. menggunakan paging and sorting repository/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

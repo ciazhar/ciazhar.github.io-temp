@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>CRUD dengan spring data jpa | ciazhar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Memulai CRUD
+Pertama-tama kita akan tambahkan dependendcy spring-boot-starter-data-jpa
+1234&amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;spring-boot-s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CRUD dengan spring data jpa">
+<meta property="og:url" content="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1. crud dengan spring data jpa/index.html">
+<meta property="og:site_name" content="ciazhar">
+<meta property="og:description" content="Memulai CRUD
+Pertama-tama kita akan tambahkan dependendcy spring-boot-starter-data-jpa
+1234&amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;spring-boot-s">
+<meta property="og:image" content="http://ciazhar.github.io/images/springboot.jpg">
+<meta property="og:updated_time" content="2017-05-03T09:11:08.487Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CRUD dengan spring data jpa">
+<meta name="twitter:description" content="Memulai CRUD
+Pertama-tama kita akan tambahkan dependendcy spring-boot-starter-data-jpa
+1234&amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;spring-boot-s">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.jpg">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Someone INTJs</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Beranda</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">Tentang</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'pos',
+            PAGES: 'Pages',
+            CATEGORIES: 'kategori',
+            TAGS: 'tag',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-pemrograman/spring/3.1. crud dengan spring data jpa" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        CRUD dengan spring data jpa
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/04/23/pemrograman/spring/3.1. crud dengan spring data jpa/" class="article-date">
+            <time datetime="2017-04-23T07:17:31.000Z" itemprop="datePublished">2017-04-23</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/springboot.jpg" alt=""></p>
+<h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
+<li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Setting Database (main/resources/application.properties)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.datasource.url=jdbc:mysql://localhost/pelatihan</div><div class="line">spring.datasource.username=pelatihanuser</div><div class="line">spring.datasource.password=pelatihanpasswd</div></pre></td></tr></table></figure>
+</li>
+<li><p>Bikin Schema (CLI)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line">grant all on pelatihan.* to pelatihanuser@localhost identified by &apos;pelatihanpasswd&apos;</div><div class="line">create database pelatihan;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Meggunakan mysql (CLI)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan tabel</div><div class="line">show tables;			///memperlihatkan tabel dan datanya</div><div class="line">show create table peserta \G	///memperlihatkan detil tabel</div><div class="line">drop table peserta;		///redeploy tabel</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1. crud dengan spring data jpa/" data-id="cj2ea53sl0019xglpntn5idup" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>ikuti:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com/kid.dont.cry" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ciazhar" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="telegram" href="http://telegram.me/ciazhar" target="_blank">
+                        <i class="icon fa fa-telegram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    <!-- 
+        
+<nav id="article-nav">
+    
+        <a href="/2017/04/23/pemrograman/spring/3.2. generate content dari server side dengan thymeleaf/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            Generate Content dari Server Side
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/04/23/pemrograman/spring/2. membuat halaman web sederhana dengan spring boot starter web dan thymeleaf/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih lawas</strong>
+        <p class="article-nav-title">Membuat Laman Web Sederhana</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+     -->
+
+    <div class="widget-wrap">
+      
+          
+              <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring Framework + AngularJS = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+          
+              
+    <div class="widget-wrap">
+        <h3 class="widget-title">Roadmap</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.jpg)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular2.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo.png)" alt="0. Introduction to Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">0. Introduction to Hexo</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/23/pemrograman/spring/0. introduction-to-spring-boot/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/springboot.jpg)" alt="Spring Boot" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></p>
+                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0. introduction-to-spring-boot/" class="title">Spring Boot</a></p>
+                                <p class="item-date"><time datetime="2017-04-23T07:17:28.000Z" itemprop="datePublished">2017-04-23</time></p>
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">kategori</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a><span class="category-list-count">12</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arsip</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tag</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+          
+      
+
+      <!-- 
+        <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring Framework + AngularJS = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+        
+       -->
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Muhammad Hafidz</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'true';
+    
+    
+    var disqus_url = 'http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1. crud dengan spring data jpa/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
