@@ -20,15 +20,15 @@ Build Tools (Apache M">
 
 Java Development Kit (JDK atau openJDK)
 Build Tools (Apache M">
-<meta property="og:image" content="http://ciazhar.github.io/images/springboot.jpg">
-<meta property="og:updated_time" content="2017-05-07T07:11:08.753Z">
+<meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
+<meta property="og:updated_time" content="2017-05-07T09:21:01.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Project Spring">
 <meta name="twitter:description" content="Setup Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
 
 Java Development Kit (JDK atau openJDK)
 Build Tools (Apache M">
-<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.jpg">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
     
 
     
@@ -79,7 +79,7 @@ Build Tools (Apache M">
                                     <a class="main-nav-list-link" href="/">Beranda</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring/">Spring</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about">Tentang</a>
@@ -138,7 +138,7 @@ Build Tools (Apache M">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a>
+    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring/">Spring</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -169,7 +169,7 @@ Build Tools (Apache M">
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/springboot.jpg" alt=""></p>
+            <p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
 <ul>
 <li>Java Development Kit (JDK atau openJDK)</li>
@@ -179,26 +179,27 @@ Build Tools (Apache M">
 <h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
 <li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
 <li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
 <li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
-<li>Project Metadata</li>
+<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
 </ul>
 </li>
-<li>Masukkan sebagai berikut<ul>
-<li>groupId : <code>com.ciazhar</code></li>
-<li>artifactId : <code>aplikasi-spring</code></li>
-<li>dependency : <code>web</code>,<code>thymeleaf</code></li>
-</ul>
-</li>
-<li>Download sample project</li>
+<li>Generate Project</li>
 <li>Add project ke text editor</li>
 </ul>
-<p>Note :<br>Pada Project tersebut terdapat 3 buah file utama yaitu :</p>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
 <ul>
-<li>pom.xml (konfigurasi maven)</li>
-<li>application.properties (konfigurasi project)</li>
-<li>Application.java (main class)</li>
+<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
+<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
+<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
 </ul>
+<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -206,7 +207,7 @@ Build Tools (Apache M">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/" data-id="cj2ed2w2g00117jlp8hz0419s" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/" data-id="cj2ed41ps002e8jlpr9x3av0h" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -333,7 +334,7 @@ Build Tools (Apache M">
     
         <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih lawas</strong>
-        <p class="article-nav-title">Introduction to Spring Boot</p>
+        <p class="article-nav-title">Introduction to Spring</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -372,7 +373,7 @@ Build Tools (Apache M">
                                 <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/android.jpg)" alt="Introduction to Android" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
     
     
 </a>
@@ -394,7 +395,7 @@ Build Tools (Apache M">
                                 <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/angular2.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
     
     
 </a>
@@ -438,7 +439,7 @@ Build Tools (Apache M">
                                 <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/springboot.jpg)" alt="Introduction to Spring Boot" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/spring.png)" alt="Introduction to Spring" class="thumbnail-image"></span>
     
     
 </a>
@@ -446,8 +447,8 @@ Build Tools (Apache M">
                             </div>
                             
                             <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></p>
-                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="title">Introduction to Spring Boot</a></p>
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring/">Spring</a></p>
+                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="title">Introduction to Spring</a></p>
                                 <p class="item-date"><time datetime="2017-04-23T07:17:28.000Z" itemprop="datePublished">2017-04-23</time></p>
                             </div>
                         </li>
@@ -462,7 +463,7 @@ Build Tools (Apache M">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a><span class="category-list-count">12</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">12</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 

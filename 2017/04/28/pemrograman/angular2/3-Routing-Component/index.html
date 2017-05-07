@@ -18,14 +18,14 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
 <meta property="og:description" content="Routing Top Level Component
 Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya yaitu about dan welcome. Struktur foldernya akan menjadi seperti ini
 1234567891011121314151">
-<meta property="og:image" content="http://ciazhar.github.io/images/angular2.png">
-<meta property="og:updated_time" content="2017-05-07T05:30:40.957Z">
+<meta property="og:image" content="http://ciazhar.github.io/images/angular.png">
+<meta property="og:updated_time" content="2017-05-07T09:22:10.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Routing Component">
 <meta name="twitter:description" content="Routing Top Level Component
 Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya yaitu about dan welcome. Struktur foldernya akan menjadi seperti ini
 1234567891011121314151">
-<meta name="twitter:image" content="http://ciazhar.github.io/images/angular2.png">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/angular.png">
     
 
     
@@ -76,7 +76,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
                                     <a class="main-nav-list-link" href="/">Beranda</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring/">Spring</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about">Tentang</a>
@@ -166,7 +166,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/angular2.png" alt=""></p>
+            <p><img src="/images/angular.png" alt=""></p>
 <h2 id="Routing-Top-Level-Component"><a href="#Routing-Top-Level-Component" class="headerlink" title="Routing Top Level Component"></a>Routing Top Level Component</h2><ol>
 <li><p>Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya yaitu about dan welcome. Struktur foldernya akan menjadi seperti ini</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">src/app/</div><div class="line">├── about</div><div class="line">│   ├── about.component.css</div><div class="line">│   ├── about.component.html</div><div class="line">│   ├── about.component.spec.ts</div><div class="line">│   └── about.component.ts</div><div class="line">├── app.component.css</div><div class="line">├── app.component.html</div><div class="line">├── app.component.spec.ts</div><div class="line">├── app.component.ts</div><div class="line">├── app.module.ts</div><div class="line">├── navbar</div><div class="line">│   ├── navbar.component.css</div><div class="line">│   ├── navbar.component.html</div><div class="line">│   ├── navbar.component.spec.ts</div><div class="line">│   └── navbar.component.ts</div><div class="line">├── sidebar</div><div class="line">│   ├── sidebar.component.css</div><div class="line">│   ├── sidebar.component.html</div><div class="line">│   ├── sidebar.component.spec.ts</div><div class="line">│   └── sidebar.component.ts</div><div class="line">├── transaksi</div><div class="line">│   ├── beli</div><div class="line">│   │   ├── beli.component.css</div><div class="line">│   │   ├── beli.component.html</div><div class="line">│   │   ├── beli.component.spec.ts</div><div class="line">│   │   └── beli.component.ts</div><div class="line">│   ├── jual</div><div class="line">│   │   ├── jual.component.css</div><div class="line">│   │   ├── jual.component.html</div><div class="line">│   │   ├── jual.component.spec.ts</div><div class="line">│   │   └── jual.component.ts</div><div class="line">│   ├── rekap</div><div class="line">│   │   ├── rekap.component.css</div><div class="line">│   │   ├── rekap.component.html</div><div class="line">│   │   ├── rekap.component.spec.ts</div><div class="line">│   │   └── rekap.component.ts</div><div class="line">│   └── transaksi.module.ts</div><div class="line">└── welcome</div><div class="line">    ├── welcome.component.css</div><div class="line">    ├── welcome.component.html</div><div class="line">    ├── welcome.component.spec.ts</div><div class="line">    └── welcome.component.ts</div></pre></td></tr></table></figure>
@@ -210,7 +210,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/28/pemrograman/angular2/3-Routing-Component/" data-id="cj2ed2w1y000q7jlpjgf6gp6f" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/28/pemrograman/angular2/3-Routing-Component/" data-id="cj2ed41n1000q8jlp2tm4f24r" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -376,7 +376,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
                                 <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/android.jpg)" alt="Introduction to Android" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
     
     
 </a>
@@ -398,7 +398,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
                                 <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/angular2.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
     
     
 </a>
@@ -442,7 +442,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
                                 <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/springboot.jpg)" alt="Introduction to Spring Boot" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/spring.png)" alt="Introduction to Spring" class="thumbnail-image"></span>
     
     
 </a>
@@ -450,8 +450,8 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
                             </div>
                             
                             <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a></p>
-                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="title">Introduction to Spring Boot</a></p>
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring/">Spring</a></p>
+                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="title">Introduction to Spring</a></p>
                                 <p class="item-date"><time datetime="2017-04-23T07:17:28.000Z" itemprop="datePublished">2017-04-23</time></p>
                             </div>
                         </li>
@@ -466,7 +466,7 @@ Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya 
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/">Spring Framework</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring-Framework/Spring-Boot/">Spring Boot</a><span class="category-list-count">12</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">12</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 

@@ -24,7 +24,7 @@
     <entry>
       <title><![CDATA[Introduction to Android]]></title>
       <url>http://ciazhar.github.io/2017/05/07/pemrograman/android/0-Introduction-to-Android/</url>
-      <content type="html"><![CDATA[<p><img src="/images/android.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/android.png" alt=""></p>
 <h1 id="Sekilas-tentang-Android"><a href="#Sekilas-tentang-Android" class="headerlink" title="Sekilas tentang Android"></a>Sekilas tentang Android</h1><p><a href="https://developer.android.com/" target="_blank" rel="external">Android</a> merupakan Sistem Operasi untuk mobile. Aplikasi android native sendiri dapat dibangun menggunakan XML(untuk design) dan Java(untuk logic). Pada Tutorial kali ini kita akan coba membuat aplikasi Android native.</p>
 <h1 id="Roadmap-Belajar-Android-Native"><a href="#Roadmap-Belajar-Android-Native" class="headerlink" title="Roadmap Belajar Android Native"></a>Roadmap Belajar Android Native</h1>]]></content>
       
@@ -42,7 +42,7 @@
     <entry>
       <title><![CDATA[Routing Component]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/3-Routing-Component/</url>
-      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
 <h2 id="Routing-Top-Level-Component"><a href="#Routing-Top-Level-Component" class="headerlink" title="Routing Top Level Component"></a>Routing Top Level Component</h2><ol>
 <li><p>Sebelum melakukan routing kita akan buat terlebih dahulu top level componentnya yaitu about dan welcome. Struktur foldernya akan menjadi seperti ini</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">src/app/</div><div class="line">├── about</div><div class="line">│   ├── about.component.css</div><div class="line">│   ├── about.component.html</div><div class="line">│   ├── about.component.spec.ts</div><div class="line">│   └── about.component.ts</div><div class="line">├── app.component.css</div><div class="line">├── app.component.html</div><div class="line">├── app.component.spec.ts</div><div class="line">├── app.component.ts</div><div class="line">├── app.module.ts</div><div class="line">├── navbar</div><div class="line">│   ├── navbar.component.css</div><div class="line">│   ├── navbar.component.html</div><div class="line">│   ├── navbar.component.spec.ts</div><div class="line">│   └── navbar.component.ts</div><div class="line">├── sidebar</div><div class="line">│   ├── sidebar.component.css</div><div class="line">│   ├── sidebar.component.html</div><div class="line">│   ├── sidebar.component.spec.ts</div><div class="line">│   └── sidebar.component.ts</div><div class="line">├── transaksi</div><div class="line">│   ├── beli</div><div class="line">│   │   ├── beli.component.css</div><div class="line">│   │   ├── beli.component.html</div><div class="line">│   │   ├── beli.component.spec.ts</div><div class="line">│   │   └── beli.component.ts</div><div class="line">│   ├── jual</div><div class="line">│   │   ├── jual.component.css</div><div class="line">│   │   ├── jual.component.html</div><div class="line">│   │   ├── jual.component.spec.ts</div><div class="line">│   │   └── jual.component.ts</div><div class="line">│   ├── rekap</div><div class="line">│   │   ├── rekap.component.css</div><div class="line">│   │   ├── rekap.component.html</div><div class="line">│   │   ├── rekap.component.spec.ts</div><div class="line">│   │   └── rekap.component.ts</div><div class="line">│   └── transaksi.module.ts</div><div class="line">└── welcome</div><div class="line">    ├── welcome.component.css</div><div class="line">    ├── welcome.component.html</div><div class="line">    ├── welcome.component.spec.ts</div><div class="line">    └── welcome.component.ts</div></pre></td></tr></table></figure>
@@ -95,7 +95,7 @@
     <entry>
       <title><![CDATA[Component dan Module]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/2-Component-dan-Module/</url>
-      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
 <h2 id="Membuat-Komponen"><a href="#Membuat-Komponen" class="headerlink" title="Membuat Komponen"></a>Membuat Komponen</h2><p>Untuk membuat componen dapat menggunakan perintah sebagai berikut<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g component NAMA_COMPONENT</div></pre></td></tr></table></figure></p>
 <p>Sehingga Struktur foldernya akan menjadi seperti :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">app/</div><div class="line">├── app.component.css</div><div class="line">├── app.component.html</div><div class="line">├── app.component.spec.ts</div><div class="line">├── app.component.ts</div><div class="line">├── app.module.ts</div><div class="line">├── navbar</div><div class="line">│   ├── navbar.component.css</div><div class="line">│   ├── navbar.component.html</div><div class="line">│   ├── navbar.component.spec.ts</div><div class="line">│   └── navbar.component.ts</div><div class="line">└── sidebar</div><div class="line">    ├── sidebar.component.css</div><div class="line">    ├── sidebar.component.html</div><div class="line">    ├── sidebar.component.spec.ts</div><div class="line">    └── sidebar.component.ts</div></pre></td></tr></table></figure></p>
 <p>Navbar dan Sidebar merupakan contoh dari Top Level Component</p>
@@ -119,7 +119,7 @@
     <entry>
       <title><![CDATA[Setup Project Angular2]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/1-Setup-Project-Angular2/</url>
-      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
 <h2 id="Menginstall-Node-dan-NPM"><a href="#Menginstall-Node-dan-NPM" class="headerlink" title="Menginstall Node dan NPM"></a>Menginstall Node dan NPM</h2><p>Untuk menginstall node saya menyarankan menggunakan tutorial dari <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04" target="_blank" rel="external">Digital Ocean</a> dengan menggunakan nvm.</p>
 <h2 id="Menginstall-Angular-CLI"><a href="#Menginstall-Angular-CLI" class="headerlink" title="Menginstall Angular CLI"></a>Menginstall Angular CLI</h2><p>Angular ini adalah salah satu tools untuk membuat aplikasi angular2. Untuk menggunakanya cukup ketikkan kode berikut apda terminal.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g @angular/cli</div></pre></td></tr></table></figure></p>
 <h2 id="Membuat-Project-Angular2"><a href="#Membuat-Project-Angular2" class="headerlink" title="Membuat Project Angular2"></a>Membuat Project Angular2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng new NAMA_PROJECT</div></pre></td></tr></table></figure>
@@ -165,7 +165,7 @@
     <entry>
       <title><![CDATA[Introduction to Angular2]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/</url>
-      <content type="html"><![CDATA[<p><img src="/images/angular2.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
 <h1 id="Sekilas-tentang-Angular"><a href="#Sekilas-tentang-Angular" class="headerlink" title="Sekilas tentang Angular"></a>Sekilas tentang Angular</h1><p><a href="https://angular.io" target="_blank" rel="external">Angular</a> merupakan framework untuk membangun aplikasi frontend web, desktop dan mobile. Angular sendiri berbasis bahasa pemrograman Typescript(<a href="https://www.typescriptlang.org/" target="_blank" rel="external">https://www.typescriptlang.org/</a>) dan <a href="https://www.javascript.com" target="_blank" rel="external">Javascript</a>. Pada Tutorial kali ini kita akan coba membuat aplikasi angular berbasis frontend web.</p>
 <h1 id="Roadmap-Belajar-Angular"><a href="#Roadmap-Belajar-Angular" class="headerlink" title="Roadmap Belajar Angular"></a>Roadmap Belajar Angular</h1>]]></content>
       
@@ -183,7 +183,7 @@
     <entry>
       <title><![CDATA[Jasper Report]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/6-jasper-report/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <ol>
 <li><p>Tambahkan dependency</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context-support<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.github.jpenren<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-spring-data-dialect<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>net.sf.jasperreports<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jasperreports<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>6.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.10.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -204,9 +204,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -216,7 +214,7 @@
     <entry>
       <title><![CDATA[Thymeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5-layout-dengan-thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; name=&quot;userName&quot; value=&quot;James Carrot&quot; th:value=&quot;$&#123;user.name&#125;&quot; /&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Menggunakan-Thymeleaf"><a href="#Menggunakan-Thymeleaf" class="headerlink" title="Menggunakan Thymeleaf"></a>Menggunakan Thymeleaf</h1><p>  Tambahkan xmlns dibawah ini pada tag html<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div></pre></td></tr></table></figure></p>
 <h1 id="Expression-di-Thymeleaf"><a href="#Expression-di-Thymeleaf" class="headerlink" title="Expression di Thymeleaf"></a>Expression di Thymeleaf</h1><ul>
@@ -239,9 +237,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -251,7 +247,7 @@
     <entry>
       <title><![CDATA[Otorisasi Login dengan spring security]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4-otorisasi-login-dengan-spring-security/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
 <li><p>Tambahkan dependency (pom.xml)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
@@ -272,9 +268,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -284,16 +278,14 @@
     <entry>
       <title><![CDATA[Kardinalitas]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.4-kardinalitas/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 ]]></content>
       
         <categories>
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -301,9 +293,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Generate Content pada Client Side Menggunakan AngularJS]]></title>
+      <title><![CDATA[CRUD dengan Content digenerate di Client Side Menggunakan AngularJS]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.3-generate-content-dari-client-side-dengan-AngularJS/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Generate-Content-pada-Client-Side-Menggunakan-AngularJS"><a href="#Generate-Content-pada-Client-Side-Menggunakan-AngularJS" class="headerlink" title="Generate Content pada Client Side Menggunakan AngularJS"></a>Generate Content pada Client Side Menggunakan AngularJS</h1><p>  Kita akan coba menggenate content dari materi.</p>
 <h2 id="Memulai-AngularJS"><a href="#Memulai-AngularJS" class="headerlink" title="Memulai AngularJS"></a>Memulai AngularJS</h2><ul>
 <li><p>Membuat file html (src/main/resources/templates/materi/listMateri.html)</p>
@@ -387,9 +379,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -399,7 +389,7 @@
     <entry>
       <title><![CDATA[Menggunakan Entity Manager Factory]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.2-menggunakan-entity-manager-factory/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h2 id="Menggunakan-Entity-Manager-Factory"><a href="#Menggunakan-Entity-Manager-Factory" class="headerlink" title="Menggunakan Entity Manager Factory"></a>Menggunakan Entity Manager Factory</h2><ul>
 <li><p>Buat Model Peserta(main/java/domain/entity/Peserta.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">public class Peserta&#123;</div><div class="line">  @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">  @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">  private String id;</div><div class="line"></div><div class="line">  @Column(nullable=false)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  @Size(min = 1, max = 150)</div><div class="line">  private String nama;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @Email</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String email;</div><div class="line"></div><div class="line">  @Column(nullable=false,unique=true)</div><div class="line">  @NotNull</div><div class="line">  @NotEmpty</div><div class="line">  private String noHp;</div><div class="line"></div><div class="line">  @Version</div><div class="line">  @Column(columnDefinition= &quot;integer DEFAULT 0&quot;)</div><div class="line">  private Integer version;</div></pre></td></tr></table></figure>
@@ -436,9 +426,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -448,7 +436,7 @@
     <entry>
       <title><![CDATA[Menggunakan Paging and Sorting Repository]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1-menggunakan-paging-and-sorting-repository/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h2 id="Menggunakan-Paging-and-Sorting-Repository"><a href="#Menggunakan-Paging-and-Sorting-Repository" class="headerlink" title="Menggunakan Paging and Sorting Repository"></a>Menggunakan Paging and Sorting Repository</h2><ul>
 <li><p>Membuat model (src/main/java/domain/model/PesertaPaging.java)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">@Entity @Table(name = &quot;t_peserta&quot;)</div><div class="line">public class PesertaPaging &#123;</div><div class="line"></div><div class="line">    @Id @GeneratedValue(generator = &quot;uuid&quot;)</div><div class="line">    @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid2&quot;)</div><div class="line">    private String id;</div><div class="line"></div><div class="line">    @Column(nullable=false)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    @Size(min = 1, max = 150)</div><div class="line">    private String nama;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @Email</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String email;</div><div class="line"></div><div class="line">    @Column(nullable=false,unique=true)</div><div class="line">    @NotNull</div><div class="line">    @NotEmpty</div><div class="line">    private String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -475,9 +463,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -485,13 +471,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Generate Content dari Server Side]]></title>
+      <title><![CDATA[CRUD dengan Content digenerate di Server Side Menggunakan Spring Data JPA dan Thymeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2-generate-content-dari-server-side-dengan-thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
-<h1 id="Generate-Content-dari-Server-Side"><a href="#Generate-Content-dari-Server-Side" class="headerlink" title="Generate Content dari Server Side"></a>Generate Content dari Server Side</h1><p>Ada banyak cara dalam melakukan crud di springframework. contoh :</p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""><br>Ada banyak cara dalam melakukan menggenetate conten dari Server Side di Spring. Anda dapat memilih salah satu dari rangkaian tutorial berikut:</p>
 <ul>
-<li>menggunakan entity manager factory</li>
-<li>menggunakan paging and sorting repository</li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1-menggunakan-paging-and-sorting-repository/">Menggunakan paging and sorting repository</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.2-menggunakan-entity-manager-factory/">Menggunakan entity manager factory</a></li>
 </ul>
 ]]></content>
       
@@ -499,9 +484,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -509,21 +492,30 @@
     </entry>
     
     <entry>
-      <title><![CDATA[CRUD dengan spring data jpa]]></title>
+      <title><![CDATA[Setup Project Untuk CRUD]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
-<h1 id="Memulai-CRUD"><a href="#Memulai-CRUD" class="headerlink" title="Memulai CRUD"></a>Memulai CRUD</h1><ul>
-<li><p>Pertama-tama kita akan tambahkan dependendcy <code>spring-boot-starter-data-jpa</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Setting Database (main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.datasource.url=jdbc:mysql://localhost/pelatihan</div><div class="line">spring.datasource.username=pelatihanuser</div><div class="line">spring.datasource.password=pelatihanpasswd</div></pre></td></tr></table></figure>
-</li>
-<li><p>Bikin Schema (CLI)</p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""><br>Pada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Untuk database kita akan menggunakan mysql, jadi anda harus menginstallnya terlebih dahulu. Berikut ini merupakan langkah-langkahnya :</p>
+<ul>
+<li>Pertama-tama kita akan tambahkan dependendcy spring data jpa (pom.xml)</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-jpa<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>6.0.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Untuk mencari dependency dapat dilihat di <a href="https://mvnrepository.com" target="_blank" rel="external">Maven Repostory</a></p>
+<ul>
+<li>Setting Database (main/resources/application.properties)</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">spring.datasource.url=jdbc:mysql://localhost:3306/pelatihan</span></div><div class="line"><span class="string">spring.datasource.username=pelatihanuser</span></div><div class="line"><span class="string">spring.datasource.password=pelatihanpasswd</span></div></pre></td></tr></table></figure>
+<p>Keterangan :</p>
+<ol>
+<li><code>spring.datasource.url</code> merupakan url untuk database. Dalam pengisianya harap disesuaikan dengan jenis database, port pada perangkat, dan nama database yang telah dibuat. Pada contoh tersebut menggunakan jenis database (mysql), port pada perangkat (3306), dan nama database(pelatihan)</li>
+<li><code>spring.datasource.username</code> merupakan username database.</li>
+<li><code>spring.datasource.password</code> merupakan password database.</li>
+</ol>
+<ul>
+<li><p>Membuat Schema (CLI)<br>Untuk memuat schema teteap harus manual. Berikut langkah-langkahnya di mysql.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line">grant all on pelatihan.* to pelatihanuser@localhost identified by &apos;pelatihanpasswd&apos;</div><div class="line">create database pelatihan;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Meggunakan mysql (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan tabel</div><div class="line">show tables;			///memperlihatkan tabel dan datanya</div><div class="line">show create table peserta \G	///memperlihatkan detil tabel</div><div class="line">drop table peserta;		///redeploy tabel</div></pre></td></tr></table></figure>
+<li><p>Meggunakan mysql (CLI)<br>Berikut adalah sintaks yang akan sering digunakan dalam mysql.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan database</div><div class="line">show tables;			///memperlihatkan tabel dan attributenya</div><div class="line">show create table nama_tabel \G	///memperlihatkan detil tabel</div><div class="line">select * from nama_tabel ///memperlihatkan data pada tabel</div><div class="line">drop table peserta;		///menghapus data pada tabel</div></pre></td></tr></table></figure>
 </li>
 </ul>
 ]]></content>
@@ -532,9 +524,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -544,25 +534,28 @@
     <entry>
       <title><![CDATA[Membuat Laman Web Sederhana]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
-<h1 id="Membuat-Laman-Web-Sederhana"><a href="#Membuat-Laman-Web-Sederhana" class="headerlink" title="Membuat Laman Web Sederhana"></a>Membuat Laman Web Sederhana</h1><ul>
-<li><p>Buat simple controller(main/java/domain/Controllers/HaloController.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class HaloController&#123;</div><div class="line">  @RequestMapping(&quot;/&quot;)</div><div class="line">  public String halo()&#123;</div><div class="line">    return &quot;index&quot;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Keterangan :</p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""><br>Untuk pertama kali kita akan coba membuat laman web sederhana. Langkah-langkahnya adalah sebagai berikut :</p>
 <ul>
-<li><code>@Controller</code> digunakan untuk menandai bahwa <code>HaloController</code> adalah class controller</li>
-<li><code>@RequestMapping</code> digunakan untuk mapping url pada methode <code>halo</code> yang akan digunakan oleh view <code>index</code></li>
-</ul>
+<li>Buat controller sederhana (main/java/domain/Controllers/HaloController.java)<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HaloController</span></span>&#123;</div><div class="line">  <span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</div><div class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">halo</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"index"</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat File Html(main/resources/templates/index.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;title&gt;Aplikasi Spring Boot&lt;/title&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/bootstrap.min.css&#125;&quot;  media=&quot;screen&quot;/&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; th:href=&quot;@&#123;/css/signin.css&#125;&quot; media=&quot;screen&quot;/&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line"></div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;nav class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;</div><div class="line">      &lt;div class=&quot;container&quot;&gt;</div><div class="line">        &lt;div class=&quot;navbar-header&quot;&gt;</div><div class="line">          &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#navbar&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navbar&quot;&gt;</div><div class="line">            &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</div><div class="line">          &lt;/button&gt;</div><div class="line">          &lt;a class=&quot;navbar-brand&quot; th:href=&quot;@&#123;/&#125;&quot;&gt;ciazhar&lt;/a&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/nav&gt;</div><div class="line"></div><div class="line">    &lt;div class=&quot;container&quot;&gt;</div><div class="line">      &lt;h1&gt;Aplikasi Spring Boot Dengan Thymeleaf&lt;/h1&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;script th:src=&quot;@&#123;/js/jquery.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script th:src=&quot;@&#123;/js/bootstrap.min.js&#125;&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</ul>
 <p>Keterangan :</p>
+<ol>
+<li><code>@Controller</code> digunakan untuk menandai bahwa class <code>HaloController</code> adalah class controller</li>
+<li><code>@RequestMapping</code> digunakan untuk mapping url metode halo yang akan digunakan oleh view bernama <code>index</code></li>
+</ol>
 <ul>
+<li>Buat file HTML (main/resources/templates/index.html)<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Aplikasi Spring Boot<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/css/bootstrap.min.css&#125;"</span>  <span class="attr">media</span>=<span class="string">"screen"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/css/signin.css&#125;"</span> <span class="attr">media</span>=<span class="string">"screen"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar navbar-inverse navbar-fixed-top"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar-header"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"navbar-toggle collapsed"</span> <span class="attr">data-toggle</span>=<span class="string">"collapse"</span> <span class="attr">data-target</span>=<span class="string">"#navbar"</span> <span class="attr">aria-expanded</span>=<span class="string">"false"</span> <span class="attr">aria-controls</span>=<span class="string">"navbar"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"navbar-brand"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/&#125;"</span>&gt;</span>ciazhar<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Aplikasi Spring Boot Dengan Thymeleaf<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/js/jquery.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/js/bootstrap.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Keterangan :</p>
+<ol>
 <li><code>&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</code> menandai bahwa html itu menggunakan template engine thymeleaf</li>
-<li><code>th:href</code> (dlm html <code>href</code>) digunakan untuk menginjek css. css tersebut dapat di simpan di <code>src/main/resources/static/css</code>. Tetapi karena <code>src/main/resources/static</code> merupakan classpath maka utnuk injek hanya perlu dari folder css saja. contoh : <code>&lt;link rel=&quot;stylesheet&quot; th:href=&quot;@{/css/bootstrap.min.css}&quot;  media=&quot;screen&quot;/&gt;</code><br>Selain itu kita juga dapat menggunakanya untuk melakukan link sesuai mapping di controller. contoh : <code>&lt;a class=&quot;navbar-brand&quot; th:href=&quot;@{/}&quot;&gt;ciazhar&lt;/a&gt;</code></li>
-<li><code>th:src</code>(dlm html <code>src</code>) digunakan untuk menginjek js. js tersebut dapat di simpan di <code>src/main/resources/static/js</code>. contoh : <code>&lt;script th:src=&quot;@{/js/jquery.min.js}&quot;&gt;&lt;/script&gt;</code></li>
-</ul>
-</li>
+<li><code>th:href</code> (jika di html bernama <code>href</code>) digunakan untuk menginjek css. css tersebut dapat di simpan di <code>src/main/resources/static/css</code>. Tetapi karena <code>src/main/resources/static</code> merupakan classpath maka untuk menginjeknya hanya perlu dari folder css saja. contoh : <code>&lt;link rel=&quot;stylesheet&quot; th:href=&quot;@{/css/bootstrap.min.css}&quot;  media=&quot;screen&quot;/&gt;</code><br>Selain itu kita juga dapat menggunakanya untuk melakukan link sesuai mapping di controller. contoh : <code>&lt;a class=&quot;navbar-brand&quot; th:href=&quot;@{/}&quot;&gt;ciazhar&lt;/a&gt;</code></li>
+<li><code>th:src</code>(jika di html bernama <code>src</code>) digunakan untuk menginjek js. js tersebut dapat di simpan di <code>src/main/resources/static/js</code>. contoh : <code>&lt;script th:src=&quot;@{/js/jquery.min.js}&quot;&gt;&lt;/script&gt;</code></li>
+</ol>
+<ul>
+<li>Memasang Library (/src/main/resources)<br>Jika kita lihat pada html diatas kita memerlukan beberapa library yaitu bootstrap dan jquery. Library tersebut dapat anda download di official masing-masing library tersebut. Kemudian masukkan ke /src/main/resources/css untuk file CSS dan /src/main/resources/js untuk file JS.</li>
 </ul>
 ]]></content>
       
@@ -570,9 +563,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -582,7 +573,7 @@
     <entry>
       <title><![CDATA[Android]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/</url>
-      <content type="html"><![CDATA[<p><img src="/images/android.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/android.png" alt=""></p>
 <h1 id="Android-for-Beginner"><a href="#Android-for-Beginner" class="headerlink" title="Android for Beginner"></a>Android for Beginner</h1><h2 id="Layouting"><a href="#Layouting" class="headerlink" title="Layouting"></a>Layouting</h2><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><h4 id="Pengertian-View"><a href="#Pengertian-View" class="headerlink" title="Pengertian View"></a>Pengertian View</h4><p>View pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.</p>
 <h4 id="Macam-macam-view-berdasar-kontenya"><a href="#Macam-macam-view-berdasar-kontenya" class="headerlink" title="Macam - macam view berdasar kontenya"></a>Macam - macam view berdasar kontenya</h4><ul>
 <li>Text View</li>
@@ -689,7 +680,7 @@
     <entry>
       <title><![CDATA[Setup Project Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
 <ul>
 <li>Java Development Kit (JDK atau openJDK)</li>
@@ -699,35 +690,34 @@
 <h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
 <li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
 <li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
 <li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
-<li>Project Metadata</li>
+<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
 </ul>
 </li>
-<li>Masukkan sebagai berikut<ul>
-<li>groupId : <code>com.ciazhar</code></li>
-<li>artifactId : <code>aplikasi-spring</code></li>
-<li>dependency : <code>web</code>,<code>thymeleaf</code></li>
-</ul>
-</li>
-<li>Download sample project</li>
+<li>Generate Project</li>
 <li>Add project ke text editor</li>
 </ul>
-<p>Note :<br>Pada Project tersebut terdapat 3 buah file utama yaitu :</p>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
 <ul>
-<li>pom.xml (konfigurasi maven)</li>
-<li>application.properties (konfigurasi project)</li>
-<li>Application.java (main class)</li>
+<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
+<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
+<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
 </ul>
+<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         <categories>
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
@@ -735,23 +725,23 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Introduction to Spring Boot]]></title>
+      <title><![CDATA[Introduction to Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.jpg" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/spring.png" alt=""></p>
 <h1 id="Sekilas-tentang-Spring-Boot"><a href="#Sekilas-tentang-Spring-Boot" class="headerlink" title="Sekilas tentang Spring Boot"></a>Sekilas tentang Spring Boot</h1><p><a href="http://projects.spring.io/spring-boot/" target="_blank" rel="external">Spring Boot</a> merupakan suatu framework untuk mempermudah dalam membangun aplikasi spring tanpa harus mengkonfigurasi setiap komponenya. Spring sendiri adalah framework untuk membuat aplikasi berbasis enterprise menggunakan <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages" target="_blank" rel="external">bahasa-bahasa JVM</a>. Pada Tutorial kali ini kita akan coba membuat aplikasi spring berbasis backend web.</p>
-<h1 id="Roadmap-Belajar-Spring-Boot"><a href="#Roadmap-Belajar-Spring-Boot" class="headerlink" title="Roadmap Belajar Spring Boot"></a>Roadmap Belajar Spring Boot</h1><ul>
-<li><a href="">Setup Development Environment</a></li>
-<li><a href="">Membuat Web Menggunakan Spring Boot dan Thyeleaf</a></li>
-<li><a href="">CRUD dengan Spring Data JPA</a></li>
-<li><a href="">Generate content dari server side menggunakan Thymeleaf</a></li>
-<li><a href="">Menggunakan Paging and sorting repostory</a></li>
-<li><a href="">Menggunakan Entity Manager Factory</a></li>
-<li><a href="">Generate content dari client side menggunkan AngularJS</a></li>
-<li><a href="">Kardinalitas dengan Spring Data JPA</a></li>
-<li><a href="">Validasi menggunakan JSR-303</a></li>
-<li><a href="">Otoriasai login dengan Spring Security</a></li>
-<li><a href="">Layouting dengan Thymeleaf</a></li>
-<li><a href="">Membuat Report dengan Jasper Report</a></li>
+<h1 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h1><ul>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/">Setup Project Spring Boot</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/">Membuat Web Menggunakan Spring Boot dan Thyeleaf</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/">Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2-generate-content-dari-server-side-dengan-thymeleaf/">CRUD dengan Content digenerate di Server Side Menggunakan Spring Data JPA dan Thymeleaf</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.3-generate-content-dari-client-side-dengan-AngularJS/">CRUD dengan Content digenerate di Client Side AngularJS</a></li>
+<li><a href="">Kardinalitas pada Spring Data JPA</a></li>
+<li><a href="">Konfigurasi yang sering digunakan untuk CRUD pada Spring Data JPA</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/4-otorisasi-login-dengan-spring-security/">Otoriasai login dengan Spring Security</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/5-layout-dengan-thymeleaf/">Layouting dengan Thymeleaf</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/6-jasper-report/">Membuat Report dengan Jasper Report</a></li>
+<li><a href="">Single Signed On dengan Spring Oauth</a></li>
+<li><a href="">Full Stack Application</a></li>
 </ul>
 ]]></content>
       
@@ -759,9 +749,7 @@
             
             <category> Pemrograman </category>
             
-            <category> Spring Framework </category>
-            
-            <category> Spring Boot </category>
+            <category> Spring </category>
             
         </categories>
         
