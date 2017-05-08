@@ -196,7 +196,7 @@
         <a href="/2017/04/23/pemrograman/spring/3.3-generate-content-dari-client-side-dengan-AngularJS/" class="thumbnail">
     
     
-        <span style="background-image:url(/images/springboot.png)" alt="CRUD dengan Content digenerate di Client Side Menggunakan AngularJS" class="thumbnail-image"></span>
+        <span style="background-image:url(/images/springboot.png)" alt="CRUD dengan Content digenerate di Client Side Menggunakan Spring Data JPA dan AngularJS" class="thumbnail-image"></span>
     
     
         
@@ -220,7 +220,7 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2017/04/23/pemrograman/spring/3.3-generate-content-dari-client-side-dengan-AngularJS/">CRUD dengan Content digenerate di Client Side Menggunakan AngularJS</a>
+        <a href="/2017/04/23/pemrograman/spring/3.3-generate-content-dari-client-side-dengan-AngularJS/">CRUD dengan Content digenerate di Client Side Menggunakan Spring Data JPA dan AngularJS</a>
         </h1>
     
 
@@ -230,106 +230,6 @@ Generate Content pada Client Side Menggunakan AngularJS  Kita akan coba menggena
 Memulai AngularJS
 Membuat file html (src/main/resources/templates/materi/listMateri.html)
 12345
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/04/23/pemrograman/spring/3.2.2-menggunakan-entity-manager-factory/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/springboot.png)" alt="Menggunakan Entity Manager Factory" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.2-menggunakan-entity-manager-factory/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring/">Spring</a>
-            </div>
-            <div class="date"><time datetime="2017-04-23T07:17:34.000Z" itemprop="datePublished">2017-04-23</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/04/23/pemrograman/spring/3.2.2-menggunakan-entity-manager-factory/">Menggunakan Entity Manager Factory</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Menggunakan Entity Manager Factory
-Buat Model Peserta(main/java/domain/entity/Peserta.java)
-1234567891011121314151617181920212223242526@Entitypublic class Peserta&#123;  @Id @GeneratedValue(generator
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2017/04/23/pemrograman/spring/3.2.1-menggunakan-paging-and-sorting-repository/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/springboot.png)" alt="Menggunakan Paging and Sorting Repository" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2.1-menggunakan-paging-and-sorting-repository/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring/">Spring</a>
-            </div>
-            <div class="date"><time datetime="2017-04-23T07:17:33.000Z" itemprop="datePublished">2017-04-23</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/04/23/pemrograman/spring/3.2.1-menggunakan-paging-and-sorting-repository/">Menggunakan Paging and Sorting Repository</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Menggunakan Paging and Sorting Repository
-Membuat model (src/main/java/domain/model/PesertaPaging.java)
-123456789101112131415161718192021222324@Entity @Table(name = &quot;t_peserta&quot;)public class
         </p>
     </div>
 </article>
@@ -378,10 +278,10 @@ Membuat model (src/main/java/domain/model/PesertaPaging.java)
     
 
         <p class="article-excerpt">
-            Ada banyak cara dalam melakukan menggenetate conten dari Server Side di Spring. Anda dapat memilih salah satu dari rangkaian tutorial berikut:
+            
 
-Menggunakan paging and sorting repository
-Menggunakan en
+Membuat model (src/main/java/domain/model/PesertaPaging.java)
+123456789101112131415161718192021222324@Entity @Table(name = &quot;t_peserta&quot;)public class PesertaPaging &#123;    @Id @GeneratedVa
         </p>
     </div>
 </article>
@@ -426,7 +326,8 @@ Menggunakan en
     
 
         <p class="article-excerpt">
-            Pada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Untuk database kita akan menggunakan mysql, jadi anda harus menginstallnya terlebih dahulu. Ber
+            
+Setup Project untuk CRUDPada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Kita akan menggunakan mysql untuk databasenya, jadi anda harus mengins
         </p>
     </div>
 </article>
@@ -490,57 +391,6 @@ Buat controller sederhana (main/java/domain/Controllers/HaloController.java)1234
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2017/04/23/pemrograman/android/1-view/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/android.png)" alt="Android" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a>
-            </div>
-            <div class="date"><time datetime="2017-04-23T07:17:29.000Z" itemprop="datePublished">2017-04-23</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/04/23/pemrograman/android/1-view/">Android</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Android for BeginnerLayoutingViewPengertian ViewView pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.
-M
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
         <a href="/2017/04/23/pemrograman/spring/1-setup-project/" class="thumbnail">
     
     
@@ -578,6 +428,57 @@ Setup Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstal
 
 Java Development Kit (JDK atau openJDK)
 Build Tools (Apache M
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/04/23/pemrograman/android/1-view/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.png)" alt="Android" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a>
+            </div>
+            <div class="date"><time datetime="2017-04-23T07:17:29.000Z" itemprop="datePublished">2017-04-23</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/04/23/pemrograman/android/1-view/">Android</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            
+Android for BeginnerLayoutingViewPengertian ViewView pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.
+M
         </p>
     </div>
 </article>
@@ -624,6 +525,105 @@ Build Tools (Apache M
         <p class="article-excerpt">
             
 Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermudah dalam membangun aplikasi spring tanpa harus mengkonfigurasi setiap komponenya. Spring sendiri adalah framework untuk
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/04/17/kuliah/orakom/orakom-bagian-processor/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://ciazhar.github.io/2017/04/17/kuliah/orakom/orakom-bagian-processor/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a>
+            </div>
+            <div class="date"><time datetime="2017-04-17T13:35:37.000Z" itemprop="datePublished">2017-04-17</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/04/17/kuliah/orakom/orakom-bagian-processor/">Bagian Processor</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            ALU (Arithmetic and Logic Unit)  ALU merupakan bagian pengolah biner di processor. ALU bertugas melalukan operasi aritmatika dan logika sesuai instruksi yang diberikan.
+Control Unit  Control Unit bert
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2017/04/17/kuliah/orakom/orakom-sistem-bilangan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://ciazhar.github.io/2017/04/17/kuliah/orakom/orakom-sistem-bilangan/">0</span>
+    
+</span>
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a>
+            </div>
+            <div class="date"><time datetime="2017-04-17T12:56:24.000Z" itemprop="datePublished">2017-04-17</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/04/17/kuliah/orakom/orakom-sistem-bilangan/">Sistem Bilangan</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Macam-macam Sistem Bilangan
+Biner (basis 2)Simbol : 0,1
+Oktal (basis 8)Simbol : 0,1,2,3,4,5,6,7
+Desimal (basis 10)Simbol : 0,1,2,3,4,5,6,7,8.9
+Heksal (basis 16)Simbol : 0,1,2,3,4,5,6,7,8,9,10,11,12,13
         </p>
     </div>
 </article>
@@ -707,28 +707,6 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
-                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
-                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
     
     
@@ -773,6 +751,28 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
                         <li>
                             
                             <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
                                 <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="thumbnail">
     
     
@@ -800,7 +800,7 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">12</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -810,7 +810,7 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -856,28 +856,6 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
-                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
-                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
     
     
@@ -922,6 +900,28 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
                         <li>
                             
                             <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
                                 <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="thumbnail">
     
     
@@ -949,7 +949,7 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">12</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -959,7 +959,7 @@ Sekilas tentang Spring BootSpring Boot merupakan suatu framework untuk mempermud
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
