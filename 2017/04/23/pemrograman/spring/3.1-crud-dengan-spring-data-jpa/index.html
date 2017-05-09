@@ -3,22 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Setup Project Untuk CRUD | ciazhar</title>
+    <title>CRUD dengan Spring Data JPA | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Setup Project untuk CRUDPada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Kita akan menggunakan mysql untuk databasenya, jadi anda harus mengins">
+    <meta name="description" content="CRUD menggunakan Spring Data JPAUntuk melakukan CRUD, setiap entitas didefinisikan dengan beberapa tahap yaitu :
+
+Membuat Model.Di model ini akan terdapat atribut-atribut yang nantinya akan ditrasfor">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Setup Project Untuk CRUD">
+<meta property="og:title" content="CRUD dengan Spring Data JPA">
 <meta property="og:url" content="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Setup Project untuk CRUDPada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Kita akan menggunakan mysql untuk databasenya, jadi anda harus mengins">
+<meta property="og:description" content="CRUD menggunakan Spring Data JPAUntuk melakukan CRUD, setiap entitas didefinisikan dengan beberapa tahap yaitu :
+
+Membuat Model.Di model ini akan terdapat atribut-atribut yang nantinya akan ditrasfor">
 <meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
-<meta property="og:updated_time" content="2017-05-08T10:09:20.779Z">
+<meta property="og:updated_time" content="2017-05-08T14:26:24.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Setup Project Untuk CRUD">
-<meta name="twitter:description" content="Setup Project untuk CRUDPada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Kita akan menggunakan mysql untuk databasenya, jadi anda harus mengins">
+<meta name="twitter:title" content="CRUD dengan Spring Data JPA">
+<meta name="twitter:description" content="CRUD menggunakan Spring Data JPAUntuk melakukan CRUD, setiap entitas didefinisikan dengan beberapa tahap yaitu :
+
+Membuat Model.Di model ini akan terdapat atribut-atribut yang nantinya akan ditrasfor">
 <meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
     
 
@@ -140,7 +146,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        Setup Project Untuk CRUD
+        CRUD dengan Spring Data JPA
         </h1>
     
 
@@ -161,82 +167,43 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Project-untuk-CRUD"><a href="#Setup-Project-untuk-CRUD" class="headerlink" title="Setup Project untuk CRUD"></a>Setup Project untuk CRUD</h1><p>Pada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Kita akan menggunakan mysql untuk databasenya, jadi anda harus menginstallnya terlebih dahulu. Berikut ini merupakan langkah-langkahnya :</p>
-<h2 id="Pertama-tama-kita-akan-tambahkan-dependendcy-spring-data-jpa-pom-xml"><a href="#Pertama-tama-kita-akan-tambahkan-dependendcy-spring-data-jpa-pom-xml" class="headerlink" title="Pertama-tama kita akan tambahkan dependendcy spring data jpa (pom.xml)"></a>Pertama-tama kita akan tambahkan dependendcy spring data jpa (pom.xml)</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-jpa<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>6.0.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Untuk mencari dependency dapat dilihat di <a href="https://mvnrepository.com" target="_blank" rel="external">Maven Repostory</a></p>
-<h2 id="Setting-Database-main-resources-application-properties"><a href="#Setting-Database-main-resources-application-properties" class="headerlink" title="Setting Database (main/resources/application.properties)"></a>Setting Database (main/resources/application.properties)</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">spring.datasource.url=jdbc:mysql://localhost:3306/pelatihan</span></div><div class="line"><span class="string">spring.datasource.username=pelatihanuser</span></div><div class="line"><span class="string">spring.datasource.password=pelatihanpasswd</span></div></pre></td></tr></table></figure>
-<p>Keterangan :</p>
-<ol>
-<li><code>spring.datasource.url</code> merupakan url untuk database. Dalam pengisianya harap disesuaikan dengan jenis database, port pada perangkat, dan nama database yang telah dibuat. Pada contoh tersebut menggunakan jenis database (mysql), port pada perangkat (3306), dan nama database(pelatihan)</li>
-<li><code>spring.datasource.username</code> merupakan username database.</li>
-<li><code>spring.datasource.password</code> merupakan password database.</li>
-</ol>
-<h2 id="Membuat-Schema-CLI"><a href="#Membuat-Schema-CLI" class="headerlink" title="Membuat Schema (CLI)."></a>Membuat Schema (CLI).</h2><p>Untuk schema tetap harus dibuat manual. Berikut langkah-langkahnya untuk mysql.</p>
-<ul>
-<li>Login ke mysql. Jika sudah login dapat diabaikan langkah ini.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div></pre></td></tr></table></figure>
-<ul>
-<li>Memasang otentifikasi database</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grant all on pelatihan.* to pelatihanuser@localhost identified by &apos;pelatihanpasswd&apos;</div></pre></td></tr></table></figure>
-<ul>
-<li>Membuat database</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create database pelatihan;</div></pre></td></tr></table></figure>
-<h2 id="Meggunakan-mysql-CLI"><a href="#Meggunakan-mysql-CLI" class="headerlink" title="Meggunakan mysql (CLI)"></a>Meggunakan mysql (CLI)</h2><p>Berikut adalah sintaks yang akan sering digunakan dalam mysql.</p>
-<ul>
-<li>Menggunakan database</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">use pelatihan;</div></pre></td></tr></table></figure>
-<ul>
-<li>Melihat list tabel dalam database</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show tables;</div></pre></td></tr></table></figure>
-<ul>
-<li>Melihat atribut pada tabel secara detail</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show create table nama_tabel \G</div></pre></td></tr></table></figure>
-<ul>
-<li>Melihat data pada tabel</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from nama_tabel</div></pre></td></tr></table></figure>
-<ul>
-<li>Menghapus data pada tabel</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drop table peserta;</div></pre></td></tr></table></figure>
 <h1 id="CRUD-menggunakan-Spring-Data-JPA"><a href="#CRUD-menggunakan-Spring-Data-JPA" class="headerlink" title="CRUD menggunakan Spring Data JPA"></a>CRUD menggunakan Spring Data JPA</h1><p>Untuk melakukan CRUD, setiap entitas didefinisikan dengan beberapa tahap yaitu :</p>
 <ul>
 <li>Membuat Model.<br>Di model ini akan terdapat atribut-atribut yang nantinya akan ditrasformasikan menjadi tabel pada Database.</li>
 <li>Membuat DAO.<br>Dia yang bertugas mendefinisikan metode apa saja yang dibutuhkan oleh Controller.</li>
 <li>Membuat Controller.<br>Controller ini berfungsi untuk mengatur apa yang akan ditampilkan ke view, apa yang akan disimpan ke database dan melakukan mapping url.</li>
-<li>Membuat View (List dan Form).<br>View ini akan menjadi apa yang akan dilihat oleh user.</li>
+<li>Membuat View (List dan Form).<br>View ini akan menjadi apa yang akan dilihat oleh user.<br>Jadi Struktur foldernya akan seperti ini :<br>Struktur foldernya akan seperti berikut :<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">src</div><div class="line"> └── main</div><div class="line"> |    ├── java</div><div class="line"> |       └── com</div><div class="line"> |           └── example</div><div class="line"> |               ├── DemoApplication.java</div><div class="line"> |               ├── controllers</div><div class="line"> |               ├── dao</div><div class="line"> |               └── model</div><div class="line"> └── resources</div><div class="line">         ├── application.properties</div><div class="line">         ├── static</div><div class="line">         │   ├── css</div><div class="line">         │   ├── fonts</div><div class="line">         │   └── js</div><div class="line">         └── templates</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <p>CRUD sendiri dapat dibagi menjadi 2 tipe tergantung dimana menggenerate contenya, yaitu client side dan server side.  Dalam mengiplementasikanya, bentuk Model dan Dao nya tetap sama, yang membedakan adalah controller dan viewnya saja.</p>
 <h2 id="Membuat-Model"><a href="#Membuat-Model" class="headerlink" title="Membuat Model"></a>Membuat Model</h2><ul>
 <li>Membuat class untuk model</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PesertaPaging</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Untuk setiap kelas yang ingin dibuat menjadi model, harus diberi anotasi <code>Entity</code> pada bagian atasnya.</p>
 <ul>
 <li>Menambahkan atribut</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PesertaPaging</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line">    <span class="keyword">private</span> String nama;</div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line">    <span class="keyword">private</span> String nama;</div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>Menambahkan validasi tiap atribut</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span> <span class="meta">@Table</span>(name = <span class="string">"t_peserta"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PesertaPaging</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Id</span> <span class="meta">@GeneratedValue</span>(generator = <span class="string">"uuid"</span>)</div><div class="line">    <span class="meta">@GenericGenerator</span>(name = <span class="string">"uuid"</span>, strategy = <span class="string">"uuid2"</span>)</div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="meta">@Size</span>(min = <span class="number">1</span>, max = <span class="number">150</span>)</div><div class="line">    <span class="keyword">private</span> String nama;  </div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@Email</span></div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span> <span class="meta">@Table</span>(name = <span class="string">"tabel_peserta"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Id</span> <span class="meta">@GeneratedValue</span>(generator = <span class="string">"uuid"</span>)</div><div class="line">    <span class="meta">@GenericGenerator</span>(name = <span class="string">"uuid"</span>, strategy = <span class="string">"uuid2"</span>)</div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="meta">@Size</span>(min = <span class="number">1</span>, max = <span class="number">150</span>)</div><div class="line">    <span class="keyword">private</span> String nama;  </div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@Email</span></div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Validasi di spring sendiri menggunkan JSR-303. Setiap variabel dapat didefinisikan secara spesifik menggunakan validasi. Sebagai Table, NotNull, NotEmpty dll.</p>
 <ul>
 <li>Menambahkan getter dan setter</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(String id)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.id = id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getNama</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNama</span><span class="params">(String nama)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.nama = nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getEmail</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> email;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEmail</span><span class="params">(String email)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.email = email;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getNoHp</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> noHp;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNoHp</span><span class="params">(String noHp)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.noHp = noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Membuat-DAO"><a href="#Membuat-DAO" class="headerlink" title="Membuat DAO"></a>Membuat DAO</h2><ul>
-<li>Membuat interface dao dan extend dengan PagingAndSortingRepository</li>
+<li>Membuat interface dao dan menginherit class PagingAndSortingRepository</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaPagingDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">PesertaPaging</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">Peserta</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Dengan menginherit class PagingAndSortingRepository kita dapat menggunakan method yang biasa digunakan untuk CRUD seperti findAll, findOne, save, delete dll.</p>
 <ul>
 <li>Membuat methode untuk searching (optional)</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaPagingDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">PesertaPaging</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">Peserta</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">  <span class="meta">@Query</span>(value = <span class="string">"select p from Peserta p where p.kelas.id = ?1 ORDER BY id_kelas"</span>)</div><div class="line">  <span class="function"><span class="keyword">public</span> Page&lt;Peserta&gt; <span class="title">findByKelasId</span><span class="params">(String id_kelas, Pageable pageable)</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Selain spring sudah mendefinisikan method yang sering digunakan, spring juga memperbolehkan kita untuk membuat method sesuai yang kita inginkan. Sebagai contoh diatas kita membuat Page yang berisi daftar peserta berdasar kelas tertentu. Dalam pembuatanya spring juga memperbolehkan menggunakan query sql atau query jpa.</p>
 
         </div>
         <footer class="article-footer">
@@ -244,7 +211,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/" data-id="cj2fxg12y0010qplptvf1fjgo" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/" data-id="cj2g5b1o00010czlp9bc2xolm" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -358,11 +325,11 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/04/23/pemrograman/spring/3.2-generate-content-dari-server-side-dengan-thymeleaf/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/04/23/pemrograman/spring/3.0-setup-project-crud/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih baru</strong>
         <p class="article-nav-title">
         
-            CRUD dengan Content digenerate di Server Side Menggunakan Spring Data JPA dan Thymeleaf
+            Setup Project Untuk CRUD
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
@@ -429,28 +396,6 @@
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/hexo.png)" alt="Introduction to Hexo" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
-                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
-                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
     
     
@@ -465,6 +410,28 @@
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
                                 <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
                                 <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo.png)" alt="Introduction to Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
                             </div>
                         </li>
                     
@@ -500,7 +467,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">10</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -510,7 +477,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
