@@ -8,28 +8,28 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Membuat shared module
-12cd tabungan_emas;ng g module shared;
+    <meta name="description" content="Membuat service
+1ng g service NAMA_SERVICE;
 
-Membuat auth service
-12cd shared;cd g service auth;">
+Struktur folder
+123456789101112131415161718├── beli│   ├── beli.component.css│   ├── beli.component.html│   ├── beli.component.spec.ts│   └── beli.compone">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Service">
 <meta property="og:url" content="http://ciazhar.github.io/2017/05/09/pemrograman/angular2/4-Service/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Membuat shared module
-12cd tabungan_emas;ng g module shared;
+<meta property="og:description" content="Membuat service
+1ng g service NAMA_SERVICE;
 
-Membuat auth service
-12cd shared;cd g service auth;">
-<meta property="og:updated_time" content="2017-05-18T14:54:43.678Z">
+Struktur folder
+123456789101112131415161718├── beli│   ├── beli.component.css│   ├── beli.component.html│   ├── beli.component.spec.ts│   └── beli.compone">
+<meta property="og:updated_time" content="2017-05-20T14:04:12.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Service">
-<meta name="twitter:description" content="Membuat shared module
-12cd tabungan_emas;ng g module shared;
+<meta name="twitter:description" content="Membuat service
+1ng g service NAMA_SERVICE;
 
-Membuat auth service
-12cd shared;cd g service auth;">
+Struktur folder
+123456789101112131415161718├── beli│   ├── beli.component.css│   ├── beli.component.html│   ├── beli.component.spec.ts│   └── beli.compone">
     
 
     
@@ -139,7 +139,7 @@ Membuat auth service
                         <div class="main-body-header">
     <h1 class="header">
     
-    belum terkategori
+    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Angular/">Angular</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -171,13 +171,26 @@ Membuat auth service
         
         <div class="article-entry" itemprop="articleBody">
             <ul>
-<li><p>Membuat shared module</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd tabungan_emas;</div><div class="line">ng g module shared;</div></pre></td></tr></table></figure>
+<li><p>Membuat service</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g service NAMA_SERVICE;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Membuat auth service</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared;</div><div class="line">cd g service auth;</div></pre></td></tr></table></figure>
+<li><p>Struktur folder</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">├── beli</div><div class="line">│   ├── beli.component.css</div><div class="line">│   ├── beli.component.html</div><div class="line">│   ├── beli.component.spec.ts</div><div class="line">│   └── beli.component.ts</div><div class="line">├── jual</div><div class="line">│   ├── jual.component.css</div><div class="line">│   ├── jual.component.html</div><div class="line">│   ├── jual.component.spec.ts</div><div class="line">│   └── jual.component.ts</div><div class="line">├── rekap</div><div class="line">│   ├── rekap.component.css</div><div class="line">│   ├── rekap.component.html</div><div class="line">│   ├── rekap.component.spec.ts</div><div class="line">│   └── rekap.component.ts</div><div class="line">├── transaksi.module.ts</div><div class="line">├── transaksi.service.spec.ts</div><div class="line">└── transaksi.service.ts</div></pre></td></tr></table></figure>
+</li>
+<li><p>Pada file service.ts terdapat anotasi <code>@Injectable</code>. Anotasi ini berfungsi untuk menandai koding javascript agak bisa di injek ketika di compile.</p>
+</li>
+<li><p>Buat methode untuk service</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">getDaftarTransaksi()&#123;</div><div class="line">  let dataTransaksi = [</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Saldo awal&quot;,nilai : 0, saldo : 0&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Tambah&quot;,nilai : 10, saldo : 10&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Kurang&quot;,nilai : 5, saldo : 5&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Tambah&quot;,nilai : 20, saldo : 25&#125;</div><div class="line">  ];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Buat promise untuk menjembatani apabila service mengalami kegagalan karena http request.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">getDaftarTransaksi()&#123;</div><div class="line">  <span class="keyword">let</span> dataTransaksi = [</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Saldo awal"</span>,nilai : <span class="number">0</span>, saldo : <span class="number">0</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Tambah"</span>,nilai : <span class="number">10</span>, saldo : <span class="number">10</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Kurang"</span>,nilai : <span class="number">5</span>, saldo : <span class="number">5</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Tambah"</span>,nilai : <span class="number">20</span>, saldo : <span class="number">25</span>&#125;</div><div class="line">  ];</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(dataTransaksi).then()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Import service ke module.tsnya</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; TransaksiService &#125; from &apos;./transaksi.service&apos;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  provider:[</div><div class="line">    TransaksiService</div><div class="line">  ]  </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>Service telah siap digunakan. Kemudian kita akan menggunakanya di component rekap.<br>(rekap.component.ts)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">dataTransaksi = [];</div><div class="line"></div><div class="line">export class RekapComponent implements OnIt &#123;</div><div class="line">  constructor(private transaksiService : TransaksiService)&#123;</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  ngOnIt()&#123;</div><div class="line">    this.transaksiService.getDaftarTransaksi().then(hasil =&gt; this.dataTransaksi = hasil)</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -185,7 +198,7 @@ Membuat auth service
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/05/09/pemrograman/angular2/4-Service/" data-id="cj2vgd7ox0003talphb1xd1w8" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/05/09/pemrograman/angular2/4-Service/" data-id="cj2yp56na000ma7lptiqlik4e" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -298,6 +311,16 @@ Membuat auth service
     <!-- 
         
 <nav id="article-nav">
+    
+        <a href="/2017/05/20/pemrograman/angular2/5-Auth-Service/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            Auth Service
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
     
     
         <a href="/2017/05/07/pemrograman/hexo/1-Setup-Project-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
@@ -431,7 +454,7 @@ Membuat auth service
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -441,7 +464,7 @@ Membuat auth service
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 

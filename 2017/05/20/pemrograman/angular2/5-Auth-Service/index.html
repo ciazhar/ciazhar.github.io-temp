@@ -3,23 +3,42 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Membuat Laman Web Sederhana | ciazhar</title>
+    <title>Auth Service | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Pada tutorial sebelumnya kita sudah melakukan setup project spring pada perangkat anda. Sekarang kita akan coba melihat bagaimana aplikasi spring dibuat.Untuk pertama kali kita akan coba membuat laman">
+    <meta name="description" content="membuat shared module
+1ng g module shared
+
+membuat service auth di dalam shared module
+12cd sharedng g service auth
+
+garap service di auth service
+1234567891011121314151617181920212223242526272829303">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Membuat Laman Web Sederhana">
-<meta property="og:url" content="http://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/index.html">
+<meta property="og:title" content="Auth Service">
+<meta property="og:url" content="http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Pada tutorial sebelumnya kita sudah melakukan setup project spring pada perangkat anda. Sekarang kita akan coba melihat bagaimana aplikasi spring dibuat.Untuk pertama kali kita akan coba membuat laman">
-<meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
-<meta property="og:updated_time" content="2017-05-11T14:44:20.131Z">
+<meta property="og:description" content="membuat shared module
+1ng g module shared
+
+membuat service auth di dalam shared module
+12cd sharedng g service auth
+
+garap service di auth service
+1234567891011121314151617181920212223242526272829303">
+<meta property="og:updated_time" content="2017-05-21T12:24:15.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Membuat Laman Web Sederhana">
-<meta name="twitter:description" content="Pada tutorial sebelumnya kita sudah melakukan setup project spring pada perangkat anda. Sekarang kita akan coba melihat bagaimana aplikasi spring dibuat.Untuk pertama kali kita akan coba membuat laman">
-<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
+<meta name="twitter:title" content="Auth Service">
+<meta name="twitter:description" content="membuat shared module
+1ng g module shared
+
+membuat service auth di dalam shared module
+12cd sharedng g service auth
+
+garap service di auth service
+1234567891011121314151617181920212223242526272829303">
     
 
     
@@ -129,18 +148,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring/">Spring</a>
+    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Angular/">Angular</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-pemrograman/angular2/5-Auth-Service" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Membuat Laman Web Sederhana
+        Auth Service
         </h1>
     
 
@@ -150,8 +169,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/" class="article-date">
-            <time datetime="2017-04-23T07:17:30.000Z" itemprop="datePublished">2017-04-23</time>
+        <a href="/2017/05/20/pemrograman/angular2/5-Auth-Service/" class="article-date">
+            <time datetime="2017-05-20T14:03:29.000Z" itemprop="datePublished">2017-05-20</time>
         </a>
     </div>
 
@@ -160,29 +179,73 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/springboot.png" alt=""><br><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/">Pada tutorial sebelumnya</a> kita sudah melakukan setup project spring pada perangkat anda. Sekarang kita akan coba melihat bagaimana aplikasi spring dibuat.<br>Untuk pertama kali kita akan coba membuat laman web sederhana. Langkah-langkahnya adalah sebagai berikut :</p>
-<ul>
-<li>Membuat controller sederhana (main/java/domain/Controllers/HaloController.java)<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HaloController</span></span>&#123;</div><div class="line">  <span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</div><div class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">halo</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"index"</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <ul>
+<li><p>membuat shared module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g module shared</div></pre></td></tr></table></figure>
+</li>
+<li><p>membuat service auth di dalam shared module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared</div><div class="line">ng g service auth</div></pre></td></tr></table></figure>
+</li>
+<li><p>garap service di auth service</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import &#123; Injectable &#125; from &apos;@angular/core&apos;;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line">export class AuthService &#123;</div><div class="line"></div><div class="line">  constructor() &#123; &#125;</div><div class="line"></div><div class="line">  isLogin() : boolean&#123;</div><div class="line">    return localStorage.getItem(&quot;authentification&quot;)!=null;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  getUserInfo() : any&#123;</div><div class="line">    return localStorage.getItem(&quot;authentification&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  login(username : string, password : string) : boolean&#123;</div><div class="line">    if(username == &quot;admin&quot; &amp;&amp; password == &quot;123&quot;)&#123;</div><div class="line">      let userObject = &#123;</div><div class="line">        username: &quot;admin&quot;,</div><div class="line">        permissions: [</div><div class="line">          &quot;TRANSAKSI_VIEW&quot;,</div><div class="line">          &quot;TRANSAKSI_EDIT&quot;</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">      localStorage.setItem(&quot;authentification&quot;,JSON.stringify(userObject));</div><div class="line">      return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  logout()&#123;</div><div class="line">    localStorage.removeItem(&quot;authentification&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>import auth service ke shared module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;./auth.service&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>definisikan di ngmodule sebagai export agar dapat digunakan oleh semua</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  exports: [</div><div class="line">    AuthService</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>buat file authguard.ts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import &#123; Injectable &#125;     from &apos;@angular/core&apos;;</div><div class="line">import &#123; CanActivate, CanActivateChild &#125;    from &apos;@angular/router&apos;;</div><div class="line"></div><div class="line">import &#123; AuthService &#125; from &apos;./auth.service&apos;;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line">export class AuthGuard implements CanActivate, CanActivateChild &#123;</div><div class="line"></div><div class="line">  constructor(private auth : AuthService)&#123;&#125;</div><div class="line"></div><div class="line">  canActivate() &#123;</div><div class="line">    console.log(&apos;AuthGuard#canActivate called&apos;);</div><div class="line">    return this.auth.isLogin();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  canActivateChild() &#123;</div><div class="line">	  console.log(&apos;AuthGuard#canActivateChild called&apos;);</div><div class="line">      return this.canActivate();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>import shared module ke app module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;./shared/auth.service&apos;;</div><div class="line">import &#123; AuthGuard &#125; from &apos;./shared/authguard&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>definisikan di ng module sebagai provider</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  providers: [</div><div class="line">    AuthGuard, AuthService</div><div class="line">  ],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>implement ke routing</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const routingTransaksi : Routes = [</div><div class="line">  &#123; path: &quot;transaksi/beli&quot;, component: BeliComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/jual&quot;, component: JualComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/rekap&quot;, component: RekapComponent &#125;</div><div class="line">]</div><div class="line">const routingAplikasi: Routes = [</div><div class="line">  &#123; path: &quot;about&quot;, component: AboutComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi&quot;, redirectTo: &quot;/transaksi&quot;, pathMatch: &quot;full&quot;, canActivateChild : [AuthGuard]&#125;,</div><div class="line">  &#123; path: &quot;**&quot;, component: WelcomeComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Keterangan :</p>
-<ol>
-<li><code>@Controller</code> digunakan untuk menandai bahwa class <code>HaloController</code> adalah class controller</li>
-<li><code>@RequestMapping</code> digunakan untuk melakukan mapping url pada metode bernama halo ke <code>/</code>. Kemudian controller itu akan di tampilkan pada view bernama <code>index</code>.</li>
-</ol>
-<ul>
-<li>Membuat file HTML (main/resources/templates/index.html)<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Aplikasi Spring Boot<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/css/bootstrap.min.css&#125;"</span>  <span class="attr">media</span>=<span class="string">"screen"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/css/signin.css&#125;"</span> <span class="attr">media</span>=<span class="string">"screen"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navbar navbar-inverse navbar-fixed-top"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"navbar-header"</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"navbar-toggle collapsed"</span> <span class="attr">data-toggle</span>=<span class="string">"collapse"</span> <span class="attr">data-target</span>=<span class="string">"#navbar"</span> <span class="attr">aria-expanded</span>=<span class="string">"false"</span> <span class="attr">aria-controls</span>=<span class="string">"navbar"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>Toggle navigation<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"navbar-brand"</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/&#125;"</span>&gt;</span>ciazhar<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Aplikasi Spring Boot Dengan Thymeleaf<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/js/jquery.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">"@&#123;/js/bootstrap.min.js&#125;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Kondisi-layout-jika-belum-login"><a href="#Kondisi-layout-jika-belum-login" class="headerlink" title="Kondisi layout jika belum login"></a>Kondisi layout jika belum login</h2><p>Apabila anda ingin membuat suatu menu tidak ditampilkan jika belum login, anda dapat menggunakan fungsi <code>isLogin</code> yang telah kita buat tadi. Anda cukup menyisipkan menu yang tidak ingin ditampilkan diantara span yang berisi kondisi isLogin. Berikut adalah contoh penggunaannya :<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"authService.isLogin()"</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">routerLink</span>=<span class="string">"path"</span>&gt;</span>Menu yang tidak ingin ditampilkan<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>Kemudian definisikan service pada konstruktor pada module.ts nya.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constructor(private authService : AuthService) &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>Jangan lupa di import AuthService nya</p>
+<h1 id="Form-Login"><a href="#Form-Login" class="headerlink" title="Form Login"></a>Form Login</h1><ul>
+<li><p>buat component login form</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared</div><div class="line">ng g component login</div></pre></td></tr></table></figure>
+</li>
+<li><p>buat html nya</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;form class=&quot;form-signin&quot;&gt;</div><div class="line">   &lt;h2 class=&quot;form-signin-heading&quot;&gt;Please sign in&lt;/h2&gt;</div><div class="line">   &lt;label for=&quot;username&quot; class=&quot;sr-only&quot;&gt;Username&lt;/label&gt;</div><div class="line">   &lt;input [(ngModel)]=&quot;username&quot; type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; required autofocus&gt;</div><div class="line">   &lt;label for=&quot;password&quot; class=&quot;sr-only&quot;&gt;Password&lt;/label&gt;</div><div class="line">   &lt;input [(ngModel)]=&quot;password&quot; type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; required&gt;</div><div class="line">   &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; (click)=login()&gt;Sign in&lt;/button&gt;</div><div class="line"> &lt;/form&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>import shared.module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; FormsModule &#125; from &apos;@angular/forms&apos;;</div><div class="line">import &#123; LoginComponent &#125; from &apos;./login/login.component&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>definisikan</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  imports: [</div><div class="line">    FormsModule</div><div class="line">  ],</div><div class="line">  declarations: [LoginComponent],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>import app.module</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; LoginComponent &#125; from &apos;./shared/login/login.component&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>definisikan</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  declarations: [LoginComponent],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>routing</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123; path: &quot;login&quot;, component: LoginComponent&#125;,</div></pre></td></tr></table></figure>
+</li>
+<li><p>method login login.component</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">username : string;</div><div class="line">password : string;</div><div class="line"></div><div class="line">login()&#123;</div><div class="line">  let apa = this.authService.login(this.username, this.password);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>constructor</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constructor (private authService : AuthService)&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>import</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;../auth.service&apos;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Keterangan :</p>
-<ol>
-<li><code>&lt;html xmlns:th=&quot;http://www.thymeleaf.org&quot;&gt;</code> menandai bahwa html itu menggunakan template engine thymeleaf</li>
-<li><code>th:href</code> (jika di html bernama <code>href</code>) digunakan untuk menginjek css. css tersebut dapat di simpan di <code>src/main/resources/static/css</code>. Tetapi karena <code>src/main/resources/static</code> merupakan classpath maka untuk menginjeknya hanya perlu dari folder css saja. contoh : <code>&lt;link rel=&quot;stylesheet&quot; th:href=&quot;@{/css/bootstrap.min.css}&quot;  media=&quot;screen&quot;/&gt;</code><br>Selain itu kita juga dapat menggunakanya untuk melakukan link sesuai mapping di controller. contoh : <code>&lt;a class=&quot;navbar-brand&quot; th:href=&quot;@{/}&quot;&gt;ciazhar&lt;/a&gt;</code></li>
-<li><code>th:src</code>(jika di html bernama <code>src</code>) digunakan untuk menginjek js. js tersebut dapat di simpan di <code>src/main/resources/static/js</code>. contoh : <code>&lt;script th:src=&quot;@{/js/jquery.min.js}&quot;&gt;&lt;/script&gt;</code></li>
-</ol>
-<ul>
-<li>Memasang Library (/src/main/resources)<br>Jika kita lihat pada html diatas kita memerlukan beberapa library yaitu bootstrap dan jquery. Library tersebut dapat anda download di official masing-masing library tersebut. Kemudian masukkan ke /src/main/resources/css untuk file CSS dan /src/main/resources/js untuk file JS.</li>
-</ul>
+<h1 id="Logout"><a href="#Logout" class="headerlink" title="Logout"></a>Logout</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li *ngIf=&quot;authService.isLogin()&quot;&gt;&lt;a (click)=&quot;logout()&quot;&gt;Keluar&lt;/a&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">logout()&#123;</div><div class="line">  this.authService.logout();</div><div class="line">  this.router.navigate([&apos;login&apos;]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;../shared/auth.service&apos;;</div><div class="line">import &#123; Router &#125;   from &apos;@angular/router&apos;;</div></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -190,7 +253,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/" data-id="cj2yp56oc0014a7lp9rdaxh5x" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/" data-id="cj2yp56ne000oa7lp5pai212i" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -304,20 +367,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/04/23/pemrograman/spring/3.0-setup-project-crud/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">lebih baru</strong>
-        <p class="article-nav-title">
-        
-            Setup Project Untuk CRUD
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/04/23/pemrograman/spring/1-setup-project/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/05/09/pemrograman/angular2/4-Service/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih lawas</strong>
-        <p class="article-nav-title">Setup Project Spring</p>
+        <p class="article-nav-title">Service</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -517,7 +570,7 @@
     var disqus_shortname = 'true';
     
     
-    var disqus_url = 'http://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/';
+    var disqus_url = 'http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/';
     
     (function() {
     var dsq = document.createElement('script');
