@@ -3,42 +3,47 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Auth Service | ciazhar</title>
+    <title>Authorization and Authentification Service | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="membuat shared module
+    <meta name="description" content="Membuat service otorisasi
+Membuat shared module.
 1ng g module shared
 
-membuat service auth di dalam shared module
+Membuat service auth di dalam shared module
 12cd sharedng g service auth
 
-garap service di auth service
-1234567891011121314151617181920212223242526272829303">
+Membuat service (auth.service.ts)
+123456789101112131415">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Auth Service">
+<meta property="og:title" content="Authorization and Authentification Service">
 <meta property="og:url" content="http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="membuat shared module
+<meta property="og:description" content="Membuat service otorisasi
+Membuat shared module.
 1ng g module shared
 
-membuat service auth di dalam shared module
+Membuat service auth di dalam shared module
 12cd sharedng g service auth
 
-garap service di auth service
-1234567891011121314151617181920212223242526272829303">
-<meta property="og:updated_time" content="2017-05-21T12:24:15.531Z">
+Membuat service (auth.service.ts)
+123456789101112131415">
+<meta property="og:image" content="http://ciazhar.github.io/images/angular.png">
+<meta property="og:updated_time" content="2017-05-21T14:29:19.339Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Auth Service">
-<meta name="twitter:description" content="membuat shared module
+<meta name="twitter:title" content="Authorization and Authentification Service">
+<meta name="twitter:description" content="Membuat service otorisasi
+Membuat shared module.
 1ng g module shared
 
-membuat service auth di dalam shared module
+Membuat service auth di dalam shared module
 12cd sharedng g service auth
 
-garap service di auth service
-1234567891011121314151617181920212223242526272829303">
+Membuat service (auth.service.ts)
+123456789101112131415">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/angular.png">
     
 
     
@@ -159,7 +164,7 @@ garap service di auth service
                 
     
         <h1 class="article-title" itemprop="name">
-        Auth Service
+        Authorization and Authentification Service
         </h1>
     
 
@@ -179,43 +184,47 @@ garap service di auth service
         
         
         <div class="article-entry" itemprop="articleBody">
-            <ul>
-<li><p>membuat shared module</p>
+            <p><img src="/images/angular.png" alt=""></p>
+<h1 id="Membuat-service-otorisasi"><a href="#Membuat-service-otorisasi" class="headerlink" title="Membuat service otorisasi"></a>Membuat service otorisasi</h1><ul>
+<li><p>Membuat shared module.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g module shared</div></pre></td></tr></table></figure>
 </li>
-<li><p>membuat service auth di dalam shared module</p>
+<li><p>Membuat service auth di dalam shared module</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared</div><div class="line">ng g service auth</div></pre></td></tr></table></figure>
 </li>
-<li><p>garap service di auth service</p>
+<li><p>Membuat service (auth.service.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import &#123; Injectable &#125; from &apos;@angular/core&apos;;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line">export class AuthService &#123;</div><div class="line"></div><div class="line">  constructor() &#123; &#125;</div><div class="line"></div><div class="line">  isLogin() : boolean&#123;</div><div class="line">    return localStorage.getItem(&quot;authentification&quot;)!=null;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  getUserInfo() : any&#123;</div><div class="line">    return localStorage.getItem(&quot;authentification&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  login(username : string, password : string) : boolean&#123;</div><div class="line">    if(username == &quot;admin&quot; &amp;&amp; password == &quot;123&quot;)&#123;</div><div class="line">      let userObject = &#123;</div><div class="line">        username: &quot;admin&quot;,</div><div class="line">        permissions: [</div><div class="line">          &quot;TRANSAKSI_VIEW&quot;,</div><div class="line">          &quot;TRANSAKSI_EDIT&quot;</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">      localStorage.setItem(&quot;authentification&quot;,JSON.stringify(userObject));</div><div class="line">      return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  logout()&#123;</div><div class="line">    localStorage.removeItem(&quot;authentification&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>import auth service ke shared module</p>
+<li><p>Import auth service (shared.module.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;./auth.service&apos;;</div></pre></td></tr></table></figure>
 </li>
-<li><p>definisikan di ngmodule sebagai export agar dapat digunakan oleh semua</p>
+<li><p>Definisikan di ngModule sebagai exports</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  exports: [</div><div class="line">    AuthService</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
-<li><p>buat file authguard.ts</p>
+<li><p>Membuat file authguard.ts</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import &#123; Injectable &#125;     from &apos;@angular/core&apos;;</div><div class="line">import &#123; CanActivate, CanActivateChild &#125;    from &apos;@angular/router&apos;;</div><div class="line"></div><div class="line">import &#123; AuthService &#125; from &apos;./auth.service&apos;;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line">export class AuthGuard implements CanActivate, CanActivateChild &#123;</div><div class="line"></div><div class="line">  constructor(private auth : AuthService)&#123;&#125;</div><div class="line"></div><div class="line">  canActivate() &#123;</div><div class="line">    console.log(&apos;AuthGuard#canActivate called&apos;);</div><div class="line">    return this.auth.isLogin();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  canActivateChild() &#123;</div><div class="line">	  console.log(&apos;AuthGuard#canActivateChild called&apos;);</div><div class="line">      return this.canActivate();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>import shared module ke app module</p>
+<li><p>import shared module (app.module.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;./shared/auth.service&apos;;</div><div class="line">import &#123; AuthGuard &#125; from &apos;./shared/authguard&apos;;</div></pre></td></tr></table></figure>
 </li>
-<li><p>definisikan di ng module sebagai provider</p>
+<li><p>definisikan di ngModule sebagai provider</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  providers: [</div><div class="line">    AuthGuard, AuthService</div><div class="line">  ],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
-<li><p>implement ke routing</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const routingTransaksi : Routes = [</div><div class="line">  &#123; path: &quot;transaksi/beli&quot;, component: BeliComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/jual&quot;, component: JualComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/rekap&quot;, component: RekapComponent &#125;</div><div class="line">]</div><div class="line">const routingAplikasi: Routes = [</div><div class="line">  &#123; path: &quot;about&quot;, component: AboutComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi&quot;, redirectTo: &quot;/transaksi&quot;, pathMatch: &quot;full&quot;, canActivateChild : [AuthGuard]&#125;,</div><div class="line">  &#123; path: &quot;**&quot;, component: WelcomeComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<li><p>implement ke routing (app.module.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const routingAplikasi: Routes = [</div><div class="line">  &#123; path: &quot;about&quot;, component: AboutComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi&quot;, redirectTo: &quot;/transaksi&quot;, pathMatch: &quot;full&quot;, canActivateChild : [AuthGuard]&#125;,</div><div class="line">  &#123; path: &quot;**&quot;, component: WelcomeComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+</li>
+<li><p>implement ke routing (transaksi.module.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const routingTransaksi : Routes = [</div><div class="line">  &#123; path: &quot;transaksi/beli&quot;, component: BeliComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/jual&quot;, component: JualComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/rekap&quot;, component: RekapComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Kondisi-layout-jika-belum-login"><a href="#Kondisi-layout-jika-belum-login" class="headerlink" title="Kondisi layout jika belum login"></a>Kondisi layout jika belum login</h2><p>Apabila anda ingin membuat suatu menu tidak ditampilkan jika belum login, anda dapat menggunakan fungsi <code>isLogin</code> yang telah kita buat tadi. Anda cukup menyisipkan menu yang tidak ingin ditampilkan diantara span yang berisi kondisi isLogin. Berikut adalah contoh penggunaannya :<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"authService.isLogin()"</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">routerLink</span>=<span class="string">"path"</span>&gt;</span>Menu yang tidak ingin ditampilkan<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="Mengatur-kondisi-layout-jika-belum-login"><a href="#Mengatur-kondisi-layout-jika-belum-login" class="headerlink" title="Mengatur kondisi layout jika belum login"></a>Mengatur kondisi layout jika belum login</h2><p>Apabila anda ingin membuat suatu menu tidak ditampilkan jika belum login, anda dapat menggunakan fungsi <code>isLogin</code> yang telah kita buat tadi. Anda cukup menyisipkan menu yang tidak ingin ditampilkan diantara tag yang berisi kondisi isLogin. Berikut adalah contoh penggunaannya :<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"authService.isLogin()"</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">routerLink</span>=<span class="string">"path"</span>&gt;</span>Menu yang tidak ingin ditampilkan<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>Kemudian definisikan service pada konstruktor pada module.ts nya.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constructor(private authService : AuthService) &#123; &#125;</div></pre></td></tr></table></figure></p>
 <p>Jangan lupa di import AuthService nya</p>
-<h1 id="Form-Login"><a href="#Form-Login" class="headerlink" title="Form Login"></a>Form Login</h1><ul>
-<li><p>buat component login form</p>
+<h1 id="Membuat-Form-Login"><a href="#Membuat-Form-Login" class="headerlink" title="Membuat Form Login"></a>Membuat Form Login</h1><ul>
+<li><p>membuat component login form</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared</div><div class="line">ng g component login</div></pre></td></tr></table></figure>
 </li>
-<li><p>buat html nya</p>
+<li><p>membuat html nya</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;form class=&quot;form-signin&quot;&gt;</div><div class="line">   &lt;h2 class=&quot;form-signin-heading&quot;&gt;Please sign in&lt;/h2&gt;</div><div class="line">   &lt;label for=&quot;username&quot; class=&quot;sr-only&quot;&gt;Username&lt;/label&gt;</div><div class="line">   &lt;input [(ngModel)]=&quot;username&quot; type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; required autofocus&gt;</div><div class="line">   &lt;label for=&quot;password&quot; class=&quot;sr-only&quot;&gt;Password&lt;/label&gt;</div><div class="line">   &lt;input [(ngModel)]=&quot;password&quot; type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; required&gt;</div><div class="line">   &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; (click)=login()&gt;Sign in&lt;/button&gt;</div><div class="line"> &lt;/form&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>import shared.module</p>
@@ -243,7 +252,7 @@ garap service di auth service
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;../auth.service&apos;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="Logout"><a href="#Logout" class="headerlink" title="Logout"></a>Logout</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li *ngIf=&quot;authService.isLogin()&quot;&gt;&lt;a (click)=&quot;logout()&quot;&gt;Keluar&lt;/a&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
+<h1 id="Membuat-Logout"><a href="#Membuat-Logout" class="headerlink" title="Membuat Logout"></a>Membuat Logout</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li *ngIf=&quot;authService.isLogin()&quot;&gt;&lt;a (click)=&quot;logout()&quot;&gt;Keluar&lt;/a&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">logout()&#123;</div><div class="line">  this.authService.logout();</div><div class="line">  this.router.navigate([&apos;login&apos;]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;../shared/auth.service&apos;;</div><div class="line">import &#123; Router &#125;   from &apos;@angular/router&apos;;</div></pre></td></tr></table></figure>
 
@@ -253,7 +262,7 @@ garap service di auth service
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/" data-id="cj2yp56ne000oa7lp5pai212i" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/" data-id="cj2ys0rpk000qenlp1xoywski" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -389,7 +398,7 @@ garap service di auth service
 <div align="center">
   <h3 class="widget-title">Muhammad Hafidz</h3>
   <div class="widget">
-    Linux + Spring Framework + AngularJS = ciazhar
+    Linux + Spring + Angular = ciazhar
   </div>
 </div>
 <br>
@@ -398,7 +407,7 @@ garap service di auth service
           
               
     <div class="widget-wrap">
-        <h3 class="widget-title">Roadmap</h3>
+        <h3 class="widget-title">Roadmap Belajar Pemrograman</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -420,28 +429,6 @@ garap service di auth service
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
                                 <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
                                 <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
-                                <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
-                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
-                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
                             </div>
                         </li>
                     
@@ -486,6 +473,28 @@ garap service di auth service
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
                                 <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
                                 <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
                             </div>
                         </li>
                     
@@ -536,7 +545,7 @@ garap service di auth service
 <div align="center">
   <h3 class="widget-title">Muhammad Hafidz</h3>
   <div class="widget">
-    Linux + Spring Framework + AngularJS = ciazhar
+    Linux + Spring + Angular = ciazhar
   </div>
 </div>
 <br>

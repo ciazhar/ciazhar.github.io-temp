@@ -4,45 +4,49 @@
   
     
     <entry>
-      <title><![CDATA[Auth Service]]></title>
+      <title><![CDATA[Authorization and Authentification Service]]></title>
       <url>http://ciazhar.github.io/2017/05/20/pemrograman/angular2/5-Auth-Service/</url>
-      <content type="html"><![CDATA[<ul>
-<li><p>membuat shared module</p>
+      <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
+<h1 id="Membuat-service-otorisasi"><a href="#Membuat-service-otorisasi" class="headerlink" title="Membuat service otorisasi"></a>Membuat service otorisasi</h1><ul>
+<li><p>Membuat shared module.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g module shared</div></pre></td></tr></table></figure>
 </li>
-<li><p>membuat service auth di dalam shared module</p>
+<li><p>Membuat service auth di dalam shared module</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared</div><div class="line">ng g service auth</div></pre></td></tr></table></figure>
 </li>
-<li><p>garap service di auth service</p>
+<li><p>Membuat service (auth.service.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import &#123; Injectable &#125; from &apos;@angular/core&apos;;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line">export class AuthService &#123;</div><div class="line"></div><div class="line">  constructor() &#123; &#125;</div><div class="line"></div><div class="line">  isLogin() : boolean&#123;</div><div class="line">    return localStorage.getItem(&quot;authentification&quot;)!=null;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  getUserInfo() : any&#123;</div><div class="line">    return localStorage.getItem(&quot;authentification&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  login(username : string, password : string) : boolean&#123;</div><div class="line">    if(username == &quot;admin&quot; &amp;&amp; password == &quot;123&quot;)&#123;</div><div class="line">      let userObject = &#123;</div><div class="line">        username: &quot;admin&quot;,</div><div class="line">        permissions: [</div><div class="line">          &quot;TRANSAKSI_VIEW&quot;,</div><div class="line">          &quot;TRANSAKSI_EDIT&quot;</div><div class="line">        ]</div><div class="line">      &#125;</div><div class="line">      localStorage.setItem(&quot;authentification&quot;,JSON.stringify(userObject));</div><div class="line">      return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  logout()&#123;</div><div class="line">    localStorage.removeItem(&quot;authentification&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>import auth service ke shared module</p>
+<li><p>Import auth service (shared.module.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;./auth.service&apos;;</div></pre></td></tr></table></figure>
 </li>
-<li><p>definisikan di ngmodule sebagai export agar dapat digunakan oleh semua</p>
+<li><p>Definisikan di ngModule sebagai exports</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  exports: [</div><div class="line">    AuthService</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
-<li><p>buat file authguard.ts</p>
+<li><p>Membuat file authguard.ts</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import &#123; Injectable &#125;     from &apos;@angular/core&apos;;</div><div class="line">import &#123; CanActivate, CanActivateChild &#125;    from &apos;@angular/router&apos;;</div><div class="line"></div><div class="line">import &#123; AuthService &#125; from &apos;./auth.service&apos;;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line">export class AuthGuard implements CanActivate, CanActivateChild &#123;</div><div class="line"></div><div class="line">  constructor(private auth : AuthService)&#123;&#125;</div><div class="line"></div><div class="line">  canActivate() &#123;</div><div class="line">    console.log(&apos;AuthGuard#canActivate called&apos;);</div><div class="line">    return this.auth.isLogin();</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  canActivateChild() &#123;</div><div class="line">	  console.log(&apos;AuthGuard#canActivateChild called&apos;);</div><div class="line">      return this.canActivate();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>import shared module ke app module</p>
+<li><p>import shared module (app.module.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;./shared/auth.service&apos;;</div><div class="line">import &#123; AuthGuard &#125; from &apos;./shared/authguard&apos;;</div></pre></td></tr></table></figure>
 </li>
-<li><p>definisikan di ng module sebagai provider</p>
+<li><p>definisikan di ngModule sebagai provider</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  providers: [</div><div class="line">    AuthGuard, AuthService</div><div class="line">  ],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
-<li><p>implement ke routing</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">const routingTransaksi : Routes = [</div><div class="line">  &#123; path: &quot;transaksi/beli&quot;, component: BeliComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/jual&quot;, component: JualComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/rekap&quot;, component: RekapComponent &#125;</div><div class="line">]</div><div class="line">const routingAplikasi: Routes = [</div><div class="line">  &#123; path: &quot;about&quot;, component: AboutComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi&quot;, redirectTo: &quot;/transaksi&quot;, pathMatch: &quot;full&quot;, canActivateChild : [AuthGuard]&#125;,</div><div class="line">  &#123; path: &quot;**&quot;, component: WelcomeComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+<li><p>implement ke routing (app.module.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const routingAplikasi: Routes = [</div><div class="line">  &#123; path: &quot;about&quot;, component: AboutComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi&quot;, redirectTo: &quot;/transaksi&quot;, pathMatch: &quot;full&quot;, canActivateChild : [AuthGuard]&#125;,</div><div class="line">  &#123; path: &quot;**&quot;, component: WelcomeComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
+</li>
+<li><p>implement ke routing (transaksi.module.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">const routingTransaksi : Routes = [</div><div class="line">  &#123; path: &quot;transaksi/beli&quot;, component: BeliComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/jual&quot;, component: JualComponent, canActivate : [AuthGuard] &#125;,</div><div class="line">  &#123; path: &quot;transaksi/rekap&quot;, component: RekapComponent &#125;</div><div class="line">]</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Kondisi-layout-jika-belum-login"><a href="#Kondisi-layout-jika-belum-login" class="headerlink" title="Kondisi layout jika belum login"></a>Kondisi layout jika belum login</h2><p>Apabila anda ingin membuat suatu menu tidak ditampilkan jika belum login, anda dapat menggunakan fungsi <code>isLogin</code> yang telah kita buat tadi. Anda cukup menyisipkan menu yang tidak ingin ditampilkan diantara span yang berisi kondisi isLogin. Berikut adalah contoh penggunaannya :<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"authService.isLogin()"</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">routerLink</span>=<span class="string">"path"</span>&gt;</span>Menu yang tidak ingin ditampilkan<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="Mengatur-kondisi-layout-jika-belum-login"><a href="#Mengatur-kondisi-layout-jika-belum-login" class="headerlink" title="Mengatur kondisi layout jika belum login"></a>Mengatur kondisi layout jika belum login</h2><p>Apabila anda ingin membuat suatu menu tidak ditampilkan jika belum login, anda dapat menggunakan fungsi <code>isLogin</code> yang telah kita buat tadi. Anda cukup menyisipkan menu yang tidak ingin ditampilkan diantara tag yang berisi kondisi isLogin. Berikut adalah contoh penggunaannya :<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"authService.isLogin()"</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">routerLink</span>=<span class="string">"path"</span>&gt;</span>Menu yang tidak ingin ditampilkan<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>Kemudian definisikan service pada konstruktor pada module.ts nya.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">constructor(private authService : AuthService) &#123; &#125;</div></pre></td></tr></table></figure></p>
 <p>Jangan lupa di import AuthService nya</p>
-<h1 id="Form-Login"><a href="#Form-Login" class="headerlink" title="Form Login"></a>Form Login</h1><ul>
-<li><p>buat component login form</p>
+<h1 id="Membuat-Form-Login"><a href="#Membuat-Form-Login" class="headerlink" title="Membuat Form Login"></a>Membuat Form Login</h1><ul>
+<li><p>membuat component login form</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd shared</div><div class="line">ng g component login</div></pre></td></tr></table></figure>
 </li>
-<li><p>buat html nya</p>
+<li><p>membuat html nya</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;form class=&quot;form-signin&quot;&gt;</div><div class="line">   &lt;h2 class=&quot;form-signin-heading&quot;&gt;Please sign in&lt;/h2&gt;</div><div class="line">   &lt;label for=&quot;username&quot; class=&quot;sr-only&quot;&gt;Username&lt;/label&gt;</div><div class="line">   &lt;input [(ngModel)]=&quot;username&quot; type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; required autofocus&gt;</div><div class="line">   &lt;label for=&quot;password&quot; class=&quot;sr-only&quot;&gt;Password&lt;/label&gt;</div><div class="line">   &lt;input [(ngModel)]=&quot;password&quot; type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; required&gt;</div><div class="line">   &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; (click)=login()&gt;Sign in&lt;/button&gt;</div><div class="line"> &lt;/form&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>import shared.module</p>
@@ -70,7 +74,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;../auth.service&apos;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="Logout"><a href="#Logout" class="headerlink" title="Logout"></a>Logout</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li *ngIf=&quot;authService.isLogin()&quot;&gt;&lt;a (click)=&quot;logout()&quot;&gt;Keluar&lt;/a&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
+<h1 id="Membuat-Logout"><a href="#Membuat-Logout" class="headerlink" title="Membuat Logout"></a>Membuat Logout</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;li *ngIf=&quot;authService.isLogin()&quot;&gt;&lt;a (click)=&quot;logout()&quot;&gt;Keluar&lt;/a&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">logout()&#123;</div><div class="line">  this.authService.logout();</div><div class="line">  this.router.navigate([&apos;login&apos;]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import &#123; AuthService &#125; from &apos;../shared/auth.service&apos;;</div><div class="line">import &#123; Router &#125;   from &apos;@angular/router&apos;;</div></pre></td></tr></table></figure>
 ]]></content>
@@ -89,27 +93,37 @@
     <entry>
       <title><![CDATA[Service]]></title>
       <url>http://ciazhar.github.io/2017/05/09/pemrograman/angular2/4-Service/</url>
-      <content type="html"><![CDATA[<ul>
-<li><p>Membuat service</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g service NAMA_SERVICE;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Struktur folder</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">├── beli</div><div class="line">│   ├── beli.component.css</div><div class="line">│   ├── beli.component.html</div><div class="line">│   ├── beli.component.spec.ts</div><div class="line">│   └── beli.component.ts</div><div class="line">├── jual</div><div class="line">│   ├── jual.component.css</div><div class="line">│   ├── jual.component.html</div><div class="line">│   ├── jual.component.spec.ts</div><div class="line">│   └── jual.component.ts</div><div class="line">├── rekap</div><div class="line">│   ├── rekap.component.css</div><div class="line">│   ├── rekap.component.html</div><div class="line">│   ├── rekap.component.spec.ts</div><div class="line">│   └── rekap.component.ts</div><div class="line">├── transaksi.module.ts</div><div class="line">├── transaksi.service.spec.ts</div><div class="line">└── transaksi.service.ts</div></pre></td></tr></table></figure>
-</li>
-<li><p>Pada file service.ts terdapat anotasi <code>@Injectable</code>. Anotasi ini berfungsi untuk menandai koding javascript agak bisa di injek ketika di compile.</p>
-</li>
-<li><p>Buat methode untuk service</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">getDaftarTransaksi()&#123;</div><div class="line">  let dataTransaksi = [</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Saldo awal&quot;,nilai : 0, saldo : 0&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Tambah&quot;,nilai : 10, saldo : 10&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Kurang&quot;,nilai : 5, saldo : 5&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Tambah&quot;,nilai : 20, saldo : 25&#125;</div><div class="line">  ];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat promise untuk menjembatani apabila service mengalami kegagalan karena http request.</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">getDaftarTransaksi()&#123;</div><div class="line">  <span class="keyword">let</span> dataTransaksi = [</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Saldo awal"</span>,nilai : <span class="number">0</span>, saldo : <span class="number">0</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Tambah"</span>,nilai : <span class="number">10</span>, saldo : <span class="number">10</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Kurang"</span>,nilai : <span class="number">5</span>, saldo : <span class="number">5</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Tambah"</span>,nilai : <span class="number">20</span>, saldo : <span class="number">25</span>&#125;</div><div class="line">  ];</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(dataTransaksi).then()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Import service ke module.tsnya</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; TransaksiService &#125; from &apos;./transaksi.service&apos;</div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""><br>Service ini pada dasarnya digunakan untuk membuat suatu layanan.</p>
+<ul>
+<li>Untuk membuat service dapat menggunakan perintah sebagai berikut :<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ng g service NAMA_SERVICE;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>Sebagai contoh kita akan membuat service di dalam transaksi.</p>
+<ul>
+<li><p>Struktur foldernya akan seperti berikut</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">transaksi</div><div class="line">├── beli</div><div class="line">│   ├── beli.component.css</div><div class="line">│   ├── beli.component.html</div><div class="line">│   ├── beli.component.spec.ts</div><div class="line">│   └── beli.component.ts</div><div class="line">├── jual</div><div class="line">│   ├── jual.component.css</div><div class="line">│   ├── jual.component.html</div><div class="line">│   ├── jual.component.spec.ts</div><div class="line">│   └── jual.component.ts</div><div class="line">├── rekap</div><div class="line">│   ├── rekap.component.css</div><div class="line">│   ├── rekap.component.html</div><div class="line">│   ├── rekap.component.spec.ts</div><div class="line">│   └── rekap.component.ts</div><div class="line">├── transaksi.module.ts</div><div class="line">├── transaksi.service.spec.ts</div><div class="line">└── transaksi.service.ts</div></pre></td></tr></table></figure>
+</li>
+<li><p>Pada file service.ts terdapat anotasi <code>@Injectable</code>. Anotasi ini berfungsi untuk menandai koding javascript agar langsung injek ketika proses compilasi berlangsung.</p>
+</li>
+<li><p>Buat methode sederhana untuk service(transaksi.service.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">getDaftarTransaksi()&#123;</div><div class="line">  let dataTransaksi = [</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Saldo awal&quot;,nilai : 0, saldo : 0&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Tambah&quot;,nilai : 10, saldo : 10&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Kurang&quot;,nilai : 5, saldo : 5&#125;,</div><div class="line">    &#123;tanggal : &quot;tanggal&quot;, keterangan : &quot;Tambah&quot;,nilai : 20, saldo : 25&#125;</div><div class="line">  ];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Buat promise untuk menjembatani apabila service mengalami kegagalan dalam http request.(transaksi.service.ts)</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">getDaftarTransaksi()&#123;</div><div class="line">  <span class="keyword">let</span> dataTransaksi = [</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Saldo awal"</span>,nilai : <span class="number">0</span>, saldo : <span class="number">0</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Tambah"</span>,nilai : <span class="number">10</span>, saldo : <span class="number">10</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Kurang"</span>,nilai : <span class="number">5</span>, saldo : <span class="number">5</span>&#125;,</div><div class="line">    &#123;tanggal : <span class="string">"tanggal"</span>, keterangan : <span class="string">"Tambah"</span>,nilai : <span class="number">20</span>, saldo : <span class="number">25</span>&#125;</div><div class="line">  ];</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(dataTransaksi);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Import service (transaksi.module.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import &#123; TransaksiService &#125; from &apos;./transaksi.service&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Definisikan pada ngModule sebagai provider (transaksi.module.ts)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@NgModule(&#123;</div><div class="line">  provider:[</div><div class="line">    TransaksiService</div><div class="line">  ]  </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>Service telah siap digunakan. Kemudian kita akan menggunakanya di component rekap.<br>(rekap.component.ts)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">dataTransaksi = [];</div><div class="line"></div><div class="line">export class RekapComponent implements OnIt &#123;</div><div class="line">  constructor(private transaksiService : TransaksiService)&#123;</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  ngOnIt()&#123;</div><div class="line">    this.transaksiService.getDaftarTransaksi().then(hasil =&gt; this.dataTransaksi = hasil)</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>Service telah siap digunakan. Kemudian kita akan menggunakanya di component rekap(rekap.component.ts)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">export class RekapComponent implements OnIt &#123;</div><div class="line"></div><div class="line">  dataTransaksi = [];</div><div class="line"></div><div class="line">  constructor(private transaksiService : TransaksiService)&#123;&#125;</div><div class="line"></div><div class="line">  ngOnIt()&#123;</div><div class="line">    this.transaksiService.getDaftarTransaksi().then(hasil =&gt; this.dataTransaksi = hasil)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tampilkan hasilnya di UI(rekap.component.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;table class=&quot;table table-hover table-condensed table-striped&quot;&gt;</div><div class="line">  &lt;thead&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">      &lt;th&gt;Tanggal&lt;/th&gt;</div><div class="line">      &lt;th&gt;Keterangan&lt;/th&gt;</div><div class="line">      &lt;th&gt;Beli&lt;/th&gt;</div><div class="line">      &lt;th&gt;Jual&lt;/th&gt;</div><div class="line">      &lt;th&gt;Saldo&lt;/th&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">  &lt;/thead&gt;</div><div class="line">  &lt;tbody&gt;</div><div class="line">    &lt;tr *ngFor=&quot;let transaksi of dataTransaksi&quot;&gt;</div><div class="line">      &lt;th&gt;&#123;&#123;transaksi.tanggal&#125;&#125;&lt;/th&gt;</div><div class="line">      &lt;th&gt;&#123;&#123;transaksi.keterangan&#125;&#125;&lt;/th&gt;</div><div class="line">      &lt;th&gt;&#123;&#123;transaksi.nilai&#125;&#125;&lt;/th&gt;</div><div class="line">      &lt;th&gt;&#123;&#123;transaksi.nilai&#125;&#125;&lt;/th&gt;</div><div class="line">      &lt;th&gt;&#123;&#123;transaksi.saldo&#125;&#125;&lt;/th&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">  &lt;/tbody&gt;</div><div class="line">&lt;/table&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 ]]></content>
       
         <categories>
@@ -331,7 +345,7 @@
       <title><![CDATA[Introduction to Angular2]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/</url>
       <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
-<h1 id="Sekilas-tentang-Angular"><a href="#Sekilas-tentang-Angular" class="headerlink" title="Sekilas tentang Angular"></a>Sekilas tentang Angular</h1><p><a href="https://angular.io" target="_blank" rel="external">Angular</a> merupakan framework untuk membangun aplikasi frontend web, desktop dan mobile. Angular sendiri pada awalnya berbasis bahasa pemrograman <a href="https://www.javascript.com" target="_blank" rel="external">Javascript</a> tetapi kemudian mulai versi 2 keatas ditambahkan untuk bahasa pemrograman Typescript(<a href="https://www.typescriptlang.org/" target="_blank" rel="external">https://www.typescriptlang.org/</a>). Pada Tutorial kali ini kita akan coba membuat aplikasi angular berbasis frontend web.</p>
+<h1 id="Sekilas-tentang-Angular"><a href="#Sekilas-tentang-Angular" class="headerlink" title="Sekilas tentang Angular"></a>Sekilas tentang Angular</h1><p><a href="https://angular.io" target="_blank" rel="external">Angular</a> merupakan framework untuk membangun aplikasi frontend web, desktop dan mobile. Angular sendiri pada awalnya berbasis bahasa pemrograman <a href="https://www.javascript.com" target="_blank" rel="external">Javascript</a> tetapi kemudian mulai versi 2 keatas ditambahkan untuk bahasa pemrograman <a href="https://www.typescriptlang.org/" target="_blank" rel="external">Typescript</a>. Pada Tutorial kali ini kita akan coba membuat aplikasi angular untuk frontend web.</p>
 <h1 id="Roadmap-Belajar-Angular"><a href="#Roadmap-Belajar-Angular" class="headerlink" title="Roadmap Belajar Angular"></a>Roadmap Belajar Angular</h1><ul>
 <li><a href="">Setup Project Angular</a></li>
 <li><a href="">Component dan Module</a></li>
@@ -728,53 +742,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Setup Project Spring]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
-<ul>
-<li>Java Development Kit (JDK atau openJDK)</li>
-<li>Build Tools (Apache Maven atau Gradle)</li>
-<li>IDE (IntellijIDEA atau Netbeans)</li>
-</ul>
-<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
-<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
-<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
-<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
-<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
-<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
-</ul>
-</li>
-<li>Generate Project</li>
-<li>Add project ke text editor</li>
-</ul>
-<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
-<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
-<ul>
-<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
-<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
-<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
-<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
-<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
-<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
-<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
-</ul>
-<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Android]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/</url>
       <content type="html"><![CDATA[<p><img src="/images/android.png" alt=""></p>
@@ -882,10 +849,57 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Setup Project Spring]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
+<ul>
+<li>Java Development Kit (JDK atau openJDK)</li>
+<li>Build Tools (Apache Maven atau Gradle)</li>
+<li>IDE (IntellijIDEA atau Netbeans)</li>
+</ul>
+<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
+<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
+<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
+<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
+<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
+</ul>
+</li>
+<li>Generate Project</li>
+<li>Add project ke text editor</li>
+</ul>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
+<ul>
+<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
+<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
+<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
+</ul>
+<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Introduction to Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/</url>
       <content type="html"><![CDATA[<p><img src="/images/spring.png" alt=""></p>
-<h1 id="Sekilas-tentang-Spring"><a href="#Sekilas-tentang-Spring" class="headerlink" title="Sekilas tentang Spring"></a>Sekilas tentang Spring</h1><p><a href="http://spring.io" target="_blank" rel="external">Spring Framework</a> merupakan suatu framework untuk mempermudah dalam membangun aplikasi berbasis enterprise menggunakan <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages" target="_blank" rel="external">bahasa-bahasa JVM</a>. Secara konsep, project spring yang akan kita buat akan  menggunakan beberapa design pattern seperti <a href="">Model View Controller</a>, <a href="">Dependecy Injection</a>, <a href="">Aspec Oriented Programming</a>, <a href="">Object Relational Mapping</a> dan lainya. Apabila anda merasa asing dengan beberapa istilah tersebut, silahkan anda mencari referensi di internet karena kita tidak akan membahas terlalu detail mengenai beberapa istilah tersebut.<br>Pada Tutorial kali ini kita akan coba membuat aplikasi berbasis backend web menggunakan Spring Framework.</p>
+<h1 id="Sekilas-tentang-Spring"><a href="#Sekilas-tentang-Spring" class="headerlink" title="Sekilas tentang Spring"></a>Sekilas tentang Spring</h1><p><a href="http://spring.io" target="_blank" rel="external">Spring Framework</a> merupakan suatu framework untuk mempermudah dalam membangun aplikasi berbasis enterprise menggunakan <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages" target="_blank" rel="external">bahasa-bahasa JVM</a>. Secara konsep, project spring yang akan kita buat akan  menggunakan beberapa design pattern seperti <a href="">Model View Controller</a>, <a href="">Dependecy Injection</a>, <a href="">Aspec Oriented Programming</a>, <a href="">Object Relational Mapping</a> dan lainya. Apabila anda merasa asing dengan beberapa istilah tersebut, silahkan anda mencari referensi di internet karena kita tidak akan membahas terlalu detail mengenai beberapa istilah tersebut.<br>Pada Tutorial kali ini kita akan coba membuat aplikasi untuk backend web menggunakan Spring Framework.</p>
 <h1 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h1><p>Berikut sekilas peta jalan yang akan kita pelajari untuk dapat membuat aplikasi spring :</p>
 <ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/">Setup Project Spring Boot</a></li>
