@@ -4,9 +4,78 @@
   
     
     <entry>
-      <title><![CDATA[SSO dengan Spring Security]]></title>
-      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4-SSO-dengan-Spring-Security/</url>
-      <content type="html"><![CDATA[<h1 id="Aplikasi-Authorization-Sever-dengan-Spring-Security"><a href="#Aplikasi-Authorization-Sever-dengan-Spring-Security" class="headerlink" title="Aplikasi Authorization Sever dengan Spring Security"></a>Aplikasi Authorization Sever dengan Spring Security</h1><p>#Setup Development Environment</p>
+      <title><![CDATA[Full Stack Application]]></title>
+      <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/8.3-Full-Stack-Application/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Microservice dengan Spring Cloud]]></title>
+      <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/8.4-Microservice-dengan-Spring-Cloud/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Debugging Spring Data JPA]]></title>
+      <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/3.5-Debug-Spring-Data-JPA/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Database Mirgation dengan FlywayDB]]></title>
+      <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/7-Database-Mirgation-dengan-FlywayDB/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Single Signed On dengan Spring Security]]></title>
+      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/8.2-SSO-dengan-Spring-Security/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Aplikasi-Authorization-Sever-dengan-Spring-Security"><a href="#Aplikasi-Authorization-Sever-dengan-Spring-Security" class="headerlink" title="Aplikasi Authorization Sever dengan Spring Security"></a>Aplikasi Authorization Sever dengan Spring Security</h1><p>#Setup Development Environment</p>
 <ul>
 <li>JDK 1.8</li>
 <li>Tomcat Sever</li>
@@ -113,37 +182,81 @@
 <li><p>membuat class ClientResources untuk mengatur otorisasi client dan akses resource yang pada tadinya terpisah</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class ClientResources &#123;</div><div class="line"></div><div class="line">  @NestedConfigurationProperty</div><div class="line">  private AuthorizationCodeResourceDetails client = new AuthorizationCodeResourceDetails();</div><div class="line"></div><div class="line">  @NestedConfigurationProperty</div><div class="line">  private ResourceServerProperties resource = new ResourceServerProperties();</div><div class="line"></div><div class="line">  public AuthorizationCodeResourceDetails getClient() &#123;</div><div class="line">    return client;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public ResourceServerProperties getResource() &#123;</div><div class="line">    return resource;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li></li>
 </ul>
+<p>-</p>
 ]]></content>
       
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CRUD Design Pattern 3]]></title>
+      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/3.2.2-generate-content-dari-server-side-dengan-thymeleaf(obsolate)/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
         
     </entry>
     
     <entry>
       <title><![CDATA[Melihat data User yang sedang Login menggunakan Spring Security]]></title>
-      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4-melihat-data-user-login-dengan-spring-security-md/</url>
-      <content type="html"><![CDATA[<p>Untuk dapat melihar user yang sedang login dapat menggunakan <code>Authentication</code> yang nilainya akan diinjek oleh spring security. Berikut contoh kodenya :<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"api/user"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/current"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Authentication <span class="title">currentUser</span><span class="params">(Authentication authentication)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> authentication;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4.3-melihat-data-user-login-dengan-spring-security-md/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Untuk dapat melihar user yang sedang login dapat menggunakan <code>Authentication</code> yang nilainya akan diinjek oleh spring security. Berikut contoh kodenya :<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"api/user"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/current"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Authentication <span class="title">currentUser</span><span class="params">(Authentication authentication)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> authentication;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 ]]></content>
       
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
         
     </entry>
     
     <entry>
-      <title><![CDATA[Mendebug Spring Security]]></title>
-      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4-debug-spring-security/</url>
-      <content type="html"><![CDATA[<p>Spring security memberikan fasilitas untuk mendebug. Untuk menggunakannya cukup dengan menambahkan anotasi <code>@EnableWebSecurity(debug = true)</code> pada file KonfigurasiSecurity.</p>
+      <title><![CDATA[Debugging Spring Security]]></title>
+      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4.3-debug-spring-security/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Spring security memberikan fasilitas untuk mendebug. Untuk menggunakannya cukup dengan menambahkan anotasi <code>@EnableWebSecurity(debug = true)</code> pada file KonfigurasiSecurity.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@EnableWebSecurity</span>(debug = <span class="keyword">true</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KonfigurasiSecurity</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span></span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Debug ini hanya disarankan pada tahap development saja.</p>
 ]]></content>
       
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
         
     </entry>
     
     <entry>
       <title><![CDATA[Otorisasi methode dengan Spring Security]]></title>
-      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4-otorisasi-method-dengan-spring-security/</url>
-      <content type="html"><![CDATA[<p>Require :</p>
+      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4.2-otorisasi-method-dengan-spring-security/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Require :</p>
 <ul>
 <li>otorisasi login dengan spring security</li>
 <li>crud</li>
@@ -152,12 +265,20 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/api/harga"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HargaRestController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Autowired</span> <span class="keyword">private</span> HargaDao hargaDao;</div><div class="line"></div><div class="line">    <span class="meta">@PreAuthorize</span>(<span class="string">"hasAuthority('HARGA_EDIT')"</span>)</div><div class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Page&lt;Harga&gt; <span class="title">daftarHarga</span><span class="params">(Pageable page)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> hargaDao.findAll(page);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
         
     </entry>
     
     <entry>
       <title><![CDATA[Integrasi Spring dan Oauth2]]></title>
-      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4-oauth2-spring/</url>
+      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/8.1-oauth2-spring/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk memulai Development sistem ini user diharuskan sudah memenuhi Development Environment sebagai berikut :</p>
 <ul>
@@ -945,7 +1066,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Jasper Report]]></title>
+      <title><![CDATA[Membuat Report dengan Jasper Report]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/6-jasper-report/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <ol>
@@ -976,7 +1097,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Thymeleaf]]></title>
+      <title><![CDATA[Template Engine Thymeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5-layout-dengan-thymeleaf/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"userName"</span> <span class="attr">value</span>=<span class="string">"James Carrot"</span> <span class="attr">th:value</span>=<span class="string">"$&#123;user.name&#125;"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
@@ -1010,7 +1131,7 @@
     
     <entry>
       <title><![CDATA[Otorisasi Login dengan spring security]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4-otorisasi-login-dengan-spring-security/</url>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4.1-otorisasi-login-dengan-spring-security/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
 <li><p>Tambahkan dependency (pom.xml)</p>
@@ -1167,7 +1288,61 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Setup Project Untuk CRUD dengan Spring Data JPA]]></title>
+      <title><![CDATA[CRUD dengan Spring Data JPA]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="CRUD-menggunakan-Spring-Data-JPA"><a href="#CRUD-menggunakan-Spring-Data-JPA" class="headerlink" title="CRUD menggunakan Spring Data JPA"></a>CRUD menggunakan Spring Data JPA</h1><p>Untuk melakukan CRUD, setiap entitas didefinisikan dengan beberapa tahap yaitu :</p>
+<ul>
+<li>Membuat Model.<br>Di model ini akan terdapat atribut-atribut yang nantinya akan ditrasformasikan menjadi tabel pada Database.</li>
+<li>Membuat DAO.<br>Dia yang bertugas mendefinisikan metode apa saja yang dibutuhkan oleh Controller.</li>
+<li>Membuat Controller.<br>Controller ini berfungsi untuk mengatur apa yang akan ditampilkan ke view, apa yang akan disimpan ke database dan melakukan mapping url.</li>
+<li>Membuat View (List dan Form).<br>View ini akan menjadi apa yang akan dilihat oleh user.<br>Jadi Struktur foldernya akan seperti ini :<br>Struktur foldernya akan seperti berikut :<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">src</div><div class="line"> └── main</div><div class="line"> |    ├── java</div><div class="line"> |       └── com</div><div class="line"> |           └── example</div><div class="line"> |               ├── DemoApplication.java</div><div class="line"> |               ├── controllers</div><div class="line"> |               ├── dao</div><div class="line"> |               └── model</div><div class="line"> └── resources</div><div class="line">         ├── application.properties</div><div class="line">         ├── static</div><div class="line">         │   ├── css</div><div class="line">         │   ├── fonts</div><div class="line">         │   └── js</div><div class="line">         └── templates</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>CRUD sendiri dapat dibagi menjadi 2 tipe tergantung dimana menggenerate contenya, yaitu client side dan server side.  Dalam mengiplementasikanya, bentuk Model dan Dao nya tetap sama, yang membedakan adalah controller dan viewnya saja.</p>
+<h2 id="Membuat-Model"><a href="#Membuat-Model" class="headerlink" title="Membuat Model"></a>Membuat Model</h2><ul>
+<li>Membuat class untuk model</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Untuk setiap kelas yang ingin dibuat menjadi model, harus diberi anotasi <code>Entity</code> pada bagian atasnya.</p>
+<ul>
+<li>Menambahkan atribut</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line">    <span class="keyword">private</span> String nama;</div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Menambahkan validasi tiap atribut</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span> <span class="meta">@Table</span>(name = <span class="string">"tabel_peserta"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Id</span> <span class="meta">@GeneratedValue</span>(generator = <span class="string">"uuid"</span>)</div><div class="line">    <span class="meta">@GenericGenerator</span>(name = <span class="string">"uuid"</span>, strategy = <span class="string">"uuid2"</span>)</div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="meta">@Size</span>(min = <span class="number">1</span>, max = <span class="number">150</span>)</div><div class="line">    <span class="keyword">private</span> String nama;  </div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@Email</span></div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Validasi di spring sendiri menggunkan JSR-303. Setiap variabel dapat didefinisikan secara spesifik menggunakan validasi. Sebagai Table, NotNull, NotEmpty dll.</p>
+<ul>
+<li>Menambahkan getter dan setter</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(String id)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.id = id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getNama</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNama</span><span class="params">(String nama)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.nama = nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getEmail</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> email;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEmail</span><span class="params">(String email)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.email = email;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getNoHp</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> noHp;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNoHp</span><span class="params">(String noHp)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.noHp = noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Membuat-DAO"><a href="#Membuat-DAO" class="headerlink" title="Membuat DAO"></a>Membuat DAO</h2><ul>
+<li>Membuat interface dao dan menginherit class PagingAndSortingRepository</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">Peserta</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Dengan menginherit class PagingAndSortingRepository kita dapat menggunakan method yang biasa digunakan untuk CRUD seperti findAll, findOne, save, delete dll.</p>
+<ul>
+<li>Membuat methode untuk searching (optional)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">Peserta</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">  <span class="meta">@Query</span>(value = <span class="string">"select p from Peserta p where p.kelas.id = ?1 ORDER BY id_kelas"</span>)</div><div class="line">  <span class="function"><span class="keyword">public</span> Page&lt;Peserta&gt; <span class="title">findByKelasId</span><span class="params">(String id_kelas, Pageable pageable)</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Keterangan :<br>Selain spring sudah mendefinisikan method yang sering digunakan, spring juga memperbolehkan kita untuk membuat method sesuai yang kita inginkan. Sebagai contoh diatas kita membuat Page yang berisi daftar peserta berdasar kelas tertentu. Dalam pembuatanya spring juga memperbolehkan menggunakan query sql atau query jpa.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.0-setup-project-crud/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <h1 id="Setup-Project-untuk-CRUD"><a href="#Setup-Project-untuk-CRUD" class="headerlink" title="Setup Project untuk CRUD"></a>Setup Project untuk CRUD</h1><p>Pada tutorial kali ini kita akan melakukan Create Read Update Delete (CRUD) menggunakan Spring Data JPA. Kita akan menggunakan mysql untuk databasenya, jadi anda harus menginstallnya terlebih dahulu.<br>Berikut ini merupakan langkah-langkahnya :</p>
@@ -1228,61 +1403,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[CRUD dengan Spring Data JPA]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="CRUD-menggunakan-Spring-Data-JPA"><a href="#CRUD-menggunakan-Spring-Data-JPA" class="headerlink" title="CRUD menggunakan Spring Data JPA"></a>CRUD menggunakan Spring Data JPA</h1><p>Untuk melakukan CRUD, setiap entitas didefinisikan dengan beberapa tahap yaitu :</p>
-<ul>
-<li>Membuat Model.<br>Di model ini akan terdapat atribut-atribut yang nantinya akan ditrasformasikan menjadi tabel pada Database.</li>
-<li>Membuat DAO.<br>Dia yang bertugas mendefinisikan metode apa saja yang dibutuhkan oleh Controller.</li>
-<li>Membuat Controller.<br>Controller ini berfungsi untuk mengatur apa yang akan ditampilkan ke view, apa yang akan disimpan ke database dan melakukan mapping url.</li>
-<li>Membuat View (List dan Form).<br>View ini akan menjadi apa yang akan dilihat oleh user.<br>Jadi Struktur foldernya akan seperti ini :<br>Struktur foldernya akan seperti berikut :<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">src</div><div class="line"> └── main</div><div class="line"> |    ├── java</div><div class="line"> |       └── com</div><div class="line"> |           └── example</div><div class="line"> |               ├── DemoApplication.java</div><div class="line"> |               ├── controllers</div><div class="line"> |               ├── dao</div><div class="line"> |               └── model</div><div class="line"> └── resources</div><div class="line">         ├── application.properties</div><div class="line">         ├── static</div><div class="line">         │   ├── css</div><div class="line">         │   ├── fonts</div><div class="line">         │   └── js</div><div class="line">         └── templates</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>CRUD sendiri dapat dibagi menjadi 2 tipe tergantung dimana menggenerate contenya, yaitu client side dan server side.  Dalam mengiplementasikanya, bentuk Model dan Dao nya tetap sama, yang membedakan adalah controller dan viewnya saja.</p>
-<h2 id="Membuat-Model"><a href="#Membuat-Model" class="headerlink" title="Membuat Model"></a>Membuat Model</h2><ul>
-<li>Membuat class untuk model</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Keterangan :<br>Untuk setiap kelas yang ingin dibuat menjadi model, harus diberi anotasi <code>Entity</code> pada bagian atasnya.</p>
-<ul>
-<li>Menambahkan atribut</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line">    <span class="keyword">private</span> String nama;</div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>Menambahkan validasi tiap atribut</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span> <span class="meta">@Table</span>(name = <span class="string">"tabel_peserta"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Peserta</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Id</span> <span class="meta">@GeneratedValue</span>(generator = <span class="string">"uuid"</span>)</div><div class="line">    <span class="meta">@GenericGenerator</span>(name = <span class="string">"uuid"</span>, strategy = <span class="string">"uuid2"</span>)</div><div class="line">    <span class="keyword">private</span> String id;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="meta">@Size</span>(min = <span class="number">1</span>, max = <span class="number">150</span>)</div><div class="line">    <span class="keyword">private</span> String nama;  </div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@Email</span></div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String email;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(nullable=<span class="keyword">false</span>,unique=<span class="keyword">true</span>)</div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="meta">@NotEmpty</span></div><div class="line">    <span class="keyword">private</span> String noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Keterangan :<br>Validasi di spring sendiri menggunkan JSR-303. Setiap variabel dapat didefinisikan secara spesifik menggunakan validasi. Sebagai Table, NotNull, NotEmpty dll.</p>
-<ul>
-<li>Menambahkan getter dan setter</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(String id)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.id = id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getNama</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNama</span><span class="params">(String nama)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.nama = nama;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getEmail</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> email;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEmail</span><span class="params">(String email)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.email = email;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getNoHp</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> noHp;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNoHp</span><span class="params">(String noHp)</span> </span>&#123;</div><div class="line">    <span class="keyword">this</span>.noHp = noHp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Membuat-DAO"><a href="#Membuat-DAO" class="headerlink" title="Membuat DAO"></a>Membuat DAO</h2><ul>
-<li>Membuat interface dao dan menginherit class PagingAndSortingRepository</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">Peserta</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Keterangan :<br>Dengan menginherit class PagingAndSortingRepository kita dapat menggunakan method yang biasa digunakan untuk CRUD seperti findAll, findOne, save, delete dll.</p>
-<ul>
-<li>Membuat methode untuk searching (optional)</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">PesertaDao</span> <span class="keyword">extends</span> <span class="title">PagingAndSortingRepository</span>&lt;<span class="title">Peserta</span>, <span class="title">String</span>&gt;</span>&#123;</div><div class="line"></div><div class="line">  <span class="meta">@Query</span>(value = <span class="string">"select p from Peserta p where p.kelas.id = ?1 ORDER BY id_kelas"</span>)</div><div class="line">  <span class="function"><span class="keyword">public</span> Page&lt;Peserta&gt; <span class="title">findByKelasId</span><span class="params">(String id_kelas, Pageable pageable)</span></span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Keterangan :<br>Selain spring sudah mendefinisikan method yang sering digunakan, spring juga memperbolehkan kita untuk membuat method sesuai yang kita inginkan. Sebagai contoh diatas kita membuat Page yang berisi daftar peserta berdasar kelas tertentu. Dalam pembuatanya spring juga memperbolehkan menggunakan query sql atau query jpa.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Membuat Laman Web Sederhana denga Spring Boot dan Thymeleaf]]></title>
+      <title><![CDATA[Membuat Web Menggunakan Spring Boot dan Thyeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""><br><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/">Pada tutorial sebelumnya</a> kita sudah melakukan setup project spring pada perangkat anda. Sekarang kita akan coba melihat bagaimana aplikasi spring dibuat.<br>Untuk pertama kali kita akan coba membuat laman web sederhana. Langkah-langkahnya adalah sebagai berikut :</p>
 <ul>
@@ -1307,6 +1428,53 @@
 <ul>
 <li>Memasang Library (/src/main/resources)<br>Jika kita lihat pada html diatas kita memerlukan beberapa library yaitu bootstrap dan jquery. Library tersebut dapat anda download di official masing-masing library tersebut. Kemudian masukkan ke /src/main/resources/css untuk file CSS dan /src/main/resources/js untuk file JS. Jika anda asset diinjek menggunakan CDN anda dapat melewati langkah berikut.</li>
 </ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Setup Project Spring Boot]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
+<ul>
+<li>Java Development Kit (JDK atau openJDK)</li>
+<li>Build Tools (Apache Maven atau Gradle)</li>
+<li>IDE (IntellijIDEA atau Netbeans)</li>
+</ul>
+<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
+<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
+<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
+<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
+<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
+</ul>
+</li>
+<li>Generate Project</li>
+<li>Add project ke text editor</li>
+</ul>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
+<ul>
+<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
+<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
+<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
+</ul>
+<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         <categories>
@@ -1428,75 +1596,54 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Setup Project Spring Boot]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
-<ul>
-<li>Java Development Kit (JDK atau openJDK)</li>
-<li>Build Tools (Apache Maven atau Gradle)</li>
-<li>IDE (IntellijIDEA atau Netbeans)</li>
-</ul>
-<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
-<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
-<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
-<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
-<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
-<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
-</ul>
-</li>
-<li>Generate Project</li>
-<li>Add project ke text editor</li>
-</ul>
-<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
-<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
-<ul>
-<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
-<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
-<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
-<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
-<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
-<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
-<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
-</ul>
-<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Introduction to Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/</url>
       <content type="html"><![CDATA[<p><img src="/images/spring.png" alt=""></p>
-<h1 id="Sekilas-tentang-Spring"><a href="#Sekilas-tentang-Spring" class="headerlink" title="Sekilas tentang Spring"></a>Sekilas tentang Spring</h1><p><a href="http://spring.io" target="_blank" rel="external">Spring Framework</a> merupakan suatu framework untuk mempermudah dalam membangun aplikasi berbasis enterprise menggunakan <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages" target="_blank" rel="external">bahasa-bahasa JVM</a>. Secara konsep, project spring yang akan kita buat akan  menggunakan beberapa design pattern seperti <a href="">Model View Controller</a>, <a href="">Dependecy Injection</a>, <a href="">Aspec Oriented Programming</a>, <a href="">Object Relational Mapping</a> dan lainya. Apabila anda merasa asing dengan beberapa istilah tersebut, silahkan anda mencari referensi di internet karena kita tidak akan membahas terlalu detail mengenai beberapa istilah tersebut.<br>Pada Tutorial kali ini kita akan coba membuat aplikasi untuk backend web menggunakan Spring Framework.</p>
+<h1 id="Sekilas-tentang-Spring"><a href="#Sekilas-tentang-Spring" class="headerlink" title="Sekilas tentang Spring"></a>Sekilas tentang Spring</h1><p>The <a href="http://spring.io" target="_blank" rel="external">Spring Framework</a> provides a comprehensive programming and configuration model for modern <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages" target="_blank" rel="external">Java-based</a> enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the “plumbing” of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.</p>
+<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><ul>
+<li>Dependency Injection</li>
+<li>Aspect-Oriented Programming including Spring’s declarative transaction management</li>
+<li>Spring MVC web application and RESTful web service framework</li>
+<li>Foundational support for JDBC, JPA, JMS</li>
+<li>Much more…</li>
+</ul>
+<p>All available features and modules are described in <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#overview-modules" target="_blank" rel="external">the Modules section of the reference documentation</a>. Their <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#dependency-management" target="_blank" rel="external">maven/gradle coordinates are also described there</a>.</p>
 <h1 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h1><p>Berikut sekilas peta jalan yang akan kita pelajari untuk dapat membuat aplikasi spring :</p>
-<ul>
+<h2 id="Setup-Project"><a href="#Setup-Project" class="headerlink" title="Setup Project"></a>Setup Project</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/">Setup Project Spring Boot</a></li>
+</ul>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/2-membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/">Membuat Web Menggunakan Spring Boot dan Thyeleaf</a></li>
-<li><a href="">Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL</a></li>
+</ul>
+<h2 id="Create-Read-Update-Delete"><a href="#Create-Read-Update-Delete" class="headerlink" title="Create Read Update Delete"></a>Create Read Update Delete</h2><ul>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.0-setup-project-crud/">Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL</a></li>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.1-crud-dengan-spring-data-jpa/">CRUD dengan Spring Data JPA</a></li>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.2-generate-content-dari-server-side-dengan-thymeleaf/">Generate Content di Server Side Menggunakan Spring Data JPA dan Thymeleaf</a></li>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.3-generate-content-dari-client-side-dengan-AngularJS/">Generate Content di Client Side Menggunakan  AngularJS</a></li>
-<li><a href="">Kardinalitas pada Spring Data JPA</a></li>
-<li><a href="">Konfigurasi yang sering digunakan untuk CRUD pada Spring Data JPA</a></li>
-<li><a href="">Migrasi Database dengan FlywayDB</a></li>
+<li><a href="">Generate Content di Server Side Menggunakan Spring Data JPA dan Thymeleaf(Obsolate)</a></li>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/3.4-kardinalitas/">Kardinalitas pada Spring Data JPA</a></li>
+<li><a href="">Debug Spring Data JPA</a></li>
+</ul>
+<h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/4-otorisasi-login-dengan-spring-security/">Otoriasai login dengan Spring Security</a></li>
+<li><a href="">Otorisasi controller dengan Spring Security</a></li>
+<li><a href="">Debug Spring Security</a></li>
+<li><a href="">Melihat Data User Login dengan Spring Security</a></li>
+</ul>
+<h2 id="Template-Engine"><a href="#Template-Engine" class="headerlink" title="Template Engine"></a>Template Engine</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/5-layout-dengan-thymeleaf/">Layouting dengan Thymeleaf</a></li>
+</ul>
+<h2 id="Report"><a href="#Report" class="headerlink" title="Report"></a>Report</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/6-jasper-report/">Membuat Report dengan Jasper Report</a></li>
+</ul>
+<h2 id="Database-Migration"><a href="#Database-Migration" class="headerlink" title="Database Migration"></a>Database Migration</h2><ul>
+<li><a href="">Migrasi Database dengan FlywayDB</a></li>
+</ul>
+<h2 id="Microservice"><a href="#Microservice" class="headerlink" title="Microservice"></a>Microservice</h2><ul>
 <li><a href="">Oauth2 dengan Spring Security</a></li>
 <li><a href="">Single Signed On dengan Spring Security</a></li>
-<li><a href="">Stack untuk Spring Framework</a></li>
 <li><a href="">Full Stack Application</a></li>
+<li><a href="">Microservice dengan Spring Cloud</a></li>
 </ul>
 ]]></content>
       

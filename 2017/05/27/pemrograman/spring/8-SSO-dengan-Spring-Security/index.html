@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>SSO dengan Spring Security | ciazhar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="Aplikasi Authorization Sever dengan Spring Security#Setup Development Environment
+
+JDK 1.8
+Tomcat Sever
+MySQL
+
+#Teknologi yang digunakan
+
+Spring Boot
+Spring Security
+AngularJS
+
+#Setup Project
+
+Buka b">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSO dengan Spring Security">
+<meta property="og:url" content="http://ciazhar.github.io/2017/05/27/pemrograman/spring/8-SSO-dengan-Spring-Security/index.html">
+<meta property="og:site_name" content="ciazhar">
+<meta property="og:description" content="Aplikasi Authorization Sever dengan Spring Security#Setup Development Environment
+
+JDK 1.8
+Tomcat Sever
+MySQL
+
+#Teknologi yang digunakan
+
+Spring Boot
+Spring Security
+AngularJS
+
+#Setup Project
+
+Buka b">
+<meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
+<meta property="og:updated_time" content="2017-05-28T08:45:36.589Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SSO dengan Spring Security">
+<meta name="twitter:description" content="Aplikasi Authorization Sever dengan Spring Security#Setup Development Environment
+
+JDK 1.8
+Tomcat Sever
+MySQL
+
+#Teknologi yang digunakan
+
+Spring Boot
+Spring Security
+AngularJS
+
+#Setup Project
+
+Buka b">
+<meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Someone INTJs</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Beranda</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring/">Spring</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">Tentang</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'pos',
+            PAGES: 'Pages',
+            CATEGORIES: 'kategori',
+            TAGS: 'tag',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring/">Spring</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-pemrograman/spring/8-SSO-dengan-Spring-Security" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        SSO dengan Spring Security
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/05/27/pemrograman/spring/8-SSO-dengan-Spring-Security/" class="article-date">
+            <time datetime="2017-05-27T10:22:29.000Z" itemprop="datePublished">2017-05-27</time>
+        </a>
+    </div>
+
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Aplikasi-Authorization-Sever-dengan-Spring-Security"><a href="#Aplikasi-Authorization-Sever-dengan-Spring-Security" class="headerlink" title="Aplikasi Authorization Sever dengan Spring Security"></a>Aplikasi Authorization Sever dengan Spring Security</h1><p>#Setup Development Environment</p>
+<ul>
+<li>JDK 1.8</li>
+<li>Tomcat Sever</li>
+<li>MySQL</li>
+</ul>
+<p>#Teknologi yang digunakan</p>
+<ul>
+<li>Spring Boot</li>
+<li>Spring Security</li>
+<li>AngularJS</li>
+</ul>
+<p>#Setup Project</p>
+<ul>
+<li><p>Buka browser masukkan url</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://start.spring.io/</div></pre></td></tr></table></figure>
+</li>
+<li><p>Masukkan data, sesuaikan dengan dependency yang dibutuhkan(web, security,oauth2) lalu download</p>
+</li>
+<li>Add project ke text editor</li>
+</ul>
+<p>Note :<br>Pada Project tersebut terdapat 3 buah file utama yaitu :</p>
+<ul>
+<li>pom.xml (konfigurasi maven)</li>
+<li>application.properties (konfigurasi database)</li>
+<li>Application.java (main class)</li>
+</ul>
+<p>#Simple Oauth Facebook</p>
+<ul>
+<li><p>Konfigurasi Oauth (application.yml)<br>Note : application.properties diganti application.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">security:</div><div class="line">  oauth2:</div><div class="line">    client:</div><div class="line">      clientId: 233668646673605</div><div class="line">      clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d</div><div class="line">      accessTokenUri: https://graph.facebook.com/oauth/access_token</div><div class="line">      userAuthorizationUri: https://www.facebook.com/dialog/oauth</div><div class="line">      tokenName: oauth_token</div><div class="line">      authenticationScheme: query</div><div class="line">      clientAuthenticationScheme: form</div><div class="line">    resource:</div><div class="line">      userInfoUri: https://graph.facebook.com/me</div></pre></td></tr></table></figure>
+</li>
+<li><p>Kasih anotasi @EnableOAuth2Sso (Aplikasi.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@EnableOAuth2Sso</div><div class="line">@SpringBootApplication</div><div class="line">public class Aplikasi &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		SpringApplication.run(Aplikasi.class, args);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Bikin UI jika otorisari succes(resource/static/index.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;utf-8&quot; /&gt;</div><div class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;</div><div class="line">    &lt;title&gt;Demo&lt;/title&gt;</div><div class="line">    &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;</div><div class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;</div><div class="line">    &lt;base href=&quot;/&quot; /&gt;</div><div class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;</div><div class="line">          href=&quot;/webjars/bootstrap/css/bootstrap.min.css&quot; /&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;/webjars/jquery/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;</div><div class="line">            src=&quot;/webjars/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;h1&gt;SSO sukses&lt;/h1&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Bikin-UI-untuk-login"><a href="#Bikin-UI-untuk-login" class="headerlink" title="Bikin UI untuk login"></a>Bikin UI untuk login</h1><ul>
+<li><p>Bikin UI (resource/static/index.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">&lt;body ng-app=&quot;app&quot; ng-controller=&quot;home as home&quot;&gt;</div><div class="line">  &lt;h1&gt;Login&lt;/h1&gt;</div><div class="line">  &lt;div class=&quot;container&quot; ng-show=&quot;!home.authenticated&quot;&gt;</div><div class="line">      With Facebook: &lt;a href=&quot;/login&quot;&gt;click here&lt;/a&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class=&quot;container&quot; ng-show=&quot;home.authenticated&quot;&gt;</div><div class="line">      &lt;h1&gt;SSO berhasil&lt;/h1&gt;</div><div class="line">      Logged in as: &lt;span ng-bind=&quot;home.user&quot;&gt;&lt;/span&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/webjars/angularjs/angular.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">      angular.module(&quot;app&quot;, []).controller(&quot;home&quot;, function($http) &#123;</div><div class="line">          var self = this;</div><div class="line">          $http.get(&quot;/user&quot;).success(function(data) &#123;</div><div class="line">              self.user = data.userAuthentication.details.name;</div><div class="line">              self.authenticated = true;</div><div class="line">          &#125;).error(function() &#123;</div><div class="line">              self.user = &quot;N/A&quot;;</div><div class="line">              self.authenticated = false;</div><div class="line">          &#125;);</div><div class="line">      &#125;);</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">...</div></pre></td></tr></table></figure>
+</li>
+<li><p>Bikin RestController(java/domain/controllers/IndexController.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@RestController</div><div class="line">public class IndexController &#123;</div><div class="line">    @RequestMapping(&quot;/user&quot;)</div><div class="line">    public Principal user(Principal principal) &#123;</div><div class="line">        return principal;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Bikin Konfigurasi Security(java/domain/config/KonfigurasiSecurity.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@Configurable</div><div class="line">@EnableOAuth2Sso</div><div class="line">@EnableWebSecurity</div><div class="line">public class KonfigurasiSecurity extends WebSecurityConfigurerAdapter &#123;</div><div class="line">    @Override</div><div class="line">    protected void configure(HttpSecurity http) throws Exception &#123;</div><div class="line">        http.antMatcher(&quot;/**&quot;).authorizeRequests().antMatchers(&quot;/&quot;, &quot;/login**&quot;, &quot;/webjars/**&quot;).permitAll().anyRequest()</div><div class="line">                .authenticated();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#Pretty print JSON</p>
+<ul>
+<li>Konfigurasi YAML (resources/application.yml)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">spring:</div><div class="line">  jackson:</div><div class="line">    serialization:</div><div class="line">      INDENT_OUTPUT: true</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#Custom Logout</p>
+<ul>
+<li><p>Konfigurasi client Side (resources/static/index.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">angular</div><div class="line">.module(&quot;app&quot;, [])</div><div class="line">...</div><div class="line">.controller(&quot;home&quot;, function($http, $location) &#123;</div><div class="line">  var self = this;</div><div class="line">  ...</div><div class="line">  self.logout = function() &#123;</div><div class="line">    $http.post(&apos;/logout&apos;, &#123;&#125;).success(function() &#123;</div><div class="line">      self.authenticated = false;</div><div class="line">      $location.path(&quot;/&quot;);</div><div class="line">    &#125;).error(function(data) &#123;</div><div class="line">      console.log(&quot;Logout failed&quot;)</div><div class="line">      self.authenticated = false;</div><div class="line">    &#125;);</div><div class="line">  &#125;;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Konfigurasi Server Side (java/domain/config/KonfigurasiSecurity.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.and()</div><div class="line">.logout().logoutSuccessUrl(&quot;/&quot;).permitAll()</div><div class="line">.and()</div><div class="line">.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#Memisahkan Otorisasi Facebook dari Spring Security</p>
+<ul>
+<li><p>Mengubah anotasi @EnableOAuth2Sso dengan @EnableOAuth2Client (java/domain/config/KonfigurasiSecurity.java)</p>
+<p>   Sejatinya adalah aplikasi yang telah kita buat tadi berdiri di persis di atas Spring Security. Hal ini dikarenakan kita menggunakan anotasi @EnableOAuth2Sso. Anotasi tersebut sendiri terdiri dari 2 fitur yaitu OAuth2 client dan Oauth2 authentification.<br>   Untuk OAuth2 client dia dapat berinteraksi dengan resource OAuth2 yang disediakan oleh Authorization Server (dalam konteks ini facebook Authorization Server).<br>   Sedangkan OAuth2 authentification dia berfungsi untuk menyelaraskan aplikasi kita dengan REST milik Spring Security<br>   Jadi ketika 2 fitur itu digunakan untuk SSO ke facebook saja, maka kita hanya dapat SSO ke facebook saja<br>   Oleh karena itu kita akan mengganti anotasi @EnableOAuth2Sso dengan @EnableOAuth2Client</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Configurable</div><div class="line">@EnableOAuth2Client</div><div class="line">@EnableWebSecurity</div><div class="line">public class KonfigurasiSecurity extends WebSecurityConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Membuat Filter authentification(java/domain/config/KonfigurasiSecurity.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">OAuth2ClientContext oauth2ClientContext;</div><div class="line"></div><div class="line">///Bean untuk memberitahu filter tentang registrasi client dengan facebook</div><div class="line">@Bean</div><div class="line">@ConfigurationProperties(&quot;facebook.client&quot;)</div><div class="line">public AuthorizationCodeResourceDetails facebook() &#123;</div><div class="line">  return new AuthorizationCodeResourceDetails();</div><div class="line">&#125;</div><div class="line"></div><div class="line">///Bean untuk memberitahu filter tentang dimana user end point di facebook</div><div class="line">@Bean</div><div class="line">@ConfigurationProperties(&quot;facebook.resource&quot;)</div><div class="line">public ResourceServerProperties facebookResource() &#123;</div><div class="line">  return new ResourceServerProperties();</div><div class="line">&#125;</div><div class="line"></div><div class="line">private Filter ssoFilter() &#123;</div><div class="line">  OAuth2ClientAuthenticationProcessingFilter facebookFilter = new OAuth2ClientAuthenticationProcessingFilter(&quot;/login/facebook&quot;);</div><div class="line">  OAuth2RestTemplate facebookTemplate = new OAuth2RestTemplate(facebook(), oauth2ClientContext);</div><div class="line">  facebookFilter.setRestTemplate(facebookTemplate);</div><div class="line">  UserInfoTokenServices tokenServices = new UserInfoTokenServices(facebookResource().getUserInfoUri(), facebook().getClientId());</div><div class="line">  tokenServices.setRestTemplate(facebookTemplate);</div><div class="line">  facebookFilter.setTokenServices(tokenServices);</div><div class="line">  return facebookFilter;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">@Override</div><div class="line">protected void configure(HttpSecurity http) throws Exception &#123;</div><div class="line">  http.antMatcher(&quot;/**&quot;)</div><div class="line">  ...</div><div class="line">  .addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Mengubah konfigurasi OAuth2(resources/application.yml)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">facebook:</div><div class="line">  client:</div><div class="line">    clientId: 233668646673605</div><div class="line">    clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d</div><div class="line">    accessTokenUri: https://graph.facebook.com/oauth/access_token</div><div class="line">    userAuthorizationUri: https://www.facebook.com/dialog/oauth</div><div class="line">    tokenName: oauth_token</div><div class="line">    authenticationScheme: query</div><div class="line">    clientAuthenticationScheme: form</div><div class="line">  resource:</div><div class="line">    userInfoUri: https://graph.facebook.com/me      </div><div class="line">logging:</div><div class="line">  level:</div><div class="line">    org.springframework.security: DEBUG</div></pre></td></tr></table></figure>
+</li>
+<li><p>Ganti URL pada UI(resources/static/index.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot; ng-show=&quot;!home.authenticated&quot;&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">  With Facebook: &lt;a href=&quot;/login/facebook&quot;&gt;click here&lt;/a&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Buat Konfigurasi untuk Redirect(java/domain/config/KonfigurasiSecurity.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Bean</div><div class="line">public FilterRegistrationBean oauth2ClientFilterRegistration(OAuth2ClientContextFilter filter) &#123;</div><div class="line">  FilterRegistrationBean registration = new FilterRegistrationBean();</div><div class="line">  registration.setFilter(filter);</div><div class="line">  registration.setOrder(-100);</div><div class="line">  return registration;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#Tambah Authentification untuk github</p>
+<ul>
+<li><p>Edit UI (resources/static/index.html)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">With Github: &lt;a href=&quot;/login/github&quot;&gt;click here&lt;/a&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tambah Konfigurasi untuk Github(java/domain/config/KonfigurasiSecurity.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Bean</div><div class="line">@ConfigurationProperties(&quot;github.client&quot;)</div><div class="line">public AuthorizationCodeResourceDetails github() &#123;</div><div class="line">    return new AuthorizationCodeResourceDetails();</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Bean</div><div class="line">@ConfigurationProperties(&quot;github.resource&quot;)</div><div class="line">public ResourceServerProperties githubResource() &#123;</div><div class="line">    return new ResourceServerProperties();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Edit Filter(java/domain/config/KonfigurasiSecurity.java)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">private Filter ssoFilter() &#123;</div><div class="line">    CompositeFilter filter = new CompositeFilter();</div><div class="line">    List&lt;Filter&gt; filters = new ArrayList&lt;&gt;();</div><div class="line">    OAuth2ClientAuthenticationProcessingFilter facebookFilter = new OAuth2ClientAuthenticationProcessingFilter(&quot;/login/facebook&quot;);</div><div class="line">    OAuth2RestTemplate facebookTemplate = new OAuth2RestTemplate(facebook(), oauth2ClientContext);</div><div class="line">    facebookFilter.setRestTemplate(facebookTemplate);</div><div class="line">    UserInfoTokenServices tokenServices = new UserInfoTokenServices(facebookResource().getUserInfoUri(), facebook().getClientId());</div><div class="line">    tokenServices.setRestTemplate(facebookTemplate);</div><div class="line">    facebookFilter.setTokenServices(tokenServices);</div><div class="line">    filters.add(facebookFilter);</div><div class="line">    OAuth2ClientAuthenticationProcessingFilter githubFilter = new OAuth2ClientAuthenticationProcessingFilter(&quot;/login/github&quot;);</div><div class="line">    OAuth2RestTemplate githubTemplate = new OAuth2RestTemplate(github(), oauth2ClientContext);</div><div class="line">    githubFilter.setRestTemplate(githubTemplate);</div><div class="line">    tokenServices = new UserInfoTokenServices(githubResource().getUserInfoUri(), github().getClientId());</div><div class="line">    tokenServices.setRestTemplate(githubTemplate);</div><div class="line">    githubFilter.setTokenServices(tokenServices);</div><div class="line">    filters.add(githubFilter);</div><div class="line">    filter.setFilters(filters);</div><div class="line">    return filter;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tambah Konfigurasi OAuth2 Github(resources/application.yml)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">github:</div><div class="line">  client:</div><div class="line">    clientId: bd1c0a783ccdd1c9b9e4</div><div class="line">    clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1</div><div class="line">    accessTokenUri: https://github.com/login/oauth/access_token</div><div class="line">    userAuthorizationUri: https://github.com/login/oauth/authorize</div><div class="line">    clientAuthenticationScheme: form</div><div class="line">  resource:</div><div class="line">    userInfoUri: https://api.github.com/user</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#Membuat authorization server</p>
+<ul>
+<li><p>Merapikan ssoFilter</p>
+<p>Note : kita akan membagi menjadi 2 agar terlihat rapi   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">private Filter ssoFilter() &#123;</div><div class="line">		CompositeFilter filter = new CompositeFilter();</div><div class="line">		List&lt;Filter&gt; filters = new ArrayList&lt;&gt;();</div><div class="line">		filters.add(ssoFilter(facebook(), &quot;/login/facebook&quot;));</div><div class="line">		filters.add(ssoFilter(github(), &quot;/login/github&quot;));</div><div class="line">		filter.setFilters(filters);</div><div class="line">		return filter;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">private Filter ssoFilter(ClientResources client, String path) &#123;</div><div class="line">    OAuth2ClientAuthenticationProcessingFilter filter = new OAuth2ClientAuthenticationProcessingFilter(</div><div class="line">            path);</div><div class="line">    OAuth2RestTemplate template = new OAuth2RestTemplate(client.getClient(), oauth2ClientContext);</div><div class="line">    filter.setRestTemplate(template);</div><div class="line">    UserInfoTokenServices tokenServices = new UserInfoTokenServices(</div><div class="line">            client.getResource().getUserInfoUri(), client.getClient().getClientId());</div><div class="line">    tokenServices.setRestTemplate(template);</div><div class="line">    filter.setTokenServices(tokenServices);</div><div class="line">    return filter;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>membuat class ClientResources untuk mengatur otorisasi client dan akses resource yang pada tadinya terpisah</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class ClientResources &#123;</div><div class="line"></div><div class="line">  @NestedConfigurationProperty</div><div class="line">  private AuthorizationCodeResourceDetails client = new AuthorizationCodeResourceDetails();</div><div class="line"></div><div class="line">  @NestedConfigurationProperty</div><div class="line">  private ResourceServerProperties resource = new ResourceServerProperties();</div><div class="line"></div><div class="line">  public AuthorizationCodeResourceDetails getClient() &#123;</div><div class="line">    return client;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public ResourceServerProperties getResource() &#123;</div><div class="line">    return resource;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>-</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://ciazhar.github.io/2017/05/27/pemrograman/spring/8-SSO-dengan-Spring-Security/" data-id="cj38hd6tb0024v3lp7qmyi1uu" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>ikuti:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com/kid.dont.cry" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ciazhar" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="telegram" href="http://telegram.me/ciazhar" target="_blank">
+                        <i class="icon fa fa-telegram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    <!-- 
+        
+<nav id="article-nav">
+    
+        <a href="/2017/05/28/pemrograman/spring/7-Database-Mirgation-dengan-FlywayDB/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            7. Database Mirgation dengan FlywayDB
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/05/27/pemrograman/spring/3.2.2-CRUD-Design-Pattern-3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih lawas</strong>
+        <p class="article-nav-title">CRUD Design Pattern 3</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+     -->
+
+    <div class="widget-wrap">
+      
+          
+              <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring + Angular = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+          
+              
+    <div class="widget-wrap">
+        <h3 class="widget-title">Roadmap Belajar Pemrograman</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo.png)" alt="Introduction to Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/spring.png)" alt="Introduction to Spring" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring/">Spring</a></p>
+                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="title">Introduction to Spring</a></p>
+                                <p class="item-date"><time datetime="2017-04-23T07:17:28.000Z" itemprop="datePublished">2017-04-23</time></p>
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">kategori</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">27</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">17</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arsip</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tag</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+          
+      
+
+      <!-- 
+        <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring + Angular = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+        
+       -->
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Muhammad Hafidz</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'true';
+    
+    
+    var disqus_url = 'http://ciazhar.github.io/2017/05/27/pemrograman/spring/8-SSO-dengan-Spring-Security/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
