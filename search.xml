@@ -4,9 +4,247 @@
   
     
     <entry>
+      <title><![CDATA[User Documentation]]></title>
+      <url>http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-User-Documentation/</url>
+      <content type="html"><![CDATA[<p><img src="http://www.audiosources.com.ua/images/photos/read_service_manual_2_read_manual.jpg" alt=""></p>
+<h1 id="Pengertian-User-Dokumentasi"><a href="#Pengertian-User-Dokumentasi" class="headerlink" title="Pengertian User Dokumentasi"></a>Pengertian User Dokumentasi</h1><p>Dokumentasi dari suatu produk atau service yang disediakan untuk end users.</p>
+<h1 id="Jenis-User-Dokumentasi"><a href="#Jenis-User-Dokumentasi" class="headerlink" title="Jenis User Dokumentasi :"></a>Jenis User Dokumentasi :</h1><ol>
+<li>Paper User Manual</li>
+<li>Online User Manual</li>
+</ol>
+<h2 id="Paper-User-Manual"><a href="#Paper-User-Manual" class="headerlink" title="Paper User Manual"></a>Paper User Manual</h2><p>User manual adalah sebuah bagian dari user interface untuk sebuah sistem komputer. User manual juga sering menjadi salah satu support yang dimiliki user untuk troubleshotting.<br>Ada beberapa macam tipe manual untuk berbagai tipe user :</p>
+<ol>
+<li>Tutorials.</li>
+<li>Reference Manuals.</li>
+<li>Quick Reference.</li>
+<li>User Guide.</li>
+</ol>
+<h3 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials"></a>Tutorials</h3><p>Tutorial cocok digunakan untuk novice user. karena user tipe ini hanya memiliki sedikit pengetahuan tentang Semantics of the Application (Apa yang bisa dilakukan sistem) dan juga Syntax of the human interface (tepatnya bagaimana melakukan sesuatu secara khusus pada sistem).</p>
+<h3 id="Detailed-Reference-Manual"><a href="#Detailed-Reference-Manual" class="headerlink" title="Detailed Reference Manual"></a>Detailed Reference Manual</h3><p>Pada bagian ini biasanya menjelaskan secara rinci kesalahan error yang umum terjadi pada user dalam menggunakan suatu aplikasi yang dibuat oleh developer. Serta beberapa pertanyaan umum yang sering dikeluhkan user (FAQ) yang jumlahnya terbatas.</p>
+<h3 id="Quick-Reference"><a href="#Quick-Reference" class="headerlink" title="Quick Reference"></a>Quick Reference</h3><p>Quick Reference berisi ringkasan informasi dari bagian kecil fungsi yang sering digunakan atau penting. ditujukan untuk Expert User.</p>
+<h3 id="User-Guides"><a href="#User-Guides" class="headerlink" title="User Guides"></a>User Guides</h3><p>User Guides ditujukan unutk intermediate user. User guide harus memenuhi kebutuhan dari semua tipe user. Memperbolehkan user untuk melewati informasi yang sebelumnya telah diperoleh.</p>
+<h2 id="Online-User-Manual"><a href="#Online-User-Manual" class="headerlink" title="Online User Manual"></a>Online User Manual</h2><p>Ada beberapa macam tipe manual untuk berbagai tipe user :</p>
+<ol>
+<li>Online Manual</li>
+<li>Online Help</li>
+<li>Context - Sensitive Help</li>
+<li>Online Tutorial &amp; Animated Demonstration</li>
+<li>Online Communities, NewsGroups, E-mail, Chat, And Instant Messaging</li>
+<li>Online Help Principle &amp; Guide Lines</li>
+</ol>
+<h3 id="Online-Manual"><a href="#Online-Manual" class="headerlink" title="Online Manual :"></a>Online Manual :</h3><h4 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h4><ul>
+<li>Secara fisik tidak banyak memakan tempat.</li>
+<li>Mudah dinavigasikan.</li>
+<li>Memberikan pengalaman yang interaktif pada user.</li>
+<li>Secara ekonomi Lebih Hemat.<h4 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h4></li>
+<li>User Interface mungkin menghambat.</li>
+<li>Kesulitan navigasi.</li>
+<li>Kesulitan melihat online manual.</li>
+<li>Isi yang lebih sedikit.</li>
+</ul>
+<h3 id="Online-Help"><a href="#Online-Help" class="headerlink" title="Online Help"></a>Online Help</h3><p>Bantuan yang disediakan oleh developer jika dalam manual online/paper tidak bisa menjawab pertanyaan user, atau juga bisa menghubungi costumer service dan admin.</p>
+<h3 id="Context-Sensitive-Help"><a href="#Context-Sensitive-Help" class="headerlink" title="Context - Sensitive Help"></a>Context - Sensitive Help</h3><p>Sebuah icon yang bersimbolkan tanda tanya pada sebuah program yang berfungsi untuk menjelaskan icon yang sedang ditunjuk secara lebih rinci.</p>
+<h3 id="Online-Tutorial-amp-Animated-Demonstration"><a href="#Online-Tutorial-amp-Animated-Demonstration" class="headerlink" title="Online Tutorial &amp; Animated Demonstration"></a>Online Tutorial &amp; Animated Demonstration</h3><p>kumpulan tata cara pengerjaan, dapat berupa video, text, online class dll. yaitu langkah - langkah yang disediakan oleh developer dalam suatu aplikasi untuk memudahkan user memahaminya.</p>
+<h3 id="Online-Communities-NewsGroups-E-mail-Chat-And-Instant-Messaging"><a href="#Online-Communities-NewsGroups-E-mail-Chat-And-Instant-Messaging" class="headerlink" title="Online Communities, NewsGroups, E-mail, Chat, And Instant Messaging"></a>Online Communities, NewsGroups, E-mail, Chat, And Instant Messaging</h3><p>layanan yang tersedia diluar aplikasi tersebut, apabila dalam user manual ( offline ) tidak bisa menjawab pertanyaan, User dapat bertanya juga kepada layanan eksternal seperti grup aplikasi, dll.</p>
+<h2 id="Online-Help-Principle-amp-Guide-Lines"><a href="#Online-Help-Principle-amp-Guide-Lines" class="headerlink" title="Online Help Principle &amp; Guide Lines :"></a>Online Help Principle &amp; Guide Lines :</h2><ul>
+<li>Membuat menu/layanan help dengan tata letak yang mudah dilihat oleh pengguna.</li>
+<li>Membuat secara lengkap dan akurat.</li>
+<li>Menyediakan beberapa cara untuk mengaksesnya.</li>
+<li>Membuat help yang berkaitan dengan user’s task dan user’s goal.</li>
+<li>Sediakan beberapa level penjelasan untuk berbagai keadaan pada user.</li>
+<li>Mudah dipelajari dan dinavigasikan.</li>
+<li>Desain layout yang menarik.</li>
+<li>Menggunakan Windowing / kotak dialog.</li>
+</ul>
+<h1 id="Online-Documentation-VS-Paper-Documentation"><a href="#Online-Documentation-VS-Paper-Documentation" class="headerlink" title="Online Documentation VS Paper Documentation :"></a>Online Documentation VS Paper Documentation :</h1><h2 id="Online-Documentation"><a href="#Online-Documentation" class="headerlink" title="Online Documentation :"></a>Online Documentation :</h2><h3 id="Kelebihan-1"><a href="#Kelebihan-1" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h3><ul>
+<li>Secara Fisik tidak memakan tempat.</li>
+<li>Mudah dinavigasikan.</li>
+<li>Dapat memberikan pengalaman interaksi pada User.</li>
+<li>Secara Ekonomi lebih Hemat.<h3 id="Kekurangan-1"><a href="#Kekurangan-1" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h3></li>
+<li>Isi yang lebih Sedikit.</li>
+<li>User interface yang mungkin menghambat user.</li>
+<li>Kesulitan melihat Online Manuals.<h2 id="Paper-Documentation"><a href="#Paper-Documentation" class="headerlink" title="Paper Documentation :"></a>Paper Documentation :</h2><h3 id="Kelebihan-2"><a href="#Kelebihan-2" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h3></li>
+<li>Secara fisik isi lengkap dan terperinci.</li>
+<li>Mudah dalam pembacaannya, seperti mata tidak terhalang radiasi cahaya komputer, dll.</li>
+<li>Tidak menggunakan jaringan internet karena menggunakan media kertas.<h3 id="Kekurangan-2"><a href="#Kekurangan-2" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h3></li>
+<li>Secara fisik memakan cukup ruang.</li>
+<li>Harganya cukup mahal.</li>
+<li>User experiencenya kurang menarik karena biasanya tidak ada animasi di dalamnya.</li>
+</ul>
+<h1 id="Sifat-Sifat-User-Dokumentasi"><a href="#Sifat-Sifat-User-Dokumentasi" class="headerlink" title="Sifat - Sifat User Dokumentasi :"></a>Sifat - Sifat User Dokumentasi :</h1><ul>
+<li>Availability : User dapat menggunakan bantuan setiap saat selama sedang berinteraksi dengan sistem. User tidak perlu keluar dari aplikasi ketika ingin membuka aplikasi bantuan.<br>Accuracy and Completeness : Bantuan seharusnya tersedia secara akurat dan lengkap.</li>
+<li>Consistency : Konsistensi pada sistem yang ada, antara jenis online dan jenis tercetak, serta konsisten dari sisi content, terminologi dan bentuk presentasi.</li>
+<li>Robustness : Kemampuan untuk melanjutkan operasi ketika sistem mempunyai perilaku yang tidak diharapkan.</li>
+<li>Flexybility : membuat setiap user berinteraksi sesuai keinginannya.<br>Unobtrusiveness : tidak mencegah user dalam melanjutkan pekerjaannya atau terpengaruh ddengan aplikasi user.</li>
+</ul>
+<h1 id="Tahapan-Membuat-User-Dokumentasi-yang-baik"><a href="#Tahapan-Membuat-User-Dokumentasi-yang-baik" class="headerlink" title="Tahapan Membuat User Dokumentasi yang baik :"></a>Tahapan Membuat User Dokumentasi yang baik :</h1><ul>
+<li>Ease of Navigation.</li>
+<li>Ease of Learning.</li>
+<li>Ease of Reading.</li>
+</ul>
+<h1 id="Fungsi-User-Dokumentasi"><a href="#Fungsi-User-Dokumentasi" class="headerlink" title="Fungsi User Dokumentasi :"></a>Fungsi User Dokumentasi :</h1><ul>
+<li>Memberikan kinerja sistem ( feedback ) yang baik untuk user.</li>
+<li>Memberikan panduan interaksi antara pengguna dan sistem.</li>
+<li>Memberikan panduan kepada pengguna untuk mempelajari sistem.</li>
+<li>Memberikan panduan kepada pengguna untuk memecahkan masalah.</li>
+</ul>
+<h1 id="Manfaat-User-Dokumentasi"><a href="#Manfaat-User-Dokumentasi" class="headerlink" title="Manfaat User Dokumentasi :"></a>Manfaat User Dokumentasi :</h1><ul>
+<li>Mengetahui dengan jelas alur pekerjaan dari sistem yang dibuat.</li>
+<li>Bukti bahwa kita pernah melakukan developing dan perbaikan sistem.</li>
+<li>Untuk mengatasi error dengan cepat.</li>
+<li>Dapat meminimalisir kesalahan user dan menyediakan kemudahan recovery.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Teknologi </category>
+            
+            <category> Interaksi Manusia dan Komputer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ui-ux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Response Time]]></title>
+      <url>http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Response-Time/</url>
+      <content type="html"><![CDATA[<p><img src="http://www.highperformingculture.com/wp-content/uploads/2015/09/Response-Time-01-758x342.png" alt=""></p>
+<h1 id="Respon-Time"><a href="#Respon-Time" class="headerlink" title="Respon Time"></a>Respon Time</h1><p>Responee Time adalah lama waktu yang dibutuhkan setelah user/ pengguna mengawali aktivitas input sampai komputer dapat menampilkan hasil respon.</p>
+<p>User think time : waktu user untuk berfikir sebelum melakukan tindakan selanjutnya.</p>
+<h1 id="Kekurangan-amp-Kelebihan-Respon-time-Lambat-Vs-Respon-time-Cepat"><a href="#Kekurangan-amp-Kelebihan-Respon-time-Lambat-Vs-Respon-time-Cepat" class="headerlink" title="Kekurangan &amp; Kelebihan - Respon time Lambat Vs. Respon time Cepat"></a>Kekurangan &amp; Kelebihan - Respon time <strong>Lambat</strong> Vs. Respon time <strong>Cepat</strong></h1><h2 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan"></a>Kekurangan</h2><h3 id="Respon-Time-Lambat"><a href="#Respon-Time-Lambat" class="headerlink" title="Respon Time Lambat :"></a>Respon Time Lambat :</h3><ul>
+<li>User Frustasi.</li>
+<li>Waktu terbuang untuk menunggu.</li>
+<li>User menjadi gelisah dan tidak fokus terhadap pekerjaan.<h3 id="Respon-Time-Cepat"><a href="#Respon-Time-Cepat" class="headerlink" title="Respon Time Cepat :"></a>Respon Time Cepat :</h3></li>
+<li>User menjadi ceroboh.</li>
+<li>Tingkat pemahaman terhadap informasi yang disajikan rendah.</li>
+</ul>
+<h2 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan"></a>Kelebihan</h2><h3 id="Respon-Time-Lambat-1"><a href="#Respon-Time-Lambat-1" class="headerlink" title="Respon Time Lambat :"></a>Respon Time Lambat :</h3><ul>
+<li>Memudahkan dalam memahami informasi yang disajikan terutama bagi pengguna awam.</li>
+<li>Karena mempermudah dalam memahami informasi, sehingga meminimalisir keselahan user.<h3 id="Respon-Time-Cepat-1"><a href="#Respon-Time-Cepat-1" class="headerlink" title="Respon Time Cepat :"></a>Respon Time Cepat :</h3></li>
+<li>User merasa puas dengan kinerja komputer.</li>
+<li>User bisa jadi lebih produktif.</li>
+</ul>
+<h1 id="Faktor-Faktor-yang-mempengaruhi-Respon-Time"><a href="#Faktor-Faktor-yang-mempengaruhi-Respon-Time" class="headerlink" title="Faktor - Faktor yang mempengaruhi Respon Time :"></a>Faktor - Faktor yang mempengaruhi Respon Time :</h1><ul>
+<li>Kompleksitas interaksi : sebuah input yang memiliki rangkaian perintah yang panjang dapat memengaruhi respon time komputer. Contoh : perbandingan waktu respon saat membuka program notepad dengan Photoshop.</li>
+<li>Keahlian user dalam mengoperasikan perangkat : user yang ahli akan lebih paham langkah yang harus diambil sehingga respon menjadi lebih singkat. Contoh : seorang programmer lebih cepat mengoperasikan komputer dibandingkan tukang siomay.<br>Kecepatan proses data dibagi menjadi 2 :</li>
+<li>Kecepatan data Internet : google.com dan youtube.com, dalam membuka url web browser tersebut terlihat perbedaan banyak data yang diproses, dan memengaruhi kecepatan respon.<br>Kecepatan data Read and Write : saat data mengalir dari/kesebuah tempat penyimpanan, kecepatan akses ditentukan oleh seberapa cepat kemampuan read dan write.</li>
+<li>Jumlah user : jumlah user yang banyak saat mengakses data dapat memengaruhi kecepatan respon sistem.</li>
+<li>Kemampuan dari perangkat itu sendiri : contoh Laptop dengan Spesifikasi tinggi ( gaming ), dengan laptop lawas dan spesifikasi rendah, waktu respon time akan terlihat jelas.</li>
+</ul>
+<h1 id="Faktor-yang-mempengaruhi-Ekspektasi-Waktu-Respon"><a href="#Faktor-yang-mempengaruhi-Ekspektasi-Waktu-Respon" class="headerlink" title="Faktor yang mempengaruhi Ekspektasi Waktu Respon :"></a>Faktor yang mempengaruhi Ekspektasi Waktu Respon :</h1><ul>
+<li>Pengalaman sebelumnya yang dilakukan oleh user mengenai waktu yang dibutuhkan untuk menyelesaikan tugas tertentu.</li>
+<li>Ragam individu dan tugas yang bervariasi.</li>
+<li>User sangat adaptif.</li>
+</ul>
+<h1 id="Beberapa-Hal-Terkait-Response-Time-Limit"><a href="#Beberapa-Hal-Terkait-Response-Time-Limit" class="headerlink" title="Beberapa Hal Terkait Response Time-Limit :"></a>Beberapa Hal Terkait Response Time-Limit :</h1><ul>
+<li>0,1 detik adalah batas waktu agar pengguna merasa bahwa sistem bereaksi seketika, artinya tidak diperlukan umpan balik khusus kecuali untuk menampilkan hasilnya.</li>
+<li>1.0 detik adalah batas waktu agar pemikiran pengguna untuk tetaptidak terganggu, meski pengguna akan memperhatikan penundaan tersebut. Biasanya, tidak ada umpan balik khusus yang diperlukan selama penundaan lebih dari 0,1 dan kurang dari 1,0 detik.</li>
+<li>10 detik adalah batas untuk menjaga perhatian pengguna terfokus pada dialog. Untuk penundaan yang lebih lama, pengguna akan cenderung melakukan tugas lain sambil menunggu proses yang lebih lama, pengguna akan cenderung melakukan tugas lain samil menunggu proses sebelumnya selesai, jadi mereka harus diberi umpan balik yang menunjukkan kapan komputer tersebut mengharapkan untuk dilakukan.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Teknologi </category>
+            
+            <category> Interaksi Manusia dan Komputer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ui-ux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Error Handling]]></title>
+      <url>http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Error-Handling/</url>
+      <content type="html"><![CDATA[<p><img src="http://bigdatadimension.com/wp-content/uploads/2017/03/Error-Handling-Testing.png" alt=""></p>
+<h1 id="Apa-Itu-Error-Handling"><a href="#Apa-Itu-Error-Handling" class="headerlink" title="Apa Itu Error Handling :"></a>Apa Itu Error Handling :</h1><p>Error Handling adalah suatu penanganan kesalahan ( eror ) pada berbagai keadaan dalam pemrograman. Setiap ada kesalahan, maka eksekusi program tidak akan dihentikan secara tiba - tiba, tetapi akan diteruskan ke baris program yang terdapat script penanganan kesalahan.<br>Contoh : Aplikasi Produk Jadi, misalkan Form pendaftaran media, konsumen telah mengisikan hampir seluruh datanya pada form pendaftaran tersebut, tetapi ditengah program terdapat suatu eror atau bug, jadi dengan penanganan yang baik, penanganan kesalahan akan dilakukan setelah baris program diisikan.</p>
+<h1 id="Kelebihan-dan-Kekurangan-Error-Handling"><a href="#Kelebihan-dan-Kekurangan-Error-Handling" class="headerlink" title="Kelebihan dan Kekurangan Error Handling :"></a>Kelebihan dan Kekurangan Error Handling :</h1><h2 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h2><ul>
+<li>Membantu user dalam menangani kesalahan.</li>
+<li>Resiko kehilangan data dapat diminalisir.</li>
+<li>Mempermudah programmer dalam pendeteksian kesalahan.</li>
+<li>User tidak perlu melakukan restart program setelah terjadi kesalahan.</li>
+</ul>
+<h2 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h2><ul>
+<li>Memperumit Kode Program.</li>
+<li>Programmer harus benar - benar tahu kemungkinan kesalahan yang akan muncul.</li>
+<li>Satu fungsi pada program bisa memiliki berbagai kemungkinan kesalahan.</li>
+</ul>
+<h1 id="Macam-Macam-Jenis-Error"><a href="#Macam-Macam-Jenis-Error" class="headerlink" title="Macam - Macam Jenis Error :"></a>Macam - Macam Jenis Error :</h1><ul>
+<li>Perceptual Error : adanya kesalahan yang disebabkan oleh ketidakjelasan keterangan dari petunjuk penggunaan yang menyebabkan kesalah tanggapan dari pihak pengguna atau user. Contoh : Icon yang ambigu dalam desain antarmuka.</li>
+<li>Cognitive Error : Kesalahan yang diakibatkan oleh kemampuan memecah oleh user atau karena banyak konteks dan informasi status.</li>
+<li>Motor Error : kesalahan yang disebabkan oleh ketidak sinkronan antara mata, tangan, dan kemampuan yang dimiliki oleh user. Contoh : typo / terlalu cepat mengetik, double klik pada mouse.</li>
+</ul>
+<h1 id="Jenis-Jenis-Kesalahan-Dari-User"><a href="#Jenis-Jenis-Kesalahan-Dari-User" class="headerlink" title="Jenis - Jenis Kesalahan Dari User :"></a>Jenis - Jenis Kesalahan Dari User :</h1><ul>
+<li>Mistake : kesalahan yang terjadi ketika user berpikir bahwa sudah melakukan hal yang benar namun sebenarnya user melakukan kesalahan.</li>
+<li>Slip : kesalahan diluar keinginan user. Contoh : saat ingin menutup user ingin mengklik tombol close tetapi secara tidak sengaja user menekan tombol minimize.</li>
+</ul>
+<h1 id="Jenis-Jenis-Kesalahan-Pada-Program"><a href="#Jenis-Jenis-Kesalahan-Pada-Program" class="headerlink" title="Jenis - Jenis Kesalahan Pada Program :"></a>Jenis - Jenis Kesalahan Pada Program :</h1><ul>
+<li>Syntax Error : kesalahan dari penulisan syntax pada program sehingga syntax tersebut tidak dapat dieksekusi oleh program dan membuat program eror. Contoh : pada C++, baris kode harus selalu diakhiri dengan tanda (;) atau kesalahan penulisan pada standar penulisan program.</li>
+<li>Logical Error : kesalahan yang disebabkan oleh programmer karena kesalahan penulisan atau rumus yang diterapkan. Contoh : saat kita membuat program yang menghasilkan nilai luas, kita menuliskan 7 tetapi hasil yang ditampilkan program adalah 11 atau pada saat kita menulis variabel s adalah hasil tambah, tetapi yang didekrasikan pada awal adalah S besar.</li>
+<li>Runtime Error : kesalahan yang terjadi ketika sebuah program komputer dijalankan.</li>
+</ul>
+<h1 id="Cara-Membuat-Error-Handling-yang-Baik"><a href="#Cara-Membuat-Error-Handling-yang-Baik" class="headerlink" title="Cara Membuat Error Handling yang Baik :"></a>Cara Membuat Error Handling yang Baik :</h1><ul>
+<li>Gunakan bahasa yang mudah dipahami oleh user.</li>
+<li>Hindari kata - kata seperti : bad, dummy, dll.</li>
+<li>Hindari kalimat perintah.</li>
+<li>FAQ ( Frequently Asked Questions ).</li>
+<li>Optimalisasikan dan pemanfaatan undo redo function dan cancel.</li>
+<li>Menyiapkan berbagai macam model respon.</li>
+<li>Validitas masukan / inteligent error checking dan recovery.</li>
+<li>Proteksi pengguna.</li>
+<li>Penampilan pesan.</li>
+<li>Optimasikan fungsi HELP ( quick access help ).</li>
+<li>Editing of Error Fields.</li>
+<li>Desain yang efektif dan effisien.</li>
+<li>Return cursor dan Highlight error.</li>
+<li>No Interupting Work Flow.</li>
+<li>Confirmation Commands.</li>
+</ul>
+<h1 id="Tips-sederhana-untuk-mencegah-terjadinya-error-dalam-program"><a href="#Tips-sederhana-untuk-mencegah-terjadinya-error-dalam-program" class="headerlink" title="Tips sederhana untuk mencegah terjadinya error dalam program :"></a>Tips sederhana untuk mencegah terjadinya error dalam program :</h1><ul>
+<li>Menulislah dengan teliti, coba ikuti aturan penulisan program dengan benar dan konsisten.</li>
+<li>Menulislah dengan rapi, coba ikuti aturan penulisan program yang baik atau mengikuti konvensi ( coding standar ).  Hal ini akan mempermudah dalam pencarian kesalahan program.</li>
+<li>Selalu konsisten dalam penamaan variabel dan sejenisnya juga membantu mencegah terjadinya error karena terkadang kesalahan terjadi karena perbedaan huruf besar dan kecil.</li>
+<li>Pastikan algoritma yang digunakan sudah teruji kebenarannya.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Teknologi </category>
+            
+            <category> Interaksi Manusia dan Komputer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ui-ux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Full Stack Application]]></title>
       <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/8.3-Full-Stack-Application/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://udemy-images.udemy.com/course/750x422/842058_eb39.jpg" alt=""></p>
+<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -23,7 +261,8 @@
     <entry>
       <title><![CDATA[Microservice dengan Spring Cloud]]></title>
       <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/8.4-Microservice-dengan-Spring-Cloud/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -41,6 +280,7 @@
       <title><![CDATA[Debugging Spring Data JPA]]></title>
       <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/3.5-Debug-Spring-Data-JPA/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -58,6 +298,7 @@
       <title><![CDATA[Database Mirgation dengan FlywayDB]]></title>
       <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/7-Database-Mirgation-dengan-FlywayDB/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -201,6 +442,7 @@
       <title><![CDATA[CRUD Design Pattern 3]]></title>
       <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/3.2.2-generate-content-dari-server-side-dengan-thymeleaf(obsolate)/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -217,7 +459,7 @@
     <entry>
       <title><![CDATA[Melihat data User yang sedang Login menggunakan Spring Security]]></title>
       <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4.3-melihat-data-user-login-dengan-spring-security-md/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://ordina-jworks.github.io/img/spring-security-logo.png" alt=""></p>
 <p>Untuk dapat melihar user yang sedang login dapat menggunakan <code>Authentication</code> yang nilainya akan diinjek oleh spring security. Berikut contoh kodenya :<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"api/user"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/current"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Authentication <span class="title">currentUser</span><span class="params">(Authentication authentication)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> authentication;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 ]]></content>
       
@@ -235,7 +477,7 @@
     <entry>
       <title><![CDATA[Debugging Spring Security]]></title>
       <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4.3-debug-spring-security/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://ordina-jworks.github.io/img/spring-security-logo.png" alt=""></p>
 <p>Spring security memberikan fasilitas untuk mendebug. Untuk menggunakannya cukup dengan menambahkan anotasi <code>@EnableWebSecurity(debug = true)</code> pada file KonfigurasiSecurity.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@EnableWebSecurity</span>(debug = <span class="keyword">true</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KonfigurasiSecurity</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span></span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Debug ini hanya disarankan pada tahap development saja.</p>
@@ -255,7 +497,7 @@
     <entry>
       <title><![CDATA[Otorisasi methode dengan Spring Security]]></title>
       <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/4.2-otorisasi-method-dengan-spring-security/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://ordina-jworks.github.io/img/spring-security-logo.png" alt=""></p>
 <p>Require :</p>
 <ul>
 <li>otorisasi login dengan spring security</li>
@@ -277,171 +519,43 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Integrasi Spring dan Oauth2]]></title>
+      <title><![CDATA[Integrasi Spring dan Oauth2 + JWT]]></title>
       <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/8.1-oauth2-spring/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk memulai Development sistem ini user diharuskan sudah memenuhi Development Environment sebagai berikut :</p>
-<ul>
-<li>JDK 1.8</li>
-<li>MySQL (Database)</li>
-<li>Tomcat (Web Server)</li>
-</ul>
 <h1 id="Gambaran-Umum"><a href="#Gambaran-Umum" class="headerlink" title="Gambaran Umum"></a>Gambaran Umum</h1><p>Aplikasi yang akan kita buat nantinya akan dibagi menjadi beberapa aplikasi kecil dengan fungsinya masing-masing. Diantaranya adalah :</p>
 <ul>
 <li>Resource Server. Aplikasi ini menyediakan resource yang dibutuhkan oleh user.</li>
 <li>Authorization Server. Aplikasi ini menyediakan layanan otorisasi.</li>
 <li>Aplikasi Client. Aplikasi yang dipakai oleh client. Dapat berupa aplikasi web ataupun native.</li>
 </ul>
-<h1 id="Membuat-Resource-Server-Sederhana"><a href="#Membuat-Resource-Server-Sederhana" class="headerlink" title="Membuat Resource Server Sederhana"></a>Membuat Resource Server Sederhana</h1><p>Pertama kita akan membuat resource server sedehana menggunakan Spring Framework. Apabila anda sudah membuatnya dapat melewati langkah ini.<br>Step by Step nya adalah sebagai berikut :</p>
-<ul>
-<li>Download Setup projek di <code>http://start.spring.io</code></li>
-<li>Isi projek metadata berupa :<ul>
-<li>artifact id :</li>
-<li>lupa</li>
-</ul>
-</li>
-<li>Isi dependency yang dubutuhkan berupa :<ul>
-<li>web</li>
-<li>thymeleaf</li>
-</ul>
-</li>
-<li>Download lalu pindahkan ke text editor</li>
-<li><p>Kita coba bikin Controller sebagi resources (resource-server/src/main/java/domain/controller/HaloController)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class ResourceServerController&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Kita bikin methode untuk di proses ke user. Methode ini akan mengembalikan waktu sekarang menggunakan variabel <code>waktu</code>. methode ini dapat diakses di url /halo.(resource-server/src/main/java/domain/controller/HaloController)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">@RequestMapping(&quot;/api/halo&quot;)</div><div class="line">@ResponseBody</div><div class="line">public Map&lt;String, Object&gt; haloApi(@RequestBody(required = false) Map&lt;String, String&gt; input)&#123;</div><div class="line">    Map&lt;String, Object&gt; data = new HashMap&lt;&gt;();</div><div class="line">    data.put(&quot;waktu&quot;, new Date());</div><div class="line"></div><div class="line">    if(input != null)&#123;</div><div class="line">        String nama = input.get(&quot;nama&quot;);</div><div class="line">        if(nama != null &amp;&amp; !nama.isEmpty())&#123;</div><div class="line">            data.put(&quot;pesan&quot;, &quot;Halo &quot;+nama);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return data;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Kita bikin UI untuk mengeluarkan informasi dari methode halo yang telah buat tadi.(resource-server/src/main/resources/templates/halo.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;title&gt;Halo Spring Boot&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Halo Spring Boot&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;Waktu saat ini : &lt;span th:text=&quot;$&#123;waktu&#125;&quot;&gt;&lt;/span&gt;&lt;/h2&gt;</div><div class="line">        &lt;h3&gt;Pesan : &lt;span th:text=&quot;*&#123;pesan&#125;?:&apos;&apos;&quot;&gt;Halo&lt;/span&gt;&lt;/h3&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Proteksi-Resource-Server-Dengan-Spring-Security"><a href="#Proteksi-Resource-Server-Dengan-Spring-Security" class="headerlink" title="Proteksi Resource Server Dengan Spring Security"></a>Proteksi Resource Server Dengan Spring Security</h1><ul>
-<li><p>Lalu coba kita proteksi Resource Server kita menggunakan Spring Security dengan menambahkan dependency di pom.xml. (resource-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-<p>Pada keadaan ini kita akan diminta otorisasi jika kita mengakses di browser dengan username : <code>user</code> dan password yang ada pada CLI. karena tidak efisien kita akan tambahkan konfigurasi untuk otorisasi.</p>
-</li>
-<li><p>Buat class untuk konfigurasi otorisasi (/resource-server/src/main/java/domain/config/KonfigurasiSecurity)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiSecurity  extends WebSecurityConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode untuk mengkonfigurasi otorisasi(/resource-server/src/main/java/domain/config/KonfigurasiSecurity.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception &#123;</div><div class="line">    auth.inMemoryAuthentication()</div><div class="line">            .withUser(&quot;admin&quot;)</div><div class="line">                .password(&quot;123&quot;)</div><div class="line">                .roles(&quot;USER&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Pada keadaan ini kita sudah dapat login tapi masih dengan interface dari browser. Selanjutnya kita akan konfig untuk interface htmlnya.</p>
-</li>
-<li><p>Konfigurasi UI untuk login(/resource-server/src/main/java/domain/config/KonfigurasiSecurity.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">protected void configure(HttpSecurity http) throws Exception &#123;</div><div class="line">    http</div><div class="line">            .authorizeRequests()</div><div class="line">            .anyRequest().authenticated()</div><div class="line">            .and()</div><div class="line">            .formLogin().loginPage(&quot;/login&quot;).permitAll()</div><div class="line">            .defaultSuccessUrl(&quot;/halo&quot;)</div><div class="line">            .and()</div><div class="line">            .logout();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Pada keadaan ini kita sudah dapat login dengan UI html yang disediakan oleh spring</p>
-</li>
-<li><p>Membuat UI html sendiri(/resource-server/src/main/resources/templates/login.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;title&gt;Login Page&lt;/title&gt;</div><div class="line">        &lt;!-- Latest compiled and minified CSS --&gt;</div><div class="line">        &lt;link rel=&quot;stylesheet&quot;</div><div class="line">              href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;/&gt;</div><div class="line"></div><div class="line">        &lt;!-- Optional theme --&gt;</div><div class="line">        &lt;link rel=&quot;stylesheet&quot;</div><div class="line">              href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css&quot;/&gt;</div><div class="line"></div><div class="line">        &lt;link rel=&quot;stylesheet&quot;</div><div class="line">              href=&quot;css/aplikasi.css&quot;/&gt;</div><div class="line"></div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;div class=&quot;container&quot;&gt;</div><div class="line"></div><div class="line">          &lt;form class=&quot;form-signin&quot; th:action=&quot;@&#123;/login&#125;&quot; method=&quot;post&quot;&gt;</div><div class="line"></div><div class="line">              &lt;div th:if=&quot;$&#123;param.error&#125;&quot; class=&quot;alert alert-error&quot;&gt;    </div><div class="line">                    Invalid username and password.</div><div class="line">                &lt;/div&gt;</div><div class="line">                &lt;div th:if=&quot;$&#123;param.logout&#125;&quot; class=&quot;alert alert-success&quot;&gt;</div><div class="line">                    You have been logged out.</div><div class="line">                &lt;/div&gt;</div><div class="line"></div><div class="line">            &lt;h2 class=&quot;form-signin-heading&quot;&gt;Please sign in&lt;/h2&gt;</div><div class="line">            &lt;label for=&quot;username&quot; class=&quot;sr-only&quot;&gt;Email address&lt;/label&gt;</div><div class="line">            &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot;</div><div class="line">                   placeholder=&quot;Username&quot;/&gt;</div><div class="line">            &lt;label for=&quot;password&quot; class=&quot;sr-only&quot;&gt;Password&lt;/label&gt;</div><div class="line">            &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot;</div><div class="line">                   class=&quot;form-control&quot; placeholder=&quot;Password&quot; /&gt;</div><div class="line">            &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; type=&quot;submit&quot;&gt;Sign in&lt;/button&gt;</div><div class="line">          &lt;/form&gt;</div><div class="line"></div><div class="line">        &lt;/div&gt; &lt;!-- /container --&gt;        </div><div class="line"></div><div class="line">        &lt;!-- Latest compiled and minified JavaScript --&gt;</div><div class="line">        &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;/&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>Selanjutnya kita akan mendaftarkan template ini agar dapat diproses sebagai template yang tidak memiliki controller</p>
-</li>
-<li><p>Membuat Class KonfigurasiWeb(/resource-server/src/main/java/domain/config/Web.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiWeb extends WebMvcConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode untuk mendaftarkan template(/resource-server/src/main/java/domain/config/Web.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void addViewControllers(ViewControllerRegistry registry) &#123;</div><div class="line">    registry.addViewController(&quot;/login&quot;).setViewName(&quot;login&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Selanjutnya kita akan tambahkan fasilitas logout pada UI(/resource-server/src/main/resources/templates/halo.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;form name=&quot;f&quot; th:action=&quot;@&#123;/logout&#125;&quot; method=&quot;post&quot;&gt;</div><div class="line">    &lt;input type=&quot;submit&quot; value=&quot;Logout&quot; /&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Integrasi-otorisasi-Resources-Server-ke-database"><a href="#Integrasi-otorisasi-Resources-Server-ke-database" class="headerlink" title="Integrasi otorisasi Resources Server ke database"></a>Integrasi otorisasi Resources Server ke database</h1><p>Selanjutnya kita akan pindahkan otorisasi kita yang ada di (/resource-server/src/main/java/domain/config/KonfigurasiSecurity.java) ke database.</p>
-<ul>
-<li><p>Pertama kita tambahkan dependency  (/resource-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;mysql-connector&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Lalu kita akan konfigurasi database di (/resource-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.datasource.url=jdbc:mysql://localhost:3306/belajar_oauth</div><div class="line">spring.datasource.username=belajar</div><div class="line">spring.datasource.password=belajar</div></pre></td></tr></table></figure>
-</li>
-<li><p>Generate JPA(/resource-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">spring.jpa.generate-ddl=true</div></pre></td></tr></table></figure>
-</li>
-<li><p>Pertama kita akan buat database dulu(CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line">grant all on belajar_oauth.* to belajar@localhost identified by &apos;belajar&apos;</div><div class="line">create database belajar_oauth;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Cara menggunakan mysql (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan tabel</div><div class="line">show tables;			///memperlihatkan tabel dan datanya</div><div class="line">show create table peserta \G	///memperlihatkan detil tabel</div><div class="line">drop table peserta;		///redeploy tabel</div></pre></td></tr></table></figure>
-</li>
-<li><p>buat super user (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">drop table if exists s_users;</div><div class="line"></div><div class="line">create table s_users (</div><div class="line">    id INT PRIMARY KEY AUTO_INCREMENT,</div><div class="line">    username VARCHAR(100) UNIQUE NOT NULL,</div><div class="line">    password VARCHAR(255) NOT NULL,</div><div class="line">    enabled BOOLEAN</div><div class="line">) Engine=InnoDB;</div><div class="line"></div><div class="line">insert into s_users (username, password, enabled)</div><div class="line">values (&apos;admin&apos;, &apos;123&apos;, true);</div><div class="line">insert into s_users (username, password, enabled)</div><div class="line">values (&apos;ciazhar&apos;, &apos;123&apos;, true);</div><div class="line"></div><div class="line">create table s_permissions (</div><div class="line">    id INT PRIMARY KEY AUTO_INCREMENT,</div><div class="line">    id_user VARCHAR(100) NOT NULL REFERENCES s_users(id),</div><div class="line">    user_role VARCHAR(255) NOT NULL</div><div class="line">) Engine=InnoDB;</div><div class="line"></div><div class="line">insert into s_permissions (id_user, user_role)</div><div class="line">values (1, &apos;ROLE_SUPERVISOR&apos;);</div><div class="line"></div><div class="line">insert into s_permissions (id_user, user_role)</div><div class="line">values (1, &apos;ROLE_OPERATOR&apos;);</div><div class="line"></div><div class="line">insert into s_permissions (id_user, user_role)</div><div class="line">values (2, &apos;ROLE_OPERATOR&apos;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>pindah otorisasi ke database (/resource-server/src/main/java/domain/config/KonfigurasiSecurity)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">private DataSource dataSource;</div><div class="line"></div><div class="line">@Autowired</div><div class="line">public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception &#123;</div><div class="line">    auth.jdbcAuthentication().dataSource(dataSource)</div><div class="line">            .usersByUsernameQuery(&quot;select username, password, &quot;</div><div class="line">                    + &quot;enabled from s_users where username=?&quot;)</div><div class="line">            .authoritiesByUsernameQuery(&quot;select u.username, p.user_role  &quot;</div><div class="line">                    + &quot;from s_users u  &quot;</div><div class="line">                    + &quot;inner join s_permissions p on u.id = p.id_user &quot;</div><div class="line">                    + &quot;where u.username=?&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Memisahkan-otorisai-pada-resources-server-agar-menjadi-authorization-server-tersendiri"><a href="#Memisahkan-otorisai-pada-resources-server-agar-menjadi-authorization-server-tersendiri" class="headerlink" title="Memisahkan otorisai pada resources server agar menjadi authorization server tersendiri"></a>Memisahkan otorisai pada resources server agar menjadi authorization server tersendiri</h1><ul>
-<li>Selanjutnya kita akan kita pisahkan Aplikasi yang telah kita buat kemarin menjadi resources server dan Authorization server. Pertama kita akan buat dulu aplikasi untuk authorization server, seperti Pertama kali kita membuat project resources server. Step by Step nya adalah sebagai berikut :<ul>
-<li>Download Setup projek di <code>http://start.spring.io</code></li>
-<li>Isi projek metadata berupa :<ul>
-<li>artifact id :</li>
-<li>lupa</li>
-</ul>
-</li>
-<li>Isi dependency yang dubutuhkan berupa :<ul>
-<li>web</li>
-<li>thymeleaf</li>
-<li>security</li>
-<li>jdbc</li>
-<li>mysql</li>
-</ul>
-</li>
-<li>Download lalu pindahkan ke text editor</li>
-</ul>
-</li>
-<li>Lalu kita akan pindahkan file file otorisasi sebagai berikut :<ul>
-<li>KonfigurasiSecurity.java</li>
-<li>KonfigurasiWeb.java</li>
-<li>login.html<br>kedalam projek authorization server kita</li>
-</ul>
-</li>
-</ul>
-<h1 id="Konfigurasi-Resource-Server-dan-Authorization-Sever-agar-dapat-berhubungan"><a href="#Konfigurasi-Resource-Server-dan-Authorization-Sever-agar-dapat-berhubungan" class="headerlink" title="Konfigurasi Resource Server dan Authorization Sever agar dapat berhubungan"></a>Konfigurasi Resource Server dan Authorization Sever agar dapat berhubungan</h1><p>Ada beberapa file yang perlu dikonfigurasi yaitu :</p>
-<ul>
-<li>pom.xml kedua aplikasi</li>
-<li>KonfigurasiResourceServer.java</li>
-<li>KonfigurasiAuthorizationServer.java</li>
-<li>application.properties kedua aplikasi</li>
-<li>KonfigurasiSecurity</li>
-</ul>
 <h2 id="Konfigurasi-Resource-Server"><a href="#Konfigurasi-Resource-Server" class="headerlink" title="Konfigurasi Resource Server"></a>Konfigurasi Resource Server</h2><ul>
-<li><p>Tambahkan dependeny OAuth2(resource-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.security.oauth&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-security-oauth2&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;2.0.7.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>setup security (resource-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logging.level.org.springframework.security=DEBUG</div></pre></td></tr></table></figure>
+<li><p>Tambahkan dependeny OAuth2 dan JWT(resource-server/pom.xml)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security.oauth<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-oauth2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.7.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-jwt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>Buat class KonfigurasiResourceServer (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiResourceServer &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@EnableResourceServer</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KonfigurasiResourceServer</span> <span class="keyword">extends</span> <span class="title">ResourceServerConfigurerAdapter</span></span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Setup RESOURCE_ID(resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">private static final String RESOURCE_ID = &quot;belajar&quot;;</div></pre></td></tr></table></figure>
+<li><p>override methode untuk authorisasi (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java/ResourceServerConfiguration).</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">    http.authorizeRequests().anyRequest().authenticated()</div><div class="line">    ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat inner class ResourceServerConfiguration (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">@EnableResourceServer</div><div class="line">protected static class ResourceServerConfiguration extends ResourceServerConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java/ResourceServerConfiguration). Methode ini berfungsi untuk menyuruh authorization server melakukan pengecekan apakah access token valid atau tidak.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void configure(ResourceServerSecurityConfigurer resources) &#123;</div><div class="line">    RemoteTokenServices tokenService = new RemoteTokenServices();</div><div class="line">    tokenService.setClientId(&quot;clientauthcode&quot;);</div><div class="line">    tokenService.setClientSecret(&quot;123456&quot;);</div><div class="line">    tokenService.setCheckTokenEndpointUrl(&quot;http://localhost:10000/oauth/check_token&quot;);</div><div class="line">    resources</div><div class="line">            .resourceId(RESOURCE_ID)</div><div class="line">            .tokenServices(tokenService);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode(resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java/ResourceServerConfiguration). Methode ini berfungsi untuk memgatur api apa saja  yang dapat diakses dan oleh siapa saja yang dapat mengakses.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void configure(HttpSecurity http) throws Exception &#123;</div><div class="line">    http.authorizeRequests()</div><div class="line">            .antMatchers(&quot;/api/halo&quot;).hasRole(&quot;OPERATOR&quot;)</div><div class="line">            .antMatchers(&quot;/api/waktu&quot;).authenticated();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>Konfigurasi JWT</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">security.oauth2.resource.jwt.key-uri=http://localhost:10000/oauth/token_key</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="Konfigurasi-Authorization-Server"><a href="#Konfigurasi-Authorization-Server" class="headerlink" title="Konfigurasi Authorization Server"></a>Konfigurasi Authorization Server</h2><ul>
-<li><p>Tambahkan dependeny OAuth2(auth-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.security.oauth&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-security-oauth2&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;2.0.7.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<li><p>Tambahkan dependeny OAuth2 dan JWT(resource-server/pom.xml)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security.oauth<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-oauth2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.7.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-jwt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>setup security (auth-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">logging.level.org.springframework.security=DEBUG</div><div class="line">server.port=10000</div></pre></td></tr></table></figure>
+<li><p>setup port (auth-server/src/main/resources/application.properties)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">server.port=10000</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat class KonfigurasiAuthorizationServer (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiAuthorizationServer &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>setup session cookies(auth-server/src/main/resources/application.properties)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">server.session.cookie.name=AUTHSERVER</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat inner class AuthorizationServerConfiguration (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">@EnableAuthorizationServer</div><div class="line">protected static class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>membuat class KonfigurasiAuthorizationServer (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KonfigurasiAuthorizationServer</span> </span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Setup RESOURCE_ID (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">private static final String RESOURCE_ID = &quot;belajar&quot;;</div></pre></td></tr></table></figure>
+<li><p>Membuat inner class</p>
 </li>
 <li><p>Setup AuthenticationManager</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">@Qualifier(&quot;authenticationManagerBean&quot;)</div><div class="line">private AuthenticationManager authenticationManager;</div></pre></td></tr></table></figure>
@@ -1099,7 +1213,7 @@
     <entry>
       <title><![CDATA[Template Engine Thymeleaf]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/5-layout-dengan-thymeleaf/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://elasticbeanstalk-us-east-1-851518566978.s3.amazonaws.com/permanentImages/7b60f151-9302-45bf-bd74-06b0e736bc55.png" alt=""></p>
 <h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"userName"</span> <span class="attr">value</span>=<span class="string">"James Carrot"</span> <span class="attr">th:value</span>=<span class="string">"$&#123;user.name&#125;"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="Menggunakan-Thymeleaf"><a href="#Menggunakan-Thymeleaf" class="headerlink" title="Menggunakan Thymeleaf"></a>Menggunakan Thymeleaf</h1><p>  Tambahkan xmlns dibawah ini pada tag html<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="Expression-di-Thymeleaf"><a href="#Expression-di-Thymeleaf" class="headerlink" title="Expression di Thymeleaf"></a>Expression di Thymeleaf</h1><ul>
@@ -1132,7 +1246,7 @@
     <entry>
       <title><![CDATA[Otorisasi Login dengan spring security]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/4.1-otorisasi-login-dengan-spring-security/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://ordina-jworks.github.io/img/spring-security-logo.png" alt=""></p>
 <h1 id="Bikin-Otorisasi-Login"><a href="#Bikin-Otorisasi-Login" class="headerlink" title="Bikin Otorisasi Login"></a>Bikin Otorisasi Login</h1><ul>
 <li><p>Tambahkan dependency (pom.xml)</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -1164,6 +1278,7 @@
       <title><![CDATA[Kardinalitas pada Spring Data JPA]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/3.4-kardinalitas/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -1442,56 +1557,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Setup Project Spring Boot]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
-<ul>
-<li>Java Development Kit (JDK atau openJDK)</li>
-<li>Build Tools (Apache Maven atau Gradle)</li>
-<li>IDE (IntellijIDEA atau Netbeans)</li>
-</ul>
-<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
-<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
-<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
-<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
-<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
-<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
-</ul>
-</li>
-<li>Generate Project</li>
-<li>Add project ke text editor</li>
-</ul>
-<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
-<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
-<ul>
-<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
-<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
-<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
-<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
-<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
-<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
-<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
-</ul>
-<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Android]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/</url>
-      <content type="html"><![CDATA[<p><img src="/images/android.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://mediarealm.com.au/wp-content/uploads/2013/02/Android-Banner1.jpg" alt=""></p>
 <h1 id="Android-for-Beginner"><a href="#Android-for-Beginner" class="headerlink" title="Android for Beginner"></a>Android for Beginner</h1><h2 id="Layouting"><a href="#Layouting" class="headerlink" title="Layouting"></a>Layouting</h2><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><h4 id="Pengertian-View"><a href="#Pengertian-View" class="headerlink" title="Pengertian View"></a>Pengertian View</h4><p>View pada dasarnya adalah sebuah kotak yang berisi berbagai macam konten. Konten tersebut dapat berupa kalimat gambar, tulisan tombol dan sebagainya.</p>
 <h4 id="Macam-macam-view-berdasar-kontenya"><a href="#Macam-macam-view-berdasar-kontenya" class="headerlink" title="Macam - macam view berdasar kontenya"></a>Macam - macam view berdasar kontenya</h4><ul>
 <li>Text View</li>
@@ -1589,6 +1657,53 @@
             <category> Pemrograman </category>
             
             <category> Android </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Setup Project Spring Boot]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/1-setup-project/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
+<ul>
+<li>Java Development Kit (JDK atau openJDK)</li>
+<li>Build Tools (Apache Maven atau Gradle)</li>
+<li>IDE (IntellijIDEA atau Netbeans)</li>
+</ul>
+<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
+<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
+<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
+<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
+<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
+</ul>
+</li>
+<li>Generate Project</li>
+<li>Add project ke text editor</li>
+</ul>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
+<ul>
+<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
+<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
+<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
+</ul>
+<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
             
         </categories>
         

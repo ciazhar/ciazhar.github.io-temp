@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Error Handling | ciazhar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="ui-ux" />
+    
+    <meta name="description" content="Apa Itu Error Handling :Error Handling adalah suatu penanganan kesalahan ( eror ) pada berbagai keadaan dalam pemrograman. Setiap ada kesalahan, maka eksekusi program tidak akan dihentikan secara tib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Error Handling">
+<meta property="og:url" content="http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Error-Handling/index.html">
+<meta property="og:site_name" content="ciazhar">
+<meta property="og:description" content="Apa Itu Error Handling :Error Handling adalah suatu penanganan kesalahan ( eror ) pada berbagai keadaan dalam pemrograman. Setiap ada kesalahan, maka eksekusi program tidak akan dihentikan secara tib">
+<meta property="og:image" content="http://bigdatadimension.com/wp-content/uploads/2017/03/Error-Handling-Testing.png">
+<meta property="og:updated_time" content="2017-06-19T03:03:33.464Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Error Handling">
+<meta name="twitter:description" content="Apa Itu Error Handling :Error Handling adalah suatu penanganan kesalahan ( eror ) pada berbagai keadaan dalam pemrograman. Setiap ada kesalahan, maka eksekusi program tidak akan dihentikan secara tib">
+<meta name="twitter:image" content="http://bigdatadimension.com/wp-content/uploads/2017/03/Error-Handling-Testing.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Someone INTJs</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Beranda</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/">Pemrograman</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Android/">Android</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Angular/">Angular</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Pemrograman/Spring/">Spring</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/">Teknologi</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about">Tentang</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cari" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'pos',
+            PAGES: 'Pages',
+            CATEGORIES: 'kategori',
+            TAGS: 'tag',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Teknologi/">Teknologi</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-kuliah/imk/ui-ux-Error-Handling" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Error Handling
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/06/19/kuliah/imk/ui-ux-Error-Handling/" class="article-date">
+            <time datetime="2017-06-19T02:37:35.000Z" itemprop="datePublished">2017-06-19</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/ui-ux/">ui-ux</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://bigdatadimension.com/wp-content/uploads/2017/03/Error-Handling-Testing.png" alt=""></p>
+<h1 id="Apa-Itu-Error-Handling"><a href="#Apa-Itu-Error-Handling" class="headerlink" title="Apa Itu Error Handling :"></a>Apa Itu Error Handling :</h1><p>Error Handling adalah suatu penanganan kesalahan ( eror ) pada berbagai keadaan dalam pemrograman. Setiap ada kesalahan, maka eksekusi program tidak akan dihentikan secara tiba - tiba, tetapi akan diteruskan ke baris program yang terdapat script penanganan kesalahan.<br>Contoh : Aplikasi Produk Jadi, misalkan Form pendaftaran media, konsumen telah mengisikan hampir seluruh datanya pada form pendaftaran tersebut, tetapi ditengah program terdapat suatu eror atau bug, jadi dengan penanganan yang baik, penanganan kesalahan akan dilakukan setelah baris program diisikan.</p>
+<h1 id="Kelebihan-dan-Kekurangan-Error-Handling"><a href="#Kelebihan-dan-Kekurangan-Error-Handling" class="headerlink" title="Kelebihan dan Kekurangan Error Handling :"></a>Kelebihan dan Kekurangan Error Handling :</h1><h2 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h2><ul>
+<li>Membantu user dalam menangani kesalahan.</li>
+<li>Resiko kehilangan data dapat diminalisir.</li>
+<li>Mempermudah programmer dalam pendeteksian kesalahan.</li>
+<li>User tidak perlu melakukan restart program setelah terjadi kesalahan.</li>
+</ul>
+<h2 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h2><ul>
+<li>Memperumit Kode Program.</li>
+<li>Programmer harus benar - benar tahu kemungkinan kesalahan yang akan muncul.</li>
+<li>Satu fungsi pada program bisa memiliki berbagai kemungkinan kesalahan.</li>
+</ul>
+<h1 id="Macam-Macam-Jenis-Error"><a href="#Macam-Macam-Jenis-Error" class="headerlink" title="Macam - Macam Jenis Error :"></a>Macam - Macam Jenis Error :</h1><ul>
+<li>Perceptual Error : adanya kesalahan yang disebabkan oleh ketidakjelasan keterangan dari petunjuk penggunaan yang menyebabkan kesalah tanggapan dari pihak pengguna atau user. Contoh : Icon yang ambigu dalam desain antarmuka.</li>
+<li>Cognitive Error : Kesalahan yang diakibatkan oleh kemampuan memecah oleh user atau karena banyak konteks dan informasi status.</li>
+<li>Motor Error : kesalahan yang disebabkan oleh ketidak sinkronan antara mata, tangan, dan kemampuan yang dimiliki oleh user. Contoh : typo / terlalu cepat mengetik, double klik pada mouse.</li>
+</ul>
+<h1 id="Jenis-Jenis-Kesalahan-Dari-User"><a href="#Jenis-Jenis-Kesalahan-Dari-User" class="headerlink" title="Jenis - Jenis Kesalahan Dari User :"></a>Jenis - Jenis Kesalahan Dari User :</h1><ul>
+<li>Mistake : kesalahan yang terjadi ketika user berpikir bahwa sudah melakukan hal yang benar namun sebenarnya user melakukan kesalahan.</li>
+<li>Slip : kesalahan diluar keinginan user. Contoh : saat ingin menutup user ingin mengklik tombol close tetapi secara tidak sengaja user menekan tombol minimize.</li>
+</ul>
+<h1 id="Jenis-Jenis-Kesalahan-Pada-Program"><a href="#Jenis-Jenis-Kesalahan-Pada-Program" class="headerlink" title="Jenis - Jenis Kesalahan Pada Program :"></a>Jenis - Jenis Kesalahan Pada Program :</h1><ul>
+<li>Syntax Error : kesalahan dari penulisan syntax pada program sehingga syntax tersebut tidak dapat dieksekusi oleh program dan membuat program eror. Contoh : pada C++, baris kode harus selalu diakhiri dengan tanda (;) atau kesalahan penulisan pada standar penulisan program.</li>
+<li>Logical Error : kesalahan yang disebabkan oleh programmer karena kesalahan penulisan atau rumus yang diterapkan. Contoh : saat kita membuat program yang menghasilkan nilai luas, kita menuliskan 7 tetapi hasil yang ditampilkan program adalah 11 atau pada saat kita menulis variabel s adalah hasil tambah, tetapi yang didekrasikan pada awal adalah S besar.</li>
+<li>Runtime Error : kesalahan yang terjadi ketika sebuah program komputer dijalankan.</li>
+</ul>
+<h1 id="Cara-Membuat-Error-Handling-yang-Baik"><a href="#Cara-Membuat-Error-Handling-yang-Baik" class="headerlink" title="Cara Membuat Error Handling yang Baik :"></a>Cara Membuat Error Handling yang Baik :</h1><ul>
+<li>Gunakan bahasa yang mudah dipahami oleh user.</li>
+<li>Hindari kata - kata seperti : bad, dummy, dll.</li>
+<li>Hindari kalimat perintah.</li>
+<li>FAQ ( Frequently Asked Questions ).</li>
+<li>Optimalisasikan dan pemanfaatan undo redo function dan cancel.</li>
+<li>Menyiapkan berbagai macam model respon.</li>
+<li>Validitas masukan / inteligent error checking dan recovery.</li>
+<li>Proteksi pengguna.</li>
+<li>Penampilan pesan.</li>
+<li>Optimasikan fungsi HELP ( quick access help ).</li>
+<li>Editing of Error Fields.</li>
+<li>Desain yang efektif dan effisien.</li>
+<li>Return cursor dan Highlight error.</li>
+<li>No Interupting Work Flow.</li>
+<li>Confirmation Commands.</li>
+</ul>
+<h1 id="Tips-sederhana-untuk-mencegah-terjadinya-error-dalam-program"><a href="#Tips-sederhana-untuk-mencegah-terjadinya-error-dalam-program" class="headerlink" title="Tips sederhana untuk mencegah terjadinya error dalam program :"></a>Tips sederhana untuk mencegah terjadinya error dalam program :</h1><ul>
+<li>Menulislah dengan teliti, coba ikuti aturan penulisan program dengan benar dan konsisten.</li>
+<li>Menulislah dengan rapi, coba ikuti aturan penulisan program yang baik atau mengikuti konvensi ( coding standar ).  Hal ini akan mempermudah dalam pencarian kesalahan program.</li>
+<li>Selalu konsisten dalam penamaan variabel dan sejenisnya juga membantu mencegah terjadinya error karena terkadang kesalahan terjadi karena perbedaan huruf besar dan kecil.</li>
+<li>Pastikan algoritma yang digunakan sudah teruji kebenarannya.</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Error-Handling/" data-id="cj43j6hkw004ze5lprpkb1ycl" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>ikuti:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com/kid.dont.cry" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ciazhar" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="telegram" href="http://telegram.me/ciazhar" target="_blank">
+                        <i class="icon fa fa-telegram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+
+    <!-- 
+        
+<nav id="article-nav">
+    
+        <a href="/2017/06/19/kuliah/imk/ui-ux-Response-Time/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            Response Time
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/05/28/pemrograman/spring/8.3-Full-Stack-Application/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih lawas</strong>
+        <p class="article-nav-title">Full Stack Application</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+     -->
+
+    <div class="widget-wrap">
+      
+          
+              <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring + Angular = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+          
+              
+    <div class="widget-wrap">
+        <h3 class="widget-title">Roadmap Belajar Pemrograman</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo.png)" alt="Introduction to Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/spring.png)" alt="Introduction to Spring" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Spring/">Spring</a></p>
+                                <p class="item-title"><a href="/2017/04/23/pemrograman/spring/0-introduction-to-spring-boot/" class="title">Introduction to Spring</a></p>
+                                <p class="item-date"><time datetime="2017-04-23T07:17:28.000Z" itemprop="datePublished">2017-04-23</time></p>
+                            </div>
+                        </li>
+                    
+                
+            </ul>
+        </div>
+    </div>
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">kategori</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">31</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arsip</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+          
+              
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tag</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+          
+      
+
+      <!-- 
+        <div class="widget-wrap" align="center">
+  <a href="/">
+    <img src="/images/photo366748288653830057.jpg" width="70%">
+  </a>
+</div>
+<div align="center">
+  <h3 class="widget-title">Muhammad Hafidz</h3>
+  <div class="widget">
+    Linux + Spring + Angular = ciazhar
+  </div>
+</div>
+<br>
+<hr style="color:#006bde">
+
+        
+       -->
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Muhammad Hafidz</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'true';
+    
+    
+    var disqus_url = 'http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Error-Handling/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

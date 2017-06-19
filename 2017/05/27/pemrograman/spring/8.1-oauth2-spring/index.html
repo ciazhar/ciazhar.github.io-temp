@@ -3,40 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Integrasi Spring dan Oauth2 | ciazhar</title>
+    <title>Integrasi Spring dan Oauth2 + JWT | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Setup Development EnvironmentUntuk memulai Development sistem ini user diharuskan sudah memenuhi Development Environment sebagai berikut :
+    <meta name="description" content="Gambaran UmumAplikasi yang akan kita buat nantinya akan dibagi menjadi beberapa aplikasi kecil dengan fungsinya masing-masing. Diantaranya adalah :
 
-JDK 1.8
-MySQL (Database)
-Tomcat (Web Server)
-
-Gambaran Umum">
+Resource Server. Aplikasi ini menyediakan resource">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Integrasi Spring dan Oauth2">
+<meta property="og:title" content="Integrasi Spring dan Oauth2 + JWT">
 <meta property="og:url" content="http://ciazhar.github.io/2017/05/27/pemrograman/spring/8.1-oauth2-spring/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Setup Development EnvironmentUntuk memulai Development sistem ini user diharuskan sudah memenuhi Development Environment sebagai berikut :
+<meta property="og:description" content="Gambaran UmumAplikasi yang akan kita buat nantinya akan dibagi menjadi beberapa aplikasi kecil dengan fungsinya masing-masing. Diantaranya adalah :
 
-JDK 1.8
-MySQL (Database)
-Tomcat (Web Server)
-
-Gambaran Umum">
+Resource Server. Aplikasi ini menyediakan resource">
 <meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
-<meta property="og:updated_time" content="2017-05-27T09:30:36.620Z">
+<meta property="og:updated_time" content="2017-05-28T09:46:58.635Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Integrasi Spring dan Oauth2">
-<meta name="twitter:description" content="Setup Development EnvironmentUntuk memulai Development sistem ini user diharuskan sudah memenuhi Development Environment sebagai berikut :
+<meta name="twitter:title" content="Integrasi Spring dan Oauth2 + JWT">
+<meta name="twitter:description" content="Gambaran UmumAplikasi yang akan kita buat nantinya akan dibagi menjadi beberapa aplikasi kecil dengan fungsinya masing-masing. Diantaranya adalah :
 
-JDK 1.8
-MySQL (Database)
-Tomcat (Web Server)
-
-Gambaran Umum">
+Resource Server. Aplikasi ini menyediakan resource">
 <meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
     
 
@@ -158,7 +146,7 @@ Gambaran Umum">
                 
     
         <h1 class="article-title" itemprop="name">
-        Integrasi Spring dan Oauth2
+        Integrasi Spring dan Oauth2 + JWT
         </h1>
     
 
@@ -179,168 +167,40 @@ Gambaran Umum">
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk memulai Development sistem ini user diharuskan sudah memenuhi Development Environment sebagai berikut :</p>
-<ul>
-<li>JDK 1.8</li>
-<li>MySQL (Database)</li>
-<li>Tomcat (Web Server)</li>
-</ul>
 <h1 id="Gambaran-Umum"><a href="#Gambaran-Umum" class="headerlink" title="Gambaran Umum"></a>Gambaran Umum</h1><p>Aplikasi yang akan kita buat nantinya akan dibagi menjadi beberapa aplikasi kecil dengan fungsinya masing-masing. Diantaranya adalah :</p>
 <ul>
 <li>Resource Server. Aplikasi ini menyediakan resource yang dibutuhkan oleh user.</li>
 <li>Authorization Server. Aplikasi ini menyediakan layanan otorisasi.</li>
 <li>Aplikasi Client. Aplikasi yang dipakai oleh client. Dapat berupa aplikasi web ataupun native.</li>
 </ul>
-<h1 id="Membuat-Resource-Server-Sederhana"><a href="#Membuat-Resource-Server-Sederhana" class="headerlink" title="Membuat Resource Server Sederhana"></a>Membuat Resource Server Sederhana</h1><p>Pertama kita akan membuat resource server sedehana menggunakan Spring Framework. Apabila anda sudah membuatnya dapat melewati langkah ini.<br>Step by Step nya adalah sebagai berikut :</p>
-<ul>
-<li>Download Setup projek di <code>http://start.spring.io</code></li>
-<li>Isi projek metadata berupa :<ul>
-<li>artifact id :</li>
-<li>lupa</li>
-</ul>
-</li>
-<li>Isi dependency yang dubutuhkan berupa :<ul>
-<li>web</li>
-<li>thymeleaf</li>
-</ul>
-</li>
-<li>Download lalu pindahkan ke text editor</li>
-<li><p>Kita coba bikin Controller sebagi resources (resource-server/src/main/java/domain/controller/HaloController)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class ResourceServerController&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Kita bikin methode untuk di proses ke user. Methode ini akan mengembalikan waktu sekarang menggunakan variabel <code>waktu</code>. methode ini dapat diakses di url /halo.(resource-server/src/main/java/domain/controller/HaloController)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">@RequestMapping(&quot;/api/halo&quot;)</div><div class="line">@ResponseBody</div><div class="line">public Map&lt;String, Object&gt; haloApi(@RequestBody(required = false) Map&lt;String, String&gt; input)&#123;</div><div class="line">    Map&lt;String, Object&gt; data = new HashMap&lt;&gt;();</div><div class="line">    data.put(&quot;waktu&quot;, new Date());</div><div class="line"></div><div class="line">    if(input != null)&#123;</div><div class="line">        String nama = input.get(&quot;nama&quot;);</div><div class="line">        if(nama != null &amp;&amp; !nama.isEmpty())&#123;</div><div class="line">            data.put(&quot;pesan&quot;, &quot;Halo &quot;+nama);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return data;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Kita bikin UI untuk mengeluarkan informasi dari methode halo yang telah buat tadi.(resource-server/src/main/resources/templates/halo.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;title&gt;Halo Spring Boot&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Halo Spring Boot&lt;/h1&gt;</div><div class="line">        &lt;h2&gt;Waktu saat ini : &lt;span th:text=&quot;$&#123;waktu&#125;&quot;&gt;&lt;/span&gt;&lt;/h2&gt;</div><div class="line">        &lt;h3&gt;Pesan : &lt;span th:text=&quot;*&#123;pesan&#125;?:&apos;&apos;&quot;&gt;Halo&lt;/span&gt;&lt;/h3&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Proteksi-Resource-Server-Dengan-Spring-Security"><a href="#Proteksi-Resource-Server-Dengan-Spring-Security" class="headerlink" title="Proteksi Resource Server Dengan Spring Security"></a>Proteksi Resource Server Dengan Spring Security</h1><ul>
-<li><p>Lalu coba kita proteksi Resource Server kita menggunakan Spring Security dengan menambahkan dependency di pom.xml. (resource-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-<p>Pada keadaan ini kita akan diminta otorisasi jika kita mengakses di browser dengan username : <code>user</code> dan password yang ada pada CLI. karena tidak efisien kita akan tambahkan konfigurasi untuk otorisasi.</p>
-</li>
-<li><p>Buat class untuk konfigurasi otorisasi (/resource-server/src/main/java/domain/config/KonfigurasiSecurity)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiSecurity  extends WebSecurityConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode untuk mengkonfigurasi otorisasi(/resource-server/src/main/java/domain/config/KonfigurasiSecurity.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception &#123;</div><div class="line">    auth.inMemoryAuthentication()</div><div class="line">            .withUser(&quot;admin&quot;)</div><div class="line">                .password(&quot;123&quot;)</div><div class="line">                .roles(&quot;USER&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Pada keadaan ini kita sudah dapat login tapi masih dengan interface dari browser. Selanjutnya kita akan konfig untuk interface htmlnya.</p>
-</li>
-<li><p>Konfigurasi UI untuk login(/resource-server/src/main/java/domain/config/KonfigurasiSecurity.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">protected void configure(HttpSecurity http) throws Exception &#123;</div><div class="line">    http</div><div class="line">            .authorizeRequests()</div><div class="line">            .anyRequest().authenticated()</div><div class="line">            .and()</div><div class="line">            .formLogin().loginPage(&quot;/login&quot;).permitAll()</div><div class="line">            .defaultSuccessUrl(&quot;/halo&quot;)</div><div class="line">            .and()</div><div class="line">            .logout();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Pada keadaan ini kita sudah dapat login dengan UI html yang disediakan oleh spring</p>
-</li>
-<li><p>Membuat UI html sendiri(/resource-server/src/main/resources/templates/login.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;title&gt;Login Page&lt;/title&gt;</div><div class="line">        &lt;!-- Latest compiled and minified CSS --&gt;</div><div class="line">        &lt;link rel=&quot;stylesheet&quot;</div><div class="line">              href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;/&gt;</div><div class="line"></div><div class="line">        &lt;!-- Optional theme --&gt;</div><div class="line">        &lt;link rel=&quot;stylesheet&quot;</div><div class="line">              href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css&quot;/&gt;</div><div class="line"></div><div class="line">        &lt;link rel=&quot;stylesheet&quot;</div><div class="line">              href=&quot;css/aplikasi.css&quot;/&gt;</div><div class="line"></div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;div class=&quot;container&quot;&gt;</div><div class="line"></div><div class="line">          &lt;form class=&quot;form-signin&quot; th:action=&quot;@&#123;/login&#125;&quot; method=&quot;post&quot;&gt;</div><div class="line"></div><div class="line">              &lt;div th:if=&quot;$&#123;param.error&#125;&quot; class=&quot;alert alert-error&quot;&gt;    </div><div class="line">                    Invalid username and password.</div><div class="line">                &lt;/div&gt;</div><div class="line">                &lt;div th:if=&quot;$&#123;param.logout&#125;&quot; class=&quot;alert alert-success&quot;&gt;</div><div class="line">                    You have been logged out.</div><div class="line">                &lt;/div&gt;</div><div class="line"></div><div class="line">            &lt;h2 class=&quot;form-signin-heading&quot;&gt;Please sign in&lt;/h2&gt;</div><div class="line">            &lt;label for=&quot;username&quot; class=&quot;sr-only&quot;&gt;Email address&lt;/label&gt;</div><div class="line">            &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; class=&quot;form-control&quot;</div><div class="line">                   placeholder=&quot;Username&quot;/&gt;</div><div class="line">            &lt;label for=&quot;password&quot; class=&quot;sr-only&quot;&gt;Password&lt;/label&gt;</div><div class="line">            &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot;</div><div class="line">                   class=&quot;form-control&quot; placeholder=&quot;Password&quot; /&gt;</div><div class="line">            &lt;button class=&quot;btn btn-lg btn-primary btn-block&quot; type=&quot;submit&quot;&gt;Sign in&lt;/button&gt;</div><div class="line">          &lt;/form&gt;</div><div class="line"></div><div class="line">        &lt;/div&gt; &lt;!-- /container --&gt;        </div><div class="line"></div><div class="line">        &lt;!-- Latest compiled and minified JavaScript --&gt;</div><div class="line">        &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;/&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>Selanjutnya kita akan mendaftarkan template ini agar dapat diproses sebagai template yang tidak memiliki controller</p>
-</li>
-<li><p>Membuat Class KonfigurasiWeb(/resource-server/src/main/java/domain/config/Web.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiWeb extends WebMvcConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode untuk mendaftarkan template(/resource-server/src/main/java/domain/config/Web.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void addViewControllers(ViewControllerRegistry registry) &#123;</div><div class="line">    registry.addViewController(&quot;/login&quot;).setViewName(&quot;login&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Selanjutnya kita akan tambahkan fasilitas logout pada UI(/resource-server/src/main/resources/templates/halo.html)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;form name=&quot;f&quot; th:action=&quot;@&#123;/logout&#125;&quot; method=&quot;post&quot;&gt;</div><div class="line">    &lt;input type=&quot;submit&quot; value=&quot;Logout&quot; /&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Integrasi-otorisasi-Resources-Server-ke-database"><a href="#Integrasi-otorisasi-Resources-Server-ke-database" class="headerlink" title="Integrasi otorisasi Resources Server ke database"></a>Integrasi otorisasi Resources Server ke database</h1><p>Selanjutnya kita akan pindahkan otorisasi kita yang ada di (/resource-server/src/main/java/domain/config/KonfigurasiSecurity.java) ke database.</p>
-<ul>
-<li><p>Pertama kita tambahkan dependency  (/resource-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">  &lt;artifactId&gt;mysql-connector&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Lalu kita akan konfigurasi database di (/resource-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.datasource.url=jdbc:mysql://localhost:3306/belajar_oauth</div><div class="line">spring.datasource.username=belajar</div><div class="line">spring.datasource.password=belajar</div></pre></td></tr></table></figure>
-</li>
-<li><p>Generate JPA(/resource-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">spring.jpa.generate-ddl=true</div></pre></td></tr></table></figure>
-</li>
-<li><p>Pertama kita akan buat database dulu(CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line">grant all on belajar_oauth.* to belajar@localhost identified by &apos;belajar&apos;</div><div class="line">create database belajar_oauth;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Cara menggunakan mysql (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">use pelatihan;			///menggunakan tabel</div><div class="line">show tables;			///memperlihatkan tabel dan datanya</div><div class="line">show create table peserta \G	///memperlihatkan detil tabel</div><div class="line">drop table peserta;		///redeploy tabel</div></pre></td></tr></table></figure>
-</li>
-<li><p>buat super user (CLI)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">drop table if exists s_users;</div><div class="line"></div><div class="line">create table s_users (</div><div class="line">    id INT PRIMARY KEY AUTO_INCREMENT,</div><div class="line">    username VARCHAR(100) UNIQUE NOT NULL,</div><div class="line">    password VARCHAR(255) NOT NULL,</div><div class="line">    enabled BOOLEAN</div><div class="line">) Engine=InnoDB;</div><div class="line"></div><div class="line">insert into s_users (username, password, enabled)</div><div class="line">values (&apos;admin&apos;, &apos;123&apos;, true);</div><div class="line">insert into s_users (username, password, enabled)</div><div class="line">values (&apos;ciazhar&apos;, &apos;123&apos;, true);</div><div class="line"></div><div class="line">create table s_permissions (</div><div class="line">    id INT PRIMARY KEY AUTO_INCREMENT,</div><div class="line">    id_user VARCHAR(100) NOT NULL REFERENCES s_users(id),</div><div class="line">    user_role VARCHAR(255) NOT NULL</div><div class="line">) Engine=InnoDB;</div><div class="line"></div><div class="line">insert into s_permissions (id_user, user_role)</div><div class="line">values (1, &apos;ROLE_SUPERVISOR&apos;);</div><div class="line"></div><div class="line">insert into s_permissions (id_user, user_role)</div><div class="line">values (1, &apos;ROLE_OPERATOR&apos;);</div><div class="line"></div><div class="line">insert into s_permissions (id_user, user_role)</div><div class="line">values (2, &apos;ROLE_OPERATOR&apos;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>pindah otorisasi ke database (/resource-server/src/main/java/domain/config/KonfigurasiSecurity)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">private DataSource dataSource;</div><div class="line"></div><div class="line">@Autowired</div><div class="line">public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception &#123;</div><div class="line">    auth.jdbcAuthentication().dataSource(dataSource)</div><div class="line">            .usersByUsernameQuery(&quot;select username, password, &quot;</div><div class="line">                    + &quot;enabled from s_users where username=?&quot;)</div><div class="line">            .authoritiesByUsernameQuery(&quot;select u.username, p.user_role  &quot;</div><div class="line">                    + &quot;from s_users u  &quot;</div><div class="line">                    + &quot;inner join s_permissions p on u.id = p.id_user &quot;</div><div class="line">                    + &quot;where u.username=?&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Memisahkan-otorisai-pada-resources-server-agar-menjadi-authorization-server-tersendiri"><a href="#Memisahkan-otorisai-pada-resources-server-agar-menjadi-authorization-server-tersendiri" class="headerlink" title="Memisahkan otorisai pada resources server agar menjadi authorization server tersendiri"></a>Memisahkan otorisai pada resources server agar menjadi authorization server tersendiri</h1><ul>
-<li>Selanjutnya kita akan kita pisahkan Aplikasi yang telah kita buat kemarin menjadi resources server dan Authorization server. Pertama kita akan buat dulu aplikasi untuk authorization server, seperti Pertama kali kita membuat project resources server. Step by Step nya adalah sebagai berikut :<ul>
-<li>Download Setup projek di <code>http://start.spring.io</code></li>
-<li>Isi projek metadata berupa :<ul>
-<li>artifact id :</li>
-<li>lupa</li>
-</ul>
-</li>
-<li>Isi dependency yang dubutuhkan berupa :<ul>
-<li>web</li>
-<li>thymeleaf</li>
-<li>security</li>
-<li>jdbc</li>
-<li>mysql</li>
-</ul>
-</li>
-<li>Download lalu pindahkan ke text editor</li>
-</ul>
-</li>
-<li>Lalu kita akan pindahkan file file otorisasi sebagai berikut :<ul>
-<li>KonfigurasiSecurity.java</li>
-<li>KonfigurasiWeb.java</li>
-<li>login.html<br>kedalam projek authorization server kita</li>
-</ul>
-</li>
-</ul>
-<h1 id="Konfigurasi-Resource-Server-dan-Authorization-Sever-agar-dapat-berhubungan"><a href="#Konfigurasi-Resource-Server-dan-Authorization-Sever-agar-dapat-berhubungan" class="headerlink" title="Konfigurasi Resource Server dan Authorization Sever agar dapat berhubungan"></a>Konfigurasi Resource Server dan Authorization Sever agar dapat berhubungan</h1><p>Ada beberapa file yang perlu dikonfigurasi yaitu :</p>
-<ul>
-<li>pom.xml kedua aplikasi</li>
-<li>KonfigurasiResourceServer.java</li>
-<li>KonfigurasiAuthorizationServer.java</li>
-<li>application.properties kedua aplikasi</li>
-<li>KonfigurasiSecurity</li>
-</ul>
 <h2 id="Konfigurasi-Resource-Server"><a href="#Konfigurasi-Resource-Server" class="headerlink" title="Konfigurasi Resource Server"></a>Konfigurasi Resource Server</h2><ul>
-<li><p>Tambahkan dependeny OAuth2(resource-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.security.oauth&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-security-oauth2&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;2.0.7.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>setup security (resource-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logging.level.org.springframework.security=DEBUG</div></pre></td></tr></table></figure>
+<li><p>Tambahkan dependeny OAuth2 dan JWT(resource-server/pom.xml)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security.oauth<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-oauth2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.7.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-jwt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>Buat class KonfigurasiResourceServer (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiResourceServer &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@EnableResourceServer</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KonfigurasiResourceServer</span> <span class="keyword">extends</span> <span class="title">ResourceServerConfigurerAdapter</span></span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Setup RESOURCE_ID(resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">private static final String RESOURCE_ID = &quot;belajar&quot;;</div></pre></td></tr></table></figure>
+<li><p>override methode untuk authorisasi (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java/ResourceServerConfiguration).</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">    http.authorizeRequests().anyRequest().authenticated()</div><div class="line">    ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat inner class ResourceServerConfiguration (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">@EnableResourceServer</div><div class="line">protected static class ResourceServerConfiguration extends ResourceServerConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode (resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java/ResourceServerConfiguration). Methode ini berfungsi untuk menyuruh authorization server melakukan pengecekan apakah access token valid atau tidak.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void configure(ResourceServerSecurityConfigurer resources) &#123;</div><div class="line">    RemoteTokenServices tokenService = new RemoteTokenServices();</div><div class="line">    tokenService.setClientId(&quot;clientauthcode&quot;);</div><div class="line">    tokenService.setClientSecret(&quot;123456&quot;);</div><div class="line">    tokenService.setCheckTokenEndpointUrl(&quot;http://localhost:10000/oauth/check_token&quot;);</div><div class="line">    resources</div><div class="line">            .resourceId(RESOURCE_ID)</div><div class="line">            .tokenServices(tokenService);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat methode(resource-server/src/main/java/domain/config/KonfigurasiResourceServer.java/ResourceServerConfiguration). Methode ini berfungsi untuk memgatur api apa saja  yang dapat diakses dan oleh siapa saja yang dapat mengakses.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">public void configure(HttpSecurity http) throws Exception &#123;</div><div class="line">    http.authorizeRequests()</div><div class="line">            .antMatchers(&quot;/api/halo&quot;).hasRole(&quot;OPERATOR&quot;)</div><div class="line">            .antMatchers(&quot;/api/waktu&quot;).authenticated();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>Konfigurasi JWT</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">security.oauth2.resource.jwt.key-uri=http://localhost:10000/oauth/token_key</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="Konfigurasi-Authorization-Server"><a href="#Konfigurasi-Authorization-Server" class="headerlink" title="Konfigurasi Authorization Server"></a>Konfigurasi Authorization Server</h2><ul>
-<li><p>Tambahkan dependeny OAuth2(auth-server/pom.xml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.security.oauth&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-security-oauth2&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;2.0.7.RELEASE&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+<li><p>Tambahkan dependeny OAuth2 dan JWT(resource-server/pom.xml)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security.oauth<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-oauth2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.7.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-jwt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>setup security (auth-server/src/main/resources/application.properties)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">logging.level.org.springframework.security=DEBUG</div><div class="line">server.port=10000</div></pre></td></tr></table></figure>
+<li><p>setup port (auth-server/src/main/resources/application.properties)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">server.port=10000</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat class KonfigurasiAuthorizationServer (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">public class KonfigurasiAuthorizationServer &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>setup session cookies(auth-server/src/main/resources/application.properties)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">server.session.cookie.name=AUTHSERVER</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>Buat inner class AuthorizationServerConfiguration (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Configuration</div><div class="line">@EnableAuthorizationServer</div><div class="line">protected static class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><p>membuat class KonfigurasiAuthorizationServer (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KonfigurasiAuthorizationServer</span> </span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>Setup RESOURCE_ID (auth-server/src/main/java/domain/config/KonfigurasiAuthorizationServer.java)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">private static final String RESOURCE_ID = &quot;belajar&quot;;</div></pre></td></tr></table></figure>
+<li><p>Membuat inner class</p>
 </li>
 <li><p>Setup AuthenticationManager</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@Autowired</div><div class="line">@Qualifier(&quot;authenticationManagerBean&quot;)</div><div class="line">private AuthenticationManager authenticationManager;</div></pre></td></tr></table></figure>
@@ -596,7 +456,7 @@ Gambaran Umum">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/05/27/pemrograman/spring/8.1-oauth2-spring/" data-id="cj38hr4tr00251clp0780fm2b" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/05/27/pemrograman/spring/8.1-oauth2-spring/" data-id="cj43j54dr0026e5lpsxtwins5" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -759,28 +619,6 @@ Gambaran Umum">
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
-                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
-                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="thumbnail">
     
     
@@ -795,6 +633,28 @@ Gambaran Umum">
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
                                 <p class="item-title"><a href="/2017/04/28/pemrograman/angular2/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
                                 <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/android.png)" alt="Introduction to Android" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Android/">Android</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/android/0-Introduction-to-Android/" class="title">Introduction to Android</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:21:33.000Z" itemprop="datePublished">2017-05-07</time></p>
                             </div>
                         </li>
                     
@@ -852,7 +712,7 @@ Gambaran Umum">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">31</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">31</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">21</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -862,7 +722,7 @@ Gambaran Umum">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -872,7 +732,7 @@ Gambaran Umum">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tag</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">3</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/komputer/">komputer</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">ui-ux</a><span class="tag-list-count">6</span></li></ul>
         </div>
     </div>
 
