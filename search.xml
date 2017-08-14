@@ -1903,19 +1903,14 @@
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/1-setup-project-crud-jpa-mysql/">Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL</a></li>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.1-crud-jpa-thymeleaf/">CRUD dengan Spring Data JPA + Thymeleaf (Server Side Rendering)</a></li>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.3-generate-content-dari-client-side-dengan-AngularJS/">CRUD dengan Spring Data JPA + AngularJS (Client Side Rendering / RESTfull API)</a><!-- - [Spring Boot REST API Design Pattern](https://ciazhar.github.io/2017/05/27/pemrograman/spring/jpa/2.2-crud-jpa-thymeleaf(extended)/) -->
-<!-- - [Kardinalitas pada Spring Data JPA](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/3-kardinalitas/)  -->
-<ul>
-<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/jpa/4-Debug-Spring-Data-JPA/">Debug Spring Data JPA</a> </li>
-</ul>
-</li>
+<!-- - [Kardinalitas pada Spring Data JPA](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/3-kardinalitas/)  --></li>
+<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/jpa/4-Debug-Spring-Data-JPA/">Debug Spring Data JPA</a>  </li>
 </ul>
 <h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/security/1-otorisasi-login-dengan-spring-security/">Otoriasai login dengan Spring Security</a></li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/2-otorisasi-method-dengan-spring-security/">Otorisasi controller dengan Spring Security</a> <ul>
+<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/2-otorisasi-method-dengan-spring-security/">Otorisasi controller dengan Spring Security</a> </li>
 <li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/3-debug-spring-security/">Debug Spring Security</a> </li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/4-melihat-data-user-login-dengan-spring-security-md/">Melihat Data User Login dengan Spring Security</a>  </li>
-</ul>
-</li>
+<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/4-melihat-data-user-login-dengan-spring-security-md/">Melihat Data User Login dengan Spring Security</a>   </li>
 <li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/5-oauth2-spring/">Securing Spring Boot App with Spring OAuth2 + JSON Web Token (JWT)</a></li>
 <li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/6-SSO-dengan-Spring-Security/">Single Signed On dengan Spring Security</a></li>
 </ul>
