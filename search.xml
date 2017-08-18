@@ -300,52 +300,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Config Service Vault Server]]></title>
-      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
-      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
-<blockquote>
-<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
-</blockquote>
-<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
-<ul>
-<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Secara default vault server akan berjalan di localhost port 8200.</p>
-<ul>
-<li><p>Konfigurasi vault address</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
-</li>
-<li><p>Tulis konfigurasi</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-</li>
-<li><p>Baca konfigurasi</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat project spring + dependency spring cloud config</p>
-</li>
-<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
-<li><p>Ubah Konfigurasi</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
-</li>
-<li><p>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</p>
-</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Config Service File System]]></title>
       <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -394,6 +348,52 @@
 <p>Pada script diatas ada 2 nilai yang harus diisi yaitu nama-parameter yang akan di override  dan value dari parameter tersebut</p>
 </blockquote>
 <p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-default.yml</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Config Service Vault Server]]></title>
+      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
+<blockquote>
+<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
+</blockquote>
+<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
+<ul>
+<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Secara default vault server akan berjalan di localhost port 8200.</p>
+<ul>
+<li><p>Konfigurasi vault address</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tulis konfigurasi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+</li>
+<li><p>Baca konfigurasi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+</li>
+<li><p>Buat project spring + dependency spring cloud config</p>
+</li>
+<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
+<li><p>Ubah Konfigurasi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
+</li>
+<li><p>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</p>
+</li>
+</ul>
 ]]></content>
       
         <categories>
@@ -2179,17 +2179,15 @@
 <li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/microservice/Microservice-dengan-Spring-Cloud/">Microservice dengan Spring Cloud</a></li>
 <li><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/">Spring Cloud Discovery Service (Eureka)</a></li>
 <li><a href="https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/">Spring Cloud Circuit Breaker (Hystrix)</a></li>
-<li>Spring Cloud API Gateway (Zuul)()</li>
+<li>Spring Cloud API Gateway (Zuul)(<a href="https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/">https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/</a>)</li>
 <li><a href="https://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/">Spring Cloud Config Service : Intro</a></li>
 <li><a href="https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/">Spring Cloud Config Service : File System</a></li>
 <li><a href="https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/">Spring Cloud Config Service : Vault Server</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/">Spring Cloud Config Service : Git Repositoty</a><ul>
+<li><a href="https://ciazhar.github.io/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/">Spring Cloud Config Service : Git Repositoty</a></li>
 <li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Cient/">Spring Cloud Config Service : Config Client</a> </li>
 <li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Encryption-Decryption/">Spring Cloud Config Service : Encryption &amp; Decryption</a> </li>
 <li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/7-Config-Service-Refresh-Scope-and-Health-Check/">Spring Cloud Config Service : Refresh Scope &amp; Health</a> </li>
 <li><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/config-service/8-Spring-Config-Service-Security/">Spring Cloud Config Service : Security</a> </li>
-</ul>
-</li>
 </ul>
 ]]></content>
       
