@@ -4,6 +4,34 @@
   
     
     <entry>
+      <title><![CDATA[Zuul As API Gateway]]></title>
+      <url>http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<p>Zull merupakan gerbang utama yang dilewati request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security. dll.</p>
+<h1 id="Membuat-API-Gateway"><a href="#Membuat-API-Gateway" class="headerlink" title="Membuat API Gateway"></a>Membuat API Gateway</h1><ul>
+<li>Tambahkan dependency <code>spring-cloud-starter-zuul</code>.</li>
+<li>Tambahkan anotasi <code>@EnableZuulProxy</code></li>
+<li>Tambahkan konfigurasi zuul<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  application:</span></div><div class="line"><span class="attr">    name:</span> <span class="string">api-gateway</span></div><div class="line"><span class="attr">zuul:</span></div><div class="line"><span class="attr">  prefix:</span> <span class="string">/api</span></div><div class="line"><span class="attr">  routes:</span></div><div class="line"><span class="attr">    eureka-client:</span></div><div class="line"><span class="attr">      path:</span> <span class="string">/pertama/**</span></div><div class="line"><span class="attr">      serviceId:</span> <span class="string">EUREKA-CLIENT</span></div><div class="line"><span class="attr">    other-eureka-client:</span></div><div class="line"><span class="attr">      path:</span> <span class="string">/kedua/**</span></div><div class="line"><span class="attr">      serviceId:</span> <span class="string">OTHER-EUREKA-CLIENT</span></div><div class="line"><span class="attr">server:</span></div><div class="line"><span class="attr">  port:</span> <span class="number">8004</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Dengan adanya API Gateway untuk memanggil API dari masing masing backend tidak harus memanggilnya secara manual dengan menyebutkan portnya, tetapi hanya perlu memanggilnya via API Gateway sesuai pathnya. Nantinya service yang bernama eureka-client akan diinisialisasi menggunakan path /pertama. Sedangkan service yang bernama eureka-client akan diinisialisasi menggunakan path /kedua.<br>Apabila dulu jika ingin mengakses API di service eureka-client menggunakan <a href="http://localhost:8002/api/halo" target="_blank" rel="external">http://localhost:8002/api/halo</a> sekarang dapat diganti dengan <a href="http://localhost:8004/api/pertama/api/halo" target="_blank" rel="external">http://localhost:8004/api/pertama/api/halo</a>. Sedangkan apabila dulu jika ingin mengakses API di service other-eureka-client menggunakan <a href="http://localhost:8003/api/halo" target="_blank" rel="external">http://localhost:8003/api/halo</a> sekarang dapat diganti dengan <a href="http://localhost:8004/api/kedua/api/halo" target="_blank" rel="external">http://localhost:8004/api/kedua/api/halo</a>.<br>Hal ini akan meringankan beban dalam development aplikasi karena tidak perlu menghafal port untuk setiap servicenya, tetapi hanya perlu mengetahui nama servinya.</p>
+<ul>
+<li>Konfigurasi tambahan<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Konfigurasi Config Service</span></div><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  cloud:</span></div><div class="line"><span class="attr">    config:</span></div><div class="line"><span class="attr">      uri:</span> <span class="attr">http://localhost:10003</span></div><div class="line"></div><div class="line"><span class="comment"># Konfigurasi Discovery Service</span></div><div class="line"><span class="attr">eureka:</span></div><div class="line"><span class="attr">  client:</span></div><div class="line"><span class="attr">    service-url:</span></div><div class="line"><span class="attr">      defaultZone:</span> <span class="attr">http://localhost:8001/eureka</span></div><div class="line"></div><div class="line"><span class="comment"># Konfigurasi Circuit Breaker</span></div><div class="line"><span class="attr">hystrix:</span></div><div class="line"><span class="attr">  command:</span></div><div class="line"><span class="attr">    default:</span></div><div class="line"><span class="attr">      execution:</span></div><div class="line"><span class="attr">        isolation:</span></div><div class="line"><span class="attr">          thread:</span></div><div class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">10000</span></div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Circuit Breaker With Hystrix]]></title>
       <url>http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -272,6 +300,52 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Config Service Vault Server]]></title>
+      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
+<blockquote>
+<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
+</blockquote>
+<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
+<ul>
+<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Secara default vault server akan berjalan di localhost port 8200.</p>
+<ul>
+<li><p>Konfigurasi vault address</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tulis konfigurasi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+</li>
+<li><p>Baca konfigurasi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+</li>
+<li><p>Buat project spring + dependency spring cloud config</p>
+</li>
+<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
+<li><p>Ubah Konfigurasi</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
+</li>
+<li><p>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</p>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Config Service File System]]></title>
       <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -320,52 +394,6 @@
 <p>Pada script diatas ada 2 nilai yang harus diisi yaitu nama-parameter yang akan di override  dan value dari parameter tersebut</p>
 </blockquote>
 <p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-default.yml</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Config Service Vault Server]]></title>
-      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
-      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
-<blockquote>
-<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
-</blockquote>
-<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
-<ul>
-<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Secara default vault server akan berjalan di localhost port 8200.</p>
-<ul>
-<li><p>Konfigurasi vault address</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
-</li>
-<li><p>Tulis konfigurasi</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-</li>
-<li><p>Baca konfigurasi</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-</li>
-<li><p>Buat project spring + dependency spring cloud config</p>
-</li>
-<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
-<li><p>Ubah Konfigurasi</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
-</li>
-<li><p>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</p>
-</li>
-</ul>
 ]]></content>
       
         <categories>
@@ -1947,6 +1975,53 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Setup Project Spring Boot]]></title>
+      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/</url>
+      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
+<ul>
+<li>Java Development Kit (JDK atau openJDK)</li>
+<li>Build Tools (Apache Maven atau Gradle)</li>
+<li>IDE (IntellijIDEA atau Netbeans)</li>
+</ul>
+<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
+<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
+<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
+<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
+<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
+</ul>
+</li>
+<li>Generate Project</li>
+<li>Add project ke text editor</li>
+</ul>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
+<ul>
+<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
+<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
+<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
+</ul>
+<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/</url>
       <content type="html"><![CDATA[<p><img src="https://mediarealm.com.au/wp-content/uploads/2013/02/Android-Banner1.jpg" alt=""></p>
@@ -2054,53 +2129,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Setup Project Spring Boot]]></title>
-      <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
-<ul>
-<li>Java Development Kit (JDK atau openJDK)</li>
-<li>Build Tools (Apache Maven atau Gradle)</li>
-<li>IDE (IntellijIDEA atau Netbeans)</li>
-</ul>
-<h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
-<li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
-<li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
-<li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
-<li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
-<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
-</ul>
-</li>
-<li>Generate Project</li>
-<li>Add project ke text editor</li>
-</ul>
-<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
-<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
-<ul>
-<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
-<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
-<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
-<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
-<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
-<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
-<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
-</ul>
-<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Introduction to Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/1-introduction-to-spring-boot/</url>
       <content type="html"><![CDATA[<p><img src="/images/spring.png" alt=""></p>
@@ -2120,6 +2148,9 @@
 <h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/web/membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/">Membuat Web Menggunakan Spring Boot dan Thymeleaf</a></li>
 </ul>
+<h2 id="Template-Engine"><a href="#Template-Engine" class="headerlink" title="Template Engine"></a>Template Engine</h2><ul>
+<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/">Template Engine Thymeleaf</a></li>
+</ul>
 <h2 id="Create-Read-Update-Delete"><a href="#Create-Read-Update-Delete" class="headerlink" title="Create Read Update Delete"></a>Create Read Update Delete</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/1-setup-project-crud-jpa-mysql/">Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL</a></li>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.1-crud-jpa-thymeleaf/">CRUD dengan Spring Data JPA + Thymeleaf (Server Side Rendering)</a></li>
@@ -2135,23 +2166,30 @@
 <li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/5-oauth2-spring/">Securing Spring Boot App with Spring OAuth2 + JSON Web Token (JWT)</a></li>
 <li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/6-SSO-dengan-Spring-Security/">Single Signed On dengan Spring Security</a></li>
 </ul>
-<h2 id="Template-Engine"><a href="#Template-Engine" class="headerlink" title="Template Engine"></a>Template Engine</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/">Template Engine Thymeleaf</a></li>
-</ul>
 <h2 id="Report"><a href="#Report" class="headerlink" title="Report"></a>Report</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/report/jasper-report/">Membuat Report dengan Jasper Report</a></li>
+</ul>
+<h2 id="Mail"><a href="#Mail" class="headerlink" title="Mail"></a>Mail</h2><ul>
+<li><a href="https://ciazhar.github.io/2017/08/17/pemrograman/spring/mail/sending-mail/">Membuat Register dengan Verifikasi Email</a></li>
 </ul>
 <h2 id="Database-Migration"><a href="#Database-Migration" class="headerlink" title="Database Migration"></a>Database Migration</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/database-migration/Database-Mirgation-dengan-FlywayDB/">Migrasi Database dengan FlywayDB</a></li>
 </ul>
 <h2 id="Microservice"><a href="#Microservice" class="headerlink" title="Microservice"></a>Microservice</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/microservice/Microservice-dengan-Spring-Cloud/">Microservice dengan Spring Cloud</a><!-- - [Spring Cloud Discovery Service (Eureka)]() --></li>
+<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/microservice/Microservice-dengan-Spring-Cloud/">Microservice dengan Spring Cloud</a></li>
+<li><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/">Spring Cloud Discovery Service (Eureka)</a></li>
+<li><a href="https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/">Spring Cloud Circuit Breaker (Hystrix)</a></li>
+<li>Spring Cloud API Gateway (Zuul)()</li>
 <li><a href="https://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/">Spring Cloud Config Service : Intro</a></li>
 <li><a href="https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/">Spring Cloud Config Service : File System</a></li>
 <li><a href="https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/">Spring Cloud Config Service : Vault Server</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/">Spring Cloud Config Service : Git Repositoty</a><!-- - [Spring Cloud Config Service : Config Client]() -->
-<!-- - [Spring Cloud Config Service : Encryption & Decryption](https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Encryption-Decryption/) -->
-<!-- - Spring Cloud API Gateway (Zuul)() --></li>
+<li><a href="https://ciazhar.github.io/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/">Spring Cloud Config Service : Git Repositoty</a><ul>
+<li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Cient/">Spring Cloud Config Service : Config Client</a> </li>
+<li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Encryption-Decryption/">Spring Cloud Config Service : Encryption &amp; Decryption</a> </li>
+<li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/7-Config-Service-Refresh-Scope-and-Health-Check/">Spring Cloud Config Service : Refresh Scope &amp; Health</a> </li>
+<li><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/config-service/8-Spring-Config-Service-Security/">Spring Cloud Config Service : Security</a> </li>
+</ul>
+</li>
 </ul>
 ]]></content>
       
