@@ -8,14 +8,17 @@
     
         <meta name="keywords" content="" />
     
-    <meta property="og:type" content="article">
+    <meta name="description" content="Eureka adalah discovery service yang didevelop oleh netfix. Discovery service sendiri berfungsi untuk menampung data semua service yang ada di microservice. Discovery service juga dapat mempermudah k">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Spring Cloud Netfix Eureka as Discovery Service">
 <meta property="og:url" content="http://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/index.html">
 <meta property="og:site_name" content="ciazhar">
+<meta property="og:description" content="Eureka adalah discovery service yang didevelop oleh netfix. Discovery service sendiri berfungsi untuk menampung data semua service yang ada di microservice. Discovery service juga dapat mempermudah k">
 <meta property="og:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
-<meta property="og:updated_time" content="2017-08-15T03:30:23.885Z">
+<meta property="og:updated_time" content="2017-08-18T09:49:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Cloud Netfix Eureka as Discovery Service">
+<meta name="twitter:description" content="Eureka adalah discovery service yang didevelop oleh netfix. Discovery service sendiri berfungsi untuk menampung data semua service yang ada di microservice. Discovery service juga dapat mempermudah k">
 <meta name="twitter:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
     
 
@@ -158,6 +161,32 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<p>Eureka adalah discovery service yang didevelop oleh netfix. Discovery service sendiri berfungsi untuk menampung data semua service yang ada di microservice. Discovery service juga dapat mempermudah komunikasi antar service yang berdiri di atasnya.</p>
+<h1 id="Implement-Eureka-Server"><a href="#Implement-Eureka-Server" class="headerlink" title="Implement Eureka Server"></a>Implement Eureka Server</h1><ul>
+<li>Tambahkan dependency <code>spring-boot-eureka-server</code></li>
+<li>Tambahkan anotasi <code>@EnableEurekaServer</code> pada main class</li>
+<li>Tambahkan konfigurasi eureka service (application.yml)<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  application:</span></div><div class="line"><span class="attr">    name:</span> <span class="string">eureka-service</span></div><div class="line"></div><div class="line"><span class="attr">server:</span></div><div class="line"><span class="attr">  port:</span> <span class="number">8761</span></div><div class="line"></div><div class="line"><span class="attr">eureka:</span></div><div class="line"><span class="attr">  client:</span></div><div class="line"><span class="attr">    register-with-eureka:</span> <span class="literal">false</span></div><div class="line"><span class="attr">    fetch-registry:</span> <span class="literal">false</span></div><div class="line"><span class="attr">    server:</span></div><div class="line"><span class="attr">      waitTimeInMsWhenSyncEmpty:</span> <span class="number">0</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Implement-Eureka-Client"><a href="#Implement-Eureka-Client" class="headerlink" title="Implement Eureka Client"></a>Implement Eureka Client</h1><ul>
+<li>Tambahkan dependency <code>spring-boot-starter-eureka</code></li>
+<li>Tambahkan anotasi <code>@EnableDiscoveryClient</code> pada main class</li>
+<li>Tambahkan konfigurasi eureka server (bootstrap.yml)<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  application:</span></div><div class="line"><span class="attr">    name:</span> <span class="string">eureka-client</span></div><div class="line"><span class="attr">eureka:</span></div><div class="line"><span class="attr">  client:</span></div><div class="line"><span class="attr">    service-url:</span></div><div class="line"><span class="attr">      defaultZone:</span> <span class="attr">http://localhost:8761/eureka</span></div><div class="line"><span class="attr">server:</span></div><div class="line"><span class="attr">  port:</span> <span class="number">8002</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Komunikasi-Data-antar-Eureka-Client"><a href="#Komunikasi-Data-antar-Eureka-Client" class="headerlink" title="Komunikasi Data antar Eureka Client"></a>Komunikasi Data antar Eureka Client</h1><p>Kita misalkan terdapat 2 eureka client, client pertama(spring.application.name=client-satu) berjalan di port 8001, sendangkan client kedua(spring.application.name=client-dua) berjalan di port 8002. Client kedua ingin mengambil API dari client pertama menggunakan eureka server.<br>Berikut contoh kode untuk komunikasi antar client. </p>
+<ul>
+<li><p>Controller pada client pertama</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/api/halo/client-satu"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">halo</span> <span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"Halo ini dari Client Satu"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Konfigurasi RestTemplate pada client kedua</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleConfig</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="meta">@LoadBalanced</span></div><div class="line">    <span class="function">RestTemplate <span class="title">restTemplate</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Controller pada client kedua</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SImpleController</span> </span>&#123;</div><div class="line">    <span class="meta">@Autowired</span> <span class="keyword">private</span> RestTemplate restTemplate;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/api/halo/client-dua"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">halo</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> restTemplate.getForObject(<span class="string">"http://client-satu/api/halo/client-satu"</span>,String.class);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Bisa dilihat pada controller client kedua mengambil API dari client pertama menggunakan RestTemplate dengan tidak mengghardcode url APInya, tetapi hanya mencantumkan <code>spring.application.name</code> dari client pertama. Dan data dari API tersebut kemudian disimpan dan dikembalikan dalam tipe data String.</p>
 
         </div>
         <footer class="article-footer">
@@ -165,7 +194,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/" data-id="cj6d2vcdz004upjlpg6p3zwli" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/" data-id="cj6hzulv7005daalpo6e21dhi" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -278,6 +307,16 @@
     <!-- 
         
 <nav id="article-nav">
+    
+        <a href="/2017/08/17/pemrograman/spring/mail/sending-mail/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            Sending Mail + Verifikasi Email
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
     
     
         <a href="/2017/08/15/pemrograman/spring/microservice/config-service/8-Spring-Config-Service-Security/" id="article-nav-older" class="article-nav-link-wrap">
@@ -411,7 +450,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">38</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">28</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">40</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">30</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -421,7 +460,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
