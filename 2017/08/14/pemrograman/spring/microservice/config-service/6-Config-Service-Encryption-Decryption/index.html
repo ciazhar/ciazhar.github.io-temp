@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="ciazhar">
 <meta property="og:description" content="Saat client mengambil konfigurasi dari config service secara default semua data tidak terenkripsi. Sehingga data data credential seperti password dan lain lain dapat langsung diketahui apabila telah">
 <meta property="og:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
-<meta property="og:updated_time" content="2017-08-14T16:17:31.369Z">
+<meta property="og:updated_time" content="2017-08-20T04:11:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Config Service Encryption Decryption">
 <meta name="twitter:description" content="Saat client mengambil konfigurasi dari config service secara default semua data tidak terenkripsi. Sehingga data data credential seperti password dan lain lain dapat langsung diketahui apabila telah">
@@ -161,34 +161,41 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<p>Saat client mengambil konfigurasi dari config service secara default semua data tidak terenkripsi. Sehingga data data credential seperti password dan lain lain dapat langsung diketahui apabila telah mendapatkan file konfigurasinya. Untuk mengurangi bocornya data ada baiknya data credential tersebut kita enkripsi.<br>Spring Cloud Config Server mensupport enkripsi dan dekripsi. Untuk menggunakannya ikuti langkah langkah berikut</p>
+<p>Saat client mengambil konfigurasi dari config service secara default semua data tidak terenkripsi. Sehingga data data credential seperti password dan lain lain dapat langsung diketahui apabila telah mendapatkan file konfigurasinya. Untuk mengurangi bocornya data ada baiknya data credential tersebut kita enkripsi.</p>
+<p>Spring Cloud Config Server mensupport enkripsi dan dekripsi. Untuk menggunakannya ikuti langkah langkah berikut :</p>
 <ul>
 <li>Download Java Criptography Enxtension (JCE)</li>
-<li>Replace fIle konfigurasi telah ada dengan file JCE yang telah di download</li>
-<li><p>Konfigurasi encrypt key (resource/bootstrap.yml)</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">encrypt:</span></div><div class="line"><span class="attr">  key:</span> <span class="string">abcdef</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Run</p>
-</li>
-<li><p>Untuk mengenkripsi, lakukan POST ke <code>localhost:8080/encrypt</code> dengan memasukkan data yang ingin di encrypt pada Body HTTP. Semisal kita ingin mengekripsi password dengan value ciazhar123. Maka masukkan password tersebut ke dalam Body HTTP, lalu POST. Kita akan mendapatkan response berupa hasil enkripsi yang dapat kita gunakan untuk mereplace data kita dengan hasil enkripsi tersebut. Hasil enkripsi tersebut dapat dipasang dengan cara seperti ini :</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">password</span> <span class="string">:</span> <span class="string">&#123;cipher&#125;1n1p455w0rd3nkr1ps1</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Untuk mendekripsi, lakukan POST ke <code>localhost:8080/decrypt</code> dengan memasukkan data yang ingin di decrypt pada Body HTTP.</p>
-</li>
-<li><p>Konfig value yang terenkripsi agar tetap terenkripsi (resource/bootstrap.yml)</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  cloud:</span></div><div class="line"><span class="attr">    config:</span></div><div class="line"><span class="attr">      server:</span></div><div class="line"><span class="attr">        encrypt:</span></div><div class="line"><span class="attr">          enabled:</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Tambahkan encrypt ket pada aplikasi client agar dapat mendekip value ()</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">encypt:</span></div><div class="line"><span class="attr">  key:</span> <span class="string">abcdef</span></div></pre></td></tr></table></figure></li>
+<li>Replace fIle konfigurasi telah ada pada desktop kita dengan file JCE yang telah di download</li>
+<li>Konfigurasi encrypt key (resource/bootstrap.yml)</li>
 </ul>
-
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">encrypt:</span></div><div class="line"><span class="attr">  key:</span> <span class="string">abcdef</span></div></pre></td></tr></table></figure>
+<p>Encrypt key akan menentukan hasil dari enkripsi dan kunci untuk mendekrip.</p>
+<ul>
+<li>Konfig value yang terenkripsi agar tetap terenkripsi (resource/bootstrap.yml)</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  cloud:</span></div><div class="line"><span class="attr">    config:</span></div><div class="line"><span class="attr">      server:</span></div><div class="line"><span class="attr">        encrypt:</span></div><div class="line"><span class="attr">          enabled:</span> <span class="literal">false</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Tambahkan encrypt key pada aplikasi client agar dapat mendekip value ()</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">encypt:</span></div><div class="line"><span class="attr">  key:</span> <span class="string">abcdef</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Jalankan program</li>
+</ul>
+<p>Untuk mengenkripsi, lakukan POST ke <code>localhost:8080/encrypt</code> dengan memasukkan data yang ingin di encrypt pada Body HTTP. Semisal kita ingin mengekripsi password dengan value ciazhar123. Maka masukkan password tersebut ke dalam Body HTTP, lalu POST. Dapat menggunakan curl untuk mempermudah :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl localhost:8080/encrypt -d value</div></pre></td></tr></table></figure>
+<p>Selanjutnya kita akan mendapatkan response berupa hasil enkripsi yang dapat kita gunakan untuk mereplace data kita dengan hasil enkripsi tersebut. Hasil enkripsi tersebut dapat dipasang dengan cara seperti ini :</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">password</span> <span class="string">:</span> <span class="string">&#123;cipher&#125;1n1p455w0rd3nkr1ps1</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Untuk mendekripsi, lakukan POST ke <code>localhost:8080/decrypt</code> dengan memasukkan data yang ingin di decrypt pada Body HTTP.<br>Dapat menggunakan curl untuk mempermudah :</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl localhost:8080/decrypt -d value</div></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/6-Config-Service-Encryption-Decryption/" data-id="cj6ihwktk0053eulpgozl2qan" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/6-Config-Service-Encryption-Decryption/" data-id="cj6k8867k0053awlp6nxi3luw" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -444,7 +451,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">31</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">32</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -454,7 +461,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 

@@ -3,31 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Config Service File System | ciazhar</title>
+    <title>Melakukan Tracing antar Microservice menggunakan Netflix Sleuth | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Membuat Config Service yang berisi konfigurasi 1 service
-Buat project dengan spring initializr.
-Menambahkan dependency spring-cloud-config-server.
-Menambah anotasi @EnableConfigServer pada main class">
+    <meta name="description" content="Spring Cloud Netflix Sleuth digunakan untuk membuat log tracing antar service. Sleuth dalam melakukan tracing, dia menggunakan Trace ID dan Span ID. Trace ID merupakan id yang digunakan untuk mentrac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Config Service File System">
-<meta property="og:url" content="http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/index.html">
+<meta property="og:title" content="Melakukan Tracing antar Microservice menggunakan Netflix Sleuth">
+<meta property="og:url" content="http://ciazhar.github.io/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Membuat Config Service yang berisi konfigurasi 1 service
-Buat project dengan spring initializr.
-Menambahkan dependency spring-cloud-config-server.
-Menambah anotasi @EnableConfigServer pada main class">
+<meta property="og:description" content="Spring Cloud Netflix Sleuth digunakan untuk membuat log tracing antar service. Sleuth dalam melakukan tracing, dia menggunakan Trace ID dan Span ID. Trace ID merupakan id yang digunakan untuk mentrac">
 <meta property="og:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
-<meta property="og:updated_time" content="2017-08-20T03:35:04.000Z">
+<meta property="og:updated_time" content="2017-08-20T02:02:49.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Config Service File System">
-<meta name="twitter:description" content="Membuat Config Service yang berisi konfigurasi 1 service
-Buat project dengan spring initializr.
-Menambahkan dependency spring-cloud-config-server.
-Menambah anotasi @EnableConfigServer pada main class">
+<meta name="twitter:title" content="Melakukan Tracing antar Microservice menggunakan Netflix Sleuth">
+<meta name="twitter:description" content="Spring Cloud Netflix Sleuth digunakan untuk membuat log tracing antar service. Sleuth dalam melakukan tracing, dia menggunakan Trace ID dan Span ID. Trace ID merupakan id yang digunakan untuk mentrac">
 <meta name="twitter:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
     
 
@@ -142,14 +133,14 @@ Menambah anotasi @EnableConfigServer pada main class">
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-pemrograman/spring/microservice/config-service/2.Config-Service-File-System" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Config Service File System
+        Melakukan Tracing antar Microservice menggunakan Netflix Sleuth
         </h1>
     
 
@@ -159,8 +150,8 @@ Menambah anotasi @EnableConfigServer pada main class">
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/" class="article-date">
-            <time datetime="2017-07-28T02:08:13.000Z" itemprop="datePublished">2017-07-28</time>
+        <a href="/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/" class="article-date">
+            <time datetime="2017-08-20T01:42:20.000Z" itemprop="datePublished">2017-08-20</time>
         </a>
     </div>
 
@@ -170,49 +161,22 @@ Menambah anotasi @EnableConfigServer pada main class">
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-Config-Service-yang-berisi-konfigurasi-1-service"><a href="#Membuat-Config-Service-yang-berisi-konfigurasi-1-service" class="headerlink" title="Membuat Config Service yang berisi konfigurasi 1 service"></a>Membuat Config Service yang berisi konfigurasi 1 service</h1><ul>
-<li>Buat project dengan spring initializr.</li>
-<li>Menambahkan dependency <code>spring-cloud-config-server</code>.</li>
-<li>Menambah anotasi <code>@EnableConfigServer</code> pada main class.</li>
-<li>Konfigurasi config service (resource/application.properties)</li>
+<p>Spring Cloud Netflix Sleuth digunakan untuk membuat log tracing antar service. Sleuth dalam melakukan tracing, dia menggunakan Trace ID dan Span ID. Trace ID merupakan id yang digunakan untuk mentracing lintas service. Sedangkan Span ID merupakan ID yang digunakan untuk mentracing internal service.</p>
+<h1 id="Implement-Sleuth"><a href="#Implement-Sleuth" class="headerlink" title="Implement Sleuth"></a>Implement Sleuth</h1><ul>
+<li>Tambahkan dependency <code>spring-cloud-starter-sleuth</code> dan <code>spring-boot-starter-web</code></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># Konfigurasi Port</div><div class="line">server.port=8080</div><div class="line"></div><div class="line"># Memberitahu bahwa file konfigurasi berada dalam 1 project</div><div class="line">spring.profiles.active=native</div><div class="line"></div><div class="line"># json pretty print</div><div class="line">spring.jackson.serialization.indent-output=true</div></pre></td></tr></table></figure>
-<ul>
-<li>Membuat File Konfigurasi<br>Selanjutnya kita akan membuat beberapa file konfigurasi. Semisal kita akan membuat konfigurasi database dan konfigurasi messaging. Di setiap konfigurasi tersebut kita juga dapat menambahkan profile, semisal untuk database kita dapat membuat untuk profile development dan profile qa. File file konfigurasi nantinya tersebut akan disimpan dalam di folder <code>resource/config</code>.</li>
+<h1 id="Komunikasi-Data-antar-Sleuth-Client"><a href="#Komunikasi-Data-antar-Sleuth-Client" class="headerlink" title="Komunikasi Data antar Sleuth Client"></a>Komunikasi Data antar Sleuth Client</h1><ul>
+<li>Controller pada client pertama (jalan di port 8080)</li>
 </ul>
-<p>Contoh Konfigurasi Database (resource/config/db.properties)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">driverClassName=com.mysql.jdbc.Driver</div><div class="line">url=mysql:jdbc://localhost:3306/test</div><div class="line">username=root</div><div class="line">password=password</div></pre></td></tr></table></figure></p>
-<p>Contoh Konfigurasi Database Dev (resource/config/db-dev.properties)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">driverClassName=com.mysql.jdbc.Driver</div><div class="line">url=mysql:jdbc://localhost:3306/test</div><div class="line">username=root</div><div class="line">password=password</div></pre></td></tr></table></figure></p>
-<p>Contoh Konfigurasi Database QA (resource/config/db-qa.properties)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">driverClassName=com.mysql.jdbc.Driver</div><div class="line">url=mysql:jdbc://localhost:3306/test</div><div class="line">username=root</div><div class="line">password=password</div></pre></td></tr></table></figure></p>
-<p>Contoh Konfigurasi Messaging (resource/config/mq.properties)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">brokeurl=localhost:5672</div><div class="line">username=guest</div><div class="line">password=guest</div></pre></td></tr></table></figure></p>
-<p>Kemudian coba jalankan config service. </p>
-<p>Spring Cloud Config menyediakan API untuk konfigurasi yang disimpan olehnya. Untuk mengaksesnya dapat menggunakan endpoint berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/&#123;name&#125;/&#123;profile&#125;/&#123;label&#125;</div></pre></td></tr></table></figure></p>
-<p>Keterangan : </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleController</span> </span>&#123;</div><div class="line"></div><div class="line">    org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(<span class="keyword">this</span>);</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/api/halo"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">halo</span> <span class="params">()</span></span>&#123;</div><div class="line">        LOGGER.info(<span class="string">"Sampai ke Server"</span>)</div><div class="line">        <span class="keyword">return</span> <span class="string">"Halo ini dari Client Satu"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>name berarti nama dari servicenya.</li>
-<li>profile berarti profile dari servicenya. Biasanya setiap service memiliki beberapa profile seperti dev, staging, deploy.</li>
-<li>label berati label tambahan</li>
-</ul>
-<p>Contoh enpoint yang dapat di akses :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/db/default</div><div class="line">http://localhost:8080/db/dev</div><div class="line">http://localhost:8080/db/qa</div><div class="line">http://localhost:8080/mq/default</div></pre></td></tr></table></figure></p>
-<h1 id="Membuat-Config-Service-yang-berisi-lebih-dari-konfigurasi-1-service"><a href="#Membuat-Config-Service-yang-berisi-lebih-dari-konfigurasi-1-service" class="headerlink" title="Membuat Config Service yang berisi lebih dari konfigurasi 1 service"></a>Membuat Config Service yang berisi lebih dari konfigurasi 1 service</h1><p>Setelah kita membuat config service dengan 1 konfigurasi service, kita akan coba menambahkan beberapa konfigurasi aplikasi pada config service kita. Karena pada dasarnya config service ini yang akan menghandle file file konfigurasi dari bebagai microservice.</p>
-<ul>
-<li>Buat File konfigurasi<br>Contoh Konfigurasi aplikasi 1 Default(resource/app1/myapp.properties)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">foo=bar</div><div class="line">bar=bam</div></pre></td></tr></table></figure>
+<li>Konfigurasi RestTemplate pada client kedua (jalan di port 8081)<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SimpleConfig</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function">RestTemplate <span class="title">restTemplate</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Contoh Konfigurasi aplikasi 1 untuk Developer Stage(resource/app1/myapp-dev.properties)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">foo=bardev</div><div class="line">bar=bam</div></pre></td></tr></table></figure></p>
-<p>Contoh Konfigurasi aplikasi 2 Default (resource/app2/myapp.properties)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">foo=bar</div><div class="line">bar=bam</div></pre></td></tr></table></figure></p>
+<p>Sletuh akan terinjek kedalam restTemplate lewat Bean di atas.</p>
 <ul>
-<li>Tambahkan konfigurasi untuk multiple aplikasi menggunakan <code>spring.cloud.config.server.native.search-locations:</code></li>
+<li>Controller pada client kedua<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@RestController</div><div class="line">public class SimpleController &#123;</div><div class="line">    @Autowired private RestTemplate restTemplate;</div><div class="line">    org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(this);</div><div class="line">    @RequestMapping("/api/halo")</div><div class="line">    public String halo()&#123;</div><div class="line">        LOGGER.info("Sebelum sampai ke server");</div><div class="line">        return restTemplate.getForObject("http://localhost:8080/api/halo",String.class);</div><div class="line">        LOGGER.info("Setelah sampai ke server);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
 </ul>
-<p>Berikut adalah contohnya :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">spring.cloud.config.server.native.search-locations:classpath:/config, classpath:/app1, classpath:/app2</div></pre></td></tr></table></figure></p>
-<p>Nama folder konfigurasi ditulis setelah classpath:/ . Dalam konteks ini classpath berada di direktori src/main/resource.</p>
-<p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp/dev</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-dev.json</div></pre></td></tr></table></figure></p>
-<h1 id="Override-value-konfigurasi"><a href="#Override-value-konfigurasi" class="headerlink" title="Override value konfigurasi"></a>Override value konfigurasi</h1><p>Kita dapat mengoverride konfgurasi yang identik, semisal untuk file <code>resource/app1/myapp.properties</code> dan <code>resource/app2/myapp.properties</code>. Kedua file konfigurasi tersebut sama-sama memiliki parameter bernama <code>foo</code>. Apabila anda ingin mengoverride value dari foo tersebut, dapat dilakukan dengan beberapa langkah berikut.</p>
-<ul>
-<li>Tambahkan konfigurasi untuk override konfigurasi<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">spring.cloud.config.server.overrides.&lt;nama-parameter&gt;=&lt;value&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Pada script diatas ada 2 nilai yang harus diisi yaitu nama-parameter yang akan di override  dan value dari parameter tersebut</p>
-<p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-default.yml</div></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -220,7 +184,7 @@ Menambah anotasi @EnableConfigServer pada main class">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/" data-id="cj6k88675004vawlpoe8zfin9" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/" data-id="cj6k8867y005bawlpd8dunqjo" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -334,20 +298,10 @@ Menambah anotasi @EnableConfigServer pada main class">
         
 <nav id="article-nav">
     
-        <a href="/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">lebih baru</strong>
-        <p class="article-nav-title">
-        
-            Config Service Git Repository
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih lawas</strong>
-        <p class="article-nav-title">Config Service Vault Server</p>
+        <p class="article-nav-title">Membuat API Gatewat Menggunakan Netflix Zuul</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -547,7 +501,7 @@ Menambah anotasi @EnableConfigServer pada main class">
     var disqus_shortname = 'true';
     
     
-    var disqus_url = 'http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/';
+    var disqus_url = 'http://ciazhar.github.io/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/';
     
     (function() {
     var dsq = document.createElement('script');

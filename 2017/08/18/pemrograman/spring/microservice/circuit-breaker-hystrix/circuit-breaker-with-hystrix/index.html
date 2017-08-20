@@ -3,23 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Circuit Breaker With Hystrix | ciazhar</title>
+    <title>Membuat Circuit Breaker menggunakan Netflix Hystrix | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Defending API from failure by bringing callbackSebagai contoh kita akan menggunakan project dari tutorial sebelumnya (netflix eureka). Konfigurasi berikut akan dilakukan pada client kedua (spring.app">
+    <meta name="description" content="Spring Cloud Netflix Hystrix digunakan untuk memeberikan fallback apabila terjadi kegagalan saat request antar service dengan cara melakukan Load Balancing.
+Defending API from failure by bringing cal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Circuit Breaker With Hystrix">
+<meta property="og:title" content="Membuat Circuit Breaker menggunakan Netflix Hystrix">
 <meta property="og:url" content="http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Defending API from failure by bringing callbackSebagai contoh kita akan menggunakan project dari tutorial sebelumnya (netflix eureka). Konfigurasi berikut akan dilakukan pada client kedua (spring.app">
-<meta property="og:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
-<meta property="og:updated_time" content="2017-08-18T09:59:52.093Z">
+<meta property="og:description" content="Spring Cloud Netflix Hystrix digunakan untuk memeberikan fallback apabila terjadi kegagalan saat request antar service dengan cara melakukan Load Balancing.
+Defending API from failure by bringing cal">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/264/0*gRZh5dHFWz-nFu7Z.png">
+<meta property="og:updated_time" content="2017-08-20T02:19:47.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Circuit Breaker With Hystrix">
-<meta name="twitter:description" content="Defending API from failure by bringing callbackSebagai contoh kita akan menggunakan project dari tutorial sebelumnya (netflix eureka). Konfigurasi berikut akan dilakukan pada client kedua (spring.app">
-<meta name="twitter:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
+<meta name="twitter:title" content="Membuat Circuit Breaker menggunakan Netflix Hystrix">
+<meta name="twitter:description" content="Spring Cloud Netflix Hystrix digunakan untuk memeberikan fallback apabila terjadi kegagalan saat request antar service dengan cara melakukan Load Balancing.
+Defending API from failure by bringing cal">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/264/0*gRZh5dHFWz-nFu7Z.png">
     
 
     
@@ -140,7 +143,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-        Circuit Breaker With Hystrix
+        Membuat Circuit Breaker menggunakan Netflix Hystrix
         </h1>
     
 
@@ -160,17 +163,20 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Defending-API-from-failure-by-bringing-callback"><a href="#Defending-API-from-failure-by-bringing-callback" class="headerlink" title="Defending API from failure by bringing callback"></a>Defending API from failure by bringing callback</h1><p>Sebagai contoh kita akan menggunakan project dari tutorial sebelumnya (netflix eureka). Konfigurasi berikut akan dilakukan pada client kedua (spring.application.name=client-dua).</p>
+            <p><img src="https://cdn-images-1.medium.com/max/264/0*gRZh5dHFWz-nFu7Z.png" alt=""></p>
+<p><a href="https://github.com/Netflix/Hystrix/blob/master/README.md" target="_blank" rel="external">Spring Cloud Netflix Hystrix</a> digunakan untuk memeberikan fallback apabila terjadi kegagalan saat request antar service dengan cara melakukan Load Balancing.</p>
+<h1 id="Defending-API-from-failure-by-bringing-callback"><a href="#Defending-API-from-failure-by-bringing-callback" class="headerlink" title="Defending API from failure by bringing callback"></a>Defending API from failure by bringing callback</h1><p><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/">Sebelumnya</a> kita telah membuat eureka server. Sekarang kita akan coba mendefend API kita yang tedapat pada aplikasi <code>other-eureka-client</code>. Berikut konfigurasi pada client kedua.</p>
 <ul>
 <li>Tambahkan dependency <code>spring-cloud-starter-hystrix</code>.</li>
 <li>Tambahkan anotasi <code>@EnableCircuitBreaker</code> pada main class.</li>
-<li><p>Tambahkan anotasi <code>@HystrixCommand</code> pada API yang ingin di fallback. Tambahkan parameter <code>fallbackMethod</code> di dalam command tersebut. Isi dengan nama methode yang berisi string yang akan ditampilkan saat fallback.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">///Berikut contoh controller APInya</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/api/halo"</span>)</div><div class="line"><span class="meta">@HystrixCommand</span>(fallbackMethod = <span class="string">"fallback"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">halo</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> restTemplate.getForObject(<span class="string">"http://eureka-client/api/halo"</span>,String.class);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">///Berikut contoh method yang akan menampilkan string fallback</span></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">fallback</span><span class="params">(Throwable hystrixCommand)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Fallback Halo"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Set berapa milisecond lantency untuk metrigger fallback</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attr">hystrix:</span></div><div class="line"><span class="attr">  command:</span></div><div class="line"><span class="attr">    default:</span></div><div class="line"><span class="attr">      execution:</span></div><div class="line"><span class="attr">        isolation:</span></div><div class="line"><span class="attr">          thread:</span></div><div class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">10000</span></div></pre></td></tr></table></figure></li>
+<li>Tambahkan anotasi <code>@HystrixCommand</code> pada API yang ingin di fallback. Tambahkan parameter <code>fallbackMethod</code> di dalam command tersebut. Valuenya merujuk pada nama methode yang berisi string yang akan ditampilkan saat fallback.</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">///Berikut contoh controller APInya</span></div><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/api/halo"</span>)</div><div class="line"><span class="meta">@HystrixCommand</span>(fallbackMethod = <span class="string">"fallback"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">halo</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> restTemplate.getForObject(<span class="string">"http://eureka-client/api/halo"</span>,String.class);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">///Berikut contoh method yang akan menampilkan string fallback</span></div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">fallback</span><span class="params">(Throwable hystrixCommand)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Fallback Halo"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Set berapa milisecond lantency untuk metrigger fallback<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attr">hystrix:</span></div><div class="line"><span class="attr">  command:</span></div><div class="line"><span class="attr">    default:</span></div><div class="line"><span class="attr">      execution:</span></div><div class="line"><span class="attr">        isolation:</span></div><div class="line"><span class="attr">          thread:</span></div><div class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">10000</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Apabila request dari <code>other-eureka-client</code> ke <code>eureka-client</code> sukses makan akan tampil String seperti “Halo ini dari Client Satu”. Sedangkan apabila gagal maka akan tampil String seperti “Fallback Halo”.</p>
 
         </div>
         <footer class="article-footer">
@@ -178,7 +184,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/" data-id="cj6ihwksz004teulp483v70rm" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/" data-id="cj6k8866y004tawlptsozgvqy" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -296,7 +302,7 @@
         <strong class="article-nav-caption">lebih baru</strong>
         <p class="article-nav-title">
         
-            Zuul As API Gateway
+            Membuat API Gatewat Menggunakan Netflix Zuul
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
@@ -305,7 +311,7 @@
     
         <a href="/2017/08/17/pemrograman/spring/mail/sending-mail/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih lawas</strong>
-        <p class="article-nav-title">Sending Mail + Verifikasi Email</p>
+        <p class="article-nav-title">Mengirim Email dan Verifikasi Lewat Email</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -434,7 +440,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">31</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">32</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -444,7 +450,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 

@@ -3,28 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Zuul As API Gateway | ciazhar</title>
+    <title>Membuat API Gatewat Menggunakan Netflix Zuul | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Zull merupakan gerbang utama yang dilewati request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security. dll.
-Membuat API Gateway
-Tambahkan dependency spring">
+    <meta name="description" content="Spring Cloud Netflix Zuul merupakan gerbang utama yang akan dilewati oleh request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security, dll.
+Membuat API Gate">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Zuul As API Gateway">
+<meta property="og:title" content="Membuat API Gatewat Menggunakan Netflix Zuul">
 <meta property="og:url" content="http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Zull merupakan gerbang utama yang dilewati request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security. dll.
-Membuat API Gateway
-Tambahkan dependency spring">
+<meta property="og:description" content="Spring Cloud Netflix Zuul merupakan gerbang utama yang akan dilewati oleh request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security, dll.
+Membuat API Gate">
 <meta property="og:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
-<meta property="og:updated_time" content="2017-08-18T15:21:31.000Z">
+<meta property="og:updated_time" content="2017-08-20T02:24:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zuul As API Gateway">
-<meta name="twitter:description" content="Zull merupakan gerbang utama yang dilewati request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security. dll.
-Membuat API Gateway
-Tambahkan dependency spring">
+<meta name="twitter:title" content="Membuat API Gatewat Menggunakan Netflix Zuul">
+<meta name="twitter:description" content="Spring Cloud Netflix Zuul merupakan gerbang utama yang akan dilewati oleh request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security, dll.
+Membuat API Gate">
 <meta name="twitter:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
     
 
@@ -146,7 +143,7 @@ Tambahkan dependency spring">
                 
     
         <h1 class="article-title" itemprop="name">
-        Zuul As API Gateway
+        Membuat API Gatewat Menggunakan Netflix Zuul
         </h1>
     
 
@@ -167,14 +164,18 @@ Tambahkan dependency spring">
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<p>Zull merupakan gerbang utama yang dilewati request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security. dll.</p>
-<h1 id="Membuat-API-Gateway"><a href="#Membuat-API-Gateway" class="headerlink" title="Membuat API Gateway"></a>Membuat API Gateway</h1><ul>
+<p><a href="https://github.com/Netflix/zuul" target="_blank" rel="external">Spring Cloud Netflix Zuul</a> merupakan gerbang utama yang akan dilewati oleh request dari apps atau website yang menuju backend. Zuul dapat berfungsi sebagai API Gateway, security, dll.</p>
+<h1 id="Membuat-API-Gateway"><a href="#Membuat-API-Gateway" class="headerlink" title="Membuat API Gateway"></a>Membuat API Gateway</h1><p><a href="https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/">Sebelumnya</a> kita telah membuat eureka server dan eureka client yang terintegrasi dengan Hystrix.<br>Sekarang kita akan mencoba membuat api gatewat dan mengintegrasikanya.</p>
+<ul>
+<li>Buat project baru menggunakan Spring Initializr</li>
 <li>Tambahkan dependency <code>spring-cloud-starter-zuul</code>.</li>
-<li>Tambahkan anotasi <code>@EnableZuulProxy</code></li>
+<li>Tambahkan anotasi <code>@EnableZuulProxy</code> pada main class</li>
 <li>Tambahkan konfigurasi zuul<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  application:</span></div><div class="line"><span class="attr">    name:</span> <span class="string">api-gateway</span></div><div class="line"><span class="attr">zuul:</span></div><div class="line"><span class="attr">  prefix:</span> <span class="string">/api</span></div><div class="line"><span class="attr">  routes:</span></div><div class="line"><span class="attr">    eureka-client:</span></div><div class="line"><span class="attr">      path:</span> <span class="string">/pertama/**</span></div><div class="line"><span class="attr">      serviceId:</span> <span class="string">EUREKA-CLIENT</span></div><div class="line"><span class="attr">    other-eureka-client:</span></div><div class="line"><span class="attr">      path:</span> <span class="string">/kedua/**</span></div><div class="line"><span class="attr">      serviceId:</span> <span class="string">OTHER-EUREKA-CLIENT</span></div><div class="line"><span class="attr">server:</span></div><div class="line"><span class="attr">  port:</span> <span class="number">8004</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Dengan adanya API Gateway untuk memanggil API dari masing masing backend tidak harus memanggilnya secara manual dengan menyebutkan portnya, tetapi hanya perlu memanggilnya via API Gateway sesuai pathnya. Nantinya service yang bernama eureka-client akan diinisialisasi menggunakan path /pertama. Sedangkan service yang bernama eureka-client akan diinisialisasi menggunakan path /kedua.<br>Apabila dulu jika ingin mengakses API di service eureka-client menggunakan <a href="http://localhost:8002/api/halo" target="_blank" rel="external">http://localhost:8002/api/halo</a> sekarang dapat diganti dengan <a href="http://localhost:8004/api/pertama/api/halo" target="_blank" rel="external">http://localhost:8004/api/pertama/api/halo</a>. Sedangkan apabila dulu jika ingin mengakses API di service other-eureka-client menggunakan <a href="http://localhost:8003/api/halo" target="_blank" rel="external">http://localhost:8003/api/halo</a> sekarang dapat diganti dengan <a href="http://localhost:8004/api/kedua/api/halo" target="_blank" rel="external">http://localhost:8004/api/kedua/api/halo</a>.<br>Hal ini akan meringankan beban dalam development aplikasi karena tidak perlu menghafal port untuk setiap servicenya, tetapi hanya perlu mengetahui nama servinya.</p>
+<p>Dengan adanya API Gateway untuk memanggil API dari masing masing backend tidak harus memanggilnya secara manual dengan menyebutkan portnya, tetapi hanya perlu memanggilnya via API Gateway sesuai pathnya. Nantinya service yang bernama eureka-client akan diinisialisasi menggunakan path /pertama. Sedangkan service yang bernama eureka-client akan diinisialisasi menggunakan path /kedua. </p>
+<p>Apabila dulu jika ingin mengakses API di service eureka-client menggunakan <a href="http://localhost:8002/api/halo" target="_blank" rel="external">http://localhost:8002/api/halo</a> sekarang dapat diganti dengan <a href="http://localhost:8004/api/pertama/api/halo" target="_blank" rel="external">http://localhost:8004/api/pertama/api/halo</a>. Sedangkan apabila dulu jika ingin mengakses API di service other-eureka-client menggunakan <a href="http://localhost:8003/api/halo" target="_blank" rel="external">http://localhost:8003/api/halo</a> sekarang dapat diganti dengan <a href="http://localhost:8004/api/kedua/api/halo" target="_blank" rel="external">http://localhost:8004/api/kedua/api/halo</a>.</p>
+<p>Hal ini akan meringankan beban dalam development aplikasi karena tidak perlu menghafal port untuk setiap servicenya, tetapi hanya perlu mengetahui nama servinya.</p>
 <ul>
 <li>Konfigurasi tambahan<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Konfigurasi Config Service</span></div><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  cloud:</span></div><div class="line"><span class="attr">    config:</span></div><div class="line"><span class="attr">      uri:</span> <span class="attr">http://localhost:10003</span></div><div class="line"></div><div class="line"><span class="comment"># Konfigurasi Discovery Service</span></div><div class="line"><span class="attr">eureka:</span></div><div class="line"><span class="attr">  client:</span></div><div class="line"><span class="attr">    service-url:</span></div><div class="line"><span class="attr">      defaultZone:</span> <span class="attr">http://localhost:8001/eureka</span></div><div class="line"></div><div class="line"><span class="comment"># Konfigurasi Circuit Breaker</span></div><div class="line"><span class="attr">hystrix:</span></div><div class="line"><span class="attr">  command:</span></div><div class="line"><span class="attr">    default:</span></div><div class="line"><span class="attr">      execution:</span></div><div class="line"><span class="attr">        isolation:</span></div><div class="line"><span class="attr">          thread:</span></div><div class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">10000</span></div></pre></td></tr></table></figure></li>
 </ul>
@@ -185,7 +186,7 @@ Tambahkan dependency spring">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/" data-id="cj6ihwksw004seulpts29v3hm" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/" data-id="cj6k8866w004sawlpyttq2mlu" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -299,10 +300,20 @@ Tambahkan dependency spring">
         
 <nav id="article-nav">
     
+        <a href="/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">lebih baru</strong>
+        <p class="article-nav-title">
+        
+            Melakukan Tracing antar Microservice menggunakan Netflix Sleuth
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih lawas</strong>
-        <p class="article-nav-title">Circuit Breaker With Hystrix</p>
+        <p class="article-nav-title">Membuat Circuit Breaker menggunakan Netflix Hystrix</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -431,7 +442,7 @@ Tambahkan dependency spring">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">31</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">32</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -441,7 +452,7 @@ Tambahkan dependency spring">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 

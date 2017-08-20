@@ -8,17 +8,17 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Spring Config ServiceSpring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport v">
+    <meta name="description" content="Spring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport version control untuk">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Config Service">
 <meta property="og:url" content="http://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Spring Config ServiceSpring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport v">
+<meta property="og:description" content="Spring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport version control untuk">
 <meta property="og:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
-<meta property="og:updated_time" content="2017-08-14T04:35:11.817Z">
+<meta property="og:updated_time" content="2017-08-20T04:14:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Config Service">
-<meta name="twitter:description" content="Spring Config ServiceSpring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport v">
+<meta name="twitter:description" content="Spring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport version control untuk">
 <meta name="twitter:image" content="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz">
     
 
@@ -161,23 +161,16 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h2 id="Spring-Config-Service"><a href="#Spring-Config-Service" class="headerlink" title="Spring Config Service"></a>Spring Config Service</h2><p>Spring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport version control untuk setiap file file konfigurasinya.</p>
-<h3 id="Spring-Config-Service-Endpoint"><a href="#Spring-Config-Service-Endpoint" class="headerlink" title="Spring Config Service Endpoint"></a>Spring Config Service Endpoint</h3><ul>
+<blockquote>
+<p>Spring Config service adalah sebuah service yang digunakan untuk menyimpan, mengakses, dan mengatur konfigurasi dari setiap service. Spring Config Service juga dapat mensupport version control untuk setiap file file konfigurasinya.</p>
+</blockquote>
+<h3 id="Spring-Config-Service"><a href="#Spring-Config-Service" class="headerlink" title="Spring Config Service"></a>Spring Config Service</h3><p>Spring Config Service memiliki beberapa fungsi yaitu :</p>
+<ul>
 <li>View/Fetch Configuration (json / yml)</li>
+<li>Encrypt &amp; Decrypt Value</li>
+<li>Refresh Scope</li>
+<li>Health Check</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/config/&#123;name&#125;/&#123;profile&#125;/&#123;label&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>Encrypt Value</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl localhost:8080/encrypt -d value</div></pre></td></tr></table></figure>
-<ul>
-<li>Decrypt Value</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl localhost:8080/decrypt -d value</div></pre></td></tr></table></figure>
-<ul>
-<li>Refresh Client</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -x POST localhost:8080/refresh</div></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -185,7 +178,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/" data-id="cj6ihwkt1004ueulpfk421dg3" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/" data-id="cj6k88671004uawlp4lvfqlnn" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -441,7 +434,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">31</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">32</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/">Teknologi</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Interaksi-Manusia-dan-Komputer/">Interaksi Manusia dan Komputer</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Teknologi/Organisasi-dan-Arsitektur-Komputer/">Organisasi dan Arsitektur Komputer</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -451,7 +444,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">Juni 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">Maret 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
