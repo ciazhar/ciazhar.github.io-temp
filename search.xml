@@ -4,6 +4,185 @@
   
     
     <entry>
+      <title><![CDATA[Membuat Launcher di Linux]]></title>
+      <url>http://ciazhar.github.io/2017/10/15/linux/membuat-laucher-di-linux/</url>
+      <content type="html"><![CDATA[<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Terdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :</p>
+<ul>
+<li>Menggunakan <code>apt install</code> pada terminal</li>
+<li>Menggunakan executable file dengan ektensi seperti <code>.deb</code>, <code>.rpm</code> / <code>.sh</code></li>
+<li>Menggunakan binary file yang di kompres dalam <code>.tar.gz</code>.</li>
+</ul>
+<p>Untuk aplikasi yang di kompress dalam <code>.tar.gz</code> karena untuk menggunakanya hanya dicopy kedalam direktori kita dan tidak diinstall, atau aplikasi yang diinstall terkadang tidak otomatis membuat Launcher. Launcher bisa dibilang cara menjalankan aplikasi tersebut melalui GUI. Biasanya terletak di <code>whisker</code>.<br>Oleh karena itu kita akan coba membuat Launcher untuk aplikasi kita.<br>Untuk kalo ini saya akan memberi contoh menggunakan aplikasi <code>Robomongo</code>.<br>Caranya cukup mudah, pertama buat file dengan ekstensi <code>.desktop</code> dengan nama sesuai nama aplikasi kita. Kemudian isi file tersebut dengan format seperti :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=</div><div class="line">Type=</div><div class="line">Name=</div><div class="line">Comment=</div><div class="line">Exec=</div><div class="line">Icon=</div><div class="line">Path=</div><div class="line">Terminal=</div><div class="line">StartupNotify=</div></pre></td></tr></table></figure></p>
+<p>Keterangan :</p>
+<ul>
+<li>Version       : versi aplikasi</li>
+<li>Type          : tipe aplikasi</li>
+<li>Name          : nama aplikasi</li>
+<li>Comment       : comment aplikasi</li>
+<li>Exec          : cara mengeksekusi aplikasi tsb</li>
+<li>Icon          : direktori untuk icon aplikasi tersebut</li>
+<li>Path          : direktori aplikasi tersebut</li>
+<li>Terminal      : apakah aplikasi khusus untuk berjalan di terminal</li>
+<li>StartupNotify : apakah akan ada notifikasi waktu aplikasi berjalan</li>
+</ul>
+<p>Berikut contohnya untuk aplikasi Robomongo saya :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=1.0</div><div class="line">Type=Application</div><div class="line">Name=Robomongo</div><div class="line">Comment=Robomongo</div><div class="line">Exec=/home/ciazhar/Application/robomongo-1.0.0/bin/robomongo</div><div class="line">Icon=/home/ciazhar/Application/robomongo-1.0.0/CWNda0_WwAAWE-F.png</div><div class="line">Path=/home/ciazhar/Application/robomongo-1.0.0</div><div class="line">Terminal=false</div><div class="line">StartupNotify=false</div></pre></td></tr></table></figure></p>
+<p>Kemudian simpan file tersebut di direktori <code>/usr/share/applications/</code>. Hati hati dengan dalam menyimpan file karena membutuhkan Permission.</p>
+<p>Finally Laucher telah dapat digunakan dan sudah tersedia di whisker.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[two-activity]]></title>
+      <url>http://ciazhar.github.io/2017/09/19/pemrograman/android/two-activity/</url>
+      <content type="html"><![CDATA[<h3 id="Modal"><a href="#Modal" class="headerlink" title="Modal"></a>Modal</h3><ul>
+<li>Relative View</li>
+<li>Text View</li>
+<li>Button</li>
+<li>Edit Text</li>
+</ul>
+<h3 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h3><ul>
+<li>Parent Activity</li>
+<li>Intent</li>
+</ul>
+<h3 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h3><p>Kita akan membuat 2 acivity yang saling berinteraksi. Dua activity tersebut adalah <code>MainActivity</code> yang difungsikan sebagai activity utama/parent dan <code>SecondActivity</code> yang difungsikan sebagai activity child. Nantinya MainActivity akan mengakses ke SecondActivity menggunakan Button. Pada SecondActovity akan terdapat tombol kembali atau <code>&lt;-</code> yang menuju ke MainActivity.</p>
+<h3 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h3><ul>
+<li>Membuat MainActivity<ul>
+<li>Relative View(activity_second.xml)</li>
+<li>Button(activity_second.xml)</li>
+</ul>
+</li>
+<li><p>Membuat SecondActivity</p>
+<ul>
+<li>Relative View(activity_second.xml)</li>
+<li>Text View(activity_second.xml)</li>
+<li>Konfigurasi Parent Activity (manifest.xml)  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=&quot;.SecondActivity&quot;</div><div class="line">    android:label=&quot;@string/SecondActivity&quot;</div><div class="line">    android:parentActivityName=&quot;.MainActivity&quot;</div><div class="line">    &gt;</div><div class="line">    &lt;meta-data</div><div class="line">        android:name=&quot;android.support.PARENT_ACTIVITY&quot;</div><div class="line">        android:value=&quot;.MainActivity&quot;</div><div class="line">        /&gt;</div><div class="line">&lt;/activity&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Membuat intent untuk menghubungkan MainActivity ke SecondActivity</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun launchSecondActivity(view: View) &#123;</div><div class="line">    Log.d(LOG_TAG, &quot;Button Clicked&quot;)</div><div class="line">    val intent = Intent(this, SecondActivity::class.java)</div><div class="line">    startActivity(intent)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Menambahkan edit text untuk input</p>
+</li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[test]]></title>
+      <url>http://ciazhar.github.io/2017/09/17/pemrograman/spring/test/</url>
+      <content type="html"><![CDATA[<ul>
+<li>buat class test pada rest dari class controller</li>
+<li>tambahkan anotasi <code>@RunWith(SpringJUnit4ClassRunner::class)</code></li>
+<li><code>private val productController : ProductController ?= null</code></li>
+<li><code>private val mockMvc : MockMvc ?=null</code>. mock ini akan digunakan untuk menjalankan testing</li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Debug JVM using JVisual VM]]></title>
+      <url>http://ciazhar.github.io/2017/09/03/jvisual-vm/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[security]]></title>
+      <url>http://ciazhar.github.io/2017/08/28/pemrograman/vertx/security/</url>
+      <content type="html"><![CDATA[<h1 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Router router = Router.router(vertx);</div><div class="line"></div><div class="line">    router.route().handler(CookieHandler.create());</div><div class="line">    router.route().handler(SessionHandler</div><div class="line">        .create(LocalSessionStore.create(vertx))</div><div class="line">        .setCookieHttpOnlyFlag(true)</div><div class="line">        .setCookieSecureFlag(true)</div><div class="line">    );</div><div class="line"></div><div class="line">    router.route().handler(routingContext -&gt; &#123;</div><div class="line"></div><div class="line">      Session session = routingContext.session();</div><div class="line"></div><div class="line">      Integer cnt = session.get(&quot;hitcount&quot;);</div><div class="line">      cnt = (cnt == null ? 0 : cnt) + 1;</div><div class="line"></div><div class="line">      session.put(&quot;hitcount&quot;, cnt);</div><div class="line"></div><div class="line">      routingContext.response().end(&quot;Hitcount: &quot; + cnt);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    vertx.createHttpServer().requestHandler(router::accept).listen(8080);</div></pre></td></tr></table></figure>
+<h1 id="Security-Header"><a href="#Security-Header" class="headerlink" title="Security Header"></a>Security Header</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">public class App extends AbstractVerticle &#123;</div><div class="line"></div><div class="line">  @Override</div><div class="line">  public void start() &#123;</div><div class="line"></div><div class="line">    Router router = Router.router(vertx);</div><div class="line">    router.route().handler(ctx -&gt; &#123;</div><div class="line">      ctx.response()</div><div class="line">          // do not allow proxies to cache the data</div><div class="line">          .putHeader(&quot;Cache-Control&quot;, &quot;no-store, no-cache&quot;)</div><div class="line">          // prevents Internet Explorer from MIME - sniffing a</div><div class="line">          // response away from the declared content-type</div><div class="line">          .putHeader(&quot;X-Content-Type-Options&quot;, &quot;nosniff&quot;)</div><div class="line">          // Strict HTTPS (for about ~6Months)</div><div class="line">          .putHeader(&quot;Strict-Transport-Security&quot;, &quot;max-age=&quot; + 15768000)</div><div class="line">          // IE8+ do not allow opening of attachments in the context of this resource</div><div class="line">          .putHeader(&quot;X-Download-Options&quot;, &quot;noopen&quot;)</div><div class="line">          // enable XSS for IE</div><div class="line">          .putHeader(&quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)</div><div class="line">          // deny frames</div><div class="line">          .putHeader(&quot;X-FRAME-OPTIONS&quot;, &quot;DENY&quot;);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    vertx.createHttpServer().requestHandler(router::accept).listen(8080);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="CSFR"><a href="#CSFR" class="headerlink" title="CSFR"></a>CSFR</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class App extends AbstractVerticle &#123;</div><div class="line"></div><div class="line">  @Override</div><div class="line">  public void start() &#123;</div><div class="line"></div><div class="line">    Router router = Router.router(vertx);</div><div class="line"></div><div class="line">    router.route().handler(CookieHandler.create());</div><div class="line">    router.route().handler(SessionHandler</div><div class="line">        .create(LocalSessionStore.create(vertx))</div><div class="line">        .setCookieSecureFlag(true)</div><div class="line">    );</div><div class="line">    router.route().handler(CSRFHandler.create(&quot;not a good secret&quot;));</div><div class="line"></div><div class="line">    router.route().handler(ctx -&gt; &#123;</div><div class="line">      ...</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h1 id="Limit-Upload"><a href="#Limit-Upload" class="headerlink" title="Limit Upload"></a>Limit Upload</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class App extends AbstractVerticle &#123;</div><div class="line"></div><div class="line">  private static final int KB = 1024;</div><div class="line">  private static final int MB = 1024 * KB;</div><div class="line"></div><div class="line">  @Override</div><div class="line">  public void start() &#123;</div><div class="line"></div><div class="line">    Router router = Router.router(vertx);</div><div class="line">    router.route().handler(BodyHandler.create().setBodyLimit(50 * MB));</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[config-port]]></title>
+      <url>http://ciazhar.github.io/2017/08/28/pemrograman/vertx/config-port/</url>
+      <content type="html"><![CDATA[<p><a href="http://vertx.io/blog/vert-x-application-configuration/" target="_blank" rel="external">http://vertx.io/blog/vert-x-application-configuration/</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[command-linux]]></title>
+      <url>http://ciazhar.github.io/2017/08/28/linux/command-linux/</url>
+      <content type="html"><![CDATA[<h1 id="Mengatur-PATH-environment-variable-di-Linux"><a href="#Mengatur-PATH-environment-variable-di-Linux" class="headerlink" title="Mengatur PATH environment variable di Linux"></a>Mengatur PATH environment variable di Linux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/bin</div><div class="line">sudo ln -s /path/to/binary binary-name</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[vertx]]></title>
+      <url>http://ciazhar.github.io/2017/08/27/pemrograman/vertx/vertx/</url>
+      <content type="html"><![CDATA[<h1 id="Membuat-project-vertx"><a href="#Membuat-project-vertx" class="headerlink" title="Membuat project vertx"></a>Membuat project vertx</h1><p>Struktur folder<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── pom.xml</div><div class="line">├── src</div><div class="line">│   └── main</div><div class="line">│       └── kotlin</div><div class="line">├── target</div></pre></td></tr></table></figure></p>
+<p>pom.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></div><div class="line">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.ciazhar<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-rest<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>vertx-rest<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>properties<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">main.verticle</span>&gt;</span>com.ciazhar.vertx.rest.MainVerticle<span class="tag">&lt;/<span class="name">main.verticle</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">vertx.version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">vertx.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>dependency<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.vertx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;vertx.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.vertx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-lang-kotlin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;vertx.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>build<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">&lt;build&gt;</div><div class="line">    &lt;pluginManagement&gt;</div><div class="line">      &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">          &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;3.1&lt;/version&gt;</div><div class="line">          &lt;configuration&gt;</div><div class="line">            &lt;source&gt;1.8&lt;/source&gt;</div><div class="line">            &lt;target&gt;1.8&lt;/target&gt;</div><div class="line">          &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">          &lt;artifactId&gt;kotlin-maven-plugin&lt;/artifactId&gt;</div><div class="line">          &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;</div><div class="line">          &lt;version&gt;1.1.0&lt;/version&gt;</div><div class="line">          &lt;executions&gt;</div><div class="line">            &lt;execution&gt;</div><div class="line">              &lt;id&gt;compile&lt;/id&gt;</div><div class="line">              &lt;goals&gt; &lt;goal&gt;compile&lt;/goal&gt; &lt;/goals&gt;</div><div class="line">              &lt;configuration&gt;</div><div class="line">                &lt;sourceDirs&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/main/kotlin&lt;/sourceDir&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/main/java&lt;/sourceDir&gt;</div><div class="line">                &lt;/sourceDirs&gt;</div><div class="line">              &lt;/configuration&gt;</div><div class="line">            &lt;/execution&gt;</div><div class="line">            &lt;execution&gt;</div><div class="line">              &lt;id&gt;test-compile&lt;/id&gt;</div><div class="line">              &lt;goals&gt; &lt;goal&gt;test-compile&lt;/goal&gt; &lt;/goals&gt;</div><div class="line">              &lt;configuration&gt;</div><div class="line">                &lt;sourceDirs&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/test/kotlin&lt;/sourceDir&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/test/java&lt;/sourceDir&gt;</div><div class="line">                &lt;/sourceDirs&gt;</div><div class="line">              &lt;/configuration&gt;</div><div class="line">            &lt;/execution&gt;</div><div class="line">          &lt;/executions&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">      &lt;/plugins&gt;</div><div class="line">    &lt;/pluginManagement&gt;</div><div class="line"></div><div class="line">    &lt;plugins&gt;</div><div class="line">      &lt;plugin&gt;</div><div class="line">        &lt;artifactId&gt;kotlin-maven-plugin&lt;/artifactId&gt;</div><div class="line">        &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;</div><div class="line">      &lt;/plugin&gt;</div><div class="line">      &lt;plugin&gt;</div><div class="line">        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;</div><div class="line">        &lt;version&gt;2.3&lt;/version&gt;</div><div class="line">        &lt;executions&gt;</div><div class="line">          &lt;execution&gt;</div><div class="line">            &lt;phase&gt;package&lt;/phase&gt;</div><div class="line">            &lt;goals&gt;</div><div class="line">              &lt;goal&gt;shade&lt;/goal&gt;</div><div class="line">            &lt;/goals&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">              &lt;transformers&gt;</div><div class="line">                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&quot;&gt;</div><div class="line">                  &lt;manifestEntries&gt;</div><div class="line">                    &lt;Main-Class&gt;io.vertx.core.Launcher&lt;/Main-Class&gt;</div><div class="line">                    &lt;Main-Verticle&gt;$&#123;main.verticle&#125;&lt;/Main-Verticle&gt;</div><div class="line">                  &lt;/manifestEntries&gt;</div><div class="line">                &lt;/transformer&gt;</div><div class="line">                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.AppendingTransformer&quot;&gt;</div><div class="line">                  &lt;resource&gt;META-INF/services/io.vertx.core.spi.VerticleFactory&lt;/resource&gt;</div><div class="line">                &lt;/transformer&gt;</div><div class="line">              &lt;/transformers&gt;</div><div class="line">              &lt;artifactSet&gt;</div><div class="line">              &lt;/artifactSet&gt;</div><div class="line">              &lt;outputFile&gt;$&#123;project.build.directory&#125;/$&#123;project.artifactId&#125;-$&#123;project.version&#125;-fat.jar&lt;/outputFile&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">          &lt;/execution&gt;</div><div class="line">        &lt;/executions&gt;</div><div class="line">      &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">  &lt;/build&gt;</div></pre></td></tr></table></figure></p>
+<p>simple verticle<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> vertx</div><div class="line"></div><div class="line"><span class="keyword">import</span> io.vertx.core.AbstractVerticle</div><div class="line"><span class="keyword">import</span> io.vertx.core.Future</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainVerticle</span> : <span class="type">AbstractVerticle</span></span>() &#123;</div><div class="line"></div><div class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">start</span><span class="params">(future: <span class="type">Future</span>&lt;<span class="type">Void</span>&gt;)</span></span> &#123;</div><div class="line">    vertx</div><div class="line">      .createHttpServer()</div><div class="line">      .requestHandler(&#123;</div><div class="line">          req -&gt; req</div><div class="line">              .response()</div><div class="line">              .putHeader(<span class="string">"content-type"</span>, <span class="string">"text/plain"</span>)</div><div class="line">              .end(<span class="string">"Hello from Vert.x!"</span>)</div><div class="line">      &#125;)</div><div class="line">      .listen(<span class="number">8080</span>,&#123;</div><div class="line">          result -&gt;</div><div class="line">          <span class="keyword">if</span>(result.succeeded())&#123;</div><div class="line">              future.complete()</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">else</span>&#123;</div><div class="line">              future.fail(result.cause())</div><div class="line">          &#125;</div><div class="line">      &#125;)</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h1><p>dependency<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.vertx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-unit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>test<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">@RunWith(VertxUnitRunner.class)</div><div class="line">public class MyFirstVerticleTest &#123;</div><div class="line"></div><div class="line">  private Vertx vertx;</div><div class="line"></div><div class="line">  @Before</div><div class="line">  public void setUp(TestContext context) &#123;</div><div class="line">    vertx = Vertx.vertx();</div><div class="line">    vertx.deployVerticle(MyFirstVerticle.class.getName(),</div><div class="line">        context.asyncAssertSuccess());</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @After</div><div class="line">  public void tearDown(TestContext context) &#123;</div><div class="line">    vertx.close(context.asyncAssertSuccess());</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @Test</div><div class="line">  public void testMyApplication(TestContext context) &#123;</div><div class="line">    final Async async = context.async();</div><div class="line"></div><div class="line">    vertx.createHttpClient().getNow(8080, &quot;localhost&quot;, &quot;/&quot;,</div><div class="line">     response -&gt; &#123;</div><div class="line">      response.handler(body -&gt; &#123;</div><div class="line">        context.assertTrue(body.toString().contains(&quot;Hello&quot;));</div><div class="line">        async.complete();</div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Cloud Foundry]]></title>
+      <url>http://ciazhar.github.io/2017/08/21/pemrograman/spring/devops/cloud-foundry/cloud-foundry-intro/</url>
+      <content type="html"><![CDATA[<h1 id="Definisi-Cloud-Foundry"><a href="#Definisi-Cloud-Foundry" class="headerlink" title="Definisi Cloud Foundry"></a>Definisi Cloud Foundry</h1><p>Cloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan untuk mendeploy aplikasi kita ke cloud. </p>
+<p>Perbedaan Traditional IT, Infrastructure as a Service (IaaS), Platform as a Service (PaaS) dan Software as a Service (SaaS).</p>
+<h1 id="Deploy-aplikasi-ke-Pivotal-Cloud-Foundry"><a href="#Deploy-aplikasi-ke-Pivotal-Cloud-Foundry" class="headerlink" title="Deploy aplikasi ke Pivotal Cloud Foundry"></a>Deploy aplikasi ke Pivotal Cloud Foundry</h1><p>##1. Install Cloud Foundry CLI<br>Kunjungi <a href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html" target="_blank" rel="external">tautan berikut</a> untuk totorial bagaimana menginstall Cloud Foundry CLI.</p>
+<p>##2. Login ke pivotal API</p>
+<ul>
+<li>Gunakan command <code>cf login -a api.run.pivotal.io</code> pada command line untuk login.</li>
+<li>Kemudian anda akan diminta memasukkan email dan password</li>
+<li>Kemudian pilih space mana yang akan anda gunakan</li>
+</ul>
+<p>##3. Buat file konfgurasi<br>Buat file bernama manifest.yml dan simpan di bagian terluar project anda. Berikut isi dari file tersebut :<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">applications:</span></div><div class="line"><span class="attr">- name:</span> <span class="string">spring-boot-cloud-foundry</span></div><div class="line"><span class="attr">  path:</span> <span class="string">target/spring-boot.jar</span></div><div class="line"><span class="attr">  domain:</span> <span class="string">cfapps.io</span></div><div class="line"><span class="attr">  memory:</span> <span class="number">512</span><span class="string">m</span></div><div class="line"><span class="attr">  instance:</span> <span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>Keterangan :</p>
+<ul>
+<li>name : nama aplikasi</li>
+<li>path : letak file hasil kompilasi berada</li>
+<li>domain : domain aplikasi</li>
+<li>memory : memory aplikasi</li>
+<li>instance : jumlah instance/replikasi aplikasi</li>
+</ul>
+<p>##4. Push ke Cloud Foundry<br>Gunakan perintah <code>cf push</code> pada terminal untuk melakukan push aplikasi ke cloud foundry.</p>
+<p>Kemudian akan terlihat log. Tunggu beberapa saat sampai aplikasi anda terdeploy.</p>
+<p>##5. Mengubah Konfigurasi Service<br>Gunakn perintah <code>cf update-service nama-service -c &#39;konfigurasinya&#39;</code><br>Contoh :<br><code>cf update-service config-server -c &#39;{&quot;git&quot;: { &quot;uri&quot;: &quot;http://example.com/config&quot; } }&#39;</code></p>
+<h2 id="Login-ke-servic-mysql"><a href="#Login-ke-servic-mysql" class="headerlink" title="Login ke servic mysql"></a>Login ke servic mysql</h2><p>mysql -u b42da3b446621e -pd66fa990 -h us-cdbr-iron-east-05.cleardb.net ad_a2227b61d61fce9</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Melakukan Tracing antar Microservice menggunakan Netflix Sleuth]]></title>
       <url>http://ciazhar.github.io/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -103,6 +282,7 @@
       <url>http://ciazhar.github.io/2017/08/17/pemrograman/spring/mail/sending-mail/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
 <p>Pada tutorial kali ini kita akan coba mengirim email dan verifikasi lewat email. Kita akan menggunakan konsep register akun implementasinya.</p>
+<p><a href="https://myaccount.google.com/lesssecureapps" target="_blank" rel="external">https://myaccount.google.com/lesssecureapps</a></p>
 <h1 id="Mengirim-Email"><a href="#Mengirim-Email" class="headerlink" title="Mengirim Email"></a>Mengirim Email</h1><ul>
 <li>Tambahkan Dependency <code>spring-boot-starter-mail</code></li>
 </ul>
@@ -358,6 +538,54 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Config Service Vault Server]]></title>
+      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
+<blockquote>
+<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
+</blockquote>
+<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
+<ul>
+<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Secara default vault server akan berjalan di localhost port 8200.</p>
+<ul>
+<li>Konfigurasi vault address</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
+<ul>
+<li>Tulis konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Baca konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Buat project spring + dependency spring cloud config</li>
+<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
+<li>Ubah Konfigurasi</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
+<ul>
+<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Config Service File System]]></title>
       <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -418,54 +646,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Config Service Vault Server]]></title>
-      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
-      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
-<blockquote>
-<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
-</blockquote>
-<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
-<ul>
-<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Secara default vault server akan berjalan di localhost port 8200.</p>
-<ul>
-<li>Konfigurasi vault address</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
-<ul>
-<li>Tulis konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Baca konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Buat project spring + dependency spring cloud config</li>
-<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
-<li>Ubah Konfigurasi</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
-<ul>
-<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Spring Config Service]]></title>
       <url>http://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -489,243 +669,6 @@
             
         </categories>
         
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[User Documentation]]></title>
-      <url>http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-User-Documentation/</url>
-      <content type="html"><![CDATA[<p><img src="http://www.audiosources.com.ua/images/photos/read_service_manual_2_read_manual.jpg" alt=""></p>
-<h1 id="Pengertian-User-Dokumentasi"><a href="#Pengertian-User-Dokumentasi" class="headerlink" title="Pengertian User Dokumentasi"></a>Pengertian User Dokumentasi</h1><p>Dokumentasi dari suatu produk atau service yang disediakan untuk end users.</p>
-<h1 id="Jenis-User-Dokumentasi"><a href="#Jenis-User-Dokumentasi" class="headerlink" title="Jenis User Dokumentasi :"></a>Jenis User Dokumentasi :</h1><ol>
-<li>Paper User Manual</li>
-<li>Online User Manual</li>
-</ol>
-<h2 id="Paper-User-Manual"><a href="#Paper-User-Manual" class="headerlink" title="Paper User Manual"></a>Paper User Manual</h2><p>User manual adalah sebuah bagian dari user interface untuk sebuah sistem komputer. User manual juga sering menjadi salah satu support yang dimiliki user untuk troubleshotting.<br>Ada beberapa macam tipe manual untuk berbagai tipe user :</p>
-<ol>
-<li>Tutorials.</li>
-<li>Reference Manuals.</li>
-<li>Quick Reference.</li>
-<li>User Guide.</li>
-</ol>
-<h3 id="Tutorials"><a href="#Tutorials" class="headerlink" title="Tutorials"></a>Tutorials</h3><p>Tutorial cocok digunakan untuk novice user. karena user tipe ini hanya memiliki sedikit pengetahuan tentang Semantics of the Application (Apa yang bisa dilakukan sistem) dan juga Syntax of the human interface (tepatnya bagaimana melakukan sesuatu secara khusus pada sistem).</p>
-<h3 id="Detailed-Reference-Manual"><a href="#Detailed-Reference-Manual" class="headerlink" title="Detailed Reference Manual"></a>Detailed Reference Manual</h3><p>Pada bagian ini biasanya menjelaskan secara rinci kesalahan error yang umum terjadi pada user dalam menggunakan suatu aplikasi yang dibuat oleh developer. Serta beberapa pertanyaan umum yang sering dikeluhkan user (FAQ) yang jumlahnya terbatas.</p>
-<h3 id="Quick-Reference"><a href="#Quick-Reference" class="headerlink" title="Quick Reference"></a>Quick Reference</h3><p>Quick Reference berisi ringkasan informasi dari bagian kecil fungsi yang sering digunakan atau penting. ditujukan untuk Expert User.</p>
-<h3 id="User-Guides"><a href="#User-Guides" class="headerlink" title="User Guides"></a>User Guides</h3><p>User Guides ditujukan unutk intermediate user. User guide harus memenuhi kebutuhan dari semua tipe user. Memperbolehkan user untuk melewati informasi yang sebelumnya telah diperoleh.</p>
-<h2 id="Online-User-Manual"><a href="#Online-User-Manual" class="headerlink" title="Online User Manual"></a>Online User Manual</h2><p>Ada beberapa macam tipe manual untuk berbagai tipe user :</p>
-<ol>
-<li>Online Manual</li>
-<li>Online Help</li>
-<li>Context - Sensitive Help</li>
-<li>Online Tutorial &amp; Animated Demonstration</li>
-<li>Online Communities, NewsGroups, E-mail, Chat, And Instant Messaging</li>
-<li>Online Help Principle &amp; Guide Lines</li>
-</ol>
-<h3 id="Online-Manual"><a href="#Online-Manual" class="headerlink" title="Online Manual :"></a>Online Manual :</h3><h4 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h4><ul>
-<li>Secara fisik tidak banyak memakan tempat.</li>
-<li>Mudah dinavigasikan.</li>
-<li>Memberikan pengalaman yang interaktif pada user.</li>
-<li>Secara ekonomi Lebih Hemat.<h4 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h4></li>
-<li>User Interface mungkin menghambat.</li>
-<li>Kesulitan navigasi.</li>
-<li>Kesulitan melihat online manual.</li>
-<li>Isi yang lebih sedikit.</li>
-</ul>
-<h3 id="Online-Help"><a href="#Online-Help" class="headerlink" title="Online Help"></a>Online Help</h3><p>Bantuan yang disediakan oleh developer jika dalam manual online/paper tidak bisa menjawab pertanyaan user, atau juga bisa menghubungi costumer service dan admin.</p>
-<h3 id="Context-Sensitive-Help"><a href="#Context-Sensitive-Help" class="headerlink" title="Context - Sensitive Help"></a>Context - Sensitive Help</h3><p>Sebuah icon yang bersimbolkan tanda tanya pada sebuah program yang berfungsi untuk menjelaskan icon yang sedang ditunjuk secara lebih rinci.</p>
-<h3 id="Online-Tutorial-amp-Animated-Demonstration"><a href="#Online-Tutorial-amp-Animated-Demonstration" class="headerlink" title="Online Tutorial &amp; Animated Demonstration"></a>Online Tutorial &amp; Animated Demonstration</h3><p>kumpulan tata cara pengerjaan, dapat berupa video, text, online class dll. yaitu langkah - langkah yang disediakan oleh developer dalam suatu aplikasi untuk memudahkan user memahaminya.</p>
-<h3 id="Online-Communities-NewsGroups-E-mail-Chat-And-Instant-Messaging"><a href="#Online-Communities-NewsGroups-E-mail-Chat-And-Instant-Messaging" class="headerlink" title="Online Communities, NewsGroups, E-mail, Chat, And Instant Messaging"></a>Online Communities, NewsGroups, E-mail, Chat, And Instant Messaging</h3><p>layanan yang tersedia diluar aplikasi tersebut, apabila dalam user manual ( offline ) tidak bisa menjawab pertanyaan, User dapat bertanya juga kepada layanan eksternal seperti grup aplikasi, dll.</p>
-<h2 id="Online-Help-Principle-amp-Guide-Lines"><a href="#Online-Help-Principle-amp-Guide-Lines" class="headerlink" title="Online Help Principle &amp; Guide Lines :"></a>Online Help Principle &amp; Guide Lines :</h2><ul>
-<li>Membuat menu/layanan help dengan tata letak yang mudah dilihat oleh pengguna.</li>
-<li>Membuat secara lengkap dan akurat.</li>
-<li>Menyediakan beberapa cara untuk mengaksesnya.</li>
-<li>Membuat help yang berkaitan dengan user’s task dan user’s goal.</li>
-<li>Sediakan beberapa level penjelasan untuk berbagai keadaan pada user.</li>
-<li>Mudah dipelajari dan dinavigasikan.</li>
-<li>Desain layout yang menarik.</li>
-<li>Menggunakan Windowing / kotak dialog.</li>
-</ul>
-<h1 id="Online-Documentation-VS-Paper-Documentation"><a href="#Online-Documentation-VS-Paper-Documentation" class="headerlink" title="Online Documentation VS Paper Documentation :"></a>Online Documentation VS Paper Documentation :</h1><h2 id="Online-Documentation"><a href="#Online-Documentation" class="headerlink" title="Online Documentation :"></a>Online Documentation :</h2><h3 id="Kelebihan-1"><a href="#Kelebihan-1" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h3><ul>
-<li>Secara Fisik tidak memakan tempat.</li>
-<li>Mudah dinavigasikan.</li>
-<li>Dapat memberikan pengalaman interaksi pada User.</li>
-<li>Secara Ekonomi lebih Hemat.<h3 id="Kekurangan-1"><a href="#Kekurangan-1" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h3></li>
-<li>Isi yang lebih Sedikit.</li>
-<li>User interface yang mungkin menghambat user.</li>
-<li>Kesulitan melihat Online Manuals.<h2 id="Paper-Documentation"><a href="#Paper-Documentation" class="headerlink" title="Paper Documentation :"></a>Paper Documentation :</h2><h3 id="Kelebihan-2"><a href="#Kelebihan-2" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h3></li>
-<li>Secara fisik isi lengkap dan terperinci.</li>
-<li>Mudah dalam pembacaannya, seperti mata tidak terhalang radiasi cahaya komputer, dll.</li>
-<li>Tidak menggunakan jaringan internet karena menggunakan media kertas.<h3 id="Kekurangan-2"><a href="#Kekurangan-2" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h3></li>
-<li>Secara fisik memakan cukup ruang.</li>
-<li>Harganya cukup mahal.</li>
-<li>User experiencenya kurang menarik karena biasanya tidak ada animasi di dalamnya.</li>
-</ul>
-<h1 id="Sifat-Sifat-User-Dokumentasi"><a href="#Sifat-Sifat-User-Dokumentasi" class="headerlink" title="Sifat - Sifat User Dokumentasi :"></a>Sifat - Sifat User Dokumentasi :</h1><ul>
-<li>Availability : User dapat menggunakan bantuan setiap saat selama sedang berinteraksi dengan sistem. User tidak perlu keluar dari aplikasi ketika ingin membuka aplikasi bantuan.<br>Accuracy and Completeness : Bantuan seharusnya tersedia secara akurat dan lengkap.</li>
-<li>Consistency : Konsistensi pada sistem yang ada, antara jenis online dan jenis tercetak, serta konsisten dari sisi content, terminologi dan bentuk presentasi.</li>
-<li>Robustness : Kemampuan untuk melanjutkan operasi ketika sistem mempunyai perilaku yang tidak diharapkan.</li>
-<li>Flexybility : membuat setiap user berinteraksi sesuai keinginannya.<br>Unobtrusiveness : tidak mencegah user dalam melanjutkan pekerjaannya atau terpengaruh ddengan aplikasi user.</li>
-</ul>
-<h1 id="Tahapan-Membuat-User-Dokumentasi-yang-baik"><a href="#Tahapan-Membuat-User-Dokumentasi-yang-baik" class="headerlink" title="Tahapan Membuat User Dokumentasi yang baik :"></a>Tahapan Membuat User Dokumentasi yang baik :</h1><ul>
-<li>Ease of Navigation.</li>
-<li>Ease of Learning.</li>
-<li>Ease of Reading.</li>
-</ul>
-<h1 id="Fungsi-User-Dokumentasi"><a href="#Fungsi-User-Dokumentasi" class="headerlink" title="Fungsi User Dokumentasi :"></a>Fungsi User Dokumentasi :</h1><ul>
-<li>Memberikan kinerja sistem ( feedback ) yang baik untuk user.</li>
-<li>Memberikan panduan interaksi antara pengguna dan sistem.</li>
-<li>Memberikan panduan kepada pengguna untuk mempelajari sistem.</li>
-<li>Memberikan panduan kepada pengguna untuk memecahkan masalah.</li>
-</ul>
-<h1 id="Manfaat-User-Dokumentasi"><a href="#Manfaat-User-Dokumentasi" class="headerlink" title="Manfaat User Dokumentasi :"></a>Manfaat User Dokumentasi :</h1><ul>
-<li>Mengetahui dengan jelas alur pekerjaan dari sistem yang dibuat.</li>
-<li>Bukti bahwa kita pernah melakukan developing dan perbaikan sistem.</li>
-<li>Untuk mengatasi error dengan cepat.</li>
-<li>Dapat meminimalisir kesalahan user dan menyediakan kemudahan recovery.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ui-ux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Response Time]]></title>
-      <url>http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Response-Time/</url>
-      <content type="html"><![CDATA[<p><img src="http://www.highperformingculture.com/wp-content/uploads/2015/09/Response-Time-01-758x342.png" alt=""></p>
-<h1 id="Respon-Time"><a href="#Respon-Time" class="headerlink" title="Respon Time"></a>Respon Time</h1><p>Responee Time adalah lama waktu yang dibutuhkan setelah user/ pengguna mengawali aktivitas input sampai komputer dapat menampilkan hasil respon.</p>
-<p>User think time : waktu user untuk berfikir sebelum melakukan tindakan selanjutnya.</p>
-<h1 id="Kekurangan-amp-Kelebihan-Respon-time-Lambat-Vs-Respon-time-Cepat"><a href="#Kekurangan-amp-Kelebihan-Respon-time-Lambat-Vs-Respon-time-Cepat" class="headerlink" title="Kekurangan &amp; Kelebihan - Respon time Lambat Vs. Respon time Cepat"></a>Kekurangan &amp; Kelebihan - Respon time <strong>Lambat</strong> Vs. Respon time <strong>Cepat</strong></h1><h2 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan"></a>Kekurangan</h2><h3 id="Respon-Time-Lambat"><a href="#Respon-Time-Lambat" class="headerlink" title="Respon Time Lambat :"></a>Respon Time Lambat :</h3><ul>
-<li>User Frustasi.</li>
-<li>Waktu terbuang untuk menunggu.</li>
-<li>User menjadi gelisah dan tidak fokus terhadap pekerjaan.<h3 id="Respon-Time-Cepat"><a href="#Respon-Time-Cepat" class="headerlink" title="Respon Time Cepat :"></a>Respon Time Cepat :</h3></li>
-<li>User menjadi ceroboh.</li>
-<li>Tingkat pemahaman terhadap informasi yang disajikan rendah.</li>
-</ul>
-<h2 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan"></a>Kelebihan</h2><h3 id="Respon-Time-Lambat-1"><a href="#Respon-Time-Lambat-1" class="headerlink" title="Respon Time Lambat :"></a>Respon Time Lambat :</h3><ul>
-<li>Memudahkan dalam memahami informasi yang disajikan terutama bagi pengguna awam.</li>
-<li>Karena mempermudah dalam memahami informasi, sehingga meminimalisir keselahan user.<h3 id="Respon-Time-Cepat-1"><a href="#Respon-Time-Cepat-1" class="headerlink" title="Respon Time Cepat :"></a>Respon Time Cepat :</h3></li>
-<li>User merasa puas dengan kinerja komputer.</li>
-<li>User bisa jadi lebih produktif.</li>
-</ul>
-<h1 id="Faktor-Faktor-yang-mempengaruhi-Respon-Time"><a href="#Faktor-Faktor-yang-mempengaruhi-Respon-Time" class="headerlink" title="Faktor - Faktor yang mempengaruhi Respon Time :"></a>Faktor - Faktor yang mempengaruhi Respon Time :</h1><ul>
-<li>Kompleksitas interaksi : sebuah input yang memiliki rangkaian perintah yang panjang dapat memengaruhi respon time komputer. Contoh : perbandingan waktu respon saat membuka program notepad dengan Photoshop.</li>
-<li>Keahlian user dalam mengoperasikan perangkat : user yang ahli akan lebih paham langkah yang harus diambil sehingga respon menjadi lebih singkat. Contoh : seorang programmer lebih cepat mengoperasikan komputer dibandingkan tukang siomay.<br>Kecepatan proses data dibagi menjadi 2 :</li>
-<li>Kecepatan data Internet : google.com dan youtube.com, dalam membuka url web browser tersebut terlihat perbedaan banyak data yang diproses, dan memengaruhi kecepatan respon.<br>Kecepatan data Read and Write : saat data mengalir dari/kesebuah tempat penyimpanan, kecepatan akses ditentukan oleh seberapa cepat kemampuan read dan write.</li>
-<li>Jumlah user : jumlah user yang banyak saat mengakses data dapat memengaruhi kecepatan respon sistem.</li>
-<li>Kemampuan dari perangkat itu sendiri : contoh Laptop dengan Spesifikasi tinggi ( gaming ), dengan laptop lawas dan spesifikasi rendah, waktu respon time akan terlihat jelas.</li>
-</ul>
-<h1 id="Faktor-yang-mempengaruhi-Ekspektasi-Waktu-Respon"><a href="#Faktor-yang-mempengaruhi-Ekspektasi-Waktu-Respon" class="headerlink" title="Faktor yang mempengaruhi Ekspektasi Waktu Respon :"></a>Faktor yang mempengaruhi Ekspektasi Waktu Respon :</h1><ul>
-<li>Pengalaman sebelumnya yang dilakukan oleh user mengenai waktu yang dibutuhkan untuk menyelesaikan tugas tertentu.</li>
-<li>Ragam individu dan tugas yang bervariasi.</li>
-<li>User sangat adaptif.</li>
-</ul>
-<h1 id="Beberapa-Hal-Terkait-Response-Time-Limit"><a href="#Beberapa-Hal-Terkait-Response-Time-Limit" class="headerlink" title="Beberapa Hal Terkait Response Time-Limit :"></a>Beberapa Hal Terkait Response Time-Limit :</h1><ul>
-<li>0,1 detik adalah batas waktu agar pengguna merasa bahwa sistem bereaksi seketika, artinya tidak diperlukan umpan balik khusus kecuali untuk menampilkan hasilnya.</li>
-<li>1.0 detik adalah batas waktu agar pemikiran pengguna untuk tetaptidak terganggu, meski pengguna akan memperhatikan penundaan tersebut. Biasanya, tidak ada umpan balik khusus yang diperlukan selama penundaan lebih dari 0,1 dan kurang dari 1,0 detik.</li>
-<li>10 detik adalah batas untuk menjaga perhatian pengguna terfokus pada dialog. Untuk penundaan yang lebih lama, pengguna akan cenderung melakukan tugas lain sambil menunggu proses yang lebih lama, pengguna akan cenderung melakukan tugas lain samil menunggu proses sebelumnya selesai, jadi mereka harus diberi umpan balik yang menunjukkan kapan komputer tersebut mengharapkan untuk dilakukan.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ui-ux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Error Handling]]></title>
-      <url>http://ciazhar.github.io/2017/06/19/kuliah/imk/ui-ux-Error-Handling/</url>
-      <content type="html"><![CDATA[<p><img src="http://bigdatadimension.com/wp-content/uploads/2017/03/Error-Handling-Testing.png" alt=""></p>
-<h1 id="Apa-Itu-Error-Handling"><a href="#Apa-Itu-Error-Handling" class="headerlink" title="Apa Itu Error Handling :"></a>Apa Itu Error Handling :</h1><p>Error Handling adalah suatu penanganan kesalahan ( eror ) pada berbagai keadaan dalam pemrograman. Setiap ada kesalahan, maka eksekusi program tidak akan dihentikan secara tiba - tiba, tetapi akan diteruskan ke baris program yang terdapat script penanganan kesalahan.<br>Contoh : Aplikasi Produk Jadi, misalkan Form pendaftaran media, konsumen telah mengisikan hampir seluruh datanya pada form pendaftaran tersebut, tetapi ditengah program terdapat suatu eror atau bug, jadi dengan penanganan yang baik, penanganan kesalahan akan dilakukan setelah baris program diisikan.</p>
-<h1 id="Kelebihan-dan-Kekurangan-Error-Handling"><a href="#Kelebihan-dan-Kekurangan-Error-Handling" class="headerlink" title="Kelebihan dan Kekurangan Error Handling :"></a>Kelebihan dan Kekurangan Error Handling :</h1><h2 id="Kelebihan"><a href="#Kelebihan" class="headerlink" title="Kelebihan :"></a>Kelebihan :</h2><ul>
-<li>Membantu user dalam menangani kesalahan.</li>
-<li>Resiko kehilangan data dapat diminalisir.</li>
-<li>Mempermudah programmer dalam pendeteksian kesalahan.</li>
-<li>User tidak perlu melakukan restart program setelah terjadi kesalahan.</li>
-</ul>
-<h2 id="Kekurangan"><a href="#Kekurangan" class="headerlink" title="Kekurangan :"></a>Kekurangan :</h2><ul>
-<li>Memperumit Kode Program.</li>
-<li>Programmer harus benar - benar tahu kemungkinan kesalahan yang akan muncul.</li>
-<li>Satu fungsi pada program bisa memiliki berbagai kemungkinan kesalahan.</li>
-</ul>
-<h1 id="Macam-Macam-Jenis-Error"><a href="#Macam-Macam-Jenis-Error" class="headerlink" title="Macam - Macam Jenis Error :"></a>Macam - Macam Jenis Error :</h1><ul>
-<li>Perceptual Error : adanya kesalahan yang disebabkan oleh ketidakjelasan keterangan dari petunjuk penggunaan yang menyebabkan kesalah tanggapan dari pihak pengguna atau user. Contoh : Icon yang ambigu dalam desain antarmuka.</li>
-<li>Cognitive Error : Kesalahan yang diakibatkan oleh kemampuan memecah oleh user atau karena banyak konteks dan informasi status.</li>
-<li>Motor Error : kesalahan yang disebabkan oleh ketidak sinkronan antara mata, tangan, dan kemampuan yang dimiliki oleh user. Contoh : typo / terlalu cepat mengetik, double klik pada mouse.</li>
-</ul>
-<h1 id="Jenis-Jenis-Kesalahan-Dari-User"><a href="#Jenis-Jenis-Kesalahan-Dari-User" class="headerlink" title="Jenis - Jenis Kesalahan Dari User :"></a>Jenis - Jenis Kesalahan Dari User :</h1><ul>
-<li>Mistake : kesalahan yang terjadi ketika user berpikir bahwa sudah melakukan hal yang benar namun sebenarnya user melakukan kesalahan.</li>
-<li>Slip : kesalahan diluar keinginan user. Contoh : saat ingin menutup user ingin mengklik tombol close tetapi secara tidak sengaja user menekan tombol minimize.</li>
-</ul>
-<h1 id="Jenis-Jenis-Kesalahan-Pada-Program"><a href="#Jenis-Jenis-Kesalahan-Pada-Program" class="headerlink" title="Jenis - Jenis Kesalahan Pada Program :"></a>Jenis - Jenis Kesalahan Pada Program :</h1><ul>
-<li>Syntax Error : kesalahan dari penulisan syntax pada program sehingga syntax tersebut tidak dapat dieksekusi oleh program dan membuat program eror. Contoh : pada C++, baris kode harus selalu diakhiri dengan tanda (;) atau kesalahan penulisan pada standar penulisan program.</li>
-<li>Logical Error : kesalahan yang disebabkan oleh programmer karena kesalahan penulisan atau rumus yang diterapkan. Contoh : saat kita membuat program yang menghasilkan nilai luas, kita menuliskan 7 tetapi hasil yang ditampilkan program adalah 11 atau pada saat kita menulis variabel s adalah hasil tambah, tetapi yang didekrasikan pada awal adalah S besar.</li>
-<li>Runtime Error : kesalahan yang terjadi ketika sebuah program komputer dijalankan.</li>
-</ul>
-<h1 id="Cara-Membuat-Error-Handling-yang-Baik"><a href="#Cara-Membuat-Error-Handling-yang-Baik" class="headerlink" title="Cara Membuat Error Handling yang Baik :"></a>Cara Membuat Error Handling yang Baik :</h1><ul>
-<li>Gunakan bahasa yang mudah dipahami oleh user.</li>
-<li>Hindari kata - kata seperti : bad, dummy, dll.</li>
-<li>Hindari kalimat perintah.</li>
-<li>FAQ ( Frequently Asked Questions ).</li>
-<li>Optimalisasikan dan pemanfaatan undo redo function dan cancel.</li>
-<li>Menyiapkan berbagai macam model respon.</li>
-<li>Validitas masukan / inteligent error checking dan recovery.</li>
-<li>Proteksi pengguna.</li>
-<li>Penampilan pesan.</li>
-<li>Optimasikan fungsi HELP ( quick access help ).</li>
-<li>Editing of Error Fields.</li>
-<li>Desain yang efektif dan effisien.</li>
-<li>Return cursor dan Highlight error.</li>
-<li>No Interupting Work Flow.</li>
-<li>Confirmation Commands.</li>
-</ul>
-<h1 id="Tips-sederhana-untuk-mencegah-terjadinya-error-dalam-program"><a href="#Tips-sederhana-untuk-mencegah-terjadinya-error-dalam-program" class="headerlink" title="Tips sederhana untuk mencegah terjadinya error dalam program :"></a>Tips sederhana untuk mencegah terjadinya error dalam program :</h1><ul>
-<li>Menulislah dengan teliti, coba ikuti aturan penulisan program dengan benar dan konsisten.</li>
-<li>Menulislah dengan rapi, coba ikuti aturan penulisan program yang baik atau mengikuti konvensi ( coding standar ).  Hal ini akan mempermudah dalam pencarian kesalahan program.</li>
-<li>Selalu konsisten dalam penamaan variabel dan sejenisnya juga membantu mencegah terjadinya error karena terkadang kesalahan terjadi karena perbedaan huruf besar dan kecil.</li>
-<li>Pastikan algoritma yang digunakan sudah teruji kebenarannya.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ui-ux </tag>
-            
-        </tags>
         
     </entry>
     
@@ -2250,433 +2193,6 @@
             
         </categories>
         
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Bagian Processor]]></title>
-      <url>http://ciazhar.github.io/2017/04/17/kuliah/orakom/orakom-bagian-processor/</url>
-      <content type="html"><![CDATA[<h1 id="ALU-Arithmetic-and-Logic-Unit"><a href="#ALU-Arithmetic-and-Logic-Unit" class="headerlink" title="ALU (Arithmetic and Logic Unit)"></a>ALU (Arithmetic and Logic Unit)</h1><p>  ALU merupakan bagian pengolah biner di processor. ALU bertugas melalukan operasi aritmatika dan logika sesuai instruksi yang diberikan.</p>
-<h1 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h1><p>  Control Unit bertugas memberikan arahan / kendali / kontrol terhadap operasi yang dilakukan oleh ALU</p>
-<h1 id="Register"><a href="#Register" class="headerlink" title="Register"></a>Register</h1><p>  Register merupakan perangkat memori sementara yang menyimpan data dari suatu program yang sedang berjalan.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Organisasi dan Arsitektur Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> komputer </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Sistem Bilangan]]></title>
-      <url>http://ciazhar.github.io/2017/04/17/kuliah/orakom/orakom-sistem-bilangan/</url>
-      <content type="html"><![CDATA[<h1 id="Macam-macam-Sistem-Bilangan"><a href="#Macam-macam-Sistem-Bilangan" class="headerlink" title="Macam-macam Sistem Bilangan"></a>Macam-macam Sistem Bilangan</h1><ul>
-<li>Biner (basis 2)<br>Simbol : 0,1</li>
-<li>Oktal (basis 8)<br>Simbol : 0,1,2,3,4,5,6,7</li>
-<li>Desimal (basis 10)<br>Simbol : 0,1,2,3,4,5,6,7,8.9</li>
-<li>Heksal (basis 16)<br>Simbol : 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15</li>
-</ul>
-<h1 id="Konversi-antar-Sistem-Bilangan"><a href="#Konversi-antar-Sistem-Bilangan" class="headerlink" title="Konversi antar Sistem Bilangan"></a>Konversi antar Sistem Bilangan</h1><ul>
-<li>Desimal ke Biner</li>
-</ul>
-<p>  Contoh : Semisal kita akan mengubah 123(10) ke biner. Hal pertama yang harus kita lakukan adalah membagi angka tersebut dengan 2, kemudian hasil pembagian kita taruh dibagian bawah. Dan apabila angka habis dibagi 2 maka kita tulis 0 dan apabila bersisa kita tulis 1 di bagian samping. Lakukan langkah tersebut secara berulang-ulang sampai hasilnya tidak bisa dibagi 2 lagi. Contohnya adalah sebagai berikut :<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">123</div><div class="line">--- =  1</div><div class="line">61</div><div class="line">--- = 1</div><div class="line">30</div><div class="line">--- = 0</div><div class="line">15</div><div class="line">--- = 1</div><div class="line">7</div><div class="line">--- = 1</div><div class="line">3</div><div class="line">--- = 1</div><div class="line">1</div></pre></td></tr></table></figure></p>
-<p>  Dari hasil diatas kita dapatkan hasil 1 1 1 1 0 1 1 (dibaca dari bawah). Jadi biner dari 123 adalah 1111011.</p>
-<ul>
-<li>Biner ke Desimal</li>
-</ul>
-<p>  Contoh : Semisal kita akan mengubah 1111011(2) ke desimal. Hal pertama yang kita lakukan adalah mendefinisikan tiap digit dengan 2 pangkat nomer digit. Digit dihitung dari belakang. Contohnya adalah sebagai berikut :<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">2^6   2^5   2^4   2^3   2^2   2^1   2^0</div><div class="line">64    32    16    8     4     2     1</div><div class="line"></div><div class="line">1     1     1     1     0     1     1</div></pre></td></tr></table></figure></p>
-<p>  Kemudian kita tambahkan tiap hasil dari 2 pangkat nomer digit yang bilangan binernya 1.<br>  64+32+16+8+4+2+1 = 123. Dari penjumlahan tersebut kita dapatkan hasil 123, jadi desimal dari 1111011 adalah 123.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Organisasi dan Arsitektur Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> komputer </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Bagaimana Perangkat Elektronik Berjalan ?]]></title>
-      <url>http://ciazhar.github.io/2017/04/15/kuliah/orakom/orakom_bagaimana-perangkat-elektronik-berjalan/</url>
-      <content type="html"><![CDATA[<p>Dalam kehidupan sehari-hari kita sering sekali menggunakan perangkat elektronik seperti komputer, laptop dan hp. Perangkat elektronik tersebut sudah didesain sedimikian rupa agar dapat nyaman berinteraksi dengan penggunanya, baik dari desain, perangkat input dll. Tetapi pernahkah anda berpikir bagaimana cara kerjanya alat-alat tersebut? Bagaimana data dari keyboard, mouse atau perangkat input lainya diproses ? Dan tentunya akan banyak sekali pertanyaan mengenai hal tersebut. Pada kesempatan ini saya akan sedikit menceritakan bagaimana proses data di perangkat elektronik tersebut.</p>
-<h2 id="Proses-Booting"><a href="#Proses-Booting" class="headerlink" title="Proses Booting"></a>Proses Booting</h2><p>Hal pertama yang dilakukan perangkat saat proses booting adalah melakukan booting Sistem Operasi. Kemudian perangkat akan melakukan inisialisasi, yaitu melakukan checklist terhadap hardware yang terhubung dengan perangkat kita.</p>
-<h2 id="Transfer-Data-pada-Komputer"><a href="#Transfer-Data-pada-Komputer" class="headerlink" title="Transfer Data pada Komputer"></a>Transfer Data pada Komputer</h2><p>Data yang kita inputkan melalui perangkat masukan sebenarnya adalah kumpulan pola arus listrik yang dikonversi menjadi kode biner. Secara teknis untuk tegangan 0 volt akan dikonversi menjadi kode biner 0 dan tegangan 5 volt akan dikonversi menjadi kode biner 1. Proses konversi dari arus listrik menjadi biner ini dilakukan oleh <code>Flip Flop</code> yang terdiri dari kumpulan gerbang logika. Data biner tersebut kemudian dibawa menuju <code>register</code> yang ada pada processor untuk disimpan. Setiap kode biner akan menghuni satu space register. Pengggambaran bagaimana data tersebut disimpan adalah seperti gambar di bawah ini :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">_________________________________</div><div class="line">|       |       |       |       |</div><div class="line">|   1   |   2   |   3   |   4   | --&gt; Register</div><div class="line">|_______|_______|_______|_______|   </div><div class="line">|       |       |       |       |</div><div class="line">|   0   |   1   |   0   |   0   | --&gt; Biner</div><div class="line">|_______|_______|_______|_______|</div></pre></td></tr></table></figure></p>
-<p>Lanjut, data yang ada pada register kemudian diproses, apakah akan dioutputkan atau akan disimpan sesuai dengan yang kita inginkan. Apabila ingin dioutputkan data akan ditransfer menuju perangkat keluaran yang dikehendaki, semisal layar monitor. Dan apabila ingin disimpan sebelumnya akan dikonversi menuju kode heksal. Proses konversi dari kode biner dan heksal dan sebaliknya dilakukan oleh Sistem Operasi.</p>
-<p>Data pada hardisk yang berupa kode heksal apabila ingin diproses maka harus dikonversi kembali menjadi kode desimal. Data tersebut kemudian diteruskan melalui RAM dan berakhir di Processor. Dalam tahap pemrosesan data, data tadi akan disimpan sementara pada cache memory yang ada pada processor.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Organisasi dan Arsitektur Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> komputer </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Fill in form dan Function Key]]></title>
-      <url>http://ciazhar.github.io/2017/04/14/kuliah/imk/ui-ux-fill-in-form-dan-function-key/</url>
-      <content type="html"><![CDATA[<p><img src="/images/ui-ux/Ui-Ux.jpg" alt=""></p>
-<h1 id="FILL-IN-FORM"><a href="#FILL-IN-FORM" class="headerlink" title="FILL IN FORM"></a>FILL IN FORM</h1><h2 id="Definisi-Fill-in-Form"><a href="#Definisi-Fill-in-Form" class="headerlink" title="Definisi Fill in Form :"></a>Definisi Fill in Form :</h2><p>   Sebuah tabel data yang diwajibkan diisi oleh user, data tersebut biasanya digunakan untuk sebuah pendaftaran.<br>   Data yang diinputkan umumnya banyak keakuratan data, misal fill in form memerintahkan user untuk memasukkan data pribadi ( nama, umur, jenis kelamin dst ).</p>
-<h2 id="Hal-yang-perlu-diperhatikan-terkait-Fill-In-Form"><a href="#Hal-yang-perlu-diperhatikan-terkait-Fill-In-Form" class="headerlink" title="Hal yang perlu diperhatikan terkait Fill In Form :"></a>Hal yang perlu diperhatikan terkait Fill In Form :</h2><ul>
-<li>Keyboard.</li>
-<li>Kegunaan Tab atau Mouse untuk memindahkan cursor.</li>
-<li>Maksud dari masing - masing field dan label.</li>
-<li>Metode dalam mengoreksi kesalahan.</li>
-<li>Kegunaan Enter dan Return.</li>
-</ul>
-<h2 id="Pedoman-dalam-membuat-Fill-Inform"><a href="#Pedoman-dalam-membuat-Fill-Inform" class="headerlink" title="Pedoman dalam membuat Fill Inform :"></a>Pedoman dalam membuat Fill Inform :</h2><ul>
-<li>Berikan judul yang jelas dan memiliki arti.</li>
-<li>Instruksi yang komprehensif.</li>
-<li>Pengelompokkan dan pengurutan secara logikal.</li>
-<li>Layout ( Desain tata letak ) yang mudah dilihat.</li>
-<li>Berikan nama field yang dikenal secara umum.</li>
-<li>Berikan tempat yang jelas untuk menginputkan data,</li>
-<li>Pergerakan kursor yang nyaman.</li>
-<li>Berikan koreksi eror / penanganan kesalahan untuk setiap karakter  tidak tepat yang diinputkan.</li>
-<li>Sertakan informasi mengenai status pengisian form.</li>
-</ul>
-<h2 id="Kelebihan-Fill-In-Form"><a href="#Kelebihan-Fill-In-Form" class="headerlink" title="Kelebihan Fill In Form :"></a>Kelebihan Fill In Form :</h2><ul>
-<li>Keterbiasaan Pengguna dalam Mengisi Form dapat mempermudah pengisian.</li>
-<li>Beban memori rendah.</li>
-<li>Perancangan yang mudah dengan berbagai alat/Software bantu perancangan tampilan.</li>
-<li>Isian Formulir yang disederhanakan.</li>
-</ul>
-<h2 id="Kekurangan-Fill-In-Form"><a href="#Kekurangan-Fill-In-Form" class="headerlink" title="Kekurangan Fill In Form :"></a>Kekurangan Fill In Form :</h2><ul>
-<li>Bila tak terbiasa, membutuhkan waktu bagi user untuk memahami dan mengisi form.</li>
-<li>Jika Formulir bermenu datar, akan memakan ruang pada layar.</li>
-<li>Pembuatan data pertanyaan harus logis dan tersusun dengan jelas jika tidak akan membuat user kebingungan.</li>
-</ul>
-<h1 id="FUNCTION-KEYS"><a href="#FUNCTION-KEYS" class="headerlink" title="FUNCTION KEYS"></a>FUNCTION KEYS</h1><h2 id="Pendahuluan"><a href="#Pendahuluan" class="headerlink" title="Pendahuluan :"></a>Pendahuluan :</h2><p>   Tahun 1986, IBM ( International Business Machine ) menambahkan beberapa tombol fungsi pada keyboard standard. Tombol ini dapat dipergunakan sebagai perintah khusus yang disertakan pada sistem operasi maupun aplikasi dan disebut function keys.<br>   Key Modal Styles : Penyampaian “aksi” melalui penekanan tombol-tombol yang diprogram sebelumnya untuk menjalankan perintah tertentu.</p>
-<h2 id="Definisi"><a href="#Definisi" class="headerlink" title="Definisi :"></a>Definisi :</h2><p>  Tombol khusus yang terdapat pada keyboard yang memberikan masukan tanpa berhubungan dengan setiap karakter F1 s/d F12. Contoh Fungsi umumnya :<br>     <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">F1 = Help.</div><div class="line">F2 = Merubah nama file.</div><div class="line">F3 = Search.</div><div class="line">alt + F4 = Menutup program yang sedang berjalan.</div><div class="line">F5 = Refresh.</div><div class="line">F6 = Memindahkan kursor ke Address bar.</div><div class="line">F7 = memeriksa ejaan/tata bahasa (Ms. Word).</div><div class="line">F8 = Tombol fungsi yang digunakan untuk masuk ke menu startup windows, biasa digunakan masuk ke Windows Safe Mode.</div><div class="line">F9 = Untuk membuka toolbar Measurements pada Quark 5.0.</div><div class="line">shift + F10 = Menampilkan menu shortcut ( MS Word ).</div><div class="line">F11 = Full Screen pada browser.</div><div class="line">shift + F12 = Save As ( MS. Word ).</div></pre></td></tr></table></figure></p>
-<h2 id="Kelebihan-Function-Keys"><a href="#Kelebihan-Function-Keys" class="headerlink" title="Kelebihan Function Keys :"></a>Kelebihan Function Keys :</h2><ul>
-<li>Mempermudah pekerjaan.</li>
-<li>Kecepatan yang lebih tinggi dan praktis.</li>
-<li>Dapat menjadi pengganti input saat mouse sedang error.</li>
-</ul>
-<p>Kekurangan Function Keys :</p>
-<ul>
-<li>Jarang Digunakan dan Diketahui oleh pengguna - pengguna baru.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ui-ux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Kritik dan Saran terhadap Website KPM Udinus]]></title>
-      <url>http://ciazhar.github.io/2017/04/11/kuliah/imk/Kritik-dan-Saran-terhadap-Website-KPM-Udinus/</url>
-      <content type="html"><![CDATA[<h1 id="Sekilas-Tentang-KPM-UDINUS"><a href="#Sekilas-Tentang-KPM-UDINUS" class="headerlink" title="Sekilas Tentang KPM UDINUS"></a>Sekilas Tentang KPM UDINUS</h1><p>Kantor Penjaminan Mutu Univeristas Dian Nuswantoro adalah suatu badan internal di bawah Universitas Dian Nuswantoro yang bertujuan untuk mengembangkan sistem penjaminan mutu, menyelenggarakan sistem audit mutu internal dalam rangka pelaksanaan sistem penjaminan mutu dan menjamin perbaikan mutu secara terus menerus terhadap pencapaian kinerja penyelenggaraan pendidikan tinggi di Universitas Dian Nuswantoro.</p>
-<h1 id="Kritik-dan-Saran"><a href="#Kritik-dan-Saran" class="headerlink" title="Kritik dan Saran"></a>Kritik dan Saran</h1><ul>
-<li>Copyright telah kadaluarsa. Seharusnya selalu diperbaharui secara konsekuen. Kemudian perlu ditambahkan instansi (udinus) karena KPM sendiri berada di bawah udinus.</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/copyright.png" alt=""></p>
-<ul>
-<li>Foto dari Anggota KPM tidak proporsional dan tidak rapi. Pada laman web terlalu kecil sedangkan pada mobile terlalu besar. Pada laman web foto tidak center dan penulisanya tidak rapi. Seharusnya kontenya dikonfigurasi agar progresive dan rapi. Kami menyarankan menggunakan grid system yang ada pada bootstrap agar lebih mudah dalam mengkonfigurasinya.</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/foto.png" alt=""></p>
-<ul>
-<li>Tidak terdapat paging indeks halaman sehingga kontennya terlihat semua dan website terlihat tidak sedap di pandang mata. Seharusnya dikonfigurasi semisal untuk setiap laman hanya berisi 10 konten. Dan untuk mengakses konten lainya melalui indeks selanjutnya.</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/index.png" alt=""></p>
-<ul>
-<li>Terdapat 2 tombol home pada halama utama yang membingungkan user. Seharusnya satu saja sudah cukup.</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/home.png" alt=""></p>
-<ul>
-<li>Konten yang belum siap dipublikasikan sebaiknya tidak perlu di tampilkan di menu. (contohnya Pelatihan, Bantuan Teknis, Kunjungan dll)</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/cp.png" alt=""></p>
-<ul>
-<li>Terdapat laman yang kontenya terlalu sepi, sehingga perlu ditambahkan konten lain yang relevan.</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/lamankosong.png" alt=""></p>
-<ul>
-<li>Perlu ditambahkan fasilitash search untuk memudahkan user mencari konten yang dikehendaki.</li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/pencarian.png" alt=""></p>
-<ul>
-<li>Perlu dicantumkan kontak person pada bagian bawah web. Sehingga apabila terjadi permasalahan pada webiste dan sebagainya dapat langsung ditanggulangi. Seperti pada  <a href="http://kjm.ugm.ac.id/" target="_blank" rel="external">http://kjm.ugm.ac.id/</a></li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/kontak-person.png" alt=""></p>
-<ul>
-<li>Perlu ditambahkan jadwal agenda kegiatan mengenai kpm. Seperti pada <a href="http://kjm.ugm.ac.id/" target="_blank" rel="external">http://kjm.ugm.ac.id/</a></li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/agenda.png" alt=""></p>
-<ul>
-<li>Perlu ditambahkan laman mengenai sambutan ketua kpm untuk menambah kesan hangat kepada pengunjung  webste. Seperti pada <a href="http://kjm.ugm.ac.id/sambutan-rektor-universitas-gadjah-mada-prof-dr-pratikno-m-soc-sc/" target="_blank" rel="external">http://kjm.ugm.ac.id/sambutan-rektor-universitas-gadjah-mada-prof-dr-pratikno-m-soc-sc/</a></li>
-</ul>
-<p><img src="/images/kritik-kpm-udinus/sambutan-kepala.png" alt=""></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Bahasa Perintah dan Bahasa Alami]]></title>
-      <url>http://ciazhar.github.io/2017/03/27/kuliah/imk/ui-ux_common-language-and-natural-language/</url>
-      <content type="html"><![CDATA[<p><img src="/images/ui-ux/Ui-Ux.jpg" alt=""></p>
-<h2 id="Pendahuluan"><a href="#Pendahuluan" class="headerlink" title="Pendahuluan"></a>Pendahuluan</h2><ul>
-<li><p>Tujuan dasar bahasa</p>
-<ul>
-<li>presisi</li>
-<li>kekompakan</li>
-<li>kemudahan dalam penulisan dan pembacaan</li>
-<li>mudah dipelajari</li>
-<li>sederhana dan mengurangi kesalahan</li>
-<li>mudah diingat</li>
-</ul>
-</li>
-<li><p>Tujuan tingkat lebih tinggi</p>
-<ul>
-<li>Hubungan yang dekat antara realitas dan notasi.</li>
-<li>Kemudahan dalam melaksanakan manipulasi yang relevan dengan tugas.</li>
-<li>Kompatibilitas dengan notasi yang telah ada.</li>
-<li>Fleksibilitas untuk mengakomodasi pemakai pemula dan ahli.</li>
-<li>Ekspresif, mendukung kreativitas.</li>
-<li>Daya tarik visual.</li>
-</ul>
-</li>
-<li><p>Kendala-kendala penggunaan Bahasa</p>
-<ul>
-<li>kapasitas manusia mengingat notasi</li>
-<li>kecocokan antara ingatan dan media penampil</li>
-<li>kemudahan berbicara(mengucapkan)</li>
-</ul>
-</li>
-<li><p>Bahasa komputer yang efektif<br>Bahasa komputer yang efektif harus tidak hanya merepresentasikan tugas pemakai dan memenuhi kebutuhan manusia untuk berkomunikasi, tetapi juga harus selaras dengan mekanisme perekaman, manipulasi, dan penampilannya di komputer.<br>Beberapa contoh bahasa yang efektif</p>
-<ul>
-<li>Bahasa pemrograman:<ul>
-<li>Pemakaian noninteraktif: Fortran, COBOL, ALGOL, PL/I, Pascal.</li>
-<li>Inkremental: BASIC, LISP, APL, PROLOG.</li>
-<li>Kompilasi dan eksekusi cepat: C.</li>
-<li>Pemrograman tim, sharing, reusability: ADA, C++.</li>
-<li>Jaringan, cross-platform: Java.</li>
-<li>Scripting World Wide Web: PHP, JavaScript, VBScript.</li>
-</ul>
-</li>
-<li>Alamat World Wide Web.</li>
-<li>Bahasa database query: SQL.</li>
-<li>Bahasa perintah command line: perintah Unix, MS-DOS.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Strategi-Organisasi-perintah"><a href="#Strategi-Organisasi-perintah" class="headerlink" title="Strategi Organisasi perintah"></a>Strategi Organisasi perintah</h2><ul>
-<li>Simple command set<br>Setiap perintah dipilih untuk melaksanakan tugas (task) tunggal, jumlah perintah sama dengan jumlah tugas.<br>Contoh: vim editor (Unix):<br>0        : go to start of line<br>$        : go to end of line<br>(space)    : go right one space<br>H        : go left one space<br>W        : forward one word<br>b        : backward one word<br>)        : forward one sentence<br>(        : backward one sentence</li>
-<li><p>Command plus arguments<br>Perintah diikuti argumen yang menunjukkan objek yang dimanipulasi.<br>Contoh:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">COPY FILEA FILEB</div><div class="line">DEL FILEA</div></pre></td></tr></table></figure>
-<p>Label keyword dapat membantu untuk meningkatkan keterbacaan dan meniadakan urutan.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"gbr.gif"</span> <span class="attr">width</span>=<span class="string">"40"</span> <span class="attr">height</span>=<span class="string">"5"</span> <span class="attr">alt</span>=<span class="string">"Gambar"</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Command plus options and arguments<br>Perintah dapat berisi options untuk menunjukkan kondisi khusus.<br>Jumlah argumen dan option yang banyak dapat meningkatkan tingkat kesalahan.<br>Contoh:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DIR C:\WINDOWS\*.EXE /S/W/P/O-N</div><div class="line">ls -alF /home/agus</div></pre></td></tr></table></figure>
-</li>
-<li><p>Hierarchical command structure<br>Perangkat penuh perintah disusun menjadi struktur tree, seperti menu tree.<br>Contoh:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Action    Object     Destination</div><div class="line">CREATE    File       File</div><div class="line">DISPLAY   Process    Local printer</div><div class="line">REMOVE    Directory  Screen</div><div class="line">COPY                 Remote  printer</div><div class="line">MOVE</div></pre></td></tr></table></figure>
-<p>Contoh di atas menghasilkan struktur berarti bagi<br>5 × 3 × 4 = 60 tugas.</p>
-</li>
-</ul>
-<h2 id="Manfaat-Struktur"><a href="#Manfaat-Struktur" class="headerlink" title="Manfaat Struktur"></a>Manfaat Struktur</h2><pre><code>- Manfaat struktur:
-  - Membantu proses belajar manusia, pemecahan masalah, dan ingatan.
-  - Membantu task concepts, computer concepts, dan rincian sintaktik bahasa perintah.
-- Topik:
-  - Urutan argumen yang konsisten
-  - Simbol vs keyword
-  - Struktur hierarkis dan kongruensi
-</code></pre><h3 id="Urutan-Argumen-yang-konsistensi"><a href="#Urutan-Argumen-yang-konsistensi" class="headerlink" title="Urutan Argumen yang konsistensi"></a>Urutan Argumen yang konsistensi</h3><pre><code>Beberapa studi menunjukkan adanya manfaat urutan argumen yang konsisten.
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Inconsistent order              Consistent order</div><div class="line"></div><div class="line">SEARCH file no, message id      SEARCH message id, file no</div><div class="line">TRIM message id, segment size   TRIM message id, segment size</div><div class="line">REPLACE message id, code no     REPLACE message id, code no</div><div class="line">INVERT group size, message id   INVERT message id, group size</div></pre></td></tr></table></figure>
-</code></pre><h3 id="Simbol-Lawan-Keyword"><a href="#Simbol-Lawan-Keyword" class="headerlink" title="Simbol Lawan Keyword"></a>Simbol Lawan Keyword</h3><pre><code>Penggunaan keyword lebih mudah daripada simbol.
-Pemakai berpengalaman dapat mengembangkan keterampilan untuk menggunakan notasi aneh sehingga variasi sintaktik tidak banyak berpengaruh.
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Symbol Editor                Keyword Editor</div><div class="line"></div><div class="line">FIND:/TOOTH/-1               BACKWARD TO “TOOTH”</div><div class="line">LIST;10                      LIST 10 LINES</div><div class="line">RS:/KO/,/OK/;*               CHANGE ALL “KO” TO “OK”</div></pre></td></tr></table></figure>
-</code></pre><h3 id="Struktur-Hierarkis-dan-Kongruensi"><a href="#Struktur-Hierarkis-dan-Kongruensi" class="headerlink" title="Struktur Hierarkis dan Kongruensi"></a>Struktur Hierarkis dan Kongruensi</h3><pre><code>Kongruen: pasangan yang berlawanan secara selaras dan berarti (simetris).
-Struktur hierarkis dan kongruensi dapat membantu ingatan pemakai.
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Congruent</div><div class="line">Hierarchical           Nonhierarchical</div><div class="line">MOVE ROBOT FORWARD     ADVANCE</div><div class="line">MOVE ROBOT BACKWARD    RETREAT</div><div class="line">MOVE ARM FORWARD       PUSH</div><div class="line">MOVE ARM BACKWARD      PULL</div><div class="line">MOVE ARM RIGHT         SWING OUT</div><div class="line">MOVE ARM LEFT          SWING IN</div><div class="line"></div><div class="line">Noncongruent</div><div class="line">Hierarchical           Nonhierarchical</div><div class="line">MOVE ROBOT FORWARD     GO</div><div class="line">CHANGE ROBOT BACKWARD  BACK</div><div class="line">CHANGE ARM FORWARD     POKE</div><div class="line">MOVE ARM BACKWARD      PULL</div><div class="line">CHANGE ARM RIGHT       PIVOT</div><div class="line">MOVE ARM LEFT          SWEEP</div></pre></td></tr></table></figure>
-</code></pre><h3 id="Ringkasan-Manfaat-Struktur"><a href="#Ringkasan-Manfaat-Struktur" class="headerlink" title="Ringkasan Manfaat Struktur"></a>Ringkasan Manfaat Struktur</h3><pre><code>Sumber struktur yang terbukti bermanfaat meliputi:
-- Konsistensi posisi
-- Konsistensi tatabahasa
-- Pasangan yang kongruen
-- Bentuk hierarkis
-</code></pre><h2 id="Penamaan-perintah"><a href="#Penamaan-perintah" class="headerlink" title="Penamaan perintah"></a>Penamaan perintah</h2><p>  Penamaan penting untuk proses belajar, pemecahan masalah, dan ingatan.<br>  Ketertentuan (specificity) vs keumuman (generality):</p>
-<ul>
-<li>Istilah-istilah yang spesifik lebih deskriptif dan lebih mudah diingat.</li>
-<li><p>Istilah-istilah yang umum lebih dikenal dan mudah diterima.<br>Contoh pengujian untuk menambah dan menghapus teks (Black &amp; Moran):</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Infrequent, discriminating words      insert    delete</div><div class="line">Frequent, discriminating words        add       remove</div><div class="line">Infrequent, nondiscriminating words   amble     perceive</div><div class="line">Frequent, nondiscriminating words     walk      view</div><div class="line">General words (frequent, nondiscr.)   alter     correct</div><div class="line">Nondiscriminating nonwords (nonsense) GAC       MIK</div><div class="line">Discriminating nonwords (icons)       abc-adbc  abc-ac</div></pre></td></tr></table></figure>
-<p>Paling baik: “infrequent, discriminating”<br>Paling buruk: general words.<br>Nonsense cukup baik!</p>
-<h2 id="Penyingkatan-Perintah"><a href="#Penyingkatan-Perintah" class="headerlink" title="Penyingkatan Perintah"></a>Penyingkatan Perintah</h2></li>
-<li>Pemotongan sederhana.<br>directory -&gt; dir, delete -&gt; del.</li>
-<li>Buang huruf hidup dengan pemotongan sederhana.<br>check disk -&gt; chkdsk, move -&gt; mv.</li>
-<li>Huruf pertama dan terakhir.<br>sort -&gt; ST, block -&gt; BK.</li>
-<li>Huruf awal setiap kata dalam frase.<br>change directory -&gt; cd, switch user -&gt; su.</li>
-<li>Singkatan standar dari konteks lain.<br>quantity -&gt; QTY, transfer -&gt;  XFER,<br>backup -&gt; BAK.</li>
-<li>Fonik: fokus pada suara.<br>execute -&gt; XQT, I seek you -&gt; ICQ,<br>connection -&gt; CNXN.</li>
-</ul>
-<h2 id="Menu-perintah"><a href="#Menu-perintah" class="headerlink" title="Menu perintah"></a>Menu perintah</h2><pre><code>Untuk mengatasi beban penghafalan perintah, beberapa perancang memberikan daftar perintah yang tersedia, dalam format yang disebut menu perintah.
-Contoh:
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Lynx</div><div class="line">  H)elp O)ptions P)rint G)o M)ain screen Q)uit /=search [delete]=history list</div><div class="line"></div><div class="line">Pico</div><div class="line">	^G Get Help  ^O Writeout  ^R Read File</div><div class="line">  ^X Exit      ^J Justify   ^W Where is</div><div class="line"></div><div class="line">WordStar</div><div class="line">	    --Cursor Movement--     | -Delete-</div><div class="line">^S char left ^D char right    |^G char</div><div class="line">^A word left ^F word right    |DEL chr lf</div><div class="line">^E line up   ^X line down     | ^T word rt</div><div class="line">      --Scrolling–-           |^Y line</div><div class="line">^Z line down ^W line up       |</div><div class="line">^C screen up ^R screen down   |</div></pre></td></tr></table></figure>
-</code></pre><h2 id="Bahasa-Alami-di-dalam-komputer"><a href="#Bahasa-Alami-di-dalam-komputer" class="headerlink" title="Bahasa Alami di dalam komputer"></a>Bahasa Alami di dalam komputer</h2><ul>
-<li>Natural-language interaction<br>Operasi komputer menggunakan bahasa alami manusia (mis. Inggris) untuk memberi instruksi dan menerima respons.</li>
-<li>Natural-language queries<br>Operasi pada database relasional.<br>Masih lebih buruk daripada SQL.<br>Contoh: INTELLECT, Symantec Q&amp;A.</li>
-<li>Text-database searching<br>Untuk mencari database tekstual.<br>Contoh: Ask Jeeves (ask.com).</li>
-<li>Natural-language text generation<br>Digunakan untuk laporan (mis. Prakiraan cuaca, laboratorium medis).<br>Di sisi artistik dapat menghasilkan puisi dan novel.</li>
-<li>Adventure and educational games<br>Pemakai menyatakan gerakan dan perintah dengan bahasa alami.<br>Menarik karena sistem tak dapat diramalkan dan perlu dijelajahi.</li>
-</ul>
-<h2 id="Pedoman-bahasa-perintah"><a href="#Pedoman-bahasa-perintah" class="headerlink" title="Pedoman bahasa perintah"></a>Pedoman bahasa perintah</h2><ul>
-<li>Buat model objek dan aksi yang eksplisit.</li>
-<li>Pilih nama yang berarti, spesifik, dan dapat dibedakan.</li>
-<li>Coba mencapai struktur hierarkis.</li>
-<li>Gunakan struktur yang konsisten (hierarki, urutan argumen, aksi-objek).</li>
-<li>Dukung aturan penyingkatan yang konsisten.</li>
-<li>Berikan kemampuan membuat makro bagi frequent users.</li>
-<li>Pertimbangkan menu perintah pada tampilan berkecepatan tinggi.</li>
-<li>Batasi jumlah perintah dan cara melakukan tugas.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ui-ux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Menu]]></title>
-      <url>http://ciazhar.github.io/2017/03/19/kuliah/imk/ui-ux_menu/</url>
-      <content type="html"><![CDATA[<p><img src="/images/ui-ux/Ui-Ux.jpg" alt=""></p>
-<h2 id="Pengertian-Menu"><a href="#Pengertian-Menu" class="headerlink" title="Pengertian Menu"></a>Pengertian Menu</h2><p>Menu adalah suatu penyajian petunjuk yang sudah di tentukan untuk memudahkan user.</p>
-<h2 id="Tujuan-Menu"><a href="#Tujuan-Menu" class="headerlink" title="Tujuan Menu"></a>Tujuan Menu</h2><p>Memudahkan user dalam mengoperasikan suatu sistem yang mudah diingat dan dipahami.</p>
-<h2 id="Kelebihan-Menu"><a href="#Kelebihan-Menu" class="headerlink" title="Kelebihan Menu"></a>Kelebihan Menu</h2><ul>
-<li>Memudahkan bagi pengguna baru/tidak ahli</li>
-<li>Memungkinkan explorasi (pengguna bisa melihat menu untuk perintah lainnya yang cocok)</li>
-<li>Menginstruksikan pengambilan keputusan bagi pengguna</li>
-<li>Adanya penanganan kesalahan yang mudah (tidak perlu di-parsed sepeti halnya command entry)</li>
-<li>Pengguna tidak perlu mengingat item yang diinginkan</li>
-</ul>
-<h2 id="Kekurangan-Menu"><a href="#Kekurangan-Menu" class="headerlink" title="Kekurangan Menu"></a>Kekurangan Menu</h2><ul>
-<li>Tidak cocok untuk tampilan grafis kecil</li>
-<li>Cukup lambat bagi pengguna ahli/usser yang sering memakai sistem</li>
-<li>Terlalu banyak menu menyebabkan overload informasi</li>
-</ul>
-<h2 id="Tipe-Tipe-Menu"><a href="#Tipe-Tipe-Menu" class="headerlink" title="Tipe Tipe Menu"></a>Tipe Tipe Menu</h2><p>Ada 2 macam tipe menu berdasarkan banyaknya sub menu pada suatu menu yaitu :</p>
-<ul>
-<li>Single Menu</li>
-<li>Multiple Combination Menu</li>
-</ul>
-<h3 id="Single-Menu"><a href="#Single-Menu" class="headerlink" title="Single Menu"></a>Single Menu</h3><h5 id="Pengertian"><a href="#Pengertian" class="headerlink" title="Pengertian"></a>Pengertian</h5><p>Single menu adalah menu yang berdiri secara independen tidak mempengaruhi yang lainnya.</p>
-<h5 id="Macam-macam"><a href="#Macam-macam" class="headerlink" title="Macam-macam"></a>Macam-macam</h5><h6 id="Binary-Menu"><a href="#Binary-Menu" class="headerlink" title="Binary Menu"></a>Binary Menu</h6><p><img src="/images/ui-ux/menu/binary-menu.png" alt=""><br>Menu yang terdiri dari dua pilihan.</p>
-<h6 id="Multiple-Item"><a href="#Multiple-Item" class="headerlink" title="Multiple Item"></a>Multiple Item</h6><p><img src="/images/ui-ux/menu/multiple-item.png" alt=""><br>Single menu yang mempunyai pilihan lebih dari dua</p>
-<h6 id="Multiple-Selection"><a href="#Multiple-Selection" class="headerlink" title="Multiple Selection"></a>Multiple Selection</h6><p><img src="/images/ui-ux/menu/multiple-selection.png" alt=""><br>Variasi dari single menu yang memungkinkan user untuk memilih lebih dari satu pilihan yang di berikan.</p>
-<h6 id="Pull-Down-dan-Pop-Up"><a href="#Pull-Down-dan-Pop-Up" class="headerlink" title="Pull Down dan Pop Up"></a>Pull Down dan Pop Up</h6><p><img src="/images/ui-ux/menu/pull-down-dan-pop-up.png" alt=""><br>Pull Down biasanya tersedia pada bagian atas menu bar sedangkan Pop Up keluar dari respon terhadap aksi pengguna</p>
-<h6 id="Scrolling"><a href="#Scrolling" class="headerlink" title="Scrolling"></a>Scrolling</h6><p><img src="/images/ui-ux/menu/scrolling.png" alt=""><br>Scrolling dan 2 dimensional menu yaitu menu dengan item list yang banyak sehingga beralasan untuk ditampilkan</p>
-<h6 id="Alphasliders"><a href="#Alphasliders" class="headerlink" title="Alphasliders"></a>Alphasliders</h6><p><img src="/images/ui-ux/menu/alphasliders.png" alt=""><br>Alphasliders menggunakan multiple level granularity pada pergerakan slider-nya atau scroll box. Alphaslider bisa mendukung untuk penggunakan menu dengan jumlah item yang banyak.</p>
-<h6 id="Embedded-Links"><a href="#Embedded-Links" class="headerlink" title="Embedded Links"></a>Embedded Links</h6><p><img src="/images/ui-ux/menu/embedded-links.png" alt=""><br>Merupakan menu dimana itemnya ditanamkan dalam bentuk teks dan grafik yang bisa ditekan atau dipilih</p>
-<h6 id="Iconic-Menu"><a href="#Iconic-Menu" class="headerlink" title="Iconic Menu"></a>Iconic Menu</h6><p><img src="/images/ui-ux/menu/iconic-menu.png" alt=""><br>Toolbars, atau palletes menu merupakan menu yang menawarkan banyak aksi yang bisa dipilih oleh pengguna dengan menekan untuk menampilkan.</p>
-<h3 id="Multiple-Combination-Menu"><a href="#Multiple-Combination-Menu" class="headerlink" title="Multiple Combination Menu"></a>Multiple Combination Menu</h3><h6 id="Tree-Structured-Menus"><a href="#Tree-Structured-Menus" class="headerlink" title="Tree Structured Menus"></a>Tree Structured Menus</h6><p><img src="/images/ui-ux/menu/tree-structured-menus.png" alt=""><br>Membagi menu-menu dalam berbagai kelompok sehingga user tidak bingung.</p>
-<h6 id="Linear-Sequence"><a href="#Linear-Sequence" class="headerlink" title="Linear Sequence"></a>Linear Sequence</h6><p><img src="/images/ui-ux/menu/linier-sequence.png" alt=""><br>Berfungsi untuk memudahkan user membuat suatu pilihan yang kompleks dan berguna untuk novice user (pemula).</p>
-<h6 id="Simultaneous-menus"><a href="#Simultaneous-menus" class="headerlink" title="Simultaneous menus"></a>Simultaneous menus</h6><p><img src="/images/ui-ux/menu/simultaneus-menu.png" alt=""><br>Memberikan semua pilihan yang mungkin secara bersamaan dan memperbolehkan user untuk memasukkan pilihan secara sembarang.</p>
-<h6 id="Menu-Maps"><a href="#Menu-Maps" class="headerlink" title="Menu Maps"></a>Menu Maps</h6><p><img src="/images/ui-ux/menu/menu-maps.png" alt=""><br>Memperlihatkan semua menu yang ada. Berfungsi suntuk membantu user agar tidak bingung dengan menu yang ada.</p>
-<h6 id="Cyclic-Network"><a href="#Cyclic-Network" class="headerlink" title="Cyclic Network"></a>Cyclic Network</h6><p><img src="/images/ui-ux/menu/cyclic-network-menu.png" alt=""><br>Tipe menu yang dapat bercabang-cabang dan dapat kembali ke menu utama atau menu sebelumnya</p>
-<h6 id="Acyclic-Network"><a href="#Acyclic-Network" class="headerlink" title="Acyclic Network"></a>Acyclic Network</h6><p><img src="/images/ui-ux/menu/acyclic-network-menu.png" alt=""><br>Tipe menu yang dapat bercabang-cabang dan setiap menu dapat ditempu dengan beberapa cara namun tidak dapat kembali ke menu utama atau menu sebelumnya.</p>
-<h2 id="Petunjuk-Pembuatan-Menu"><a href="#Petunjuk-Pembuatan-Menu" class="headerlink" title="Petunjuk Pembuatan Menu"></a>Petunjuk Pembuatan Menu</h2><p>Guidelines untuk menu :</p>
-<ul>
-<li>Organisasikan menu berdasarkan jenis pekerjaan</li>
-<li>Lebih cenderung pada broad – shallow daripada narrow – deep</li>
-<li>Perlihatkan posisi dengan grafik, angka, ataupun judul</li>
-<li>Gunakan items sebagai judul untuk subtrees</li>
-<li>Pengelompokkan item harus memiliki arti</li>
-<li>Pembuatan urut – urutan item harus memiliki arti</li>
-<li>Gunakan kalimat singkat (keyword)</li>
-<li>Perhatikan konsistensi grammar, layout, dan terminologi</li>
-<li>Sediakan shortcut</li>
-<li>Perbolehkan user untuk langsung kembali ke menu sebelumnya dan main menu</li>
-<li>Pertimbangkan online help, response time, display rate, dan ukuran layar</li>
-</ul>
-<p>Hal-hal Yang Harus Diperhatikan Dalam Menu Layout:</p>
-<ul>
-<li>Judul</li>
-<li>Layout dan design(ukuran layar, display rate, character set dan teknik highlighting)</li>
-<li>Konsistensi (judul, penempatan item, intruksi, pesan kesalahan dan laporan status)</li>
-<li>Teknik (identasi, huruf besar/kecil,simbol,penanda posisi,cascading menu, magic lens)</li>
-</ul>
-<p>Pengaturan konten dapat dilakukan dengan memperhatikan hal-hal berikut:<br>● Mengelompokkan suatu pekerjaan yang sama kedalam satu kategori<br>● Membuat menu dengan berurutan, urutan bisa didasarkan pada waktu, nomor urutan dan lain-lain</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Teknologi </category>
-            
-            <category> Interaksi Manusia dan Komputer </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> ui-ux </tag>
-            
-        </tags>
         
     </entry>
     
