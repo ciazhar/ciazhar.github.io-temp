@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Template Engine Thymeleaf | ciazhar</title>
+    <title>Cloud Foundry | ciazhar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Layout dengan Thymeleaf  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita">
+    <meta name="description" content="Definisi Cloud FoundryCloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan unt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Template Engine Thymeleaf">
-<meta property="og:url" content="http://ciazhar.github.io/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/index.html">
+<meta property="og:title" content="Cloud Foundry">
+<meta property="og:url" content="http://ciazhar.github.io/2017/08/21/pemrograman/devops/cloud-foundry/cloud-foundry-intro/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Layout dengan Thymeleaf  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita">
-<meta property="og:image" content="https://elasticbeanstalk-us-east-1-851518566978.s3.amazonaws.com/permanentImages/7b60f151-9302-45bf-bd74-06b0e736bc55.png">
-<meta property="og:updated_time" content="2017-06-19T03:56:46.429Z">
+<meta property="og:description" content="Definisi Cloud FoundryCloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan unt">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/CloudFoundryCorp_vertical.svg/1280px-CloudFoundryCorp_vertical.svg.png">
+<meta property="og:updated_time" content="2017-11-23T16:07:25.511Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Template Engine Thymeleaf">
-<meta name="twitter:description" content="Layout dengan Thymeleaf  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita">
-<meta name="twitter:image" content="https://elasticbeanstalk-us-east-1-851518566978.s3.amazonaws.com/permanentImages/7b60f151-9302-45bf-bd74-06b0e736bc55.png">
+<meta name="twitter:title" content="Cloud Foundry">
+<meta name="twitter:description" content="Definisi Cloud FoundryCloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan unt">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/CloudFoundryCorp_vertical.svg/1280px-CloudFoundryCorp_vertical.svg.png">
     
 
     
@@ -129,18 +129,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Pemrograman/Spring/">Spring</a>
+    belum terkategori
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-pemrograman/spring/template-engine/layout-dengan-thymeleaf" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-pemrograman/devops/cloud-foundry/cloud-foundry-intro" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Template Engine Thymeleaf
+        Cloud Foundry
         </h1>
     
 
@@ -150,8 +150,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/" class="article-date">
-            <time datetime="2017-04-23T07:17:38.000Z" itemprop="datePublished">2017-04-23</time>
+        <a href="/2017/08/21/pemrograman/devops/cloud-foundry/cloud-foundry-intro/" class="article-date">
+            <time datetime="2017-08-21T10:22:41.000Z" itemprop="datePublished">2017-08-21</time>
         </a>
     </div>
 
@@ -160,23 +160,29 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="https://elasticbeanstalk-us-east-1-851518566978.s3.amazonaws.com/permanentImages/7b60f151-9302-45bf-bd74-06b0e736bc55.png" alt=""></p>
-<h1 id="Layout-dengan-Thymeleaf"><a href="#Layout-dengan-Thymeleaf" class="headerlink" title="Layout dengan Thymeleaf"></a>Layout dengan Thymeleaf</h1><p>  Thymeleaf adalah template engine untuk JVM. Dia support HTMl, XML, TEXT, CSS, JS, dan RAW. Thymeleaf emmpunya kemampuan yang dikenal dengan Natural Template yaitu dimana kita dapat membuat 2 buah value yang sama. Hal ini mempermudah antara designer dan programer agar dapat bekerja bersama. Ketika value dari backed belum ada designer dapat menggunakan value html.<br>    <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"userName"</span> <span class="attr">value</span>=<span class="string">"James Carrot"</span> <span class="attr">th:value</span>=<span class="string">"$&#123;user.name&#125;"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="Menggunakan-Thymeleaf"><a href="#Menggunakan-Thymeleaf" class="headerlink" title="Menggunakan Thymeleaf"></a>Menggunakan Thymeleaf</h1><p>  Tambahkan xmlns dibawah ini pada tag html<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns:th</span>=<span class="string">"http://www.thymeleaf.org"</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="Expression-di-Thymeleaf"><a href="#Expression-di-Thymeleaf" class="headerlink" title="Expression di Thymeleaf"></a>Expression di Thymeleaf</h1><ul>
-<li><p>Menampilkan pesan menggunakan <code>#{}</code><br>Contoh Menampilkan nama user yang sedang online</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">th:utext</span>=<span class="string">"#&#123;home.welcome($&#123;session.user.name&#125;)&#125;"</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Menampilkan variabel menggunakan <code>${}</code><br>contoh menggunakan th:each:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">th:each</span>=<span class="string">"pesertas : $&#123;peserta&#125;"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">th:text</span>=<span class="string">"$&#123;pesertas.nama&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">th:text</span>=<span class="string">"$&#123;pesertas.email&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span> <span class="attr">th:text</span>=<span class="string">"$&#123;pesertas.noHp&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"$&#123;'/peserta/edit/'+pesertas.id&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-edit"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"$&#123;'/peserta/hapus/'+pesertas.id&#125;"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-remove"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>Menampilkan link url menggunakan <code>@{}</code>.<br>Contoh url dapat berasal dari mapping controller :</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/peserta&#125;"</span>&gt;</span>Daftar Peserta<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Contoh url dapat berasal dari default folder :</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">th:href</span>=<span class="string">"@&#123;/css/bootstrap.min.css&#125;"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> /&gt;</span></div></pre></td></tr></table></figure>
-</li>
+            <p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/CloudFoundryCorp_vertical.svg/1280px-CloudFoundryCorp_vertical.svg.png" alt=""></p>
+<h1 id="Definisi-Cloud-Foundry"><a href="#Definisi-Cloud-Foundry" class="headerlink" title="Definisi Cloud Foundry"></a>Definisi Cloud Foundry</h1><p>Cloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan untuk mendeploy aplikasi kita ke cloud. </p>
+<p>Perbedaan Traditional IT, Infrastructure as a Service (IaaS), Platform as a Service (PaaS) dan Software as a Service (SaaS).</p>
+<h1 id="Deploy-aplikasi-ke-Pivotal-Cloud-Foundry"><a href="#Deploy-aplikasi-ke-Pivotal-Cloud-Foundry" class="headerlink" title="Deploy aplikasi ke Pivotal Cloud Foundry"></a>Deploy aplikasi ke Pivotal Cloud Foundry</h1><p>##1. Install Cloud Foundry CLI<br>Kunjungi <a href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html" target="_blank" rel="external">tautan berikut</a> untuk totorial bagaimana menginstall Cloud Foundry CLI.</p>
+<p>##2. Login ke pivotal API</p>
+<ul>
+<li>Gunakan command <code>cf login -a api.run.pivotal.io</code> pada command line untuk login.</li>
+<li>Kemudian anda akan diminta memasukkan email dan password</li>
+<li>Kemudian pilih space mana yang akan anda gunakan</li>
 </ul>
-<h2 id="Template-Inheritance"><a href="#Template-Inheritance" class="headerlink" title="Template Inheritance"></a>Template Inheritance</h2><p>  Template Inheritance dapat menggunakan<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">layout:fragment</span>=<span class="string">"content"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>##3. Buat file konfgurasi<br>Buat file bernama manifest.yml dan simpan di bagian terluar project anda. Berikut isi dari file tersebut :<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">applications:</span></div><div class="line"><span class="attr">- name:</span> <span class="string">spring-boot-cloud-foundry</span></div><div class="line"><span class="attr">  path:</span> <span class="string">target/spring-boot.jar</span></div><div class="line"><span class="attr">  domain:</span> <span class="string">cfapps.io</span></div><div class="line"><span class="attr">  memory:</span> <span class="number">512</span><span class="string">m</span></div><div class="line"><span class="attr">  instance:</span> <span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>Keterangan :</p>
+<ul>
+<li>name : nama aplikasi</li>
+<li>path : letak file hasil kompilasi berada</li>
+<li>domain : domain aplikasi</li>
+<li>memory : memory aplikasi</li>
+<li>instance : jumlah instance/replikasi aplikasi</li>
+</ul>
+<p>##4. Push ke Cloud Foundry<br>Gunakan perintah <code>cf push</code> pada terminal untuk melakukan push aplikasi ke cloud foundry.</p>
+<p>Kemudian akan terlihat log. Tunggu beberapa saat sampai aplikasi anda terdeploy.</p>
+<p>##5. Mengubah Konfigurasi Service<br>Gunakn perintah <code>cf update-service nama-service -c &#39;konfigurasinya&#39;</code><br>Contoh :<br><code>cf update-service config-server -c &#39;{&quot;git&quot;: { &quot;uri&quot;: &quot;http://example.com/config&quot; } }&#39;</code></p>
+<h2 id="Login-ke-servic-mysql"><a href="#Login-ke-servic-mysql" class="headerlink" title="Login ke servic mysql"></a>Login ke servic mysql</h2><p>mysql -u b42da3b446621e -pd66fa990 -h us-cdbr-iron-east-05.cleardb.net ad_a2227b61d61fce9</p>
 
         </div>
         <footer class="article-footer">
@@ -184,7 +190,7 @@
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/" data-id="cj8yih3ct002zyilp8iwd61t8" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/08/21/pemrograman/devops/cloud-foundry/cloud-foundry-intro/" data-id="cjaco8wdl00009dlpxa2lj4sb" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -298,20 +304,20 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/04/23/pemrograman/spring/report/jasper-report/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/08/28/linux/command-linux/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih baru</strong>
         <p class="article-nav-title">
         
-            Membuat Report dengan Jasper Report
+            Command Command pada Linux
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2017/04/23/pemrograman/spring/security/1-otorisasi-login-dengan-spring-security/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/08/20/pemrograman/spring/microservice/distibused-tracing-sleuth/sleuth-for-distribused-tracing/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">lebih lawas</strong>
-        <p class="article-nav-title">Otorisasi Login dengan spring security</p>
+        <p class="article-nav-title">Melakukan Tracing antar Microservice menggunakan Netflix Sleuth</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -511,7 +517,7 @@
     var disqus_shortname = 'true';
     
     
-    var disqus_url = 'http://ciazhar.github.io/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/';
+    var disqus_url = 'http://ciazhar.github.io/2017/08/21/pemrograman/devops/cloud-foundry/cloud-foundry-intro/';
     
     (function() {
     var dsq = document.createElement('script');

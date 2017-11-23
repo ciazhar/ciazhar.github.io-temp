@@ -6,7 +6,8 @@
     <entry>
       <title><![CDATA[Membuat Launcher di Linux]]></title>
       <url>http://ciazhar.github.io/2017/10/15/linux/membuat-laucher-di-linux/</url>
-      <content type="html"><![CDATA[<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Terdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :</p>
+      <content type="html"><![CDATA[<p><img src="/images/linux.jpg" alt=""></p>
+<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Terdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :</p>
 <ul>
 <li>Menggunakan <code>apt install</code> pada terminal</li>
 <li>Menggunakan executable file dengan ektensi seperti <code>.deb</code>, <code>.rpm</code> / <code>.sh</code></li>
@@ -46,48 +47,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[two-activity]]></title>
-      <url>http://ciazhar.github.io/2017/09/19/pemrograman/android/two-activity/</url>
-      <content type="html"><![CDATA[<h3 id="Modal"><a href="#Modal" class="headerlink" title="Modal"></a>Modal</h3><ul>
-<li>Relative View</li>
-<li>Text View</li>
-<li>Button</li>
-<li>Edit Text</li>
-</ul>
-<h3 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h3><ul>
-<li>Parent Activity</li>
-<li>Intent</li>
-</ul>
-<h3 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h3><p>Kita akan membuat 2 acivity yang saling berinteraksi. Dua activity tersebut adalah <code>MainActivity</code> yang difungsikan sebagai activity utama/parent dan <code>SecondActivity</code> yang difungsikan sebagai activity child. Nantinya MainActivity akan mengakses ke SecondActivity menggunakan Button. Pada SecondActovity akan terdapat tombol kembali atau <code>&lt;-</code> yang menuju ke MainActivity.</p>
-<h3 id="Step"><a href="#Step" class="headerlink" title="Step"></a>Step</h3><ul>
-<li>Membuat MainActivity<ul>
-<li>Relative View(activity_second.xml)</li>
-<li>Button(activity_second.xml)</li>
-</ul>
-</li>
-<li><p>Membuat SecondActivity</p>
+      <title><![CDATA[Testing in Spring Framework]]></title>
+      <url>http://ciazhar.github.io/2017/09/17/pemrograman/spring/test/test/</url>
+      <content type="html"><![CDATA[<p><img src="/images/spring-boot-banner.png" alt=""></p>
 <ul>
-<li>Relative View(activity_second.xml)</li>
-<li>Text View(activity_second.xml)</li>
-<li>Konfigurasi Parent Activity (manifest.xml)  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=&quot;.SecondActivity&quot;</div><div class="line">    android:label=&quot;@string/SecondActivity&quot;</div><div class="line">    android:parentActivityName=&quot;.MainActivity&quot;</div><div class="line">    &gt;</div><div class="line">    &lt;meta-data</div><div class="line">        android:name=&quot;android.support.PARENT_ACTIVITY&quot;</div><div class="line">        android:value=&quot;.MainActivity&quot;</div><div class="line">        /&gt;</div><div class="line">&lt;/activity&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Membuat intent untuk menghubungkan MainActivity ke SecondActivity</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun launchSecondActivity(view: View) &#123;</div><div class="line">    Log.d(LOG_TAG, &quot;Button Clicked&quot;)</div><div class="line">    val intent = Intent(this, SecondActivity::class.java)</div><div class="line">    startActivity(intent)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>Menambahkan edit text untuk input</p>
-</li>
-</ul>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[test]]></title>
-      <url>http://ciazhar.github.io/2017/09/17/pemrograman/spring/test/</url>
-      <content type="html"><![CDATA[<ul>
 <li>buat class test pada rest dari class controller</li>
 <li>tambahkan anotasi <code>@RunWith(SpringJUnit4ClassRunner::class)</code></li>
 <li><code>private val productController : ProductController ?= null</code></li>
@@ -99,63 +62,32 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Debug JVM using JVisual VM]]></title>
-      <url>http://ciazhar.github.io/2017/09/03/jvisual-vm/</url>
-      <content type="html"></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[security]]></title>
-      <url>http://ciazhar.github.io/2017/08/28/pemrograman/vertx/security/</url>
-      <content type="html"><![CDATA[<h1 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Router router = Router.router(vertx);</div><div class="line"></div><div class="line">    router.route().handler(CookieHandler.create());</div><div class="line">    router.route().handler(SessionHandler</div><div class="line">        .create(LocalSessionStore.create(vertx))</div><div class="line">        .setCookieHttpOnlyFlag(true)</div><div class="line">        .setCookieSecureFlag(true)</div><div class="line">    );</div><div class="line"></div><div class="line">    router.route().handler(routingContext -&gt; &#123;</div><div class="line"></div><div class="line">      Session session = routingContext.session();</div><div class="line"></div><div class="line">      Integer cnt = session.get(&quot;hitcount&quot;);</div><div class="line">      cnt = (cnt == null ? 0 : cnt) + 1;</div><div class="line"></div><div class="line">      session.put(&quot;hitcount&quot;, cnt);</div><div class="line"></div><div class="line">      routingContext.response().end(&quot;Hitcount: &quot; + cnt);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    vertx.createHttpServer().requestHandler(router::accept).listen(8080);</div></pre></td></tr></table></figure>
-<h1 id="Security-Header"><a href="#Security-Header" class="headerlink" title="Security Header"></a>Security Header</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">public class App extends AbstractVerticle &#123;</div><div class="line"></div><div class="line">  @Override</div><div class="line">  public void start() &#123;</div><div class="line"></div><div class="line">    Router router = Router.router(vertx);</div><div class="line">    router.route().handler(ctx -&gt; &#123;</div><div class="line">      ctx.response()</div><div class="line">          // do not allow proxies to cache the data</div><div class="line">          .putHeader(&quot;Cache-Control&quot;, &quot;no-store, no-cache&quot;)</div><div class="line">          // prevents Internet Explorer from MIME - sniffing a</div><div class="line">          // response away from the declared content-type</div><div class="line">          .putHeader(&quot;X-Content-Type-Options&quot;, &quot;nosniff&quot;)</div><div class="line">          // Strict HTTPS (for about ~6Months)</div><div class="line">          .putHeader(&quot;Strict-Transport-Security&quot;, &quot;max-age=&quot; + 15768000)</div><div class="line">          // IE8+ do not allow opening of attachments in the context of this resource</div><div class="line">          .putHeader(&quot;X-Download-Options&quot;, &quot;noopen&quot;)</div><div class="line">          // enable XSS for IE</div><div class="line">          .putHeader(&quot;X-XSS-Protection&quot;, &quot;1; mode=block&quot;)</div><div class="line">          // deny frames</div><div class="line">          .putHeader(&quot;X-FRAME-OPTIONS&quot;, &quot;DENY&quot;);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    vertx.createHttpServer().requestHandler(router::accept).listen(8080);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="CSFR"><a href="#CSFR" class="headerlink" title="CSFR"></a>CSFR</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class App extends AbstractVerticle &#123;</div><div class="line"></div><div class="line">  @Override</div><div class="line">  public void start() &#123;</div><div class="line"></div><div class="line">    Router router = Router.router(vertx);</div><div class="line"></div><div class="line">    router.route().handler(CookieHandler.create());</div><div class="line">    router.route().handler(SessionHandler</div><div class="line">        .create(LocalSessionStore.create(vertx))</div><div class="line">        .setCookieSecureFlag(true)</div><div class="line">    );</div><div class="line">    router.route().handler(CSRFHandler.create(&quot;not a good secret&quot;));</div><div class="line"></div><div class="line">    router.route().handler(ctx -&gt; &#123;</div><div class="line">      ...</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
-<h1 id="Limit-Upload"><a href="#Limit-Upload" class="headerlink" title="Limit Upload"></a>Limit Upload</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class App extends AbstractVerticle &#123;</div><div class="line"></div><div class="line">  private static final int KB = 1024;</div><div class="line">  private static final int MB = 1024 * KB;</div><div class="line"></div><div class="line">  @Override</div><div class="line">  public void start() &#123;</div><div class="line"></div><div class="line">    Router router = Router.router(vertx);</div><div class="line">    router.route().handler(BodyHandler.create().setBodyLimit(50 * MB));</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[config-port]]></title>
-      <url>http://ciazhar.github.io/2017/08/28/pemrograman/vertx/config-port/</url>
-      <content type="html"><![CDATA[<p><a href="http://vertx.io/blog/vert-x-application-configuration/" target="_blank" rel="external">http://vertx.io/blog/vert-x-application-configuration/</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[command-linux]]></title>
+      <title><![CDATA[Command Command pada Linux]]></title>
       <url>http://ciazhar.github.io/2017/08/28/linux/command-linux/</url>
-      <content type="html"><![CDATA[<h1 id="Mengatur-PATH-environment-variable-di-Linux"><a href="#Mengatur-PATH-environment-variable-di-Linux" class="headerlink" title="Mengatur PATH environment variable di Linux"></a>Mengatur PATH environment variable di Linux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/bin</div><div class="line">sudo ln -s /path/to/binary binary-name</div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<p><img src="/images/linux.jpg" alt=""></p>
+<h1 id="Mengatur-PATH-environment-variable-di-Linux"><a href="#Mengatur-PATH-environment-variable-di-Linux" class="headerlink" title="Mengatur PATH environment variable di Linux"></a>Mengatur PATH environment variable di Linux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/bin</div><div class="line">sudo ln -s /path/to/binary binary-name</div></pre></td></tr></table></figure>
 ]]></content>
       
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
         
-    </entry>
-    
-    <entry>
-      <title><![CDATA[vertx]]></title>
-      <url>http://ciazhar.github.io/2017/08/27/pemrograman/vertx/vertx/</url>
-      <content type="html"><![CDATA[<h1 id="Membuat-project-vertx"><a href="#Membuat-project-vertx" class="headerlink" title="Membuat project vertx"></a>Membuat project vertx</h1><p>Struktur folder<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── pom.xml</div><div class="line">├── src</div><div class="line">│   └── main</div><div class="line">│       └── kotlin</div><div class="line">├── target</div></pre></td></tr></table></figure></p>
-<p>pom.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></div><div class="line">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></div><div class="line">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.ciazhar<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-rest<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>vertx-rest<span class="tag">&lt;/<span class="name">name</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>properties<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">main.verticle</span>&gt;</span>com.ciazhar.vertx.rest.MainVerticle<span class="tag">&lt;/<span class="name">main.verticle</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">vertx.version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">vertx.version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>dependency<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.vertx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;vertx.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.vertx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-lang-kotlin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;vertx.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>build<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">&lt;build&gt;</div><div class="line">    &lt;pluginManagement&gt;</div><div class="line">      &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">          &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div><div class="line">          &lt;version&gt;3.1&lt;/version&gt;</div><div class="line">          &lt;configuration&gt;</div><div class="line">            &lt;source&gt;1.8&lt;/source&gt;</div><div class="line">            &lt;target&gt;1.8&lt;/target&gt;</div><div class="line">          &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">          &lt;artifactId&gt;kotlin-maven-plugin&lt;/artifactId&gt;</div><div class="line">          &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;</div><div class="line">          &lt;version&gt;1.1.0&lt;/version&gt;</div><div class="line">          &lt;executions&gt;</div><div class="line">            &lt;execution&gt;</div><div class="line">              &lt;id&gt;compile&lt;/id&gt;</div><div class="line">              &lt;goals&gt; &lt;goal&gt;compile&lt;/goal&gt; &lt;/goals&gt;</div><div class="line">              &lt;configuration&gt;</div><div class="line">                &lt;sourceDirs&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/main/kotlin&lt;/sourceDir&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/main/java&lt;/sourceDir&gt;</div><div class="line">                &lt;/sourceDirs&gt;</div><div class="line">              &lt;/configuration&gt;</div><div class="line">            &lt;/execution&gt;</div><div class="line">            &lt;execution&gt;</div><div class="line">              &lt;id&gt;test-compile&lt;/id&gt;</div><div class="line">              &lt;goals&gt; &lt;goal&gt;test-compile&lt;/goal&gt; &lt;/goals&gt;</div><div class="line">              &lt;configuration&gt;</div><div class="line">                &lt;sourceDirs&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/test/kotlin&lt;/sourceDir&gt;</div><div class="line">                  &lt;sourceDir&gt;$&#123;project.basedir&#125;/src/test/java&lt;/sourceDir&gt;</div><div class="line">                &lt;/sourceDirs&gt;</div><div class="line">              &lt;/configuration&gt;</div><div class="line">            &lt;/execution&gt;</div><div class="line">          &lt;/executions&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">      &lt;/plugins&gt;</div><div class="line">    &lt;/pluginManagement&gt;</div><div class="line"></div><div class="line">    &lt;plugins&gt;</div><div class="line">      &lt;plugin&gt;</div><div class="line">        &lt;artifactId&gt;kotlin-maven-plugin&lt;/artifactId&gt;</div><div class="line">        &lt;groupId&gt;org.jetbrains.kotlin&lt;/groupId&gt;</div><div class="line">      &lt;/plugin&gt;</div><div class="line">      &lt;plugin&gt;</div><div class="line">        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;</div><div class="line">        &lt;version&gt;2.3&lt;/version&gt;</div><div class="line">        &lt;executions&gt;</div><div class="line">          &lt;execution&gt;</div><div class="line">            &lt;phase&gt;package&lt;/phase&gt;</div><div class="line">            &lt;goals&gt;</div><div class="line">              &lt;goal&gt;shade&lt;/goal&gt;</div><div class="line">            &lt;/goals&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">              &lt;transformers&gt;</div><div class="line">                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&quot;&gt;</div><div class="line">                  &lt;manifestEntries&gt;</div><div class="line">                    &lt;Main-Class&gt;io.vertx.core.Launcher&lt;/Main-Class&gt;</div><div class="line">                    &lt;Main-Verticle&gt;$&#123;main.verticle&#125;&lt;/Main-Verticle&gt;</div><div class="line">                  &lt;/manifestEntries&gt;</div><div class="line">                &lt;/transformer&gt;</div><div class="line">                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.AppendingTransformer&quot;&gt;</div><div class="line">                  &lt;resource&gt;META-INF/services/io.vertx.core.spi.VerticleFactory&lt;/resource&gt;</div><div class="line">                &lt;/transformer&gt;</div><div class="line">              &lt;/transformers&gt;</div><div class="line">              &lt;artifactSet&gt;</div><div class="line">              &lt;/artifactSet&gt;</div><div class="line">              &lt;outputFile&gt;$&#123;project.build.directory&#125;/$&#123;project.artifactId&#125;-$&#123;project.version&#125;-fat.jar&lt;/outputFile&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">          &lt;/execution&gt;</div><div class="line">        &lt;/executions&gt;</div><div class="line">      &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">  &lt;/build&gt;</div></pre></td></tr></table></figure></p>
-<p>simple verticle<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> vertx</div><div class="line"></div><div class="line"><span class="keyword">import</span> io.vertx.core.AbstractVerticle</div><div class="line"><span class="keyword">import</span> io.vertx.core.Future</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainVerticle</span> : <span class="type">AbstractVerticle</span></span>() &#123;</div><div class="line"></div><div class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">start</span><span class="params">(future: <span class="type">Future</span>&lt;<span class="type">Void</span>&gt;)</span></span> &#123;</div><div class="line">    vertx</div><div class="line">      .createHttpServer()</div><div class="line">      .requestHandler(&#123;</div><div class="line">          req -&gt; req</div><div class="line">              .response()</div><div class="line">              .putHeader(<span class="string">"content-type"</span>, <span class="string">"text/plain"</span>)</div><div class="line">              .end(<span class="string">"Hello from Vert.x!"</span>)</div><div class="line">      &#125;)</div><div class="line">      .listen(<span class="number">8080</span>,&#123;</div><div class="line">          result -&gt;</div><div class="line">          <span class="keyword">if</span>(result.succeeded())&#123;</div><div class="line">              future.complete()</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">else</span>&#123;</div><div class="line">              future.fail(result.cause())</div><div class="line">          &#125;</div><div class="line">      &#125;)</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h1><p>dependency<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.vertx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>vertx-unit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>test<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">@RunWith(VertxUnitRunner.class)</div><div class="line">public class MyFirstVerticleTest &#123;</div><div class="line"></div><div class="line">  private Vertx vertx;</div><div class="line"></div><div class="line">  @Before</div><div class="line">  public void setUp(TestContext context) &#123;</div><div class="line">    vertx = Vertx.vertx();</div><div class="line">    vertx.deployVerticle(MyFirstVerticle.class.getName(),</div><div class="line">        context.asyncAssertSuccess());</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @After</div><div class="line">  public void tearDown(TestContext context) &#123;</div><div class="line">    vertx.close(context.asyncAssertSuccess());</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  @Test</div><div class="line">  public void testMyApplication(TestContext context) &#123;</div><div class="line">    final Async async = context.async();</div><div class="line"></div><div class="line">    vertx.createHttpClient().getNow(8080, &quot;localhost&quot;, &quot;/&quot;,</div><div class="line">     response -&gt; &#123;</div><div class="line">      response.handler(body -&gt; &#123;</div><div class="line">        context.assertTrue(body.toString().contains(&quot;Hello&quot;));</div><div class="line">        async.complete();</div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-]]></content>
-      
+        
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
         
     </entry>
     
     <entry>
       <title><![CDATA[Cloud Foundry]]></title>
-      <url>http://ciazhar.github.io/2017/08/21/pemrograman/spring/devops/cloud-foundry/cloud-foundry-intro/</url>
-      <content type="html"><![CDATA[<h1 id="Definisi-Cloud-Foundry"><a href="#Definisi-Cloud-Foundry" class="headerlink" title="Definisi Cloud Foundry"></a>Definisi Cloud Foundry</h1><p>Cloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan untuk mendeploy aplikasi kita ke cloud. </p>
+      <url>http://ciazhar.github.io/2017/08/21/pemrograman/devops/cloud-foundry/cloud-foundry-intro/</url>
+      <content type="html"><![CDATA[<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/CloudFoundryCorp_vertical.svg/1280px-CloudFoundryCorp_vertical.svg.png" alt=""></p>
+<h1 id="Definisi-Cloud-Foundry"><a href="#Definisi-Cloud-Foundry" class="headerlink" title="Definisi Cloud Foundry"></a>Definisi Cloud Foundry</h1><p>Cloud Foundry adalah suatu Paas(Platform as a Service) berbasis open source yang disediakan dikembangkan Pivotal. Platform as a service sendiri adalah service yang digunakan untuk mendeploy aplikasi kita ke cloud. </p>
 <p>Perbedaan Traditional IT, Infrastructure as a Service (IaaS), Platform as a Service (PaaS) dan Software as a Service (SaaS).</p>
 <h1 id="Deploy-aplikasi-ke-Pivotal-Cloud-Foundry"><a href="#Deploy-aplikasi-ke-Pivotal-Cloud-Foundry" class="headerlink" title="Deploy aplikasi ke Pivotal Cloud Foundry"></a>Deploy aplikasi ke Pivotal Cloud Foundry</h1><p>##1. Install Cloud Foundry CLI<br>Kunjungi <a href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html" target="_blank" rel="external">tautan berikut</a> untuk totorial bagaimana menginstall Cloud Foundry CLI.</p>
 <p>##2. Login ke pivotal API</p>
@@ -280,7 +212,7 @@
     <entry>
       <title><![CDATA[Mengirim Email dan Verifikasi Lewat Email]]></title>
       <url>http://ciazhar.github.io/2017/08/17/pemrograman/spring/mail/sending-mail/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/spring-boot-banner.png" alt=""></p>
 <p>Pada tutorial kali ini kita akan coba mengirim email dan verifikasi lewat email. Kita akan menggunakan konsep register akun implementasinya.</p>
 <p><a href="https://myaccount.google.com/lesssecureapps" target="_blank" rel="external">https://myaccount.google.com/lesssecureapps</a></p>
 <h1 id="Mengirim-Email"><a href="#Mengirim-Email" class="headerlink" title="Mengirim Email"></a>Mengirim Email</h1><ul>
@@ -538,54 +470,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Config Service Vault Server]]></title>
-      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
-      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
-<blockquote>
-<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
-</blockquote>
-<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
-<ul>
-<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Secara default vault server akan berjalan di localhost port 8200.</p>
-<ul>
-<li>Konfigurasi vault address</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
-<ul>
-<li>Tulis konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Baca konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Buat project spring + dependency spring cloud config</li>
-<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
-<li>Ubah Konfigurasi</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
-<ul>
-<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Config Service File System]]></title>
       <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -632,6 +516,54 @@
 </ul>
 <p>Pada script diatas ada 2 nilai yang harus diisi yaitu nama-parameter yang akan di override  dan value dari parameter tersebut</p>
 <p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-default.yml</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Config Service Vault Server]]></title>
+      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
+<blockquote>
+<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
+</blockquote>
+<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
+<ul>
+<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Secara default vault server akan berjalan di localhost port 8200.</p>
+<ul>
+<li>Konfigurasi vault address</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
+<ul>
+<li>Tulis konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Baca konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Buat project spring + dependency spring cloud config</li>
+<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
+<li>Ubah Konfigurasi</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
+<ul>
+<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
+</ul>
 ]]></content>
       
         <categories>
@@ -701,26 +633,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Debugging Spring Data JPA]]></title>
-      <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/jpa/4-Debug-Spring-Data-JPA/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attr">spring:</span></div><div class="line"><span class="attr">  jpa:</span></div><div class="line"><span class="attr">      hibernate:</span></div><div class="line"><span class="attr">        ddl-auto:</span> <span class="string">none</span></div><div class="line"><span class="attr">      show-sql:</span> <span class="literal">true</span></div></pre></td></tr></table></figure>]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Database Mirgation dengan FlywayDB]]></title>
       <url>http://ciazhar.github.io/2017/05/28/pemrograman/spring/database-migration/Database-Mirgation-dengan-FlywayDB/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="/images/spring-boot-banner.png" alt=""></p>
 <ul>
 <li>jalankan seperti biasa projectnya maka akan di generate folder resource/db/migration</li>
 <li>koneksikan dengan database agar model dapat di ubah menjadi tabel</li>
@@ -854,24 +769,6 @@
 </li>
 </ul>
 <p>-</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CRUD Design Pattern 3]]></title>
-      <url>http://ciazhar.github.io/2017/05/27/pemrograman/spring/jpa/2.2-crud-jpa-thymeleaf(extended)/</url>
-      <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<p>Sedang dalam pembuatan Konten</p>
 ]]></content>
       
         <categories>
@@ -1567,7 +1464,7 @@
 <li>Selanjutnya app.component.ts. Di app.component.ts terdapat <code>selector</code> yang digunakan untuk tag pada html. Jadi dia akan mencari tag di html (yaitu app-root), apabila ada maka dia akan menginjectkan templatenya ke dalam tag tersebut. Templatenya sendiri berasa dari <code>templateUrl</code>.</li>
 <li>Selanjutnya app.component.html. Di app.component.html apabila ada variabel maka dia akan mengambilnya dari app.component.ts bagian export.</li>
 </ol>
-<h2 id="Install-Bootstrap"><a href="#Install-Bootstrap" class="headerlink" title="Install Bootstrap"></a>Install Bootstrap</h2><p>Step ini optional karena untuk css bisa pake framework yang lain atau menginputkan sendiri cssnya. Step ini hanya untuk mempermudah saja.<br>Untuk menginstallnya dapat menggunakan kode<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install ng2-bootstrap bootstrap --save</div></pre></td></tr></table></figure></p>
+<h2 id="Install-Bootstrap"><a href="#Install-Bootstrap" class="headerlink" title="Install Bootstrap"></a>Install Bootstrap</h2><p>Step ini optional karena untuk css bisa pake framework yang lain atau menginputkan sendiri cssnya. Step ini hanya untuk mempermudah saja.<br>Untuk menginstallnya dapat menggunakan kode<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install --save @ng-bootstrap/ng-bootstrap</div><div class="line">npm install bootstrap@4.0.0-alpha.6</div></pre></td></tr></table></figure></p>
 <p>Setelah itu includekan bootstrapnya ke file angular-cli.json.<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">"styles": [</div><div class="line">  "styles.css",</div><div class="line">  "../node_modules/bootstrap/dist/css/bootstrap.min.css"</div><div class="line">],</div></pre></td></tr></table></figure></p>
 <h2 id="Arsitektur-Aplikasi-Angular2"><a href="#Arsitektur-Aplikasi-Angular2" class="headerlink" title="Arsitektur Aplikasi Angular2"></a>Arsitektur Aplikasi Angular2</h2><p>Arsitekturnya kurang lebih seperti berikut<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Aplikasi</div><div class="line">├── Top Level Component</div><div class="line">├── Module</div><div class="line">    ├── Component</div><div class="line">        |── File Typescript/JS</div><div class="line">        |── File HTML</div></pre></td></tr></table></figure></p>
 <p>Penjelasanya adalah setiap aplikasi terdiri dari satu atau lebih Component. Module yang tersusun dari satu atau lebih Component. Component sendiri dibuat berdasarkan file Typescript dan HTML. Berikut contoh sederhananya:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Aplikasi Tabungan Emas</div><div class="line">├── Sidebar Component</div><div class="line">│   ├── Informasi Rekening</div><div class="line">│   ├── Transaksi Emas</div><div class="line">│   │   ├── Form</div><div class="line">│   │   ├── Rekap</div><div class="line">├── Navbar Component</div><div class="line">│   ├── Settings</div><div class="line">│   ├── Profile</div><div class="line">│   ├── Help</div></pre></td></tr></table></figure></p>
