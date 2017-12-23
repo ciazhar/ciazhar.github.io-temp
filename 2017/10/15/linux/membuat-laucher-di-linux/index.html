@@ -8,26 +8,23 @@
     
         <meta name="keywords" content="linux" />
     
-    <meta name="description" content="Membuat Launcher di LinuxTerdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :
+    <meta name="description" content="Membuat Launcher di LinuxApakah anda pernah menginstall apikasi di linux ? Sebenearnya di linux terdapat banyak cara dalam menginstall aplikasi tergantung dari jenis filenya, diantaranya :
 
-Menggunakan apt install pada terminal
-Menggunakan executable file denga">
+Menggunak">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Membuat Launcher di Linux">
 <meta property="og:url" content="http://ciazhar.github.io/2017/10/15/linux/membuat-laucher-di-linux/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Membuat Launcher di LinuxTerdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :
+<meta property="og:description" content="Membuat Launcher di LinuxApakah anda pernah menginstall apikasi di linux ? Sebenearnya di linux terdapat banyak cara dalam menginstall aplikasi tergantung dari jenis filenya, diantaranya :
 
-Menggunakan apt install pada terminal
-Menggunakan executable file denga">
+Menggunak">
 <meta property="og:image" content="http://ciazhar.github.io/images/linux.jpg">
-<meta property="og:updated_time" content="2017-11-23T16:14:17.684Z">
+<meta property="og:updated_time" content="2017-12-23T17:56:56.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Membuat Launcher di Linux">
-<meta name="twitter:description" content="Membuat Launcher di LinuxTerdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :
+<meta name="twitter:description" content="Membuat Launcher di LinuxApakah anda pernah menginstall apikasi di linux ? Sebenearnya di linux terdapat banyak cara dalam menginstall aplikasi tergantung dari jenis filenya, diantaranya :
 
-Menggunakan apt install pada terminal
-Menggunakan executable file denga">
+Menggunak">
 <meta name="twitter:image" content="http://ciazhar.github.io/images/linux.jpg">
     
 
@@ -175,13 +172,19 @@ Menggunakan executable file denga">
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/linux.jpg" alt=""></p>
-<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Terdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :</p>
+<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Apakah anda pernah menginstall apikasi di linux ? Sebenearnya di linux terdapat banyak cara dalam menginstall aplikasi tergantung dari jenis filenya, diantaranya :</p>
 <ul>
-<li>Menggunakan <code>apt install</code> pada terminal</li>
-<li>Menggunakan executable file dengan ektensi seperti <code>.deb</code>, <code>.rpm</code> / <code>.sh</code></li>
+<li>Menggunakan Software Center.</li>
+<li>Menggunakan perintah <code>sudo apt install {nama_package}</code> pada terminal</li>
+<li>Menggunakan executable file dengan ektensi seperti <code>.deb</code>, <code>.rpm</code> atau <code>.sh</code></li>
 <li>Menggunakan binary file yang di kompres dalam <code>.tar.gz</code>.</li>
 </ul>
-<p>Untuk aplikasi yang di kompress dalam <code>.tar.gz</code> karena untuk menggunakanya hanya dicopy kedalam direktori kita dan tidak diinstall, atau aplikasi yang diinstall terkadang tidak otomatis membuat Launcher. Launcher bisa dibilang cara menjalankan aplikasi tersebut melalui GUI. Biasanya terletak di <code>whisker</code>.<br>Oleh karena itu kita akan coba membuat Launcher untuk aplikasi kita.<br>Untuk kalo ini saya akan memberi contoh menggunakan aplikasi <code>Robomongo</code>.<br>Caranya cukup mudah, pertama buat file dengan ekstensi <code>.desktop</code> dengan nama sesuai nama aplikasi kita. Kemudian isi file tersebut dengan format seperti :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=</div><div class="line">Type=</div><div class="line">Name=</div><div class="line">Comment=</div><div class="line">Exec=</div><div class="line">Icon=</div><div class="line">Path=</div><div class="line">Terminal=</div><div class="line">StartupNotify=</div></pre></td></tr></table></figure></p>
+<p>Untuk aplikasi yang di kompress dalam <code>.tar.gz</code>, terkadang setelah menginstallnya, sistem tidak otomatis membuat Launcher untuk aplikasi tersebut. Sehingga kita harus membuat Launcher secara manual.<br>Launcher sendiri bisa dibilang cara GUI/Shortcut untuk menjalankan aplikasi tersebut. Biasanya terletak di <code>whisker</code> (star menu kalo di w<em>nd</em>ws).</p>
+<p>Oleh karena itu kita akan coba membuat Launcher untuk aplikasi kita. Saya akan memberi contoh untuk membuat launcher aplikasi <code>Robomongo</code>.</p>
+<h2 id="1-Pindah-direktori-ke-usr-share-applications-menggunakan-terminal"><a href="#1-Pindah-direktori-ke-usr-share-applications-menggunakan-terminal" class="headerlink" title="1. Pindah direktori ke /usr/share/applications/ menggunakan terminal"></a>1. Pindah direktori ke <code>/usr/share/applications/</code> menggunakan terminal</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/share/appications/</div></pre></td></tr></table></figure>
+<h2 id="2-Buat-file-berekesensi-dekstop-Nama-file-dapat-diesusaikan-dengan-nama-apikasi"><a href="#2-Buat-file-berekesensi-dekstop-Nama-file-dapat-diesusaikan-dengan-nama-apikasi" class="headerlink" title="2. Buat file berekesensi .dekstop. Nama file dapat diesusaikan dengan nama apikasi"></a>2. Buat file berekesensi <code>.dekstop</code>. Nama file dapat diesusaikan dengan nama apikasi</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch robomongo.desktop</div></pre></td></tr></table></figure>
+<h2 id="3-Buka-file-tersebut-menggunakan-teks-editor-kesayangan-anda-Disini-saya-akan-menggunakan-gedit"><a href="#3-Buka-file-tersebut-menggunakan-teks-editor-kesayangan-anda-Disini-saya-akan-menggunakan-gedit" class="headerlink" title="3. Buka file tersebut menggunakan teks editor kesayangan anda. Disini saya akan menggunakan gedit"></a>3. Buka file tersebut menggunakan teks editor kesayangan anda. Disini saya akan menggunakan gedit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit robomongo.desktop</div></pre></td></tr></table></figure>
+<h2 id="4-Isi-file-tersebut-dengan-format-seperti-di-bawah-ini"><a href="#4-Isi-file-tersebut-dengan-format-seperti-di-bawah-ini" class="headerlink" title="4. Isi file tersebut dengan format seperti di bawah ini"></a>4. Isi file tersebut dengan format seperti di bawah ini</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=</div><div class="line">Type=</div><div class="line">Name=</div><div class="line">Comment=</div><div class="line">Exec=</div><div class="line">Icon=</div><div class="line">Path=</div><div class="line">Terminal=</div><div class="line">StartupNotify=</div></pre></td></tr></table></figure>
 <p>Keterangan :</p>
 <ul>
 <li>Version       : versi aplikasi</li>
@@ -194,8 +197,8 @@ Menggunakan executable file denga">
 <li>Terminal      : apakah aplikasi khusus untuk berjalan di terminal</li>
 <li>StartupNotify : apakah akan ada notifikasi waktu aplikasi berjalan</li>
 </ul>
-<p>Berikut contohnya untuk aplikasi Robomongo saya :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=1.0</div><div class="line">Type=Application</div><div class="line">Name=Robomongo</div><div class="line">Comment=Robomongo</div><div class="line">Exec=/home/ciazhar/Application/robomongo-1.0.0/bin/robomongo</div><div class="line">Icon=/home/ciazhar/Application/robomongo-1.0.0/CWNda0_WwAAWE-F.png</div><div class="line">Path=/home/ciazhar/Application/robomongo-1.0.0</div><div class="line">Terminal=false</div><div class="line">StartupNotify=false</div></pre></td></tr></table></figure></p>
-<p>Kemudian simpan file tersebut di direktori <code>/usr/share/applications/</code>. Hati hati dengan dalam menyimpan file karena membutuhkan Permission.</p>
+<p>Berikut contohnya untuk aplikasi Robomongo saya :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=1.0</div><div class="line">Type=Application</div><div class="line">Name=Robomongo</div><div class="line">Comment=Robomongo</div><div class="line">Exec=/home/ciazhar/Application/robomongo-1.0.0/bin/robomongo</div><div class="line">Icon=/home/ciazhar/Application/robomongo-1.0.0/CWNda0_WwAAWE-F.png</div><div class="line">Path=/home/ciazhar/Application/robomongo-1.0.0</div><div class="line">Terminal=false</div><div class="line">StartupNotify=false</div></pre></td></tr></table></figure>
 <p>Finally Laucher telah dapat digunakan dan sudah tersedia di whisker.</p>
 
         </div>
@@ -204,7 +207,7 @@ Menggunakan executable file denga">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/10/15/linux/membuat-laucher-di-linux/" data-id="cj8yih32g0003yilpz1tvx3f7" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/10/15/linux/membuat-laucher-di-linux/" data-id="cjbjnk0100000nxlpsmvgthur" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,7 +292,7 @@ Menggunakan executable file denga">
             
                 
                 <li>
-                    <a class="social-tooltip" title="facebook" href="http://facebook.com/kid.dont.cry" target="_blank">
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com/ciazhar28" target="_blank">
                         <i class="icon fa fa-facebook"></i>
                     </a>
                 </li>
@@ -307,6 +310,14 @@ Menggunakan executable file denga">
                 <li>
                     <a class="social-tooltip" title="telegram" href="http://telegram.me/ciazhar" target="_blank">
                         <i class="icon fa fa-telegram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/in/ciazhar" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
                     </a>
                 </li>
                 
@@ -340,7 +351,7 @@ Menggunakan executable file denga">
 <div align="center">
   <h3 class="widget-title">Muhammad Hafidz</h3>
   <div class="widget">
-    Linux + Spring + Angular = ciazhar
+    INTJ - Java Developer
   </div>
 </div>
 <br>
@@ -379,28 +390,6 @@ Menggunakan executable file denga">
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
-                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
-                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
     
     
@@ -415,6 +404,28 @@ Menggunakan executable file denga">
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
                                 <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
                                 <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
                             </div>
                         </li>
                     
@@ -487,7 +498,7 @@ Menggunakan executable file denga">
 <div align="center">
   <h3 class="widget-title">Muhammad Hafidz</h3>
   <div class="widget">
-    Linux + Spring + Angular = ciazhar
+    INTJ - Java Developer
   </div>
 </div>
 <br>

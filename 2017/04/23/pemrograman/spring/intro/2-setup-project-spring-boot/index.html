@@ -8,26 +8,26 @@
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Setup Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
+    <meta name="description" content="1. Install Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
 
-Java Development Kit (JDK atau openJDK)
-Build Tools (Apache M">
+Java Development Kit (JDK atau openJDK).
+Build Tools (Ap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Setup Project Spring Boot">
 <meta property="og:url" content="http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/index.html">
 <meta property="og:site_name" content="ciazhar">
-<meta property="og:description" content="Setup Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
+<meta property="og:description" content="1. Install Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
 
-Java Development Kit (JDK atau openJDK)
-Build Tools (Apache M">
+Java Development Kit (JDK atau openJDK).
+Build Tools (Ap">
 <meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
-<meta property="og:updated_time" content="2017-05-27T10:16:48.440Z">
+<meta property="og:updated_time" content="2017-12-23T18:17:13.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Project Spring Boot">
-<meta name="twitter:description" content="Setup Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
+<meta name="twitter:description" content="1. Install Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
 
-Java Development Kit (JDK atau openJDK)
-Build Tools (Apache M">
+Java Development Kit (JDK atau openJDK).
+Build Tools (Ap">
 <meta name="twitter:image" content="http://ciazhar.github.io/images/springboot.png">
     
 
@@ -170,14 +170,18 @@ Build Tools (Apache M">
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
+<h1 id="1-Install-Development-Environment"><a href="#1-Install-Development-Environment" class="headerlink" title="1. Install Development Environment"></a>1. Install Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
 <ul>
-<li>Java Development Kit (JDK atau openJDK)</li>
-<li>Build Tools (Apache Maven atau Gradle)</li>
-<li>IDE (IntellijIDEA atau Netbeans)</li>
+<li>Java Development Kit (JDK atau openJDK).</li>
+<li>Build Tools (Apache Maven atau Gradle).</li>
+<li>IDE atau Text Editor (IntellijIDEA / VSCode).</li>
 </ul>
 <h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
 <li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
+<li>Maka akan tampil antarmuka seperti ini.</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20161203083002608" alt=""></p>
+<ul>
 <li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
 <li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
 <li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
@@ -185,10 +189,11 @@ Build Tools (Apache M">
 <li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
 </ul>
 </li>
-<li>Generate Project</li>
-<li>Add project ke text editor</li>
+<li>Generate Project.</li>
+<li>Add project ke text editor/IDE.</li>
 </ul>
-<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure>
 <p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
 <ul>
 <li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
@@ -207,7 +212,7 @@ Build Tools (Apache M">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/" data-id="cj8yih39n001eyilp0coy1rn5" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/" data-id="cjbjnk05q002enxlpmts968uf" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -292,7 +297,7 @@ Build Tools (Apache M">
             
                 
                 <li>
-                    <a class="social-tooltip" title="facebook" href="http://facebook.com/kid.dont.cry" target="_blank">
+                    <a class="social-tooltip" title="facebook" href="http://facebook.com/ciazhar28" target="_blank">
                         <i class="icon fa fa-facebook"></i>
                     </a>
                 </li>
@@ -310,6 +315,14 @@ Build Tools (Apache M">
                 <li>
                     <a class="social-tooltip" title="telegram" href="http://telegram.me/ciazhar" target="_blank">
                         <i class="icon fa fa-telegram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://www.linkedin.com/in/ciazhar" target="_blank">
+                        <i class="icon fa fa-linkedin"></i>
                     </a>
                 </li>
                 
@@ -353,7 +366,7 @@ Build Tools (Apache M">
 <div align="center">
   <h3 class="widget-title">Muhammad Hafidz</h3>
   <div class="widget">
-    Linux + Spring + Angular = ciazhar
+    INTJ - Java Developer
   </div>
 </div>
 <br>
@@ -392,28 +405,6 @@ Build Tools (Apache M">
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
-                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
-                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
     
     
@@ -428,6 +419,28 @@ Build Tools (Apache M">
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
                                 <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
                                 <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/angular.png)" alt="Introduction to Angular2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
+                                <p class="item-title"><a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
+                                <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
                             </div>
                         </li>
                     
@@ -500,7 +513,7 @@ Build Tools (Apache M">
 <div align="center">
   <h3 class="widget-title">Muhammad Hafidz</h3>
   <div class="widget">
-    Linux + Spring + Angular = ciazhar
+    INTJ - Java Developer
   </div>
 </div>
 <br>

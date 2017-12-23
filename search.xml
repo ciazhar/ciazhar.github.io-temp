@@ -7,13 +7,19 @@
       <title><![CDATA[Membuat Launcher di Linux]]></title>
       <url>http://ciazhar.github.io/2017/10/15/linux/membuat-laucher-di-linux/</url>
       <content type="html"><![CDATA[<p><img src="/images/linux.jpg" alt=""></p>
-<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Terdapat banyak cara dalam menginstall aplikasi di linux tergantung dari jenis filenya, diantaranya :</p>
+<h1 id="Membuat-Launcher-di-Linux"><a href="#Membuat-Launcher-di-Linux" class="headerlink" title="Membuat Launcher di Linux"></a>Membuat Launcher di Linux</h1><p>Apakah anda pernah menginstall apikasi di linux ? Sebenearnya di linux terdapat banyak cara dalam menginstall aplikasi tergantung dari jenis filenya, diantaranya :</p>
 <ul>
-<li>Menggunakan <code>apt install</code> pada terminal</li>
-<li>Menggunakan executable file dengan ektensi seperti <code>.deb</code>, <code>.rpm</code> / <code>.sh</code></li>
+<li>Menggunakan Software Center.</li>
+<li>Menggunakan perintah <code>sudo apt install {nama_package}</code> pada terminal</li>
+<li>Menggunakan executable file dengan ektensi seperti <code>.deb</code>, <code>.rpm</code> atau <code>.sh</code></li>
 <li>Menggunakan binary file yang di kompres dalam <code>.tar.gz</code>.</li>
 </ul>
-<p>Untuk aplikasi yang di kompress dalam <code>.tar.gz</code> karena untuk menggunakanya hanya dicopy kedalam direktori kita dan tidak diinstall, atau aplikasi yang diinstall terkadang tidak otomatis membuat Launcher. Launcher bisa dibilang cara menjalankan aplikasi tersebut melalui GUI. Biasanya terletak di <code>whisker</code>.<br>Oleh karena itu kita akan coba membuat Launcher untuk aplikasi kita.<br>Untuk kalo ini saya akan memberi contoh menggunakan aplikasi <code>Robomongo</code>.<br>Caranya cukup mudah, pertama buat file dengan ekstensi <code>.desktop</code> dengan nama sesuai nama aplikasi kita. Kemudian isi file tersebut dengan format seperti :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=</div><div class="line">Type=</div><div class="line">Name=</div><div class="line">Comment=</div><div class="line">Exec=</div><div class="line">Icon=</div><div class="line">Path=</div><div class="line">Terminal=</div><div class="line">StartupNotify=</div></pre></td></tr></table></figure></p>
+<p>Untuk aplikasi yang di kompress dalam <code>.tar.gz</code>, terkadang setelah menginstallnya, sistem tidak otomatis membuat Launcher untuk aplikasi tersebut. Sehingga kita harus membuat Launcher secara manual.<br>Launcher sendiri bisa dibilang cara GUI/Shortcut untuk menjalankan aplikasi tersebut. Biasanya terletak di <code>whisker</code> (star menu kalo di w<em>nd</em>ws).</p>
+<p>Oleh karena itu kita akan coba membuat Launcher untuk aplikasi kita. Saya akan memberi contoh untuk membuat launcher aplikasi <code>Robomongo</code>.</p>
+<h2 id="1-Pindah-direktori-ke-usr-share-applications-menggunakan-terminal"><a href="#1-Pindah-direktori-ke-usr-share-applications-menggunakan-terminal" class="headerlink" title="1. Pindah direktori ke /usr/share/applications/ menggunakan terminal"></a>1. Pindah direktori ke <code>/usr/share/applications/</code> menggunakan terminal</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /usr/share/appications/</div></pre></td></tr></table></figure>
+<h2 id="2-Buat-file-berekesensi-dekstop-Nama-file-dapat-diesusaikan-dengan-nama-apikasi"><a href="#2-Buat-file-berekesensi-dekstop-Nama-file-dapat-diesusaikan-dengan-nama-apikasi" class="headerlink" title="2. Buat file berekesensi .dekstop. Nama file dapat diesusaikan dengan nama apikasi"></a>2. Buat file berekesensi <code>.dekstop</code>. Nama file dapat diesusaikan dengan nama apikasi</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch robomongo.desktop</div></pre></td></tr></table></figure>
+<h2 id="3-Buka-file-tersebut-menggunakan-teks-editor-kesayangan-anda-Disini-saya-akan-menggunakan-gedit"><a href="#3-Buka-file-tersebut-menggunakan-teks-editor-kesayangan-anda-Disini-saya-akan-menggunakan-gedit" class="headerlink" title="3. Buka file tersebut menggunakan teks editor kesayangan anda. Disini saya akan menggunakan gedit"></a>3. Buka file tersebut menggunakan teks editor kesayangan anda. Disini saya akan menggunakan gedit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gedit robomongo.desktop</div></pre></td></tr></table></figure>
+<h2 id="4-Isi-file-tersebut-dengan-format-seperti-di-bawah-ini"><a href="#4-Isi-file-tersebut-dengan-format-seperti-di-bawah-ini" class="headerlink" title="4. Isi file tersebut dengan format seperti di bawah ini"></a>4. Isi file tersebut dengan format seperti di bawah ini</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=</div><div class="line">Type=</div><div class="line">Name=</div><div class="line">Comment=</div><div class="line">Exec=</div><div class="line">Icon=</div><div class="line">Path=</div><div class="line">Terminal=</div><div class="line">StartupNotify=</div></pre></td></tr></table></figure>
 <p>Keterangan :</p>
 <ul>
 <li>Version       : versi aplikasi</li>
@@ -26,8 +32,8 @@
 <li>Terminal      : apakah aplikasi khusus untuk berjalan di terminal</li>
 <li>StartupNotify : apakah akan ada notifikasi waktu aplikasi berjalan</li>
 </ul>
-<p>Berikut contohnya untuk aplikasi Robomongo saya :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=1.0</div><div class="line">Type=Application</div><div class="line">Name=Robomongo</div><div class="line">Comment=Robomongo</div><div class="line">Exec=/home/ciazhar/Application/robomongo-1.0.0/bin/robomongo</div><div class="line">Icon=/home/ciazhar/Application/robomongo-1.0.0/CWNda0_WwAAWE-F.png</div><div class="line">Path=/home/ciazhar/Application/robomongo-1.0.0</div><div class="line">Terminal=false</div><div class="line">StartupNotify=false</div></pre></td></tr></table></figure></p>
-<p>Kemudian simpan file tersebut di direktori <code>/usr/share/applications/</code>. Hati hati dengan dalam menyimpan file karena membutuhkan Permission.</p>
+<p>Berikut contohnya untuk aplikasi Robomongo saya :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Desktop Entry]</div><div class="line">Version=1.0</div><div class="line">Type=Application</div><div class="line">Name=Robomongo</div><div class="line">Comment=Robomongo</div><div class="line">Exec=/home/ciazhar/Application/robomongo-1.0.0/bin/robomongo</div><div class="line">Icon=/home/ciazhar/Application/robomongo-1.0.0/CWNda0_WwAAWE-F.png</div><div class="line">Path=/home/ciazhar/Application/robomongo-1.0.0</div><div class="line">Terminal=false</div><div class="line">StartupNotify=false</div></pre></td></tr></table></figure>
 <p>Finally Laucher telah dapat digunakan dan sudah tersedia di whisker.</p>
 ]]></content>
       
@@ -470,6 +476,54 @@
     </entry>
     
     <entry>
+      <title><![CDATA[Config Service Vault Server]]></title>
+      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
+<blockquote>
+<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
+</blockquote>
+<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
+<ul>
+<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Secara default vault server akan berjalan di localhost port 8200.</p>
+<ul>
+<li>Konfigurasi vault address</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
+<ul>
+<li>Tulis konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Baca konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Buat project spring + dependency spring cloud config</li>
+<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
+<li>Ubah Konfigurasi</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
+<ul>
+<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Config Service File System]]></title>
       <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -516,54 +570,6 @@
 </ul>
 <p>Pada script diatas ada 2 nilai yang harus diisi yaitu nama-parameter yang akan di override  dan value dari parameter tersebut</p>
 <p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-default.yml</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Config Service Vault Server]]></title>
-      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
-      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
-<blockquote>
-<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
-</blockquote>
-<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
-<ul>
-<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Secara default vault server akan berjalan di localhost port 8200.</p>
-<ul>
-<li>Konfigurasi vault address</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
-<ul>
-<li>Tulis konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Baca konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Buat project spring + dependency spring cloud config</li>
-<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
-<li>Ubah Konfigurasi</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
-<ul>
-<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
-</ul>
 ]]></content>
       
         <categories>
@@ -1869,14 +1875,18 @@
       <title><![CDATA[Setup Project Spring Boot]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/</url>
       <content type="html"><![CDATA[<p><img src="/images/springboot.png" alt=""></p>
-<h1 id="Setup-Development-Environment"><a href="#Setup-Development-Environment" class="headerlink" title="Setup Development Environment"></a>Setup Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
+<h1 id="1-Install-Development-Environment"><a href="#1-Install-Development-Environment" class="headerlink" title="1. Install Development Environment"></a>1. Install Development Environment</h1><p>Untuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :</p>
 <ul>
-<li>Java Development Kit (JDK atau openJDK)</li>
-<li>Build Tools (Apache Maven atau Gradle)</li>
-<li>IDE (IntellijIDEA atau Netbeans)</li>
+<li>Java Development Kit (JDK atau openJDK).</li>
+<li>Build Tools (Apache Maven atau Gradle).</li>
+<li>IDE atau Text Editor (IntellijIDEA / VSCode).</li>
 </ul>
 <h1 id="Setup-Project-Mengunakan-Spring-Initializer"><a href="#Setup-Project-Mengunakan-Spring-Initializer" class="headerlink" title="Setup Project Mengunakan Spring Initializer"></a>Setup Project Mengunakan Spring Initializer</h1><ul>
 <li>Buka browser lalu masukkan url <code>http://start.spring.io/</code></li>
+<li>Maka akan tampil antarmuka seperti ini.</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20161203083002608" alt=""></p>
+<ul>
 <li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
 <li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
 <li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
@@ -1884,10 +1894,11 @@
 <li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
 </ul>
 </li>
-<li>Generate Project</li>
-<li>Add project ke text editor</li>
+<li>Generate Project.</li>
+<li>Add project ke text editor/IDE.</li>
 </ul>
-<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure></p>
+<h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure>
 <p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
 <ul>
 <li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
@@ -2032,7 +2043,7 @@
 <li>Much more…</li>
 </ul>
 <p>All available features and modules are described in <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#overview-modules" target="_blank" rel="external">the Modules section of the reference documentation</a>. Their <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#dependency-management" target="_blank" rel="external">maven/gradle coordinates are also described there</a>.</p>
-<h1 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h1><p>Berikut sekilas peta jalan yang akan kita pelajari untuk dapat membuat aplikasi spring :</p>
+<h1 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h1><p>Berikut sekilas peta jalan yang dapat anda pelajari untuk dapat membuat aplikasi spring :</p>
 <h2 id="Setup-Project"><a href="#Setup-Project" class="headerlink" title="Setup Project"></a>Setup Project</h2><ul>
 <li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/">Setup Project Spring Boot</a></li>
 </ul>
