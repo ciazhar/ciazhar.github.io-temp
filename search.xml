@@ -53,43 +53,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Testing in Spring Framework]]></title>
-      <url>http://ciazhar.github.io/2017/09/17/pemrograman/spring/test/test/</url>
-      <content type="html"><![CDATA[<p><img src="/images/spring-boot-banner.png" alt=""></p>
-<ul>
-<li>buat class test pada rest dari class controller</li>
-<li>tambahkan anotasi <code>@RunWith(SpringJUnit4ClassRunner::class)</code></li>
-<li><code>private val productController : ProductController ?= null</code></li>
-<li><code>private val mockMvc : MockMvc ?=null</code>. mock ini akan digunakan untuk menjalankan testing</li>
-</ul>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Command Command pada Linux]]></title>
-      <url>http://ciazhar.github.io/2017/08/28/linux/command-linux/</url>
-      <content type="html"><![CDATA[<p><img src="/images/linux.jpg" alt=""></p>
-<h1 id="Mengatur-PATH-environment-variable-di-Linux"><a href="#Mengatur-PATH-environment-variable-di-Linux" class="headerlink" title="Mengatur PATH environment variable di Linux"></a>Mengatur PATH environment variable di Linux</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/bin</div><div class="line">sudo ln -s /path/to/binary binary-name</div></pre></td></tr></table></figure>
-]]></content>
-      
-        <categories>
-            
-            <category> Linux </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> linux </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Cloud Foundry]]></title>
       <url>http://ciazhar.github.io/2017/08/21/pemrograman/devops/cloud-foundry/cloud-foundry-intro/</url>
       <content type="html"><![CDATA[<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/CloudFoundryCorp_vertical.svg/1280px-CloudFoundryCorp_vertical.svg.png" alt=""></p>
@@ -476,54 +439,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Config Service Vault Server]]></title>
-      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
-      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
-<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
-<blockquote>
-<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
-</blockquote>
-<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
-<ul>
-<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Secara default vault server akan berjalan di localhost port 8200.</p>
-<ul>
-<li>Konfigurasi vault address</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
-<ul>
-<li>Tulis konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Baca konfigurasi</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
-<ul>
-<li>Buat project spring + dependency spring cloud config</li>
-<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
-<li>Ubah Konfigurasi</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
-<ul>
-<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Pemrograman </category>
-            
-            <category> Spring </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Config Service File System]]></title>
       <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/</url>
       <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
@@ -570,6 +485,54 @@
 </ul>
 <p>Pada script diatas ada 2 nilai yang harus diisi yaitu nama-parameter yang akan di override  dan value dari parameter tersebut</p>
 <p>Untuk dapat melihat hasilnya anda dapat mengakses beberapa url berikut :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http://localhost:8080/myapp/default</div><div class="line">http://localhost:8080/myapp-default.json</div><div class="line">http://localhost:8080/myapp-default.yml</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Pemrograman </category>
+            
+            <category> Spring </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Config Service Vault Server]]></title>
+      <url>http://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/</url>
+      <content type="html"><![CDATA[<p><img src="https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/logos/image/1398937767-b70129ba6592929d32c0337c3eea2880.png?itok=NBZRaOhz" alt=""></p>
+<h1 id="Membuat-config-service-vault"><a href="#Membuat-config-service-vault" class="headerlink" title="Membuat config service vault"></a>Membuat config service vault</h1><p>Pada tutorial sebelumnya telah membahas pembuatan config service dimana file konfigurasinya disimpan di dalam file system atau dalam project. Sekarang kita akan mencoba membuat config service dimana file konfigurasinya disimpan di dalam vault server.</p>
+<blockquote>
+<p>Vault is a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, certificates, and more. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.(<a href="https://www.vaultproject.io/intro/index.html" target="_blank" rel="external">https://www.vaultproject.io/intro/index.html</a>)</p>
+</blockquote>
+<p>Apabila anda belum menginstal vault server, anda dapat menginstalnya menggunakan tutorial berikut : <a href="http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/" target="_blank" rel="external">http://discoposse.com/2016/11/04/installing-hashicorp-vault-on-ubuntu16-04/</a></p>
+<ul>
+<li>Jalankan vault server<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault server -dev</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Secara default vault server akan berjalan di localhost port 8200.</p>
+<ul>
+<li>Konfigurasi vault address</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">set VAULT_ADDR=http://127.0.0.1:8200</div></pre></td></tr></table></figure>
+<ul>
+<li>Tulis konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Baca konfigurasi</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vault write secret/myapp foo=bar bam=baz</div></pre></td></tr></table></figure>
+<ul>
+<li>Buat project spring + dependency spring cloud config</li>
+<li>Tambahkan <code>@EnableConfigServer</code> pada main class</li>
+<li>Ubah Konfigurasi</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#ubah port</div><div class="line">server.port=8888</div><div class="line"></div><div class="line">#ubah profile</div><div class="line">server.profiles.active=vault</div></pre></td></tr></table></figure>
+<ul>
+<li>Untuk merequest API nya tambahkan parameter pada HTTP Header dengan nama <code>X-Config-Token</code> dengan value dari <code>root token</code> yang ada pada CLI vault server.</li>
+</ul>
 ]]></content>
       
         <categories>
@@ -1888,10 +1851,10 @@
 <p><img src="http://img.blog.csdn.net/20161203083002608" alt=""></p>
 <ul>
 <li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Tipe Project. Project dapat berupa <code>maven</code> atau <code>gradle</code>. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
 <li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
 <li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
-<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan.</li>
 </ul>
 </li>
 <li>Generate Project.</li>
@@ -1899,17 +1862,19 @@
 </ul>
 <h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure>
-<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Pada Project tersebut terdapat beberapa file yaitu :</p>
 <ul>
-<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
-<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
-<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
-<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
-<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
-<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
-<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
+<li><code>pom.xml</code>. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file <code>.gradle</code>.</li>
+<li>Di dalam folder <code>src/main/java/com/example</code> terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder <code>src/main/java/</code> sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder <code>src/main/resources</code> terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder <code>src/main/resources/static</code> digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder <code>src/main/resources/templates</code> digunakan untuk menampung file html yang menggunakan template engine.</li>
+<li>Folder <code>src/test/java/com/example</code> digunakan untuk menampung file-file testing.</li>
 </ul>
-<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
+<h1 id="Menjalankan-aplikasi"><a href="#Menjalankan-aplikasi" class="headerlink" title="Menjalankan aplikasi"></a>Menjalankan aplikasi</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure>
+<p>Maka secara default aplikasi anda akan berjalan di port 8080.</p>
 ]]></content>
       
         <categories>

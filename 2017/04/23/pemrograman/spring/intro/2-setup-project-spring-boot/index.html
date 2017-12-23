@@ -21,7 +21,7 @@ Build Tools (Ap">
 Java Development Kit (JDK atau openJDK).
 Build Tools (Ap">
 <meta property="og:image" content="http://ciazhar.github.io/images/springboot.png">
-<meta property="og:updated_time" content="2017-12-23T18:17:13.191Z">
+<meta property="og:updated_time" content="2017-12-23T18:23:51.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setup Project Spring Boot">
 <meta name="twitter:description" content="1. Install Development EnvironmentUntuk menggunakan Spring Boot anda perlu menginstall beberapa Development Environment. Diantaranya adalah :
@@ -183,10 +183,10 @@ Build Tools (Ap">
 <p><img src="http://img.blog.csdn.net/20161203083002608" alt=""></p>
 <ul>
 <li>Selanjutnya anda akan diminta untuk mengisi beberapa data yaitu :<ul>
-<li>Tipe Project. Project dapat berupa maven atau gradle. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
+<li>Tipe Project. Project dapat berupa <code>maven</code> atau <code>gradle</code>. Isi dengan Build tools yang sudah anda install di komputer anda.</li>
 <li>Versi Spring. Pilih versi terbaru yang bukan SNAPSHOOT.</li>
 <li>Project Metadata. Format pengisianya adalah sebagai berikut :<br>Group : com.nama.domain.anda (dipisah dengan titik)<br>Artifact : nama-aplikasi-anda (tidak boleh diberi spasi)</li>
-<li>Dependencies. Isi dengan library yang anda butuhkan. Pada tutorial ini kita kan menggunakan <code>Thymeleaf</code> dan <code>Web</code>.</li>
+<li>Dependencies. Isi dengan library yang anda butuhkan.</li>
 </ul>
 </li>
 <li>Generate Project.</li>
@@ -194,17 +194,19 @@ Build Tools (Ap">
 </ul>
 <h1 id="Struktur-Folder-Aplikasi-Spring-Boot"><a href="#Struktur-Folder-Aplikasi-Spring-Boot" class="headerlink" title="Struktur Folder Aplikasi Spring Boot"></a>Struktur Folder Aplikasi Spring Boot</h1><p>Struktur foldernya akan seperti berikut :</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">demo</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── DemoApplicationTests.java</div></pre></td></tr></table></figure>
-<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Anda dapat menghapus mvnw dan mvn.cmd. Pada Project tersebut terdapat beberapa file yaitu :</p>
+<p>Sebagai catatan struktur folder tersebut dapat berubah sesuai data yang anda masukkan saat membuat project.<br>Pada Project tersebut terdapat beberapa file yaitu :</p>
 <ul>
-<li>pom.xml. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file .gradle.</li>
-<li>Di dalam folder src/main/java/com/example terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
-<li>Folder src/main/java/com/example sendiri digunakan untuk menampung file-file java.</li>
-<li>Di dalam folder src/main/resources terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
-<li>Folder src/main/respurces/static digunakan untuk menampung file static (hmtl, css dan js)</li>
-<li>Folder src/main/respurces/templates digunakan untuk menampung file html yang menggunakan Thymeleaf.</li>
-<li>Folder src/test/java/com/example digunakan untuk menampung file-file testing.</li>
+<li><code>pom.xml</code>. File ini merupakan konfigurasi dari Maven. Jika anda menggunakan Gradle maka yang dibuat adalah file <code>.gradle</code>.</li>
+<li>Di dalam folder <code>src/main/java/com/example</code> terdapat file DemoApplication.java. File ini merupakan main file dari aplikasi spring boot anda.</li>
+<li>Folder <code>src/main/java/</code> sendiri digunakan untuk menampung file-file java.</li>
+<li>Di dalam folder <code>src/main/resources</code> terdapat file application.properties. File ini digunakan untuk mengkonfigurasi aplikasi spring.</li>
+<li>Folder <code>src/main/resources/static</code> digunakan untuk menampung file static (hmtl, css dan js)</li>
+<li>Folder <code>src/main/resources/templates</code> digunakan untuk menampung file html yang menggunakan template engine.</li>
+<li>Folder <code>src/test/java/com/example</code> digunakan untuk menampung file-file testing.</li>
 </ul>
-<h1 id="Running-Project"><a href="#Running-Project" class="headerlink" title="Running Project"></a>Running Project</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure></p>
+<h1 id="Menjalankan-aplikasi"><a href="#Menjalankan-aplikasi" class="headerlink" title="Menjalankan aplikasi"></a>Menjalankan aplikasi</h1><p>Untuk menjalankan project dapat menggunakan perintah berikut pada CLI</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn clean spring-boot:run</div></pre></td></tr></table></figure>
+<p>Maka secara default aplikasi anda akan berjalan di port 8080.</p>
 
         </div>
         <footer class="article-footer">
@@ -212,7 +214,7 @@ Build Tools (Ap">
 
 
 
-    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/" data-id="cjbjnk05q002enxlpmts968uf" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
+    <a data-url="http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/" data-id="cjbjpctoq001kfvlpo5tbcdo2" class="article-share-link"><i class="fa fa-share"></i>Bagikan</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -405,28 +407,6 @@ Build Tools (Ap">
                         <li>
                             
                             <div class="item-thumbnail">
-                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/hexo.png)" alt="Introduction to Hexo" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                            </div>
-                            
-                            <div class="item-inner">
-                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
-                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
-                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
-                            </div>
-                        </li>
-                    
-                
-                    
-                        <li>
-                            
-                            <div class="item-thumbnail">
                                 <a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="thumbnail">
     
     
@@ -441,6 +421,28 @@ Build Tools (Ap">
                                 <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Angular/">Angular</a></p>
                                 <p class="item-title"><a href="/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/" class="title">Introduction to Angular2</a></p>
                                 <p class="item-date"><time datetime="2017-04-28T03:01:35.000Z" itemprop="datePublished">2017-04-28</time></p>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            
+                            <div class="item-thumbnail">
+                                <a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/hexo.png)" alt="Introduction to Hexo" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                            </div>
+                            
+                            <div class="item-inner">
+                                <p class="item-category"><a class="article-category-link" href="/categories/Pemrograman/">Pemrograman</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Pemrograman/Hexo/">Hexo</a></p>
+                                <p class="item-title"><a href="/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/" class="title">Introduction to Hexo</a></p>
+                                <p class="item-date"><time datetime="2017-05-07T05:44:17.000Z" itemprop="datePublished">2017-05-07</time></p>
                             </div>
                         </li>
                     
@@ -476,7 +478,7 @@ Build Tools (Ap">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">kategori</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">40</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">30</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/">Pemrograman</a><span class="category-list-count">40</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Android/">Android</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Angular/">Angular</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Pemrograman/Spring/">Spring</a><span class="category-list-count">30</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -486,7 +488,7 @@ Build Tools (Ap">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">arsip</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">Oktober 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">15</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">Oktober 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">Agustus 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">Juli 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">Mei 2017</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">15</span></li></ul>
         </div>
     </div>
 
@@ -496,7 +498,7 @@ Build Tools (Ap">
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tag</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
