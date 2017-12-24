@@ -1276,14 +1276,7 @@
       <url>http://ciazhar.github.io/2017/05/07/pemrograman/hexo/0-Introduction-to-Hexo/</url>
       <content type="html"><![CDATA[<p><img src="/images/hexo.png" alt=""></p>
 <h1 id="Sekilas-tentang-Hexo"><a href="#Sekilas-tentang-Hexo" class="headerlink" title="Sekilas tentang Hexo"></a>Sekilas tentang Hexo</h1><p><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> merupakan suatu framework untuk mempermudah dalam membuat Blog atau Website probadi. Untuk mengulis konten pada Hexo, dapat menggunakan <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a> yang kemudian akan dicompile menjadi html. Untuk Layout dan Design dapat menggunkaan <a href="http://ejs.co/" target="_blank" rel="external">EJS</a>.</p>
-<h1 id="Roadmap-Belajar-Hexo"><a href="#Roadmap-Belajar-Hexo" class="headerlink" title="Roadmap Belajar Hexo"></a>Roadmap Belajar Hexo</h1><ul>
-<li><a href="">Setup Project Hexo</a></li>
-<li><a href="">Menulis Konten pada Hexo</a></li>
-<li><a href="">Mengganti Tema pada Hexo</a></li>
-<li><a href="">Mengkonfigurasi Teman pada Hexo</a></li>
-<li><a href="">Hosting Hexo ke Github Page</a></li>
-</ul>
-]]></content>
+<h1 id="Roadmap-Belajar-Hexo"><a href="#Roadmap-Belajar-Hexo" class="headerlink" title="Roadmap Belajar Hexo"></a>Roadmap Belajar Hexo</h1><h3 id="Setup-Project-Hexo"><a href="#Setup-Project-Hexo" class="headerlink" title="Setup Project Hexo"></a><a href="">Setup Project Hexo</a></h3><h3 id="Menulis-Konten-pada-Hexo"><a href="#Menulis-Konten-pada-Hexo" class="headerlink" title="Menulis Konten pada Hexo"></a><a href="">Menulis Konten pada Hexo</a></h3><h3 id="Mengganti-Tema-pada-Hexo"><a href="#Mengganti-Tema-pada-Hexo" class="headerlink" title="Mengganti Tema pada Hexo"></a><a href="">Mengganti Tema pada Hexo</a></h3><h3 id="Mengkonfigurasi-Tema-pada-Hexo"><a href="#Mengkonfigurasi-Tema-pada-Hexo" class="headerlink" title="Mengkonfigurasi Tema pada Hexo"></a><a href="">Mengkonfigurasi Tema pada Hexo</a></h3><h3 id="Hosting-Hexo-ke-Github-Page"><a href="#Hosting-Hexo-ke-Github-Page" class="headerlink" title="Hosting Hexo ke Github Page"></a><a href="">Hosting Hexo ke Github Page</a></h3>]]></content>
       
         <categories>
             
@@ -1300,13 +1293,14 @@
       <title><![CDATA[Introduction to Android]]></title>
       <url>http://ciazhar.github.io/2017/05/07/pemrograman/android/0-Introduction-to-Android/</url>
       <content type="html"><![CDATA[<p><img src="/images/android.png" alt=""></p>
-<h1 id="Sekilas-tentang-Android"><a href="#Sekilas-tentang-Android" class="headerlink" title="Sekilas tentang Android"></a>Sekilas tentang Android</h1><p><a href="https://developer.android.com/" target="_blank" rel="external">Android</a> merupakan Sistem Operasi untuk mobile. Aplikasi android native sendiri dapat dibangun menggunakan XML(untuk design) dan Java(untuk logic). Pada Tutorial kali ini kita akan coba membuat aplikasi Android native.</p>
-<h1 id="Roadmap-Belajar-Android-Native"><a href="#Roadmap-Belajar-Android-Native" class="headerlink" title="Roadmap Belajar Android Native"></a>Roadmap Belajar Android Native</h1><ul>
-<li><a href="">Setup Project Android</a></li>
-<li><a href="">View</a></li>
-<li><a href="">Java</a></li>
+<h1 id="Sekilas-tentang-Android"><a href="#Sekilas-tentang-Android" class="headerlink" title="Sekilas tentang Android"></a>Sekilas tentang Android</h1><p><a href="https://developer.android.com/" target="_blank" rel="external">Android</a> merupakan Sistem Operasi untuk mobile platform. Untuk membuat aplikasi android ada beberapa cara tergantung dari platform dan bahasa pemrogramanya. Diantaranya yang populer adalah :</p>
+<ul>
+<li><code>Android Native</code>. Aplikasi android ini dibuat menggunakan bahasa Java atau Kotlin untuk logicnya dan XML untuk UI nya. Platform ini yang paling banyak digunakan karena selain official dari Google sendiri, juga memiliki performa yang paling optimal.</li>
+<li><code>React Native</code>. Aplikasi android ini dibuat menggunakan bahasa Javascript lebih tepatnya dengan ReactJS framework. Platform ini dalam membuatnya “katanya” lebih ringan dibanding Android Native. Namun platform ini performanya tidak sebaik Android Native.</li>
+<li><code>Hybrid</code>. Aplikasi android ini seperti Xamarin(C#), Ionic(AngularJS) dan lain lain. Platform ini kurang lebih sama dengan React Native tapi “katanya” lebih lambat.</li>
 </ul>
-]]></content>
+<p>Untuk rangkaian tutorial berikut kita akan mengguakan Android Native sebagai platform dan Android Studio sebagai IDE. Sekian Happy Coding :D.</p>
+<h1 id="Roadmap-Belajar-Android-Java-menggunakan-Android-Studio"><a href="#Roadmap-Belajar-Android-Java-menggunakan-Android-Studio" class="headerlink" title="Roadmap Belajar Android Java menggunakan Android Studio"></a>Roadmap Belajar Android Java menggunakan Android Studio</h1><h3 id="1-Setup-Project-Android"><a href="#1-Setup-Project-Android" class="headerlink" title="1. Setup Project Android"></a><a href="">1. Setup Project Android</a></h3><h3 id="2-Belajar-Tentang-View"><a href="#2-Belajar-Tentang-View" class="headerlink" title="2. Belajar Tentang View"></a><a href="http://ciazhar.github.io/2017/04/23/pemrograman/android/1-view/">2. Belajar Tentang View</a></h3><h3 id="3-Mengenal-Activity"><a href="#3-Mengenal-Activity" class="headerlink" title="3. Mengenal Activity"></a><a href="">3. Mengenal Activity</a></h3><h3 id="4-Berpindah-Activity-Menggunakan-Intent"><a href="#4-Berpindah-Activity-Menggunakan-Intent" class="headerlink" title="4. Berpindah Activity Menggunakan Intent"></a><a href="">4. Berpindah Activity Menggunakan Intent</a></h3><h3 id="5-Meload-Data-dari-Array-Menggunakan-Recycler-View"><a href="#5-Meload-Data-dari-Array-Menggunakan-Recycler-View" class="headerlink" title="5. Meload Data dari Array Menggunakan Recycler View"></a><a href="">5. Meload Data dari Array Menggunakan Recycler View</a></h3><h3 id="6-Menyimpan-Data-pada-Shared-Preference"><a href="#6-Menyimpan-Data-pada-Shared-Preference" class="headerlink" title="6. Menyimpan Data pada Shared Preference"></a><a href="">6. Menyimpan Data pada Shared Preference</a></h3><h3 id="7-Menyimpan-Data-pada-SQLite"><a href="#7-Menyimpan-Data-pada-SQLite" class="headerlink" title="7. Menyimpan Data pada SQLite"></a><a href="">7. Menyimpan Data pada SQLite</a></h3><h3 id="8-Menkonsumsi-REST-API-Menggunakan-Volley"><a href="#8-Menkonsumsi-REST-API-Menggunakan-Volley" class="headerlink" title="8. Menkonsumsi REST API Menggunakan Volley"></a><a href="">8. Menkonsumsi REST API Menggunakan Volley</a></h3><h3 id="9-Menkonsumsi-REST-API-Menggunakan-Retrofit"><a href="#9-Menkonsumsi-REST-API-Menggunakan-Retrofit" class="headerlink" title="9. Menkonsumsi REST API Menggunakan Retrofit"></a><a href="">9. Menkonsumsi REST API Menggunakan Retrofit</a></h3><h3 id="10-Memanfaatkan-Kamera-Untuk-Menscan-Barcode"><a href="#10-Memanfaatkan-Kamera-Untuk-Menscan-Barcode" class="headerlink" title="10. Memanfaatkan Kamera Untuk Menscan Barcode"></a><a href="">10. Memanfaatkan Kamera Untuk Menscan Barcode</a></h3>]]></content>
       
         <categories>
             
@@ -1451,17 +1445,11 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Introduction to Angular2]]></title>
+      <title><![CDATA[Introduction to Angular]]></title>
       <url>http://ciazhar.github.io/2017/04/28/pemrograman/angular/0-Introduction-to-Angular2/</url>
       <content type="html"><![CDATA[<p><img src="/images/angular.png" alt=""></p>
 <h1 id="Sekilas-tentang-Angular"><a href="#Sekilas-tentang-Angular" class="headerlink" title="Sekilas tentang Angular"></a>Sekilas tentang Angular</h1><p><a href="https://angular.io" target="_blank" rel="external">Angular</a> merupakan framework untuk membangun aplikasi frontend web, desktop dan mobile. Angular sendiri pada awalnya berbasis bahasa pemrograman <a href="https://www.javascript.com" target="_blank" rel="external">Javascript</a> tetapi kemudian mulai versi 2 keatas ditambahkan untuk bahasa pemrograman <a href="https://www.typescriptlang.org/" target="_blank" rel="external">Typescript</a>. Pada Tutorial kali ini kita akan coba membuat aplikasi angular untuk frontend web.</p>
-<h1 id="Roadmap-Belajar-Angular"><a href="#Roadmap-Belajar-Angular" class="headerlink" title="Roadmap Belajar Angular"></a>Roadmap Belajar Angular</h1><ul>
-<li><a href="">Setup Project Angular</a></li>
-<li><a href="">Component dan Module</a></li>
-<li><a href="">Routing Top Level Conponent</a></li>
-<li>[Routing Module]</li>
-</ul>
-]]></content>
+<h1 id="Roadmap-Belajar-AngularJS-versi-1"><a href="#Roadmap-Belajar-AngularJS-versi-1" class="headerlink" title="Roadmap Belajar AngularJS (versi 1)"></a>Roadmap Belajar AngularJS (versi 1)</h1><h3 id="Setup-Project-AngularJS"><a href="#Setup-Project-AngularJS" class="headerlink" title="Setup Project AngularJS"></a><a href="">Setup Project AngularJS</a></h3><h3 id="Binding-Value"><a href="#Binding-Value" class="headerlink" title="Binding Value"></a><a href="">Binding Value</a></h3><h3 id="Mengkonsumsi-REST-API"><a href="#Mengkonsumsi-REST-API" class="headerlink" title="Mengkonsumsi REST API"></a><a href="">Mengkonsumsi REST API</a></h3><h1 id="Roadmap-Belajar-Angular-versi-2-keatas"><a href="#Roadmap-Belajar-Angular-versi-2-keatas" class="headerlink" title="Roadmap Belajar Angular (versi 2 keatas)"></a>Roadmap Belajar Angular (versi 2 keatas)</h1><h3 id="Setup-Project-Angular"><a href="#Setup-Project-Angular" class="headerlink" title="Setup Project Angular"></a><a href="">Setup Project Angular</a></h3><h3 id="Mengenal-Component-dan-Module"><a href="#Mengenal-Component-dan-Module" class="headerlink" title="Mengenal Component dan Module"></a><a href="">Mengenal Component dan Module</a></h3><h3 id="Routing-Top-Level-Component"><a href="#Routing-Top-Level-Component" class="headerlink" title="Routing Top Level Component"></a><a href="">Routing Top Level Component</a></h3><h3 id="Routing-Module"><a href="#Routing-Module" class="headerlink" title="Routing Module"></a><a href="">Routing Module</a></h3><h3 id="Mengenal-Service"><a href="#Mengenal-Service" class="headerlink" title="Mengenal Service"></a><a href="">Mengenal Service</a></h3><h3 id="Mengkonsumsi-REST-API-1"><a href="#Mengkonsumsi-REST-API-1" class="headerlink" title="Mengkonsumsi REST API"></a><a href="">Mengkonsumsi REST API</a></h3><h3 id="Otorisasi-menggunakan-Basic-Auth"><a href="#Otorisasi-menggunakan-Basic-Auth" class="headerlink" title="Otorisasi menggunakan Basic Auth"></a><a href="">Otorisasi menggunakan Basic Auth</a></h3><h3 id="Otorisasi-menggunakan-OAuth2"><a href="#Otorisasi-menggunakan-OAuth2" class="headerlink" title="Otorisasi menggunakan OAuth2"></a><a href="">Otorisasi menggunakan OAuth2</a></h3>]]></content>
       
         <categories>
             
@@ -1999,63 +1987,57 @@
       <title><![CDATA[Introduction to Spring]]></title>
       <url>http://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/1-introduction-to-spring-boot/</url>
       <content type="html"><![CDATA[<p><img src="/images/spring.png" alt=""></p>
-<h1 id="Sekilas-tentang-Spring"><a href="#Sekilas-tentang-Spring" class="headerlink" title="Sekilas tentang Spring"></a>Sekilas tentang Spring</h1><p>The <a href="http://spring.io" target="_blank" rel="external">Spring Framework</a> provides a comprehensive programming and configuration model for modern <a href="https://en.wikipedia.org/wiki/List_of_JVM_languages" target="_blank" rel="external">Java-based</a> enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the “plumbing” of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.</p>
-<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><ul>
-<li>Dependency Injection</li>
-<li>Aspect-Oriented Programming including Spring’s declarative transaction management</li>
-<li>Spring MVC web application and RESTful web service framework</li>
-<li>Foundational support for JDBC, JPA, JMS</li>
-<li>Much more…</li>
+<h1 id="Sekilas-tentang-Spring-Framework"><a href="#Sekilas-tentang-Spring-Framework" class="headerlink" title="Sekilas tentang Spring Framework"></a>Sekilas tentang Spring Framework</h1><blockquote>
+<p><a href="http://spring.io" target="_blank" rel="external">Spring Framework</a> adalah Fullstack Web Framework yang dikembangkan oleh Pivotal menggunakan bahasa bahasa JVM (seperti Java, Kotlin dan Groovy).</p>
+</blockquote>
+<p>Spring sendiri telah mengalami evolusi sampai beberapa kali, diantara lain :</p>
+<ul>
+<li><strong>Spring MVC</strong>. Aplikasi spring edisi ini untuk masih dikonfigurasi secara manual, sehingga dalam development masih lambat. Web Server juga masih terpisah sehingga harus di deploy secara manual.</li>
+<li><strong>Spring MVC yang di wrap dengan Spring Boot</strong>. Dengan adanya Spring Boot, setup project menjadi lebih cepat dan mudah. Web server juga sudah di embed sehingga tidak perlu di deploy secara manual. Secara default menggunakan Tomcat Web Server.</li>
+<li><strong>Spring Webflux yang di wrap dengan Spring Boot</strong>. Spring Webflux menawarkan Reactive Programming yang Non Blocking. Web Server default diganti dengan netty yang lebih leightweight. Sehingga performa dari aplikasi spring dapat meningkat.</li>
 </ul>
-<p>All available features and modules are described in <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#overview-modules" target="_blank" rel="external">the Modules section of the reference documentation</a>. Their <a href="http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/overview.html#dependency-management" target="_blank" rel="external">maven/gradle coordinates are also described there</a>.</p>
-<h1 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h1><p>Berikut sekilas peta jalan yang dapat anda pelajari untuk dapat membuat aplikasi spring :</p>
-<h2 id="Setup-Project"><a href="#Setup-Project" class="headerlink" title="Setup Project"></a>Setup Project</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/">Setup Project Spring Boot</a></li>
-</ul>
-<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/web/membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/">Membuat Web Menggunakan Spring Boot dan Thymeleaf</a></li>
-</ul>
-<h2 id="Template-Engine"><a href="#Template-Engine" class="headerlink" title="Template Engine"></a>Template Engine</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/template-engine/layout-dengan-thymeleaf/">Template Engine Thymeleaf</a></li>
-</ul>
-<h2 id="Create-Read-Update-Delete"><a href="#Create-Read-Update-Delete" class="headerlink" title="Create Read Update Delete"></a>Create Read Update Delete</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/1-setup-project-crud-jpa-mysql/">Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL</a></li>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.1-crud-jpa-thymeleaf/">CRUD dengan Spring Data JPA + Thymeleaf (Server Side Rendering)</a></li>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.3-generate-content-dari-client-side-dengan-AngularJS/">CRUD dengan Spring Data JPA + AngularJS (Client Side Rendering / RESTfull API)</a><!-- - [Spring Boot REST API Design Pattern](https://ciazhar.github.io/2017/05/27/pemrograman/spring/jpa/2.2-crud-jpa-thymeleaf(extended)/) -->
-<!-- - [Kardinalitas pada Spring Data JPA](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/3-kardinalitas/)  --></li>
-<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/jpa/4-Debug-Spring-Data-JPA/">Debug Spring Data JPA</a>  </li>
-</ul>
-<h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/security/1-otorisasi-login-dengan-spring-security/">Otoriasai login dengan Spring Security</a></li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/2-otorisasi-method-dengan-spring-security/">Otorisasi controller dengan Spring Security</a> </li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/3-debug-spring-security/">Debug Spring Security</a> </li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/4-melihat-data-user-login-dengan-spring-security-md/">Melihat Data User Login dengan Spring Security</a>   </li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/5-oauth2-spring/">Securing Spring Boot App with Spring OAuth2 + JSON Web Token (JWT)</a></li>
-<li><a href="https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/6-SSO-dengan-Spring-Security/">Single Signed On dengan Spring Security</a></li>
-</ul>
-<h2 id="Report"><a href="#Report" class="headerlink" title="Report"></a>Report</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/report/jasper-report/">Membuat Report dengan Jasper Report</a></li>
-</ul>
-<h2 id="Mail"><a href="#Mail" class="headerlink" title="Mail"></a>Mail</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/08/17/pemrograman/spring/mail/sending-mail/">Membuat Register dengan Verifikasi Email</a></li>
-</ul>
-<h2 id="Database-Migration"><a href="#Database-Migration" class="headerlink" title="Database Migration"></a>Database Migration</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/database-migration/Database-Mirgation-dengan-FlywayDB/">Migrasi Database dengan FlywayDB</a></li>
-</ul>
-<h2 id="Microservice"><a href="#Microservice" class="headerlink" title="Microservice"></a>Microservice</h2><ul>
-<li><a href="https://ciazhar.github.io/2017/05/28/pemrograman/spring/microservice/Microservice-dengan-Spring-Cloud/">Microservice dengan Spring Cloud</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/">Spring Cloud Discovery Service (Eureka)</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/">Spring Cloud Circuit Breaker (Hystrix)</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/">Spring Cloud API Gateway (Zuul)</a></li>
-<li><a href="https://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/">Spring Cloud Config Service : Intro</a></li>
-<li><a href="https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/">Spring Cloud Config Service : File System</a></li>
-<li><a href="https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/">Spring Cloud Config Service : Vault Server</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/">Spring Cloud Config Service : Git Repositoty</a></li>
-<li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Cient/">Spring Cloud Config Service : Config Client</a> </li>
-<li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Encryption-Decryption/">Spring Cloud Config Service : Encryption &amp; Decryption</a> </li>
-<li><a href="https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/7-Config-Service-Refresh-Scope-and-Health-Check/">Spring Cloud Config Service : Refresh Scope &amp; Health</a> </li>
-<li><a href="https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/config-service/8-Spring-Config-Service-Security/">Spring Cloud Config Service : Security</a> </li>
-</ul>
+<p>Sejauh ini secara pribadi spring merupakan framework paling lengkap yang pernah saya temui. Spring dapat mengatasi permasalahan  mulai dari masalah REST API sampai Microservice.</p>
+<p>Framework ini merupakan <strong>compiled framework</strong> karena dalam menjalankannya harus di compile terlebih dahulu. Oleh karena itu Spring memiliki performa yang lumayan bagus. Saya pernah melakukan benchmark menggunakan <strong>wrk</strong> untuk melakukan hit API mendapatkan hasil sekitar 30.000an request per detik. Lebih detailnya dapat di cek di <a href="">Laman Berikut</a>.</p>
+<p>Walaupun memiliki performa yang lumayan, framework ini memiliki waktu startup yang relatif lama, sekitar 10 detik lebih. Sehingga apabila anda memiliki RAM lebih saya menyarankan menggunakan build tool <strong>Gradle</strong> daripada Maven untuk mempercepat proses kompilasi.</p>
+<h2 id="Roadmap-Belajar-Spring"><a href="#Roadmap-Belajar-Spring" class="headerlink" title="Roadmap Belajar Spring"></a>Roadmap Belajar Spring</h2><p>Berikut sekilas peta jalan yang dapat anda pelajari untuk dapat membuat aplikasi spring. Happy Coding :D.</p>
+<h3 id="1-Setup-Project-Spring-Boot"><a href="#1-Setup-Project-Spring-Boot" class="headerlink" title="1. Setup Project Spring Boot"></a><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/intro/2-setup-project-spring-boot/">1. Setup Project Spring Boot</a></h3><h3 id="2-Membuat-Web-pada-Spring-Boot-menggunakan-Template-Engine"><a href="#2-Membuat-Web-pada-Spring-Boot-menggunakan-Template-Engine" class="headerlink" title="2. Membuat Web pada Spring Boot menggunakan Template Engine"></a><a href="https://ciazhar.github.io/2017/04/23/pemrograman/spring/web/membuat-web-sederhana-dengan-spring-boot-starter-web-dan-thymeleaf/">2. Membuat Web pada Spring Boot menggunakan Template Engine</a></h3><h5 id="2-1-Berkenalan-dengan-Template-Engine-Thymeleaf"><a href="#2-1-Berkenalan-dengan-Template-Engine-Thymeleaf" class="headerlink" title="2.1. Berkenalan dengan Template Engine Thymeleaf"></a><a href="">2.1. Berkenalan dengan Template Engine Thymeleaf</a></h5><h5 id="2-1-Membuat-Aplikasi-CRUD-menggunakan-Spring-Boot-Spring-Data-dan-Thymeleaf"><a href="#2-1-Membuat-Aplikasi-CRUD-menggunakan-Spring-Boot-Spring-Data-dan-Thymeleaf" class="headerlink" title="2.1. Membuat Aplikasi CRUD menggunakan Spring Boot, Spring Data dan Thymeleaf"></a><a href="">2.1. Membuat Aplikasi CRUD menggunakan Spring Boot, Spring Data dan Thymeleaf</a></h5><h3 id="3-Membuat-REST-API-pada-Spring-Boot"><a href="#3-Membuat-REST-API-pada-Spring-Boot" class="headerlink" title="3. Membuat REST API pada Spring Boot"></a><a href="">3. Membuat REST API pada Spring Boot</a></h3><h5 id="3-1-Membuat-REST-API-Sederhana"><a href="#3-1-Membuat-REST-API-Sederhana" class="headerlink" title="3.1. Membuat REST API Sederhana"></a><a href="">3.1. Membuat REST API Sederhana</a></h5><h5 id="3-2-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-JPA"><a href="#3-2-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-JPA" class="headerlink" title="3.2. Membuat REST API dengan Spring Boot dan Spring Data JPA"></a><a href="">3.2. Membuat REST API dengan Spring Boot dan Spring Data JPA</a></h5><h5 id="3-3-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-MongoDB"><a href="#3-3-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-MongoDB" class="headerlink" title="3.3. Membuat REST API  dengan Spring Boot dan Spring Data MongoDB"></a><a href="">3.3. Membuat REST API  dengan Spring Boot dan Spring Data MongoDB</a></h5><h3 id="4-Mengamankan-Aplikasi-Spring-Boot"><a href="#4-Mengamankan-Aplikasi-Spring-Boot" class="headerlink" title="4. Mengamankan Aplikasi Spring Boot"></a><a href="">4. Mengamankan Aplikasi Spring Boot</a></h3><h5 id="4-1-Basic-Auth-In-Memory"><a href="#4-1-Basic-Auth-In-Memory" class="headerlink" title="4.1. Basic Auth In Memory"></a><a href="">4.1. Basic Auth In Memory</a></h5><h5 id="4-2-Basic-Auth-Database"><a href="#4-2-Basic-Auth-Database" class="headerlink" title="4.2. Basic Auth Database"></a><a href="">4.2. Basic Auth Database</a></h5><h5 id="4-3-OAuth2"><a href="#4-3-OAuth2" class="headerlink" title="4.3. OAuth2"></a><a href="">4.3. OAuth2</a></h5><h5 id="4-4-JWT"><a href="#4-4-JWT" class="headerlink" title="4.4. JWT"></a><a href="">4.4. JWT</a></h5><h3 id="5-Reactive-Membuat-REST-API-pada-Spring-Boot"><a href="#5-Reactive-Membuat-REST-API-pada-Spring-Boot" class="headerlink" title="5. [Reactive] Membuat REST API pada Spring Boot"></a><a href="">5. [Reactive] Membuat REST API pada Spring Boot</a></h3><h5 id="5-1-Membuat-REST-API-Sederhana"><a href="#5-1-Membuat-REST-API-Sederhana" class="headerlink" title="5.1. Membuat REST API Sederhana"></a><a href="">5.1. Membuat REST API Sederhana</a></h5><h5 id="5-2-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-JPA"><a href="#5-2-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-JPA" class="headerlink" title="5.2. Membuat REST API dengan Spring Boot dan Spring Data JPA"></a><a href="">5.2. Membuat REST API dengan Spring Boot dan Spring Data JPA</a></h5><h5 id="5-3-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-MongoDB"><a href="#5-3-Membuat-REST-API-dengan-Spring-Boot-dan-Spring-Data-MongoDB" class="headerlink" title="5.3. Membuat REST API  dengan Spring Boot dan Spring Data MongoDB"></a><a href="">5.3. Membuat REST API  dengan Spring Boot dan Spring Data MongoDB</a></h5><h3 id="6-Reactive-Mengamankan-Aplikasi-Spring-Boot"><a href="#6-Reactive-Mengamankan-Aplikasi-Spring-Boot" class="headerlink" title="6. [Reactive] Mengamankan Aplikasi Spring Boot"></a><a href="">6. [Reactive] Mengamankan Aplikasi Spring Boot</a></h3><h5 id="6-1-Basic-Auth-In-Memory"><a href="#6-1-Basic-Auth-In-Memory" class="headerlink" title="6.1. Basic Auth In Memory"></a><a href="">6.1. Basic Auth In Memory</a></h5><h5 id="6-2-Basic-Auth-Database"><a href="#6-2-Basic-Auth-Database" class="headerlink" title="6.2. Basic Auth Database"></a><a href="">6.2. Basic Auth Database</a></h5><h3 id="7-Membuat-Mail-Server"><a href="#7-Membuat-Mail-Server" class="headerlink" title="7. Membuat Mail Server"></a><a href="">7. Membuat Mail Server</a></h3><h3 id="8-Membuat-Report-menggunakan-Jasper-Report"><a href="#8-Membuat-Report-menggunakan-Jasper-Report" class="headerlink" title="8. Membuat Report menggunakan Jasper Report"></a><a href="">8. Membuat Report menggunakan Jasper Report</a></h3><h3 id="9-Database-Migration-menggunakan-FlywayDB"><a href="#9-Database-Migration-menggunakan-FlywayDB" class="headerlink" title="9. Database Migration menggunakan FlywayDB"></a><a href="">9. Database Migration menggunakan FlywayDB</a></h3><h3 id="9-API-documentation-menggunakan-Swagger2"><a href="#9-API-documentation-menggunakan-Swagger2" class="headerlink" title="9. API documentation menggunakan Swagger2"></a><a href="">9. API documentation menggunakan Swagger2</a></h3><h3 id="7-Membuat-Microservice-dengan-Spring-Cloud"><a href="#7-Membuat-Microservice-dengan-Spring-Cloud" class="headerlink" title="7. Membuat Microservice dengan Spring Cloud"></a><a href="">7. Membuat Microservice dengan Spring Cloud</a></h3><!-- ## Create Read Update Delete
+- [Setup Project Untuk CRUD dengan Spring Data JPA dan MySQL](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/1-setup-project-crud-jpa-mysql/)
+- [CRUD dengan Spring Data JPA + Thymeleaf (Server Side Rendering)](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.1-crud-jpa-thymeleaf/)
+- [CRUD dengan Spring Data JPA + AngularJS (Client Side Rendering / RESTfull API)](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/2.3-generate-content-dari-client-side-dengan-AngularJS/) -->
+<!-- - [Spring Boot REST API Design Pattern](https://ciazhar.github.io/2017/05/27/pemrograman/spring/jpa/2.2-crud-jpa-thymeleaf(extended)/) -->
+<!-- - [Kardinalitas pada Spring Data JPA](https://ciazhar.github.io/2017/04/23/pemrograman/spring/jpa/3-kardinalitas/)  -->
+<!-- - [Debug Spring Data JPA](https://ciazhar.github.io/2017/05/28/pemrograman/spring/jpa/4-Debug-Spring-Data-JPA/)  
+
+## Security
+- [Otoriasai login dengan Spring Security](https://ciazhar.github.io/2017/04/23/pemrograman/spring/security/1-otorisasi-login-dengan-spring-security/)
+- [Otorisasi controller dengan Spring Security](https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/2-otorisasi-method-dengan-spring-security/) 
+- [Debug Spring Security](https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/3-debug-spring-security/) 
+- [Melihat Data User Login dengan Spring Security](https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/4-melihat-data-user-login-dengan-spring-security-md/)   
+- [Securing Spring Boot App with Spring OAuth2 + JSON Web Token (JWT)](https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/5-oauth2-spring/)
+- [Single Signed On dengan Spring Security](https://ciazhar.github.io/2017/05/27/pemrograman/spring/security/6-SSO-dengan-Spring-Security/)
+
+## Report
+- [Membuat Report dengan Jasper Report](https://ciazhar.github.io/2017/04/23/pemrograman/spring/report/jasper-report/)
+
+## Mail
+- [Membuat Register dengan Verifikasi Email](https://ciazhar.github.io/2017/08/17/pemrograman/spring/mail/sending-mail/)
+
+## Database Migration
+- [Migrasi Database dengan FlywayDB](https://ciazhar.github.io/2017/05/28/pemrograman/spring/database-migration/Database-Mirgation-dengan-FlywayDB/)
+
+## Microservice
+- [Microservice dengan Spring Cloud](https://ciazhar.github.io/2017/05/28/pemrograman/spring/microservice/Microservice-dengan-Spring-Cloud/)
+- [Spring Cloud Discovery Service (Eureka)](https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/discovery-service-eureka/netflix-eureka-as-discovery-service/)
+- [Spring Cloud Circuit Breaker (Hystrix)](https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/circuit-breaker-hystrix/circuit-breaker-with-hystrix/)
+- [Spring Cloud API Gateway (Zuul)](https://ciazhar.github.io/2017/08/18/pemrograman/spring/microservice/api-gateway-zuul/zuul-as-api-gateway/)
+- [Spring Cloud Config Service : Intro](https://ciazhar.github.io/2017/07/22/pemrograman/spring/microservice/config-service/1.GS-Config-Service/)
+- [Spring Cloud Config Service : File System](https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/2.Config-Service-File-System/)
+- [Spring Cloud Config Service : Vault Server](https://ciazhar.github.io/2017/07/28/pemrograman/spring/microservice/config-service/3.Config-Service-Vault-Server/)
+- [Spring Cloud Config Service : Git Repositoty](https://ciazhar.github.io/2017/08/05/pemrograman/spring/microservice/config-service/4.Config-Service-Git-Repository/)
+- [Spring Cloud Config Service : Config Client](https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Cient/) 
+- [Spring Cloud Config Service : Encryption & Decryption](https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/5-Config-Service-Encryption-Decryption/) 
+- [Spring Cloud Config Service : Refresh Scope & Health](https://ciazhar.github.io/2017/08/14/pemrograman/spring/microservice/config-service/7-Config-Service-Refresh-Scope-and-Health-Check/) 
+- [Spring Cloud Config Service : Security](https://ciazhar.github.io/2017/08/15/pemrograman/spring/microservice/config-service/8-Spring-Config-Service-Security/)  -->
 ]]></content>
       
         <categories>
